@@ -40,7 +40,7 @@ type ClientService interface {
 }
 
 /*
-  GetOrgPreferences gets current org prefs
+GetOrgPreferences gets current org prefs
 */
 func (a *Client) GetOrgPreferences(params *GetOrgPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrgPreferencesOK, error) {
 	// TODO: Validate the params before sending
@@ -79,7 +79,7 @@ func (a *Client) GetOrgPreferences(params *GetOrgPreferencesParams, authInfo run
 }
 
 /*
-  PatchOrgPreferences patches current org prefs
+PatchOrgPreferences patches current org prefs
 */
 func (a *Client) PatchOrgPreferences(params *PatchOrgPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PatchOrgPreferencesOK, error) {
 	// TODO: Validate the params before sending
@@ -118,7 +118,7 @@ func (a *Client) PatchOrgPreferences(params *PatchOrgPreferencesParams, authInfo
 }
 
 /*
-  UpdateOrgPreferences updates current org prefs
+UpdateOrgPreferences updates current org prefs
 */
 func (a *Client) UpdateOrgPreferences(params *UpdateOrgPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgPreferencesOK, error) {
 	// TODO: Validate the params before sending

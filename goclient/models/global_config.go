@@ -49,6 +49,9 @@ type GlobalConfig struct {
 	// smtp auth password
 	SMTPAuthPassword Secret `json:"smtp_auth_password,omitempty"`
 
+	// smtp auth password file
+	SMTPAuthPasswordFile string `json:"smtp_auth_password_file,omitempty"`
+
 	// smtp auth secret
 	SMTPAuthSecret Secret `json:"smtp_auth_secret,omitempty"`
 
@@ -66,6 +69,9 @@ type GlobalConfig struct {
 
 	// smtp smarthost
 	SMTPSmarthost *HostPort `json:"smtp_smarthost,omitempty"`
+
+	// telegram api url
+	TelegramAPIURL *URL `json:"telegram_api_url,omitempty"`
 
 	// victorops api key
 	VictoropsAPIKey Secret `json:"victorops_api_key,omitempty"`
@@ -120,6 +126,10 @@ func (m *GlobalConfig) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateSMTPSmarthost(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateTelegramAPIURL(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -308,6 +318,25 @@ func (m *GlobalConfig) validateSMTPSmarthost(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *GlobalConfig) validateTelegramAPIURL(formats strfmt.Registry) error {
+	if swag.IsZero(m.TelegramAPIURL) { // not required
+		return nil
+	}
+
+	if m.TelegramAPIURL != nil {
+		if err := m.TelegramAPIURL.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("telegram_api_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("telegram_api_url")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 func (m *GlobalConfig) validateVictoropsAPIKey(formats strfmt.Registry) error {
 	if swag.IsZero(m.VictoropsAPIKey) { // not required
 		return nil
@@ -417,6 +446,10 @@ func (m *GlobalConfig) ContextValidate(ctx context.Context, formats strfmt.Regis
 	}
 
 	if err := m.contextValidateSMTPSmarthost(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateTelegramAPIURL(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -570,6 +603,22 @@ func (m *GlobalConfig) contextValidateSMTPSmarthost(ctx context.Context, formats
 				return ve.ValidateName("smtp_smarthost")
 			} else if ce, ok := err.(*errors.CompositeError); ok {
 				return ce.ValidateName("smtp_smarthost")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (m *GlobalConfig) contextValidateTelegramAPIURL(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.TelegramAPIURL != nil {
+		if err := m.TelegramAPIURL.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("telegram_api_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("telegram_api_url")
 			}
 			return err
 		}

@@ -52,10 +52,12 @@ func NewGetAccessControlStatusParamsWithHTTPClient(client *http.Client) *GetAcce
 	}
 }
 
-/* GetAccessControlStatusParams contains all the parameters to send to the API endpoint
-   for the get access control status operation.
+/*
+GetAccessControlStatusParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get access control status operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAccessControlStatusParams struct {
 	timeout    time.Duration

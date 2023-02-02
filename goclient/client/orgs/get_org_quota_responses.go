@@ -63,7 +63,8 @@ func NewGetOrgQuotaOK() *GetOrgQuotaOK {
 	return &GetOrgQuotaOK{}
 }
 
-/* GetOrgQuotaOK describes a response with status code 200, with default header values.
+/*
+GetOrgQuotaOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetOrgQuotaUnauthorized() *GetOrgQuotaUnauthorized {
 	return &GetOrgQuotaUnauthorized{}
 }
 
-/* GetOrgQuotaUnauthorized describes a response with status code 401, with default header values.
+/*
+GetOrgQuotaUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetOrgQuotaForbidden() *GetOrgQuotaForbidden {
 	return &GetOrgQuotaForbidden{}
 }
 
-/* GetOrgQuotaForbidden describes a response with status code 403, with default header values.
+/*
+GetOrgQuotaForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetOrgQuotaNotFound() *GetOrgQuotaNotFound {
 	return &GetOrgQuotaNotFound{}
 }
 
-/* GetOrgQuotaNotFound describes a response with status code 404, with default header values.
+/*
+GetOrgQuotaNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetOrgQuotaInternalServerError() *GetOrgQuotaInternalServerError {
 	return &GetOrgQuotaInternalServerError{}
 }
 
-/* GetOrgQuotaInternalServerError describes a response with status code 500, with default header values.
+/*
+GetOrgQuotaInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

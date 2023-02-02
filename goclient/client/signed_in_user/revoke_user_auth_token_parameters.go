@@ -54,10 +54,12 @@ func NewRevokeUserAuthTokenParamsWithHTTPClient(client *http.Client) *RevokeUser
 	}
 }
 
-/* RevokeUserAuthTokenParams contains all the parameters to send to the API endpoint
-   for the revoke user auth token operation.
+/*
+RevokeUserAuthTokenParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the revoke user auth token operation.
+
+	Typically these are written to a http.Request.
 */
 type RevokeUserAuthTokenParams struct {
 

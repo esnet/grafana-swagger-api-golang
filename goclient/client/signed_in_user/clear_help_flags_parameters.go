@@ -52,10 +52,12 @@ func NewClearHelpFlagsParamsWithHTTPClient(client *http.Client) *ClearHelpFlagsP
 	}
 }
 
-/* ClearHelpFlagsParams contains all the parameters to send to the API endpoint
-   for the clear help flags operation.
+/*
+ClearHelpFlagsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the clear help flags operation.
+
+	Typically these are written to a http.Request.
 */
 type ClearHelpFlagsParams struct {
 	timeout    time.Duration

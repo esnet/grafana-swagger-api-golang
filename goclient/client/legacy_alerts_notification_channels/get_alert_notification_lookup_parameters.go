@@ -52,10 +52,12 @@ func NewGetAlertNotificationLookupParamsWithHTTPClient(client *http.Client) *Get
 	}
 }
 
-/* GetAlertNotificationLookupParams contains all the parameters to send to the API endpoint
-   for the get alert notification lookup operation.
+/*
+GetAlertNotificationLookupParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get alert notification lookup operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAlertNotificationLookupParams struct {
 	timeout    time.Duration

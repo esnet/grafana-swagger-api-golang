@@ -52,10 +52,12 @@ func NewGetDashboardByUIDParamsWithHTTPClient(client *http.Client) *GetDashboard
 	}
 }
 
-/* GetDashboardByUIDParams contains all the parameters to send to the API endpoint
-   for the get dashboard by UID operation.
+/*
+GetDashboardByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardByUIDParams struct {
 

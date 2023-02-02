@@ -50,9 +50,10 @@ type ClientService interface {
 }
 
 /*
-  CreateServiceAccount creates service account
+	CreateServiceAccount creates service account
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:write` scope: `serviceaccounts:*`
 
 Requires basic authentication and that the authenticated user is a Grafana Admin.
@@ -94,9 +95,10 @@ func (a *Client) CreateServiceAccount(params *CreateServiceAccountParams, authIn
 }
 
 /*
-  CreateToken creates new token adds a token to a service account
+	CreateToken creates new token adds a token to a service account
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)
 */
 func (a *Client) CreateToken(params *CreateTokenParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateTokenOK, error) {
@@ -136,9 +138,10 @@ func (a *Client) CreateToken(params *CreateTokenParams, authInfo runtime.ClientA
 }
 
 /*
-  DeleteServiceAccount deletes service account
+	DeleteServiceAccount deletes service account
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:delete` scope: `serviceaccounts:id:1` (single service account)
 */
 func (a *Client) DeleteServiceAccount(params *DeleteServiceAccountParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteServiceAccountOK, error) {
@@ -178,9 +181,10 @@ func (a *Client) DeleteServiceAccount(params *DeleteServiceAccountParams, authIn
 }
 
 /*
-  DeleteToken deletes token deletes service account tokens
+	DeleteToken deletes token deletes service account tokens
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)
 
 Requires basic authentication and that the authenticated user is a Grafana Admin.
@@ -222,9 +226,10 @@ func (a *Client) DeleteToken(params *DeleteTokenParams, authInfo runtime.ClientA
 }
 
 /*
-  ListTokens gets service account tokens
+	ListTokens gets service account tokens
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:read` scope: `global:serviceaccounts:id:1` (single service account)
 
 Requires basic authentication and that the authenticated user is a Grafana Admin.
@@ -266,9 +271,10 @@ func (a *Client) ListTokens(params *ListTokensParams, authInfo runtime.ClientAut
 }
 
 /*
-  RetrieveServiceAccount gets single serviceaccount by Id
+	RetrieveServiceAccount gets single serviceaccount by Id
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:read` scope: `serviceaccounts:id:1` (single service account)
 */
 func (a *Client) RetrieveServiceAccount(params *RetrieveServiceAccountParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RetrieveServiceAccountOK, error) {
@@ -308,9 +314,10 @@ func (a *Client) RetrieveServiceAccount(params *RetrieveServiceAccountParams, au
 }
 
 /*
-  SearchOrgServiceAccountsWithPaging searches service accounts with paging
+	SearchOrgServiceAccountsWithPaging searches service accounts with paging
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:read` scope: `serviceaccounts:*`
 */
 func (a *Client) SearchOrgServiceAccountsWithPaging(params *SearchOrgServiceAccountsWithPagingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOrgServiceAccountsWithPagingOK, error) {
@@ -350,9 +357,10 @@ func (a *Client) SearchOrgServiceAccountsWithPaging(params *SearchOrgServiceAcco
 }
 
 /*
-  UpdateServiceAccount updates service account
+	UpdateServiceAccount updates service account
 
-  Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+	Required permissions (See note in the [introduction](https://grafana.com/docs/grafana/latest/developers/http_api/serviceaccount/#service-account-api) for an explanation):
+
 action: `serviceaccounts:write` scope: `serviceaccounts:id:1` (single service account)
 */
 func (a *Client) UpdateServiceAccount(params *UpdateServiceAccountParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateServiceAccountOK, error) {

@@ -45,7 +45,8 @@ func NewGetCustomPermissionsReportOK() *GetCustomPermissionsReportOK {
 	return &GetCustomPermissionsReportOK{}
 }
 
-/* GetCustomPermissionsReportOK describes a response with status code 200, with default header values.
+/*
+GetCustomPermissionsReportOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -75,7 +76,8 @@ func NewGetCustomPermissionsReportInternalServerError() *GetCustomPermissionsRep
 	return &GetCustomPermissionsReportInternalServerError{}
 }
 
-/* GetCustomPermissionsReportInternalServerError describes a response with status code 500, with default header values.
+/*
+GetCustomPermissionsReportInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

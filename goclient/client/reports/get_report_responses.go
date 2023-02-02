@@ -69,7 +69,8 @@ func NewGetReportOK() *GetReportOK {
 	return &GetReportOK{}
 }
 
-/* GetReportOK describes a response with status code 200, with default header values.
+/*
+GetReportOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewGetReportBadRequest() *GetReportBadRequest {
 	return &GetReportBadRequest{}
 }
 
-/* GetReportBadRequest describes a response with status code 400, with default header values.
+/*
+GetReportBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewGetReportUnauthorized() *GetReportUnauthorized {
 	return &GetReportUnauthorized{}
 }
 
-/* GetReportUnauthorized describes a response with status code 401, with default header values.
+/*
+GetReportUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewGetReportForbidden() *GetReportForbidden {
 	return &GetReportForbidden{}
 }
 
-/* GetReportForbidden describes a response with status code 403, with default header values.
+/*
+GetReportForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewGetReportNotFound() *GetReportNotFound {
 	return &GetReportNotFound{}
 }
 
-/* GetReportNotFound describes a response with status code 404, with default header values.
+/*
+GetReportNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewGetReportInternalServerError() *GetReportInternalServerError {
 	return &GetReportInternalServerError{}
 }
 
-/* GetReportInternalServerError describes a response with status code 500, with default header values.
+/*
+GetReportInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

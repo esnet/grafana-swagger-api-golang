@@ -63,7 +63,8 @@ func NewGetAPIkeysOK() *GetAPIkeysOK {
 	return &GetAPIkeysOK{}
 }
 
-/* GetAPIkeysOK describes a response with status code 200, with default header values.
+/*
+GetAPIkeysOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetAPIkeysUnauthorized() *GetAPIkeysUnauthorized {
 	return &GetAPIkeysUnauthorized{}
 }
 
-/* GetAPIkeysUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAPIkeysUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetAPIkeysForbidden() *GetAPIkeysForbidden {
 	return &GetAPIkeysForbidden{}
 }
 
-/* GetAPIkeysForbidden describes a response with status code 403, with default header values.
+/*
+GetAPIkeysForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetAPIkeysNotFound() *GetAPIkeysNotFound {
 	return &GetAPIkeysNotFound{}
 }
 
-/* GetAPIkeysNotFound describes a response with status code 404, with default header values.
+/*
+GetAPIkeysNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetAPIkeysInternalServerError() *GetAPIkeysInternalServerError {
 	return &GetAPIkeysInternalServerError{}
 }
 
-/* GetAPIkeysInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAPIkeysInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

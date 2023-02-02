@@ -57,7 +57,8 @@ func NewRenderReportPDFsOK() *RenderReportPDFsOK {
 	return &RenderReportPDFsOK{}
 }
 
-/* RenderReportPDFsOK describes a response with status code 200, with default header values.
+/*
+RenderReportPDFsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewRenderReportPDFsBadRequest() *RenderReportPDFsBadRequest {
 	return &RenderReportPDFsBadRequest{}
 }
 
-/* RenderReportPDFsBadRequest describes a response with status code 400, with default header values.
+/*
+RenderReportPDFsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -119,7 +121,8 @@ func NewRenderReportPDFsUnauthorized() *RenderReportPDFsUnauthorized {
 	return &RenderReportPDFsUnauthorized{}
 }
 
-/* RenderReportPDFsUnauthorized describes a response with status code 401, with default header values.
+/*
+RenderReportPDFsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -151,7 +154,8 @@ func NewRenderReportPDFsInternalServerError() *RenderReportPDFsInternalServerErr
 	return &RenderReportPDFsInternalServerError{}
 }
 
-/* RenderReportPDFsInternalServerError describes a response with status code 500, with default header values.
+/*
+RenderReportPDFsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

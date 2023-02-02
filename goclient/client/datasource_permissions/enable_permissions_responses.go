@@ -69,7 +69,8 @@ func NewEnablePermissionsOK() *EnablePermissionsOK {
 	return &EnablePermissionsOK{}
 }
 
-/* EnablePermissionsOK describes a response with status code 200, with default header values.
+/*
+EnablePermissionsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewEnablePermissionsBadRequest() *EnablePermissionsBadRequest {
 	return &EnablePermissionsBadRequest{}
 }
 
-/* EnablePermissionsBadRequest describes a response with status code 400, with default header values.
+/*
+EnablePermissionsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewEnablePermissionsUnauthorized() *EnablePermissionsUnauthorized {
 	return &EnablePermissionsUnauthorized{}
 }
 
-/* EnablePermissionsUnauthorized describes a response with status code 401, with default header values.
+/*
+EnablePermissionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewEnablePermissionsForbidden() *EnablePermissionsForbidden {
 	return &EnablePermissionsForbidden{}
 }
 
-/* EnablePermissionsForbidden describes a response with status code 403, with default header values.
+/*
+EnablePermissionsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewEnablePermissionsNotFound() *EnablePermissionsNotFound {
 	return &EnablePermissionsNotFound{}
 }
 
-/* EnablePermissionsNotFound describes a response with status code 404, with default header values.
+/*
+EnablePermissionsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewEnablePermissionsInternalServerError() *EnablePermissionsInternalServerE
 	return &EnablePermissionsInternalServerError{}
 }
 
-/* EnablePermissionsInternalServerError describes a response with status code 500, with default header values.
+/*
+EnablePermissionsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

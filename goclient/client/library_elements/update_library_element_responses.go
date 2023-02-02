@@ -75,7 +75,8 @@ func NewUpdateLibraryElementOK() *UpdateLibraryElementOK {
 	return &UpdateLibraryElementOK{}
 }
 
-/* UpdateLibraryElementOK describes a response with status code 200, with default header values.
+/*
+UpdateLibraryElementOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -107,7 +108,8 @@ func NewUpdateLibraryElementBadRequest() *UpdateLibraryElementBadRequest {
 	return &UpdateLibraryElementBadRequest{}
 }
 
-/* UpdateLibraryElementBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateLibraryElementBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -139,7 +141,8 @@ func NewUpdateLibraryElementUnauthorized() *UpdateLibraryElementUnauthorized {
 	return &UpdateLibraryElementUnauthorized{}
 }
 
-/* UpdateLibraryElementUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateLibraryElementUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -171,7 +174,8 @@ func NewUpdateLibraryElementForbidden() *UpdateLibraryElementForbidden {
 	return &UpdateLibraryElementForbidden{}
 }
 
-/* UpdateLibraryElementForbidden describes a response with status code 403, with default header values.
+/*
+UpdateLibraryElementForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -203,7 +207,8 @@ func NewUpdateLibraryElementNotFound() *UpdateLibraryElementNotFound {
 	return &UpdateLibraryElementNotFound{}
 }
 
-/* UpdateLibraryElementNotFound describes a response with status code 404, with default header values.
+/*
+UpdateLibraryElementNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -235,7 +240,8 @@ func NewUpdateLibraryElementPreconditionFailed() *UpdateLibraryElementPreconditi
 	return &UpdateLibraryElementPreconditionFailed{}
 }
 
-/* UpdateLibraryElementPreconditionFailed describes a response with status code 412, with default header values.
+/*
+UpdateLibraryElementPreconditionFailed describes a response with status code 412, with default header values.
 
 PreconditionFailedError
 */
@@ -267,7 +273,8 @@ func NewUpdateLibraryElementInternalServerError() *UpdateLibraryElementInternalS
 	return &UpdateLibraryElementInternalServerError{}
 }
 
-/* UpdateLibraryElementInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateLibraryElementInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

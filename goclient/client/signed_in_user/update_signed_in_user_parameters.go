@@ -54,10 +54,12 @@ func NewUpdateSignedInUserParamsWithHTTPClient(client *http.Client) *UpdateSigne
 	}
 }
 
-/* UpdateSignedInUserParams contains all the parameters to send to the API endpoint
-   for the update signed in user operation.
+/*
+UpdateSignedInUserParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update signed in user operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateSignedInUserParams struct {
 

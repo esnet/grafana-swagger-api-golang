@@ -52,10 +52,12 @@ func NewDeletePlaylistParamsWithHTTPClient(client *http.Client) *DeletePlaylistP
 	}
 }
 
-/* DeletePlaylistParams contains all the parameters to send to the API endpoint
-   for the delete playlist operation.
+/*
+DeletePlaylistParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete playlist operation.
+
+	Typically these are written to a http.Request.
 */
 type DeletePlaylistParams struct {
 

@@ -52,10 +52,12 @@ func NewPostRenewLicenseTokenParamsWithHTTPClient(client *http.Client) *PostRene
 	}
 }
 
-/* PostRenewLicenseTokenParams contains all the parameters to send to the API endpoint
-   for the post renew license token operation.
+/*
+PostRenewLicenseTokenParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post renew license token operation.
+
+	Typically these are written to a http.Request.
 */
 type PostRenewLicenseTokenParams struct {
 

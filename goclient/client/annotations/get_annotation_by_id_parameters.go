@@ -52,10 +52,12 @@ func NewGetAnnotationByIDParamsWithHTTPClient(client *http.Client) *GetAnnotatio
 	}
 }
 
-/* GetAnnotationByIDParams contains all the parameters to send to the API endpoint
-   for the get annotation by ID operation.
+/*
+GetAnnotationByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get annotation by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAnnotationByIDParams struct {
 

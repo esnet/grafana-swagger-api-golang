@@ -63,7 +63,8 @@ func NewDeleteServiceAccountOK() *DeleteServiceAccountOK {
 	return &DeleteServiceAccountOK{}
 }
 
-/* DeleteServiceAccountOK describes a response with status code 200, with default header values.
+/*
+DeleteServiceAccountOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewDeleteServiceAccountBadRequest() *DeleteServiceAccountBadRequest {
 	return &DeleteServiceAccountBadRequest{}
 }
 
-/* DeleteServiceAccountBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteServiceAccountBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewDeleteServiceAccountUnauthorized() *DeleteServiceAccountUnauthorized {
 	return &DeleteServiceAccountUnauthorized{}
 }
 
-/* DeleteServiceAccountUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteServiceAccountUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewDeleteServiceAccountForbidden() *DeleteServiceAccountForbidden {
 	return &DeleteServiceAccountForbidden{}
 }
 
-/* DeleteServiceAccountForbidden describes a response with status code 403, with default header values.
+/*
+DeleteServiceAccountForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewDeleteServiceAccountInternalServerError() *DeleteServiceAccountInternalS
 	return &DeleteServiceAccountInternalServerError{}
 }
 
-/* DeleteServiceAccountInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteServiceAccountInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

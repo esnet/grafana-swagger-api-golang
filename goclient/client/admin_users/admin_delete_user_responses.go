@@ -63,7 +63,8 @@ func NewAdminDeleteUserOK() *AdminDeleteUserOK {
 	return &AdminDeleteUserOK{}
 }
 
-/* AdminDeleteUserOK describes a response with status code 200, with default header values.
+/*
+AdminDeleteUserOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewAdminDeleteUserUnauthorized() *AdminDeleteUserUnauthorized {
 	return &AdminDeleteUserUnauthorized{}
 }
 
-/* AdminDeleteUserUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminDeleteUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewAdminDeleteUserForbidden() *AdminDeleteUserForbidden {
 	return &AdminDeleteUserForbidden{}
 }
 
-/* AdminDeleteUserForbidden describes a response with status code 403, with default header values.
+/*
+AdminDeleteUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewAdminDeleteUserNotFound() *AdminDeleteUserNotFound {
 	return &AdminDeleteUserNotFound{}
 }
 
-/* AdminDeleteUserNotFound describes a response with status code 404, with default header values.
+/*
+AdminDeleteUserNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewAdminDeleteUserInternalServerError() *AdminDeleteUserInternalServerError
 	return &AdminDeleteUserInternalServerError{}
 }
 
-/* AdminDeleteUserInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminDeleteUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -69,7 +69,8 @@ func NewSendReportOK() *SendReportOK {
 	return &SendReportOK{}
 }
 
-/* SendReportOK describes a response with status code 200, with default header values.
+/*
+SendReportOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewSendReportBadRequest() *SendReportBadRequest {
 	return &SendReportBadRequest{}
 }
 
-/* SendReportBadRequest describes a response with status code 400, with default header values.
+/*
+SendReportBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewSendReportUnauthorized() *SendReportUnauthorized {
 	return &SendReportUnauthorized{}
 }
 
-/* SendReportUnauthorized describes a response with status code 401, with default header values.
+/*
+SendReportUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewSendReportForbidden() *SendReportForbidden {
 	return &SendReportForbidden{}
 }
 
-/* SendReportForbidden describes a response with status code 403, with default header values.
+/*
+SendReportForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewSendReportNotFound() *SendReportNotFound {
 	return &SendReportNotFound{}
 }
 
-/* SendReportNotFound describes a response with status code 404, with default header values.
+/*
+SendReportNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewSendReportInternalServerError() *SendReportInternalServerError {
 	return &SendReportInternalServerError{}
 }
 
-/* SendReportInternalServerError describes a response with status code 500, with default header values.
+/*
+SendReportInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

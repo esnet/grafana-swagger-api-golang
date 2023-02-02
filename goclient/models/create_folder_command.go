@@ -12,10 +12,17 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// CreateFolderCommand create folder command
+// CreateFolderCommand CreateFolderCommand captures the information required by the folder service
+// to create a folder.
 //
 // swagger:model CreateFolderCommand
 type CreateFolderCommand struct {
+
+	// description
+	Description string `json:"description,omitempty"`
+
+	// parent uid
+	ParentUID string `json:"parent_uid,omitempty"`
 
 	// title
 	Title string `json:"title,omitempty"`

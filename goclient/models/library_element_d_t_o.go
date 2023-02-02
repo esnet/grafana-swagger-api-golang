@@ -45,6 +45,9 @@ type LibraryElementDTO struct {
 	// org Id
 	OrgID int64 `json:"orgId,omitempty"`
 
+	// schema version
+	SchemaVersion int64 `json:"schemaVersion,omitempty"`
+
 	// type
 	Type string `json:"type,omitempty"`
 

@@ -63,7 +63,8 @@ func NewAdminUpdateUserPasswordOK() *AdminUpdateUserPasswordOK {
 	return &AdminUpdateUserPasswordOK{}
 }
 
-/* AdminUpdateUserPasswordOK describes a response with status code 200, with default header values.
+/*
+AdminUpdateUserPasswordOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewAdminUpdateUserPasswordBadRequest() *AdminUpdateUserPasswordBadRequest {
 	return &AdminUpdateUserPasswordBadRequest{}
 }
 
-/* AdminUpdateUserPasswordBadRequest describes a response with status code 400, with default header values.
+/*
+AdminUpdateUserPasswordBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewAdminUpdateUserPasswordUnauthorized() *AdminUpdateUserPasswordUnauthoriz
 	return &AdminUpdateUserPasswordUnauthorized{}
 }
 
-/* AdminUpdateUserPasswordUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminUpdateUserPasswordUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewAdminUpdateUserPasswordForbidden() *AdminUpdateUserPasswordForbidden {
 	return &AdminUpdateUserPasswordForbidden{}
 }
 
-/* AdminUpdateUserPasswordForbidden describes a response with status code 403, with default header values.
+/*
+AdminUpdateUserPasswordForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewAdminUpdateUserPasswordInternalServerError() *AdminUpdateUserPasswordInt
 	return &AdminUpdateUserPasswordInternalServerError{}
 }
 
-/* AdminUpdateUserPasswordInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminUpdateUserPasswordInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

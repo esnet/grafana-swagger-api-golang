@@ -53,10 +53,12 @@ func NewRemoveTeamMemberParamsWithHTTPClient(client *http.Client) *RemoveTeamMem
 	}
 }
 
-/* RemoveTeamMemberParams contains all the parameters to send to the API endpoint
-   for the remove team member operation.
+/*
+RemoveTeamMemberParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the remove team member operation.
+
+	Typically these are written to a http.Request.
 */
 type RemoveTeamMemberParams struct {
 

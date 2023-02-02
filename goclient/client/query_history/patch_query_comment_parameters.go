@@ -54,10 +54,12 @@ func NewPatchQueryCommentParamsWithHTTPClient(client *http.Client) *PatchQueryCo
 	}
 }
 
-/* PatchQueryCommentParams contains all the parameters to send to the API endpoint
-   for the patch query comment operation.
+/*
+PatchQueryCommentParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the patch query comment operation.
+
+	Typically these are written to a http.Request.
 */
 type PatchQueryCommentParams struct {
 

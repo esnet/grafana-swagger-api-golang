@@ -8,7 +8,6 @@ package models
 import (
 	"context"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
@@ -25,69 +24,16 @@ type EvalMatch struct {
 	Tags map[string]string `json:"tags,omitempty"`
 
 	// value
-	Value *Float `json:"value,omitempty"`
+	Value string `json:"value,omitempty"`
 }
 
 // Validate validates this eval match
 func (m *EvalMatch) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := m.validateValue(formats); err != nil {
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
 	return nil
 }
 
-func (m *EvalMatch) validateValue(formats strfmt.Registry) error {
-	if swag.IsZero(m.Value) { // not required
-		return nil
-	}
-
-	if m.Value != nil {
-		if err := m.Value.Validate(formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("value")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("value")
-			}
-			return err
-		}
-	}
-
-	return nil
-}
-
-// ContextValidate validate this eval match based on the context it is used
+// ContextValidate validates this eval match based on context it is used
 func (m *EvalMatch) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
-	var res []error
-
-	if err := m.contextValidateValue(ctx, formats); err != nil {
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (m *EvalMatch) contextValidateValue(ctx context.Context, formats strfmt.Registry) error {
-
-	if m.Value != nil {
-		if err := m.Value.ContextValidate(ctx, formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("value")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("value")
-			}
-			return err
-		}
-	}
-
 	return nil
 }
 

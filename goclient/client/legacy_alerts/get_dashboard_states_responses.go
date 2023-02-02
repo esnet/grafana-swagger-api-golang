@@ -51,7 +51,8 @@ func NewGetDashboardStatesOK() *GetDashboardStatesOK {
 	return &GetDashboardStatesOK{}
 }
 
-/* GetDashboardStatesOK describes a response with status code 200, with default header values.
+/*
+GetDashboardStatesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -81,7 +82,8 @@ func NewGetDashboardStatesBadRequest() *GetDashboardStatesBadRequest {
 	return &GetDashboardStatesBadRequest{}
 }
 
-/* GetDashboardStatesBadRequest describes a response with status code 400, with default header values.
+/*
+GetDashboardStatesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -113,7 +115,8 @@ func NewGetDashboardStatesInternalServerError() *GetDashboardStatesInternalServe
 	return &GetDashboardStatesInternalServerError{}
 }
 
-/* GetDashboardStatesInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDashboardStatesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

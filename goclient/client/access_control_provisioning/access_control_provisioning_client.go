@@ -36,7 +36,7 @@ type ClientService interface {
 }
 
 /*
-  AdminProvisioningReloadAccessControl yous need to have a permission with action provisioning reload with scope provisioners accesscontrol
+AdminProvisioningReloadAccessControl yous need to have a permission with action provisioning reload with scope provisioners accesscontrol
 */
 func (a *Client) AdminProvisioningReloadAccessControl(params *AdminProvisioningReloadAccessControlParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminProvisioningReloadAccessControlAccepted, error) {
 	// TODO: Validate the params before sending

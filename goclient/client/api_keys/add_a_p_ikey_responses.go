@@ -69,7 +69,8 @@ func NewAddAPIkeyOK() *AddAPIkeyOK {
 	return &AddAPIkeyOK{}
 }
 
-/* AddAPIkeyOK describes a response with status code 200, with default header values.
+/*
+AddAPIkeyOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewAddAPIkeyBadRequest() *AddAPIkeyBadRequest {
 	return &AddAPIkeyBadRequest{}
 }
 
-/* AddAPIkeyBadRequest describes a response with status code 400, with default header values.
+/*
+AddAPIkeyBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAddAPIkeyUnauthorized() *AddAPIkeyUnauthorized {
 	return &AddAPIkeyUnauthorized{}
 }
 
-/* AddAPIkeyUnauthorized describes a response with status code 401, with default header values.
+/*
+AddAPIkeyUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAddAPIkeyForbidden() *AddAPIkeyForbidden {
 	return &AddAPIkeyForbidden{}
 }
 
-/* AddAPIkeyForbidden describes a response with status code 403, with default header values.
+/*
+AddAPIkeyForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAddAPIkeyConflict() *AddAPIkeyConflict {
 	return &AddAPIkeyConflict{}
 }
 
-/* AddAPIkeyConflict describes a response with status code 409, with default header values.
+/*
+AddAPIkeyConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -229,7 +234,8 @@ func NewAddAPIkeyInternalServerError() *AddAPIkeyInternalServerError {
 	return &AddAPIkeyInternalServerError{}
 }
 
-/* AddAPIkeyInternalServerError describes a response with status code 500, with default header values.
+/*
+AddAPIkeyInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

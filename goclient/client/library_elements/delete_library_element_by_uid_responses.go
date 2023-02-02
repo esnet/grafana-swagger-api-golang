@@ -69,7 +69,8 @@ func NewDeleteLibraryElementByUIDOK() *DeleteLibraryElementByUIDOK {
 	return &DeleteLibraryElementByUIDOK{}
 }
 
-/* DeleteLibraryElementByUIDOK describes a response with status code 200, with default header values.
+/*
+DeleteLibraryElementByUIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewDeleteLibraryElementByUIDBadRequest() *DeleteLibraryElementByUIDBadReque
 	return &DeleteLibraryElementByUIDBadRequest{}
 }
 
-/* DeleteLibraryElementByUIDBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteLibraryElementByUIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteLibraryElementByUIDUnauthorized() *DeleteLibraryElementByUIDUnauth
 	return &DeleteLibraryElementByUIDUnauthorized{}
 }
 
-/* DeleteLibraryElementByUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteLibraryElementByUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteLibraryElementByUIDForbidden() *DeleteLibraryElementByUIDForbidden
 	return &DeleteLibraryElementByUIDForbidden{}
 }
 
-/* DeleteLibraryElementByUIDForbidden describes a response with status code 403, with default header values.
+/*
+DeleteLibraryElementByUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteLibraryElementByUIDNotFound() *DeleteLibraryElementByUIDNotFound {
 	return &DeleteLibraryElementByUIDNotFound{}
 }
 
-/* DeleteLibraryElementByUIDNotFound describes a response with status code 404, with default header values.
+/*
+DeleteLibraryElementByUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewDeleteLibraryElementByUIDInternalServerError() *DeleteLibraryElementByUI
 	return &DeleteLibraryElementByUIDInternalServerError{}
 }
 
-/* DeleteLibraryElementByUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteLibraryElementByUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

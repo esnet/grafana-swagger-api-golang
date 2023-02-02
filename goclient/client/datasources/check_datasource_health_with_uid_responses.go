@@ -63,7 +63,8 @@ func NewCheckDatasourceHealthWithUIDOK() *CheckDatasourceHealthWithUIDOK {
 	return &CheckDatasourceHealthWithUIDOK{}
 }
 
-/* CheckDatasourceHealthWithUIDOK describes a response with status code 200, with default header values.
+/*
+CheckDatasourceHealthWithUIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewCheckDatasourceHealthWithUIDBadRequest() *CheckDatasourceHealthWithUIDBa
 	return &CheckDatasourceHealthWithUIDBadRequest{}
 }
 
-/* CheckDatasourceHealthWithUIDBadRequest describes a response with status code 400, with default header values.
+/*
+CheckDatasourceHealthWithUIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewCheckDatasourceHealthWithUIDUnauthorized() *CheckDatasourceHealthWithUID
 	return &CheckDatasourceHealthWithUIDUnauthorized{}
 }
 
-/* CheckDatasourceHealthWithUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+CheckDatasourceHealthWithUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewCheckDatasourceHealthWithUIDForbidden() *CheckDatasourceHealthWithUIDFor
 	return &CheckDatasourceHealthWithUIDForbidden{}
 }
 
-/* CheckDatasourceHealthWithUIDForbidden describes a response with status code 403, with default header values.
+/*
+CheckDatasourceHealthWithUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewCheckDatasourceHealthWithUIDInternalServerError() *CheckDatasourceHealth
 	return &CheckDatasourceHealthWithUIDInternalServerError{}
 }
 
-/* CheckDatasourceHealthWithUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+CheckDatasourceHealthWithUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -57,7 +57,8 @@ func NewPatchQueryCommentOK() *PatchQueryCommentOK {
 	return &PatchQueryCommentOK{}
 }
 
-/* PatchQueryCommentOK describes a response with status code 200, with default header values.
+/*
+PatchQueryCommentOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewPatchQueryCommentBadRequest() *PatchQueryCommentBadRequest {
 	return &PatchQueryCommentBadRequest{}
 }
 
-/* PatchQueryCommentBadRequest describes a response with status code 400, with default header values.
+/*
+PatchQueryCommentBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewPatchQueryCommentUnauthorized() *PatchQueryCommentUnauthorized {
 	return &PatchQueryCommentUnauthorized{}
 }
 
-/* PatchQueryCommentUnauthorized describes a response with status code 401, with default header values.
+/*
+PatchQueryCommentUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewPatchQueryCommentInternalServerError() *PatchQueryCommentInternalServerE
 	return &PatchQueryCommentInternalServerError{}
 }
 
-/* PatchQueryCommentInternalServerError describes a response with status code 500, with default header values.
+/*
+PatchQueryCommentInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

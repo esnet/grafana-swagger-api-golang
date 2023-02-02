@@ -57,7 +57,8 @@ func NewPatchUserPreferencesOK() *PatchUserPreferencesOK {
 	return &PatchUserPreferencesOK{}
 }
 
-/* PatchUserPreferencesOK describes a response with status code 200, with default header values.
+/*
+PatchUserPreferencesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewPatchUserPreferencesBadRequest() *PatchUserPreferencesBadRequest {
 	return &PatchUserPreferencesBadRequest{}
 }
 
-/* PatchUserPreferencesBadRequest describes a response with status code 400, with default header values.
+/*
+PatchUserPreferencesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewPatchUserPreferencesUnauthorized() *PatchUserPreferencesUnauthorized {
 	return &PatchUserPreferencesUnauthorized{}
 }
 
-/* PatchUserPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+PatchUserPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewPatchUserPreferencesInternalServerError() *PatchUserPreferencesInternalS
 	return &PatchUserPreferencesInternalServerError{}
 }
 
-/* PatchUserPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+PatchUserPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

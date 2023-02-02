@@ -63,7 +63,8 @@ func NewGetDashboardVersionsByIDOK() *GetDashboardVersionsByIDOK {
 	return &GetDashboardVersionsByIDOK{}
 }
 
-/* GetDashboardVersionsByIDOK describes a response with status code 200, with default header values.
+/*
+GetDashboardVersionsByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetDashboardVersionsByIDUnauthorized() *GetDashboardVersionsByIDUnauthor
 	return &GetDashboardVersionsByIDUnauthorized{}
 }
 
-/* GetDashboardVersionsByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDashboardVersionsByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetDashboardVersionsByIDForbidden() *GetDashboardVersionsByIDForbidden {
 	return &GetDashboardVersionsByIDForbidden{}
 }
 
-/* GetDashboardVersionsByIDForbidden describes a response with status code 403, with default header values.
+/*
+GetDashboardVersionsByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetDashboardVersionsByIDNotFound() *GetDashboardVersionsByIDNotFound {
 	return &GetDashboardVersionsByIDNotFound{}
 }
 
-/* GetDashboardVersionsByIDNotFound describes a response with status code 404, with default header values.
+/*
+GetDashboardVersionsByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetDashboardVersionsByIDInternalServerError() *GetDashboardVersionsByIDI
 	return &GetDashboardVersionsByIDInternalServerError{}
 }
 
-/* GetDashboardVersionsByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDashboardVersionsByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

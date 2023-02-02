@@ -57,7 +57,8 @@ func NewSearchTeamsOK() *SearchTeamsOK {
 	return &SearchTeamsOK{}
 }
 
-/* SearchTeamsOK describes a response with status code 200, with default header values.
+/*
+SearchTeamsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewSearchTeamsUnauthorized() *SearchTeamsUnauthorized {
 	return &SearchTeamsUnauthorized{}
 }
 
-/* SearchTeamsUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchTeamsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewSearchTeamsForbidden() *SearchTeamsForbidden {
 	return &SearchTeamsForbidden{}
 }
 
-/* SearchTeamsForbidden describes a response with status code 403, with default header values.
+/*
+SearchTeamsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewSearchTeamsInternalServerError() *SearchTeamsInternalServerError {
 	return &SearchTeamsInternalServerError{}
 }
 
-/* SearchTeamsInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchTeamsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

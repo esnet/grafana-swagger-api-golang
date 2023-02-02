@@ -51,7 +51,8 @@ func NewGetLibraryElementsOK() *GetLibraryElementsOK {
 	return &GetLibraryElementsOK{}
 }
 
-/* GetLibraryElementsOK describes a response with status code 200, with default header values.
+/*
+GetLibraryElementsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetLibraryElementsUnauthorized() *GetLibraryElementsUnauthorized {
 	return &GetLibraryElementsUnauthorized{}
 }
 
-/* GetLibraryElementsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetLibraryElementsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetLibraryElementsInternalServerError() *GetLibraryElementsInternalServe
 	return &GetLibraryElementsInternalServerError{}
 }
 
-/* GetLibraryElementsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetLibraryElementsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

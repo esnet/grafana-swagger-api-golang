@@ -63,7 +63,8 @@ func NewUpdateAlertNotificationChannelByUIDOK() *UpdateAlertNotificationChannelB
 	return &UpdateAlertNotificationChannelByUIDOK{}
 }
 
-/* UpdateAlertNotificationChannelByUIDOK describes a response with status code 200, with default header values.
+/*
+UpdateAlertNotificationChannelByUIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewUpdateAlertNotificationChannelByUIDUnauthorized() *UpdateAlertNotificati
 	return &UpdateAlertNotificationChannelByUIDUnauthorized{}
 }
 
-/* UpdateAlertNotificationChannelByUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateAlertNotificationChannelByUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewUpdateAlertNotificationChannelByUIDForbidden() *UpdateAlertNotificationC
 	return &UpdateAlertNotificationChannelByUIDForbidden{}
 }
 
-/* UpdateAlertNotificationChannelByUIDForbidden describes a response with status code 403, with default header values.
+/*
+UpdateAlertNotificationChannelByUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewUpdateAlertNotificationChannelByUIDNotFound() *UpdateAlertNotificationCh
 	return &UpdateAlertNotificationChannelByUIDNotFound{}
 }
 
-/* UpdateAlertNotificationChannelByUIDNotFound describes a response with status code 404, with default header values.
+/*
+UpdateAlertNotificationChannelByUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewUpdateAlertNotificationChannelByUIDInternalServerError() *UpdateAlertNot
 	return &UpdateAlertNotificationChannelByUIDInternalServerError{}
 }
 
-/* UpdateAlertNotificationChannelByUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateAlertNotificationChannelByUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -52,10 +52,12 @@ func NewRouteDeleteContactpointsParamsWithHTTPClient(client *http.Client) *Route
 	}
 }
 
-/* RouteDeleteContactpointsParams contains all the parameters to send to the API endpoint
-   for the route delete contactpoints operation.
+/*
+RouteDeleteContactpointsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route delete contactpoints operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteDeleteContactpointsParams struct {
 

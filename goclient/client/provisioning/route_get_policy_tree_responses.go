@@ -39,7 +39,8 @@ func NewRouteGetPolicyTreeOK() *RouteGetPolicyTreeOK {
 	return &RouteGetPolicyTreeOK{}
 }
 
-/* RouteGetPolicyTreeOK describes a response with status code 200, with default header values.
+/*
+RouteGetPolicyTreeOK describes a response with status code 200, with default header values.
 
 Route
 */

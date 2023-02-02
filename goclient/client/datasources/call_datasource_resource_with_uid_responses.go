@@ -69,7 +69,8 @@ func NewCallDatasourceResourceWithUIDOK() *CallDatasourceResourceWithUIDOK {
 	return &CallDatasourceResourceWithUIDOK{}
 }
 
-/* CallDatasourceResourceWithUIDOK describes a response with status code 200, with default header values.
+/*
+CallDatasourceResourceWithUIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewCallDatasourceResourceWithUIDBadRequest() *CallDatasourceResourceWithUID
 	return &CallDatasourceResourceWithUIDBadRequest{}
 }
 
-/* CallDatasourceResourceWithUIDBadRequest describes a response with status code 400, with default header values.
+/*
+CallDatasourceResourceWithUIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewCallDatasourceResourceWithUIDUnauthorized() *CallDatasourceResourceWithU
 	return &CallDatasourceResourceWithUIDUnauthorized{}
 }
 
-/* CallDatasourceResourceWithUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+CallDatasourceResourceWithUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewCallDatasourceResourceWithUIDForbidden() *CallDatasourceResourceWithUIDF
 	return &CallDatasourceResourceWithUIDForbidden{}
 }
 
-/* CallDatasourceResourceWithUIDForbidden describes a response with status code 403, with default header values.
+/*
+CallDatasourceResourceWithUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewCallDatasourceResourceWithUIDNotFound() *CallDatasourceResourceWithUIDNo
 	return &CallDatasourceResourceWithUIDNotFound{}
 }
 
-/* CallDatasourceResourceWithUIDNotFound describes a response with status code 404, with default header values.
+/*
+CallDatasourceResourceWithUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewCallDatasourceResourceWithUIDInternalServerError() *CallDatasourceResour
 	return &CallDatasourceResourceWithUIDInternalServerError{}
 }
 
-/* CallDatasourceResourceWithUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+CallDatasourceResourceWithUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

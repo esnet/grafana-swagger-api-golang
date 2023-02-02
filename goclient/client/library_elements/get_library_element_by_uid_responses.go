@@ -57,7 +57,8 @@ func NewGetLibraryElementByUIDOK() *GetLibraryElementByUIDOK {
 	return &GetLibraryElementByUIDOK{}
 }
 
-/* GetLibraryElementByUIDOK describes a response with status code 200, with default header values.
+/*
+GetLibraryElementByUIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewGetLibraryElementByUIDUnauthorized() *GetLibraryElementByUIDUnauthorized
 	return &GetLibraryElementByUIDUnauthorized{}
 }
 
-/* GetLibraryElementByUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetLibraryElementByUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewGetLibraryElementByUIDNotFound() *GetLibraryElementByUIDNotFound {
 	return &GetLibraryElementByUIDNotFound{}
 }
 
-/* GetLibraryElementByUIDNotFound describes a response with status code 404, with default header values.
+/*
+GetLibraryElementByUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -153,7 +156,8 @@ func NewGetLibraryElementByUIDInternalServerError() *GetLibraryElementByUIDInter
 	return &GetLibraryElementByUIDInternalServerError{}
 }
 
-/* GetLibraryElementByUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetLibraryElementByUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

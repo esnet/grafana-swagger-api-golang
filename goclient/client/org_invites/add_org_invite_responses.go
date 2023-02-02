@@ -69,7 +69,8 @@ func NewAddOrgInviteOK() *AddOrgInviteOK {
 	return &AddOrgInviteOK{}
 }
 
-/* AddOrgInviteOK describes a response with status code 200, with default header values.
+/*
+AddOrgInviteOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewAddOrgInviteBadRequest() *AddOrgInviteBadRequest {
 	return &AddOrgInviteBadRequest{}
 }
 
-/* AddOrgInviteBadRequest describes a response with status code 400, with default header values.
+/*
+AddOrgInviteBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAddOrgInviteUnauthorized() *AddOrgInviteUnauthorized {
 	return &AddOrgInviteUnauthorized{}
 }
 
-/* AddOrgInviteUnauthorized describes a response with status code 401, with default header values.
+/*
+AddOrgInviteUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAddOrgInviteForbidden() *AddOrgInviteForbidden {
 	return &AddOrgInviteForbidden{}
 }
 
-/* AddOrgInviteForbidden describes a response with status code 403, with default header values.
+/*
+AddOrgInviteForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAddOrgInvitePreconditionFailed() *AddOrgInvitePreconditionFailed {
 	return &AddOrgInvitePreconditionFailed{}
 }
 
-/* AddOrgInvitePreconditionFailed describes a response with status code 412, with default header values.
+/*
+AddOrgInvitePreconditionFailed describes a response with status code 412, with default header values.
 
 (empty)
 */
@@ -218,7 +223,8 @@ func NewAddOrgInviteInternalServerError() *AddOrgInviteInternalServerError {
 	return &AddOrgInviteInternalServerError{}
 }
 
-/* AddOrgInviteInternalServerError describes a response with status code 500, with default header values.
+/*
+AddOrgInviteInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

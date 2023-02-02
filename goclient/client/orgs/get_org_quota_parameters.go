@@ -53,10 +53,12 @@ func NewGetOrgQuotaParamsWithHTTPClient(client *http.Client) *GetOrgQuotaParams 
 	}
 }
 
-/* GetOrgQuotaParams contains all the parameters to send to the API endpoint
-   for the get org quota operation.
+/*
+GetOrgQuotaParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org quota operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgQuotaParams struct {
 

@@ -51,7 +51,8 @@ func NewGetTeamPreferencesOK() *GetTeamPreferencesOK {
 	return &GetTeamPreferencesOK{}
 }
 
-/* GetTeamPreferencesOK describes a response with status code 200, with default header values.
+/*
+GetTeamPreferencesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetTeamPreferencesUnauthorized() *GetTeamPreferencesUnauthorized {
 	return &GetTeamPreferencesUnauthorized{}
 }
 
-/* GetTeamPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+GetTeamPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetTeamPreferencesInternalServerError() *GetTeamPreferencesInternalServe
 	return &GetTeamPreferencesInternalServerError{}
 }
 
-/* GetTeamPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+GetTeamPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

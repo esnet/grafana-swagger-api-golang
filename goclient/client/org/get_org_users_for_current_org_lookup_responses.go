@@ -57,7 +57,8 @@ func NewGetOrgUsersForCurrentOrgLookupOK() *GetOrgUsersForCurrentOrgLookupOK {
 	return &GetOrgUsersForCurrentOrgLookupOK{}
 }
 
-/* GetOrgUsersForCurrentOrgLookupOK describes a response with status code 200, with default header values.
+/*
+GetOrgUsersForCurrentOrgLookupOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetOrgUsersForCurrentOrgLookupUnauthorized() *GetOrgUsersForCurrentOrgLo
 	return &GetOrgUsersForCurrentOrgLookupUnauthorized{}
 }
 
-/* GetOrgUsersForCurrentOrgLookupUnauthorized describes a response with status code 401, with default header values.
+/*
+GetOrgUsersForCurrentOrgLookupUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetOrgUsersForCurrentOrgLookupForbidden() *GetOrgUsersForCurrentOrgLooku
 	return &GetOrgUsersForCurrentOrgLookupForbidden{}
 }
 
-/* GetOrgUsersForCurrentOrgLookupForbidden describes a response with status code 403, with default header values.
+/*
+GetOrgUsersForCurrentOrgLookupForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetOrgUsersForCurrentOrgLookupInternalServerError() *GetOrgUsersForCurre
 	return &GetOrgUsersForCurrentOrgLookupInternalServerError{}
 }
 
-/* GetOrgUsersForCurrentOrgLookupInternalServerError describes a response with status code 500, with default header values.
+/*
+GetOrgUsersForCurrentOrgLookupInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

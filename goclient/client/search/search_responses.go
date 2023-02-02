@@ -57,7 +57,8 @@ func NewSearchOK() *SearchOK {
 	return &SearchOK{}
 }
 
-/* SearchOK describes a response with status code 200, with default header values.
+/*
+SearchOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewSearchUnauthorized() *SearchUnauthorized {
 	return &SearchUnauthorized{}
 }
 
-/* SearchUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewSearchUnprocessableEntity() *SearchUnprocessableEntity {
 	return &SearchUnprocessableEntity{}
 }
 
-/* SearchUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+SearchUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -151,7 +154,8 @@ func NewSearchInternalServerError() *SearchInternalServerError {
 	return &SearchInternalServerError{}
 }
 
-/* SearchInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

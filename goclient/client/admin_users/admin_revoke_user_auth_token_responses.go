@@ -69,7 +69,8 @@ func NewAdminRevokeUserAuthTokenOK() *AdminRevokeUserAuthTokenOK {
 	return &AdminRevokeUserAuthTokenOK{}
 }
 
-/* AdminRevokeUserAuthTokenOK describes a response with status code 200, with default header values.
+/*
+AdminRevokeUserAuthTokenOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewAdminRevokeUserAuthTokenBadRequest() *AdminRevokeUserAuthTokenBadRequest
 	return &AdminRevokeUserAuthTokenBadRequest{}
 }
 
-/* AdminRevokeUserAuthTokenBadRequest describes a response with status code 400, with default header values.
+/*
+AdminRevokeUserAuthTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAdminRevokeUserAuthTokenUnauthorized() *AdminRevokeUserAuthTokenUnauthor
 	return &AdminRevokeUserAuthTokenUnauthorized{}
 }
 
-/* AdminRevokeUserAuthTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminRevokeUserAuthTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAdminRevokeUserAuthTokenForbidden() *AdminRevokeUserAuthTokenForbidden {
 	return &AdminRevokeUserAuthTokenForbidden{}
 }
 
-/* AdminRevokeUserAuthTokenForbidden describes a response with status code 403, with default header values.
+/*
+AdminRevokeUserAuthTokenForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAdminRevokeUserAuthTokenNotFound() *AdminRevokeUserAuthTokenNotFound {
 	return &AdminRevokeUserAuthTokenNotFound{}
 }
 
-/* AdminRevokeUserAuthTokenNotFound describes a response with status code 404, with default header values.
+/*
+AdminRevokeUserAuthTokenNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewAdminRevokeUserAuthTokenInternalServerError() *AdminRevokeUserAuthTokenI
 	return &AdminRevokeUserAuthTokenInternalServerError{}
 }
 
-/* AdminRevokeUserAuthTokenInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminRevokeUserAuthTokenInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

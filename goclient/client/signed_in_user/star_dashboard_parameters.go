@@ -52,10 +52,12 @@ func NewStarDashboardParamsWithHTTPClient(client *http.Client) *StarDashboardPar
 	}
 }
 
-/* StarDashboardParams contains all the parameters to send to the API endpoint
-   for the star dashboard operation.
+/*
+StarDashboardParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the star dashboard operation.
+
+	Typically these are written to a http.Request.
 */
 type StarDashboardParams struct {
 

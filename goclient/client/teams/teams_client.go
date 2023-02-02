@@ -56,7 +56,7 @@ type ClientService interface {
 }
 
 /*
-  AddTeamMember adds team member
+AddTeamMember adds team member
 */
 func (a *Client) AddTeamMember(params *AddTeamMemberParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddTeamMemberOK, error) {
 	// TODO: Validate the params before sending
@@ -95,7 +95,7 @@ func (a *Client) AddTeamMember(params *AddTeamMemberParams, authInfo runtime.Cli
 }
 
 /*
-  CreateTeam adds team
+CreateTeam adds team
 */
 func (a *Client) CreateTeam(params *CreateTeamParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateTeamOK, error) {
 	// TODO: Validate the params before sending
@@ -134,7 +134,7 @@ func (a *Client) CreateTeam(params *CreateTeamParams, authInfo runtime.ClientAut
 }
 
 /*
-  DeleteTeamByID deletes team by ID
+DeleteTeamByID deletes team by ID
 */
 func (a *Client) DeleteTeamByID(params *DeleteTeamByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteTeamByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -173,7 +173,7 @@ func (a *Client) DeleteTeamByID(params *DeleteTeamByIDParams, authInfo runtime.C
 }
 
 /*
-  GetTeamByID gets team by ID
+GetTeamByID gets team by ID
 */
 func (a *Client) GetTeamByID(params *GetTeamByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetTeamByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -212,7 +212,7 @@ func (a *Client) GetTeamByID(params *GetTeamByIDParams, authInfo runtime.ClientA
 }
 
 /*
-  GetTeamMembers gets team members
+GetTeamMembers gets team members
 */
 func (a *Client) GetTeamMembers(params *GetTeamMembersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetTeamMembersOK, error) {
 	// TODO: Validate the params before sending
@@ -251,7 +251,7 @@ func (a *Client) GetTeamMembers(params *GetTeamMembersParams, authInfo runtime.C
 }
 
 /*
-  GetTeamPreferences gets team preferences
+GetTeamPreferences gets team preferences
 */
 func (a *Client) GetTeamPreferences(params *GetTeamPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetTeamPreferencesOK, error) {
 	// TODO: Validate the params before sending
@@ -290,7 +290,7 @@ func (a *Client) GetTeamPreferences(params *GetTeamPreferencesParams, authInfo r
 }
 
 /*
-  RemoveTeamMember removes member from team
+RemoveTeamMember removes member from team
 */
 func (a *Client) RemoveTeamMember(params *RemoveTeamMemberParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveTeamMemberOK, error) {
 	// TODO: Validate the params before sending
@@ -329,7 +329,7 @@ func (a *Client) RemoveTeamMember(params *RemoveTeamMemberParams, authInfo runti
 }
 
 /*
-  SearchTeams teams search with paging
+SearchTeams teams search with paging
 */
 func (a *Client) SearchTeams(params *SearchTeamsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchTeamsOK, error) {
 	// TODO: Validate the params before sending
@@ -368,7 +368,7 @@ func (a *Client) SearchTeams(params *SearchTeamsParams, authInfo runtime.ClientA
 }
 
 /*
-  UpdateTeam updates team
+UpdateTeam updates team
 */
 func (a *Client) UpdateTeam(params *UpdateTeamParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateTeamOK, error) {
 	// TODO: Validate the params before sending
@@ -407,7 +407,7 @@ func (a *Client) UpdateTeam(params *UpdateTeamParams, authInfo runtime.ClientAut
 }
 
 /*
-  UpdateTeamMember updates team member
+UpdateTeamMember updates team member
 */
 func (a *Client) UpdateTeamMember(params *UpdateTeamMemberParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateTeamMemberOK, error) {
 	// TODO: Validate the params before sending
@@ -446,7 +446,7 @@ func (a *Client) UpdateTeamMember(params *UpdateTeamMemberParams, authInfo runti
 }
 
 /*
-  UpdateTeamPreferences updates team preferences
+UpdateTeamPreferences updates team preferences
 */
 func (a *Client) UpdateTeamPreferences(params *UpdateTeamPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateTeamPreferencesOK, error) {
 	// TODO: Validate the params before sending

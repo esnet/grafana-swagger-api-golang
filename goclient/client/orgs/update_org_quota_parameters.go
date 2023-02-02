@@ -55,10 +55,12 @@ func NewUpdateOrgQuotaParamsWithHTTPClient(client *http.Client) *UpdateOrgQuotaP
 	}
 }
 
-/* UpdateOrgQuotaParams contains all the parameters to send to the API endpoint
-   for the update org quota operation.
+/*
+UpdateOrgQuotaParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update org quota operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateOrgQuotaParams struct {
 

@@ -54,10 +54,12 @@ func NewCreateOrgParamsWithHTTPClient(client *http.Client) *CreateOrgParams {
 	}
 }
 
-/* CreateOrgParams contains all the parameters to send to the API endpoint
-   for the create org operation.
+/*
+CreateOrgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create org operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateOrgParams struct {
 

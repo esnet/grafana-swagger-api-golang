@@ -53,10 +53,12 @@ func NewDeleteRecordingRuleParamsWithHTTPClient(client *http.Client) *DeleteReco
 	}
 }
 
-/* DeleteRecordingRuleParams contains all the parameters to send to the API endpoint
-   for the delete recording rule operation.
+/*
+DeleteRecordingRuleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete recording rule operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteRecordingRuleParams struct {
 

@@ -52,10 +52,12 @@ func NewDeletePermissionsParamsWithHTTPClient(client *http.Client) *DeletePermis
 	}
 }
 
-/* DeletePermissionsParams contains all the parameters to send to the API endpoint
-   for the delete permissions operation.
+/*
+DeletePermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type DeletePermissionsParams struct {
 

@@ -54,10 +54,12 @@ func NewPostGraphiteAnnotationParamsWithHTTPClient(client *http.Client) *PostGra
 	}
 }
 
-/* PostGraphiteAnnotationParams contains all the parameters to send to the API endpoint
-   for the post graphite annotation operation.
+/*
+PostGraphiteAnnotationParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post graphite annotation operation.
+
+	Typically these are written to a http.Request.
 */
 type PostGraphiteAnnotationParams struct {
 

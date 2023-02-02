@@ -39,7 +39,8 @@ func NewRouteGetContactpointsOK() *RouteGetContactpointsOK {
 	return &RouteGetContactpointsOK{}
 }
 
-/* RouteGetContactpointsOK describes a response with status code 200, with default header values.
+/*
+RouteGetContactpointsOK describes a response with status code 200, with default header values.
 
 ContactPoints
 */

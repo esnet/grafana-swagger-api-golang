@@ -45,7 +45,8 @@ func NewRouteGetTemplatesOK() *RouteGetTemplatesOK {
 	return &RouteGetTemplatesOK{}
 }
 
-/* RouteGetTemplatesOK describes a response with status code 200, with default header values.
+/*
+RouteGetTemplatesOK describes a response with status code 200, with default header values.
 
 MessageTemplates
 */
@@ -75,9 +76,10 @@ func NewRouteGetTemplatesNotFound() *RouteGetTemplatesNotFound {
 	return &RouteGetTemplatesNotFound{}
 }
 
-/* RouteGetTemplatesNotFound describes a response with status code 404, with default header values.
+/*
+RouteGetTemplatesNotFound describes a response with status code 404, with default header values.
 
-Not found.
+	Not found.
 */
 type RouteGetTemplatesNotFound struct {
 }

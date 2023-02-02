@@ -45,7 +45,8 @@ func NewGetCustomPermissionsCSVOK() *GetCustomPermissionsCSVOK {
 	return &GetCustomPermissionsCSVOK{}
 }
 
-/* GetCustomPermissionsCSVOK describes a response with status code 200, with default header values.
+/*
+GetCustomPermissionsCSVOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -75,7 +76,8 @@ func NewGetCustomPermissionsCSVInternalServerError() *GetCustomPermissionsCSVInt
 	return &GetCustomPermissionsCSVInternalServerError{}
 }
 
-/* GetCustomPermissionsCSVInternalServerError describes a response with status code 500, with default header values.
+/*
+GetCustomPermissionsCSVInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -53,10 +53,12 @@ func NewGetDashboardVersionsByUIDParamsWithHTTPClient(client *http.Client) *GetD
 	}
 }
 
-/* GetDashboardVersionsByUIDParams contains all the parameters to send to the API endpoint
-   for the get dashboard versions by UID operation.
+/*
+GetDashboardVersionsByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard versions by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardVersionsByUIDParams struct {
 

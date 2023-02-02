@@ -53,10 +53,12 @@ func NewSearchPlaylistsParamsWithHTTPClient(client *http.Client) *SearchPlaylist
 	}
 }
 
-/* SearchPlaylistsParams contains all the parameters to send to the API endpoint
-   for the search playlists operation.
+/*
+SearchPlaylistsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search playlists operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchPlaylistsParams struct {
 

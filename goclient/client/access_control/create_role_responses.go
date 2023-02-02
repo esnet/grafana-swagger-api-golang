@@ -57,7 +57,8 @@ func NewCreateRoleCreated() *CreateRoleCreated {
 	return &CreateRoleCreated{}
 }
 
-/* CreateRoleCreated describes a response with status code 201, with default header values.
+/*
+CreateRoleCreated describes a response with status code 201, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewCreateRoleBadRequest() *CreateRoleBadRequest {
 	return &CreateRoleBadRequest{}
 }
 
-/* CreateRoleBadRequest describes a response with status code 400, with default header values.
+/*
+CreateRoleBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewCreateRoleForbidden() *CreateRoleForbidden {
 	return &CreateRoleForbidden{}
 }
 
-/* CreateRoleForbidden describes a response with status code 403, with default header values.
+/*
+CreateRoleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewCreateRoleInternalServerError() *CreateRoleInternalServerError {
 	return &CreateRoleInternalServerError{}
 }
 
-/* CreateRoleInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateRoleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

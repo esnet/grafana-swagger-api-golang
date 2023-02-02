@@ -75,7 +75,8 @@ func NewCreateTokenOK() *CreateTokenOK {
 	return &CreateTokenOK{}
 }
 
-/* CreateTokenOK describes a response with status code 200, with default header values.
+/*
+CreateTokenOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -107,7 +108,8 @@ func NewCreateTokenBadRequest() *CreateTokenBadRequest {
 	return &CreateTokenBadRequest{}
 }
 
-/* CreateTokenBadRequest describes a response with status code 400, with default header values.
+/*
+CreateTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -139,7 +141,8 @@ func NewCreateTokenUnauthorized() *CreateTokenUnauthorized {
 	return &CreateTokenUnauthorized{}
 }
 
-/* CreateTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -171,7 +174,8 @@ func NewCreateTokenForbidden() *CreateTokenForbidden {
 	return &CreateTokenForbidden{}
 }
 
-/* CreateTokenForbidden describes a response with status code 403, with default header values.
+/*
+CreateTokenForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -203,7 +207,8 @@ func NewCreateTokenNotFound() *CreateTokenNotFound {
 	return &CreateTokenNotFound{}
 }
 
-/* CreateTokenNotFound describes a response with status code 404, with default header values.
+/*
+CreateTokenNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -235,7 +240,8 @@ func NewCreateTokenConflict() *CreateTokenConflict {
 	return &CreateTokenConflict{}
 }
 
-/* CreateTokenConflict describes a response with status code 409, with default header values.
+/*
+CreateTokenConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -267,7 +273,8 @@ func NewCreateTokenInternalServerError() *CreateTokenInternalServerError {
 	return &CreateTokenInternalServerError{}
 }
 
-/* CreateTokenInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateTokenInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

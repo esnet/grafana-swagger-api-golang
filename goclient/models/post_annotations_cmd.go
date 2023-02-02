@@ -8,8 +8,10 @@ package models
 import (
 	"context"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 )
 
 // PostAnnotationsCmd post annotations cmd
@@ -33,7 +35,8 @@ type PostAnnotationsCmd struct {
 	Tags []string `json:"tags"`
 
 	// text
-	Text string `json:"text,omitempty"`
+	// Required: true
+	Text *string `json:"text"`
 
 	// time
 	Time int64 `json:"time,omitempty"`
@@ -44,6 +47,24 @@ type PostAnnotationsCmd struct {
 
 // Validate validates this post annotations cmd
 func (m *PostAnnotationsCmd) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateText(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *PostAnnotationsCmd) validateText(formats strfmt.Registry) error {
+
+	if err := validate.Required("text", "body", m.Text); err != nil {
+		return err
+	}
+
 	return nil
 }
 

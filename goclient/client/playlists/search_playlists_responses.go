@@ -45,7 +45,8 @@ func NewSearchPlaylistsOK() *SearchPlaylistsOK {
 	return &SearchPlaylistsOK{}
 }
 
-/* SearchPlaylistsOK describes a response with status code 200, with default header values.
+/*
+SearchPlaylistsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -75,7 +76,8 @@ func NewSearchPlaylistsInternalServerError() *SearchPlaylistsInternalServerError
 	return &SearchPlaylistsInternalServerError{}
 }
 
-/* SearchPlaylistsInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchPlaylistsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

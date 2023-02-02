@@ -54,10 +54,12 @@ func NewUpdateOrgPreferencesParamsWithHTTPClient(client *http.Client) *UpdateOrg
 	}
 }
 
-/* UpdateOrgPreferencesParams contains all the parameters to send to the API endpoint
-   for the update org preferences operation.
+/*
+UpdateOrgPreferencesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update org preferences operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateOrgPreferencesParams struct {
 

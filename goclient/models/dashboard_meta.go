@@ -63,11 +63,11 @@ type DashboardMeta struct {
 	// has Acl
 	HasACL bool `json:"hasAcl,omitempty"`
 
+	// has public dashboard
+	HasPublicDashboard bool `json:"hasPublicDashboard,omitempty"`
+
 	// is folder
 	IsFolder bool `json:"isFolder,omitempty"`
-
-	// is home
-	IsHome bool `json:"isHome,omitempty"`
 
 	// is snapshot
 	IsSnapshot bool `json:"isSnapshot,omitempty"`
@@ -86,6 +86,9 @@ type DashboardMeta struct {
 
 	// public dashboard enabled
 	PublicDashboardEnabled bool `json:"publicDashboardEnabled,omitempty"`
+
+	// public dashboard Uid
+	PublicDashboardUID string `json:"publicDashboardUid,omitempty"`
 
 	// slug
 	Slug string `json:"slug,omitempty"`

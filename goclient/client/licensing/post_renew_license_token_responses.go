@@ -51,7 +51,8 @@ func NewPostRenewLicenseTokenOK() *PostRenewLicenseTokenOK {
 	return &PostRenewLicenseTokenOK{}
 }
 
-/* PostRenewLicenseTokenOK describes a response with status code 200, with default header values.
+/*
+PostRenewLicenseTokenOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -72,7 +73,8 @@ func NewPostRenewLicenseTokenUnauthorized() *PostRenewLicenseTokenUnauthorized {
 	return &PostRenewLicenseTokenUnauthorized{}
 }
 
-/* PostRenewLicenseTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+PostRenewLicenseTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -104,7 +106,8 @@ func NewPostRenewLicenseTokenNotFound() *PostRenewLicenseTokenNotFound {
 	return &PostRenewLicenseTokenNotFound{}
 }
 
-/* PostRenewLicenseTokenNotFound describes a response with status code 404, with default header values.
+/*
+PostRenewLicenseTokenNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */

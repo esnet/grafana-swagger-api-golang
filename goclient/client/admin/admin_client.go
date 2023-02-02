@@ -40,9 +40,9 @@ type ClientService interface {
 }
 
 /*
-  AdminGetSettings fetches settings
+AdminGetSettings fetches settings
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `settings:read` and scopes: `settings:*`, `settings:auth.saml:` and `settings:auth.saml:enabled` (property level).
 */
 func (a *Client) AdminGetSettings(params *AdminGetSettingsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminGetSettingsOK, error) {
 	// TODO: Validate the params before sending
@@ -81,9 +81,10 @@ func (a *Client) AdminGetSettings(params *AdminGetSettingsParams, authInfo runti
 }
 
 /*
-  AdminGetStats fetches grafana stats
+	AdminGetStats fetches grafana stats
 
-  Only works with Basic Authentication (username and password). See introduction for an explanation.
+	Only works with Basic Authentication (username and password). See introduction for an explanation.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `server:stats:read`.
 */
 func (a *Client) AdminGetStats(params *AdminGetStatsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminGetStatsOK, error) {
@@ -123,7 +124,7 @@ func (a *Client) AdminGetStats(params *AdminGetStatsParams, authInfo runtime.Cli
 }
 
 /*
-  PauseAllAlerts pauses unpause all legacy alerts
+PauseAllAlerts pauses unpause all legacy alerts
 */
 func (a *Client) PauseAllAlerts(params *PauseAllAlertsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PauseAllAlertsOK, error) {
 	// TODO: Validate the params before sending

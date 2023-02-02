@@ -57,7 +57,8 @@ func NewUpdateTeamPreferencesOK() *UpdateTeamPreferencesOK {
 	return &UpdateTeamPreferencesOK{}
 }
 
-/* UpdateTeamPreferencesOK describes a response with status code 200, with default header values.
+/*
+UpdateTeamPreferencesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewUpdateTeamPreferencesBadRequest() *UpdateTeamPreferencesBadRequest {
 	return &UpdateTeamPreferencesBadRequest{}
 }
 
-/* UpdateTeamPreferencesBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateTeamPreferencesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewUpdateTeamPreferencesUnauthorized() *UpdateTeamPreferencesUnauthorized {
 	return &UpdateTeamPreferencesUnauthorized{}
 }
 
-/* UpdateTeamPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateTeamPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewUpdateTeamPreferencesInternalServerError() *UpdateTeamPreferencesInterna
 	return &UpdateTeamPreferencesInternalServerError{}
 }
 
-/* UpdateTeamPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateTeamPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

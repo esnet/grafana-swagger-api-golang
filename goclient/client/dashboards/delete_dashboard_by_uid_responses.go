@@ -63,7 +63,8 @@ func NewDeleteDashboardByUIDOK() *DeleteDashboardByUIDOK {
 	return &DeleteDashboardByUIDOK{}
 }
 
-/* DeleteDashboardByUIDOK describes a response with status code 200, with default header values.
+/*
+DeleteDashboardByUIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewDeleteDashboardByUIDUnauthorized() *DeleteDashboardByUIDUnauthorized {
 	return &DeleteDashboardByUIDUnauthorized{}
 }
 
-/* DeleteDashboardByUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteDashboardByUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewDeleteDashboardByUIDForbidden() *DeleteDashboardByUIDForbidden {
 	return &DeleteDashboardByUIDForbidden{}
 }
 
-/* DeleteDashboardByUIDForbidden describes a response with status code 403, with default header values.
+/*
+DeleteDashboardByUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewDeleteDashboardByUIDNotFound() *DeleteDashboardByUIDNotFound {
 	return &DeleteDashboardByUIDNotFound{}
 }
 
-/* DeleteDashboardByUIDNotFound describes a response with status code 404, with default header values.
+/*
+DeleteDashboardByUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewDeleteDashboardByUIDInternalServerError() *DeleteDashboardByUIDInternalS
 	return &DeleteDashboardByUIDInternalServerError{}
 }
 
-/* DeleteDashboardByUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteDashboardByUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

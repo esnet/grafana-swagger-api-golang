@@ -52,10 +52,12 @@ func NewGetTeamPreferencesParamsWithHTTPClient(client *http.Client) *GetTeamPref
 	}
 }
 
-/* GetTeamPreferencesParams contains all the parameters to send to the API endpoint
-   for the get team preferences operation.
+/*
+GetTeamPreferencesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get team preferences operation.
+
+	Typically these are written to a http.Request.
 */
 type GetTeamPreferencesParams struct {
 

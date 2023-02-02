@@ -52,10 +52,12 @@ func NewGetSAMLLogoutParamsWithHTTPClient(client *http.Client) *GetSAMLLogoutPar
 	}
 }
 
-/* GetSAMLLogoutParams contains all the parameters to send to the API endpoint
-   for the get s a m l logout operation.
+/*
+GetSAMLLogoutParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get s a m l logout operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSAMLLogoutParams struct {
 	timeout    time.Duration

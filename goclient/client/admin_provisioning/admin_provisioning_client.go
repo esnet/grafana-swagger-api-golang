@@ -42,9 +42,10 @@ type ClientService interface {
 }
 
 /*
-  AdminProvisioningReloadDashboards reloads dashboard provisioning configurations
+	AdminProvisioningReloadDashboards reloads dashboard provisioning configurations
 
-  Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+	Reloads the provisioning config files for dashboards again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:dashboards`.
 */
 func (a *Client) AdminProvisioningReloadDashboards(params *AdminProvisioningReloadDashboardsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminProvisioningReloadDashboardsOK, error) {
@@ -84,9 +85,10 @@ func (a *Client) AdminProvisioningReloadDashboards(params *AdminProvisioningRelo
 }
 
 /*
-  AdminProvisioningReloadDatasources reloads datasource provisioning configurations
+	AdminProvisioningReloadDatasources reloads datasource provisioning configurations
 
-  Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+	Reloads the provisioning config files for datasources again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:datasources`.
 */
 func (a *Client) AdminProvisioningReloadDatasources(params *AdminProvisioningReloadDatasourcesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminProvisioningReloadDatasourcesOK, error) {
@@ -126,9 +128,10 @@ func (a *Client) AdminProvisioningReloadDatasources(params *AdminProvisioningRel
 }
 
 /*
-  AdminProvisioningReloadNotifications reloads legacy alert notifier provisioning configurations
+	AdminProvisioningReloadNotifications reloads legacy alert notifier provisioning configurations
 
-  Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+	Reloads the provisioning config files for legacy alert notifiers again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:notifications`.
 */
 func (a *Client) AdminProvisioningReloadNotifications(params *AdminProvisioningReloadNotificationsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminProvisioningReloadNotificationsOK, error) {
@@ -168,9 +171,10 @@ func (a *Client) AdminProvisioningReloadNotifications(params *AdminProvisioningR
 }
 
 /*
-  AdminProvisioningReloadPlugins reloads plugin provisioning configurations
+	AdminProvisioningReloadPlugins reloads plugin provisioning configurations
 
-  Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+	Reloads the provisioning config files for plugins again. It won’t return until the new provisioned entities are already stored in the database. In case of dashboards, it will stop polling for changes in dashboard files and then restart it with new configurations after returning.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `provisioning:reload` and scope `provisioners:plugin`.
 */
 func (a *Client) AdminProvisioningReloadPlugins(params *AdminProvisioningReloadPluginsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminProvisioningReloadPluginsOK, error) {

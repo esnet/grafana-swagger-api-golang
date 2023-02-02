@@ -81,7 +81,8 @@ func NewPostDashboardOK() *PostDashboardOK {
 	return &PostDashboardOK{}
 }
 
-/* PostDashboardOK describes a response with status code 200, with default header values.
+/*
+PostDashboardOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -113,7 +114,8 @@ func NewPostDashboardBadRequest() *PostDashboardBadRequest {
 	return &PostDashboardBadRequest{}
 }
 
-/* PostDashboardBadRequest describes a response with status code 400, with default header values.
+/*
+PostDashboardBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -145,7 +147,8 @@ func NewPostDashboardUnauthorized() *PostDashboardUnauthorized {
 	return &PostDashboardUnauthorized{}
 }
 
-/* PostDashboardUnauthorized describes a response with status code 401, with default header values.
+/*
+PostDashboardUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -177,7 +180,8 @@ func NewPostDashboardForbidden() *PostDashboardForbidden {
 	return &PostDashboardForbidden{}
 }
 
-/* PostDashboardForbidden describes a response with status code 403, with default header values.
+/*
+PostDashboardForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -209,7 +213,8 @@ func NewPostDashboardNotFound() *PostDashboardNotFound {
 	return &PostDashboardNotFound{}
 }
 
-/* PostDashboardNotFound describes a response with status code 404, with default header values.
+/*
+PostDashboardNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -241,7 +246,8 @@ func NewPostDashboardPreconditionFailed() *PostDashboardPreconditionFailed {
 	return &PostDashboardPreconditionFailed{}
 }
 
-/* PostDashboardPreconditionFailed describes a response with status code 412, with default header values.
+/*
+PostDashboardPreconditionFailed describes a response with status code 412, with default header values.
 
 PreconditionFailedError
 */
@@ -273,7 +279,8 @@ func NewPostDashboardUnprocessableEntity() *PostDashboardUnprocessableEntity {
 	return &PostDashboardUnprocessableEntity{}
 }
 
-/* PostDashboardUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+PostDashboardUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -305,7 +312,8 @@ func NewPostDashboardInternalServerError() *PostDashboardInternalServerError {
 	return &PostDashboardInternalServerError{}
 }
 
-/* PostDashboardInternalServerError describes a response with status code 500, with default header values.
+/*
+PostDashboardInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

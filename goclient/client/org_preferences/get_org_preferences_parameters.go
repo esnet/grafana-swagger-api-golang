@@ -52,10 +52,12 @@ func NewGetOrgPreferencesParamsWithHTTPClient(client *http.Client) *GetOrgPrefer
 	}
 }
 
-/* GetOrgPreferencesParams contains all the parameters to send to the API endpoint
-   for the get org preferences operation.
+/*
+GetOrgPreferencesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org preferences operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgPreferencesParams struct {
 	timeout    time.Duration

@@ -53,10 +53,12 @@ func NewRemoveTeamRoleParamsWithHTTPClient(client *http.Client) *RemoveTeamRoleP
 	}
 }
 
-/* RemoveTeamRoleParams contains all the parameters to send to the API endpoint
-   for the remove team role operation.
+/*
+RemoveTeamRoleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the remove team role operation.
+
+	Typically these are written to a http.Request.
 */
 type RemoveTeamRoleParams struct {
 

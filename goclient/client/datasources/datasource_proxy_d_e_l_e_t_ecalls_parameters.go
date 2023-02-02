@@ -52,10 +52,12 @@ func NewDatasourceProxyDELETEcallsParamsWithHTTPClient(client *http.Client) *Dat
 	}
 }
 
-/* DatasourceProxyDELETEcallsParams contains all the parameters to send to the API endpoint
-   for the datasource proxy d e l e t ecalls operation.
+/*
+DatasourceProxyDELETEcallsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the datasource proxy d e l e t ecalls operation.
+
+	Typically these are written to a http.Request.
 */
 type DatasourceProxyDELETEcallsParams struct {
 

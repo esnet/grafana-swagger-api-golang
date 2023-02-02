@@ -55,10 +55,12 @@ func NewAddTeamRoleParamsWithHTTPClient(client *http.Client) *AddTeamRoleParams 
 	}
 }
 
-/* AddTeamRoleParams contains all the parameters to send to the API endpoint
-   for the add team role operation.
+/*
+AddTeamRoleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add team role operation.
+
+	Typically these are written to a http.Request.
 */
 type AddTeamRoleParams struct {
 

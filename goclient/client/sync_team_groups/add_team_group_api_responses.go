@@ -69,7 +69,8 @@ func NewAddTeamGroupAPIOK() *AddTeamGroupAPIOK {
 	return &AddTeamGroupAPIOK{}
 }
 
-/* AddTeamGroupAPIOK describes a response with status code 200, with default header values.
+/*
+AddTeamGroupAPIOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewAddTeamGroupAPIBadRequest() *AddTeamGroupAPIBadRequest {
 	return &AddTeamGroupAPIBadRequest{}
 }
 
-/* AddTeamGroupAPIBadRequest describes a response with status code 400, with default header values.
+/*
+AddTeamGroupAPIBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAddTeamGroupAPIUnauthorized() *AddTeamGroupAPIUnauthorized {
 	return &AddTeamGroupAPIUnauthorized{}
 }
 
-/* AddTeamGroupAPIUnauthorized describes a response with status code 401, with default header values.
+/*
+AddTeamGroupAPIUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAddTeamGroupAPIForbidden() *AddTeamGroupAPIForbidden {
 	return &AddTeamGroupAPIForbidden{}
 }
 
-/* AddTeamGroupAPIForbidden describes a response with status code 403, with default header values.
+/*
+AddTeamGroupAPIForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAddTeamGroupAPINotFound() *AddTeamGroupAPINotFound {
 	return &AddTeamGroupAPINotFound{}
 }
 
-/* AddTeamGroupAPINotFound describes a response with status code 404, with default header values.
+/*
+AddTeamGroupAPINotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewAddTeamGroupAPIInternalServerError() *AddTeamGroupAPIInternalServerError
 	return &AddTeamGroupAPIInternalServerError{}
 }
 
-/* AddTeamGroupAPIInternalServerError describes a response with status code 500, with default header values.
+/*
+AddTeamGroupAPIInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

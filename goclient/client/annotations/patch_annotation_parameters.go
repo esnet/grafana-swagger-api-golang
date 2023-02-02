@@ -54,10 +54,12 @@ func NewPatchAnnotationParamsWithHTTPClient(client *http.Client) *PatchAnnotatio
 	}
 }
 
-/* PatchAnnotationParams contains all the parameters to send to the API endpoint
-   for the patch annotation operation.
+/*
+PatchAnnotationParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the patch annotation operation.
+
+	Typically these are written to a http.Request.
 */
 type PatchAnnotationParams struct {
 

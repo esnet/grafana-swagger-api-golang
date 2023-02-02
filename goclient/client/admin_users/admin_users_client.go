@@ -56,9 +56,10 @@ type ClientService interface {
 }
 
 /*
-  AdminCreateUser creates new user
+	AdminCreateUser creates new user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.
+	If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:create`.
+
 Note that OrgId is an optional parameter that can be used to assign a new user to a different organization when `auto_assign_org` is set to `true`.
 */
 func (a *Client) AdminCreateUser(params *AdminCreateUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminCreateUserOK, error) {
@@ -98,9 +99,9 @@ func (a *Client) AdminCreateUser(params *AdminCreateUserParams, authInfo runtime
 }
 
 /*
-  AdminDeleteUser deletes global user
+AdminDeleteUser deletes global user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:delete` and scope `global.users:*`.
 */
 func (a *Client) AdminDeleteUser(params *AdminDeleteUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminDeleteUserOK, error) {
 	// TODO: Validate the params before sending
@@ -139,9 +140,9 @@ func (a *Client) AdminDeleteUser(params *AdminDeleteUserParams, authInfo runtime
 }
 
 /*
-  AdminDisableUser disables user
+AdminDisableUser disables user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:disable` and scope `global.users:1` (userIDScope).
 */
 func (a *Client) AdminDisableUser(params *AdminDisableUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminDisableUserOK, error) {
 	// TODO: Validate the params before sending
@@ -180,9 +181,9 @@ func (a *Client) AdminDisableUser(params *AdminDisableUserParams, authInfo runti
 }
 
 /*
-  AdminEnableUser enables user
+AdminEnableUser enables user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users:enable` and scope `global.users:1` (userIDScope).
 */
 func (a *Client) AdminEnableUser(params *AdminEnableUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminEnableUserOK, error) {
 	// TODO: Validate the params before sending
@@ -221,9 +222,9 @@ func (a *Client) AdminEnableUser(params *AdminEnableUserParams, authInfo runtime
 }
 
 /*
-  AdminGetUserAuthTokens returns a list of all auth tokens devices that the user currently have logged in from
+AdminGetUserAuthTokens returns a list of all auth tokens devices that the user currently have logged in from
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:list` and scope `global.users:*`.
 */
 func (a *Client) AdminGetUserAuthTokens(params *AdminGetUserAuthTokensParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminGetUserAuthTokensOK, error) {
 	// TODO: Validate the params before sending
@@ -262,9 +263,9 @@ func (a *Client) AdminGetUserAuthTokens(params *AdminGetUserAuthTokensParams, au
 }
 
 /*
-  AdminLogoutUser logouts user revokes all auth tokens devices for the user user of issued auth tokens devices will no longer be logged in and will be required to authenticate again upon next activity
+AdminLogoutUser logouts user revokes all auth tokens devices for the user user of issued auth tokens devices will no longer be logged in and will be required to authenticate again upon next activity
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.logout` and scope `global.users:*`.
 */
 func (a *Client) AdminLogoutUser(params *AdminLogoutUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminLogoutUserOK, error) {
 	// TODO: Validate the params before sending
@@ -303,9 +304,10 @@ func (a *Client) AdminLogoutUser(params *AdminLogoutUserParams, authInfo runtime
 }
 
 /*
-  AdminRevokeUserAuthToken revokes auth token for user
+	AdminRevokeUserAuthToken revokes auth token for user
 
-  Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.
+	Revokes the given auth token (device) for the user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.authtoken:update` and scope `global.users:*`.
 */
 func (a *Client) AdminRevokeUserAuthToken(params *AdminRevokeUserAuthTokenParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminRevokeUserAuthTokenOK, error) {
@@ -345,9 +347,9 @@ func (a *Client) AdminRevokeUserAuthToken(params *AdminRevokeUserAuthTokenParams
 }
 
 /*
-  AdminUpdateUserPassword sets password for user
+AdminUpdateUserPassword sets password for user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.password:update` and scope `global.users:*`.
 */
 func (a *Client) AdminUpdateUserPassword(params *AdminUpdateUserPasswordParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminUpdateUserPasswordOK, error) {
 	// TODO: Validate the params before sending
@@ -386,9 +388,10 @@ func (a *Client) AdminUpdateUserPassword(params *AdminUpdateUserPasswordParams, 
 }
 
 /*
-  AdminUpdateUserPermissions sets permissions for user
+	AdminUpdateUserPermissions sets permissions for user
 
-  Only works with Basic Authentication (username and password). See introduction for an explanation.
+	Only works with Basic Authentication (username and password). See introduction for an explanation.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.permissions:update` and scope `global.users:*`.
 */
 func (a *Client) AdminUpdateUserPermissions(params *AdminUpdateUserPermissionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AdminUpdateUserPermissionsOK, error) {
@@ -428,9 +431,9 @@ func (a *Client) AdminUpdateUserPermissions(params *AdminUpdateUserPermissionsPa
 }
 
 /*
-  GetUserQuota fetches user quota
+GetUserQuota fetches user quota
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:list` and scope `global.users:1` (userIDScope).
 */
 func (a *Client) GetUserQuota(params *GetUserQuotaParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserQuotaOK, error) {
 	// TODO: Validate the params before sending
@@ -469,9 +472,9 @@ func (a *Client) GetUserQuota(params *GetUserQuotaParams, authInfo runtime.Clien
 }
 
 /*
-  UpdateUserQuota updates user quota
+UpdateUserQuota updates user quota
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `users.quotas:update` and scope `global.users:1` (userIDScope).
 */
 func (a *Client) UpdateUserQuota(params *UpdateUserQuotaParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateUserQuotaOK, error) {
 	// TODO: Validate the params before sending

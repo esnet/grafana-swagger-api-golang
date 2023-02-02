@@ -63,7 +63,8 @@ func NewGetRecordingRuleWriteTargetOK() *GetRecordingRuleWriteTargetOK {
 	return &GetRecordingRuleWriteTargetOK{}
 }
 
-/* GetRecordingRuleWriteTargetOK describes a response with status code 200, with default header values.
+/*
+GetRecordingRuleWriteTargetOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewGetRecordingRuleWriteTargetUnauthorized() *GetRecordingRuleWriteTargetUn
 	return &GetRecordingRuleWriteTargetUnauthorized{}
 }
 
-/* GetRecordingRuleWriteTargetUnauthorized describes a response with status code 401, with default header values.
+/*
+GetRecordingRuleWriteTargetUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetRecordingRuleWriteTargetForbidden() *GetRecordingRuleWriteTargetForbi
 	return &GetRecordingRuleWriteTargetForbidden{}
 }
 
-/* GetRecordingRuleWriteTargetForbidden describes a response with status code 403, with default header values.
+/*
+GetRecordingRuleWriteTargetForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetRecordingRuleWriteTargetNotFound() *GetRecordingRuleWriteTargetNotFou
 	return &GetRecordingRuleWriteTargetNotFound{}
 }
 
-/* GetRecordingRuleWriteTargetNotFound describes a response with status code 404, with default header values.
+/*
+GetRecordingRuleWriteTargetNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetRecordingRuleWriteTargetInternalServerError() *GetRecordingRuleWriteT
 	return &GetRecordingRuleWriteTargetInternalServerError{}
 }
 
-/* GetRecordingRuleWriteTargetInternalServerError describes a response with status code 500, with default header values.
+/*
+GetRecordingRuleWriteTargetInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

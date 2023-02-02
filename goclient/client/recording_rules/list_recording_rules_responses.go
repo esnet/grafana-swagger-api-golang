@@ -63,7 +63,8 @@ func NewListRecordingRulesOK() *ListRecordingRulesOK {
 	return &ListRecordingRulesOK{}
 }
 
-/* ListRecordingRulesOK describes a response with status code 200, with default header values.
+/*
+ListRecordingRulesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewListRecordingRulesUnauthorized() *ListRecordingRulesUnauthorized {
 	return &ListRecordingRulesUnauthorized{}
 }
 
-/* ListRecordingRulesUnauthorized describes a response with status code 401, with default header values.
+/*
+ListRecordingRulesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewListRecordingRulesForbidden() *ListRecordingRulesForbidden {
 	return &ListRecordingRulesForbidden{}
 }
 
-/* ListRecordingRulesForbidden describes a response with status code 403, with default header values.
+/*
+ListRecordingRulesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewListRecordingRulesNotFound() *ListRecordingRulesNotFound {
 	return &ListRecordingRulesNotFound{}
 }
 
-/* ListRecordingRulesNotFound describes a response with status code 404, with default header values.
+/*
+ListRecordingRulesNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewListRecordingRulesInternalServerError() *ListRecordingRulesInternalServe
 	return &ListRecordingRulesInternalServerError{}
 }
 
-/* ListRecordingRulesInternalServerError describes a response with status code 500, with default header values.
+/*
+ListRecordingRulesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

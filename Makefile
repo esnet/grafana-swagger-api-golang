@@ -5,6 +5,7 @@ include .bingo/Variables.mk
 GRAFANA_TARGET_VERSION ?= main
 SWAGGER_SPEC_LOCAL ?= $$(pwd)/../grafana/public/api-merged.json
 
+
 generate: $(SWAGGER)
 	mkdir -p ./goclient
 	$(SWAGGER) generate client \

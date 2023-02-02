@@ -52,10 +52,12 @@ func NewListRecordingRulesParamsWithHTTPClient(client *http.Client) *ListRecordi
 	}
 }
 
-/* ListRecordingRulesParams contains all the parameters to send to the API endpoint
-   for the list recording rules operation.
+/*
+ListRecordingRulesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the list recording rules operation.
+
+	Typically these are written to a http.Request.
 */
 type ListRecordingRulesParams struct {
 	timeout    time.Duration

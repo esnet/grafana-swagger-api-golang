@@ -52,10 +52,12 @@ func NewGetLibraryElementByUIDParamsWithHTTPClient(client *http.Client) *GetLibr
 	}
 }
 
-/* GetLibraryElementByUIDParams contains all the parameters to send to the API endpoint
-   for the get library element by UID operation.
+/*
+GetLibraryElementByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get library element by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetLibraryElementByUIDParams struct {
 

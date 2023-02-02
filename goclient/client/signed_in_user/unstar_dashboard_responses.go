@@ -63,7 +63,8 @@ func NewUnstarDashboardOK() *UnstarDashboardOK {
 	return &UnstarDashboardOK{}
 }
 
-/* UnstarDashboardOK describes a response with status code 200, with default header values.
+/*
+UnstarDashboardOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUnstarDashboardBadRequest() *UnstarDashboardBadRequest {
 	return &UnstarDashboardBadRequest{}
 }
 
-/* UnstarDashboardBadRequest describes a response with status code 400, with default header values.
+/*
+UnstarDashboardBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUnstarDashboardUnauthorized() *UnstarDashboardUnauthorized {
 	return &UnstarDashboardUnauthorized{}
 }
 
-/* UnstarDashboardUnauthorized describes a response with status code 401, with default header values.
+/*
+UnstarDashboardUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUnstarDashboardForbidden() *UnstarDashboardForbidden {
 	return &UnstarDashboardForbidden{}
 }
 
-/* UnstarDashboardForbidden describes a response with status code 403, with default header values.
+/*
+UnstarDashboardForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUnstarDashboardInternalServerError() *UnstarDashboardInternalServerError
 	return &UnstarDashboardInternalServerError{}
 }
 
-/* UnstarDashboardInternalServerError describes a response with status code 500, with default header values.
+/*
+UnstarDashboardInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

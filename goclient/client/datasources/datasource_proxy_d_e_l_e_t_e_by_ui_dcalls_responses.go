@@ -69,7 +69,8 @@ func NewDatasourceProxyDELETEByUIDcallsAccepted() *DatasourceProxyDELETEByUIDcal
 	return &DatasourceProxyDELETEByUIDcallsAccepted{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsAccepted describes a response with status code 202, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsAccepted describes a response with status code 202, with default header values.
 
 (empty)
 */
@@ -90,7 +91,8 @@ func NewDatasourceProxyDELETEByUIDcallsBadRequest() *DatasourceProxyDELETEByUIDc
 	return &DatasourceProxyDELETEByUIDcallsBadRequest{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -122,7 +124,8 @@ func NewDatasourceProxyDELETEByUIDcallsUnauthorized() *DatasourceProxyDELETEByUI
 	return &DatasourceProxyDELETEByUIDcallsUnauthorized{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -154,7 +157,8 @@ func NewDatasourceProxyDELETEByUIDcallsForbidden() *DatasourceProxyDELETEByUIDca
 	return &DatasourceProxyDELETEByUIDcallsForbidden{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -186,7 +190,8 @@ func NewDatasourceProxyDELETEByUIDcallsNotFound() *DatasourceProxyDELETEByUIDcal
 	return &DatasourceProxyDELETEByUIDcallsNotFound{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -218,7 +223,8 @@ func NewDatasourceProxyDELETEByUIDcallsInternalServerError() *DatasourceProxyDEL
 	return &DatasourceProxyDELETEByUIDcallsInternalServerError{}
 }
 
-/* DatasourceProxyDELETEByUIDcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyDELETEByUIDcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

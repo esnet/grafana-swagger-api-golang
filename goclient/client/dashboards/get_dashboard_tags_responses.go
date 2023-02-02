@@ -51,7 +51,8 @@ func NewGetDashboardTagsOK() *GetDashboardTagsOK {
 	return &GetDashboardTagsOK{}
 }
 
-/* GetDashboardTagsOK describes a response with status code 200, with default header values.
+/*
+GetDashboardTagsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -81,7 +82,8 @@ func NewGetDashboardTagsUnauthorized() *GetDashboardTagsUnauthorized {
 	return &GetDashboardTagsUnauthorized{}
 }
 
-/* GetDashboardTagsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDashboardTagsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -113,7 +115,8 @@ func NewGetDashboardTagsInternalServerError() *GetDashboardTagsInternalServerErr
 	return &GetDashboardTagsInternalServerError{}
 }
 
-/* GetDashboardTagsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDashboardTagsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

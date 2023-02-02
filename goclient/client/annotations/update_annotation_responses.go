@@ -63,7 +63,8 @@ func NewUpdateAnnotationOK() *UpdateAnnotationOK {
 	return &UpdateAnnotationOK{}
 }
 
-/* UpdateAnnotationOK describes a response with status code 200, with default header values.
+/*
+UpdateAnnotationOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUpdateAnnotationBadRequest() *UpdateAnnotationBadRequest {
 	return &UpdateAnnotationBadRequest{}
 }
 
-/* UpdateAnnotationBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateAnnotationBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUpdateAnnotationUnauthorized() *UpdateAnnotationUnauthorized {
 	return &UpdateAnnotationUnauthorized{}
 }
 
-/* UpdateAnnotationUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateAnnotationUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUpdateAnnotationForbidden() *UpdateAnnotationForbidden {
 	return &UpdateAnnotationForbidden{}
 }
 
-/* UpdateAnnotationForbidden describes a response with status code 403, with default header values.
+/*
+UpdateAnnotationForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUpdateAnnotationInternalServerError() *UpdateAnnotationInternalServerErr
 	return &UpdateAnnotationInternalServerError{}
 }
 
-/* UpdateAnnotationInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateAnnotationInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

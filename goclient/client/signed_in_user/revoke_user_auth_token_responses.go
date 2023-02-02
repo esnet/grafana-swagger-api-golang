@@ -63,7 +63,8 @@ func NewRevokeUserAuthTokenOK() *RevokeUserAuthTokenOK {
 	return &RevokeUserAuthTokenOK{}
 }
 
-/* RevokeUserAuthTokenOK describes a response with status code 200, with default header values.
+/*
+RevokeUserAuthTokenOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewRevokeUserAuthTokenBadRequest() *RevokeUserAuthTokenBadRequest {
 	return &RevokeUserAuthTokenBadRequest{}
 }
 
-/* RevokeUserAuthTokenBadRequest describes a response with status code 400, with default header values.
+/*
+RevokeUserAuthTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewRevokeUserAuthTokenUnauthorized() *RevokeUserAuthTokenUnauthorized {
 	return &RevokeUserAuthTokenUnauthorized{}
 }
 
-/* RevokeUserAuthTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+RevokeUserAuthTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewRevokeUserAuthTokenForbidden() *RevokeUserAuthTokenForbidden {
 	return &RevokeUserAuthTokenForbidden{}
 }
 
-/* RevokeUserAuthTokenForbidden describes a response with status code 403, with default header values.
+/*
+RevokeUserAuthTokenForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewRevokeUserAuthTokenInternalServerError() *RevokeUserAuthTokenInternalSer
 	return &RevokeUserAuthTokenInternalServerError{}
 }
 
-/* RevokeUserAuthTokenInternalServerError describes a response with status code 500, with default header values.
+/*
+RevokeUserAuthTokenInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

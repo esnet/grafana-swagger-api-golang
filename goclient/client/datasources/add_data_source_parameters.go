@@ -54,10 +54,12 @@ func NewAddDataSourceParamsWithHTTPClient(client *http.Client) *AddDataSourcePar
 	}
 }
 
-/* AddDataSourceParams contains all the parameters to send to the API endpoint
-   for the add data source operation.
+/*
+AddDataSourceParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add data source operation.
+
+	Typically these are written to a http.Request.
 */
 type AddDataSourceParams struct {
 

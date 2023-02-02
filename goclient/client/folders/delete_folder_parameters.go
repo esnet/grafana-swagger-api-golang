@@ -53,10 +53,12 @@ func NewDeleteFolderParamsWithHTTPClient(client *http.Client) *DeleteFolderParam
 	}
 }
 
-/* DeleteFolderParams contains all the parameters to send to the API endpoint
-   for the delete folder operation.
+/*
+DeleteFolderParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete folder operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteFolderParams struct {
 

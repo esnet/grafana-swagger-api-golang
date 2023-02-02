@@ -53,10 +53,12 @@ func NewGetDashboardVersionByIDParamsWithHTTPClient(client *http.Client) *GetDas
 	}
 }
 
-/* GetDashboardVersionByIDParams contains all the parameters to send to the API endpoint
-   for the get dashboard version by ID operation.
+/*
+GetDashboardVersionByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard version by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardVersionByIDParams struct {
 

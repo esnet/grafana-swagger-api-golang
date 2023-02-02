@@ -91,6 +91,10 @@ func (m *LegacyAlert) Validate(formats strfmt.Registry) error {
 		res = append(res, err)
 	}
 
+	if err := m.validateFor(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateNewStateDate(formats); err != nil {
 		res = append(res, err)
 	}
@@ -115,6 +119,23 @@ func (m *LegacyAlert) validateCreated(formats strfmt.Registry) error {
 	}
 
 	if err := validate.FormatOf("Created", "body", "date-time", m.Created.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *LegacyAlert) validateFor(formats strfmt.Registry) error {
+	if swag.IsZero(m.For) { // not required
+		return nil
+	}
+
+	if err := m.For.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("For")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("For")
+		}
 		return err
 	}
 
@@ -166,6 +187,10 @@ func (m *LegacyAlert) validateUpdated(formats strfmt.Registry) error {
 func (m *LegacyAlert) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateFor(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateState(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -173,6 +198,20 @@ func (m *LegacyAlert) ContextValidate(ctx context.Context, formats strfmt.Regist
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *LegacyAlert) contextValidateFor(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.For.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("For")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("For")
+		}
+		return err
+	}
+
 	return nil
 }
 

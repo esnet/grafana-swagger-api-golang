@@ -52,6 +52,9 @@ type CreateOrUpdateConfigCmd struct {
 	// reply to
 	ReplyTo string `json:"replyTo,omitempty"`
 
+	// scale factor
+	ScaleFactor int64 `json:"scaleFactor,omitempty"`
+
 	// schedule
 	Schedule *ScheduleDTO `json:"schedule,omitempty"`
 

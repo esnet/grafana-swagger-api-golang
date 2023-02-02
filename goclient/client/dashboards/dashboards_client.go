@@ -50,7 +50,7 @@ type ClientService interface {
 }
 
 /*
-  CalculateDashboardDiff performs diff on two dashboards
+CalculateDashboardDiff performs diff on two dashboards
 */
 func (a *Client) CalculateDashboardDiff(params *CalculateDashboardDiffParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CalculateDashboardDiffOK, error) {
 	// TODO: Validate the params before sending
@@ -89,9 +89,9 @@ func (a *Client) CalculateDashboardDiff(params *CalculateDashboardDiffParams, au
 }
 
 /*
-  DeleteDashboardByUID deletes dashboard by uid
+DeleteDashboardByUID deletes dashboard by uid
 
-  Will delete the dashboard given the specified unique identifier (uid).
+Will delete the dashboard given the specified unique identifier (uid).
 */
 func (a *Client) DeleteDashboardByUID(params *DeleteDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDashboardByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -130,9 +130,9 @@ func (a *Client) DeleteDashboardByUID(params *DeleteDashboardByUIDParams, authIn
 }
 
 /*
-  GetDashboardByUID gets dashboard by uid
+GetDashboardByUID gets dashboard by uid
 
-  Will return the dashboard given the dashboard unique identifier (uid).
+Will return the dashboard given the dashboard unique identifier (uid).
 */
 func (a *Client) GetDashboardByUID(params *GetDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -171,7 +171,7 @@ func (a *Client) GetDashboardByUID(params *GetDashboardByUIDParams, authInfo run
 }
 
 /*
-  GetDashboardTags gets all dashboards tags of an organisation
+GetDashboardTags gets all dashboards tags of an organisation
 */
 func (a *Client) GetDashboardTags(params *GetDashboardTagsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardTagsOK, error) {
 	// TODO: Validate the params before sending
@@ -210,7 +210,7 @@ func (a *Client) GetDashboardTags(params *GetDashboardTagsParams, authInfo runti
 }
 
 /*
-  GetHomeDashboard gets home dashboard
+GetHomeDashboard gets home dashboard
 */
 func (a *Client) GetHomeDashboard(params *GetHomeDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetHomeDashboardOK, error) {
 	// TODO: Validate the params before sending
@@ -249,7 +249,7 @@ func (a *Client) GetHomeDashboard(params *GetHomeDashboardParams, authInfo runti
 }
 
 /*
-  ImportDashboard imports dashboard
+ImportDashboard imports dashboard
 */
 func (a *Client) ImportDashboard(params *ImportDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ImportDashboardOK, error) {
 	// TODO: Validate the params before sending
@@ -288,9 +288,9 @@ func (a *Client) ImportDashboard(params *ImportDashboardParams, authInfo runtime
 }
 
 /*
-  PostDashboard creates update dashboard
+PostDashboard creates update dashboard
 
-  Creates a new dashboard or updates an existing dashboard.
+Creates a new dashboard or updates an existing dashboard.
 */
 func (a *Client) PostDashboard(params *PostDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostDashboardOK, error) {
 	// TODO: Validate the params before sending
@@ -329,7 +329,7 @@ func (a *Client) PostDashboard(params *PostDashboardParams, authInfo runtime.Cli
 }
 
 /*
-  TrimDashboard trims defaults from dashboard
+TrimDashboard trims defaults from dashboard
 */
 func (a *Client) TrimDashboard(params *TrimDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TrimDashboardOK, error) {
 	// TODO: Validate the params before sending

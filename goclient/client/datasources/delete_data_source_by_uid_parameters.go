@@ -52,10 +52,12 @@ func NewDeleteDataSourceByUIDParamsWithHTTPClient(client *http.Client) *DeleteDa
 	}
 }
 
-/* DeleteDataSourceByUIDParams contains all the parameters to send to the API endpoint
-   for the delete data source by UID operation.
+/*
+DeleteDataSourceByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete data source by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteDataSourceByUIDParams struct {
 

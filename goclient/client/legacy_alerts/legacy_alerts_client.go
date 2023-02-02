@@ -44,9 +44,10 @@ type ClientService interface {
 }
 
 /*
-  GetAlertByID gets alert by ID
+	GetAlertByID gets alert by ID
 
-  “evalMatches” data in the response is cached in the db when and only when the state of the alert changes (e.g. transitioning from “ok” to “alerting” state).
+	“evalMatches” data in the response is cached in the db when and only when the state of the alert changes (e.g. transitioning from “ok” to “alerting” state).
+
 If data from one server triggers the alert first and, before that server is seen leaving alerting state, a second server also enters a state that would trigger the alert, the second server will not be visible in “evalMatches” data.
 */
 func (a *Client) GetAlertByID(params *GetAlertByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertByIDOK, error) {
@@ -86,7 +87,7 @@ func (a *Client) GetAlertByID(params *GetAlertByIDParams, authInfo runtime.Clien
 }
 
 /*
-  GetAlerts gets legacy alerts
+GetAlerts gets legacy alerts
 */
 func (a *Client) GetAlerts(params *GetAlertsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertsOK, error) {
 	// TODO: Validate the params before sending
@@ -125,7 +126,7 @@ func (a *Client) GetAlerts(params *GetAlertsParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  GetDashboardStates gets alert states for a dashboard
+GetDashboardStates gets alert states for a dashboard
 */
 func (a *Client) GetDashboardStates(params *GetDashboardStatesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardStatesOK, error) {
 	// TODO: Validate the params before sending
@@ -164,7 +165,7 @@ func (a *Client) GetDashboardStates(params *GetDashboardStatesParams, authInfo r
 }
 
 /*
-  PauseAlert pauses unpause alert by id
+PauseAlert pauses unpause alert by id
 */
 func (a *Client) PauseAlert(params *PauseAlertParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PauseAlertOK, error) {
 	// TODO: Validate the params before sending
@@ -203,7 +204,7 @@ func (a *Client) PauseAlert(params *PauseAlertParams, authInfo runtime.ClientAut
 }
 
 /*
-  TestAlert tests alert
+TestAlert tests alert
 */
 func (a *Client) TestAlert(params *TestAlertParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TestAlertOK, error) {
 	// TODO: Validate the params before sending

@@ -54,10 +54,12 @@ func NewQueryMetricsWithExpressionsParamsWithHTTPClient(client *http.Client) *Qu
 	}
 }
 
-/* QueryMetricsWithExpressionsParams contains all the parameters to send to the API endpoint
-   for the query metrics with expressions operation.
+/*
+QueryMetricsWithExpressionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the query metrics with expressions operation.
+
+	Typically these are written to a http.Request.
 */
 type QueryMetricsWithExpressionsParams struct {
 

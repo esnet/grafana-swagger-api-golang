@@ -63,7 +63,8 @@ func NewStarDashboardOK() *StarDashboardOK {
 	return &StarDashboardOK{}
 }
 
-/* StarDashboardOK describes a response with status code 200, with default header values.
+/*
+StarDashboardOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewStarDashboardBadRequest() *StarDashboardBadRequest {
 	return &StarDashboardBadRequest{}
 }
 
-/* StarDashboardBadRequest describes a response with status code 400, with default header values.
+/*
+StarDashboardBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewStarDashboardUnauthorized() *StarDashboardUnauthorized {
 	return &StarDashboardUnauthorized{}
 }
 
-/* StarDashboardUnauthorized describes a response with status code 401, with default header values.
+/*
+StarDashboardUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewStarDashboardForbidden() *StarDashboardForbidden {
 	return &StarDashboardForbidden{}
 }
 
-/* StarDashboardForbidden describes a response with status code 403, with default header values.
+/*
+StarDashboardForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewStarDashboardInternalServerError() *StarDashboardInternalServerError {
 	return &StarDashboardInternalServerError{}
 }
 
-/* StarDashboardInternalServerError describes a response with status code 500, with default header values.
+/*
+StarDashboardInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

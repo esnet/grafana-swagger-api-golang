@@ -15,7 +15,8 @@ import (
 // Description:
 // `0` - No Access
 // `1` - Query
-// Enum: 0,1
+// `2` - Edit
+// Enum: 0,1,2
 //
 // swagger:model DsPermissionType
 type DsPermissionType int64

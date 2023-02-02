@@ -52,10 +52,12 @@ func NewGetDashboardSnapshotParamsWithHTTPClient(client *http.Client) *GetDashbo
 	}
 }
 
-/* GetDashboardSnapshotParams contains all the parameters to send to the API endpoint
-   for the get dashboard snapshot operation.
+/*
+GetDashboardSnapshotParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard snapshot operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardSnapshotParams struct {
 

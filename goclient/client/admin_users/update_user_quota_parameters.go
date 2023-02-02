@@ -55,10 +55,12 @@ func NewUpdateUserQuotaParamsWithHTTPClient(client *http.Client) *UpdateUserQuot
 	}
 }
 
-/* UpdateUserQuotaParams contains all the parameters to send to the API endpoint
-   for the update user quota operation.
+/*
+UpdateUserQuotaParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update user quota operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateUserQuotaParams struct {
 

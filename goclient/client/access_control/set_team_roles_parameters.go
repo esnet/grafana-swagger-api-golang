@@ -53,10 +53,12 @@ func NewSetTeamRolesParamsWithHTTPClient(client *http.Client) *SetTeamRolesParam
 	}
 }
 
-/* SetTeamRolesParams contains all the parameters to send to the API endpoint
-   for the set team roles operation.
+/*
+SetTeamRolesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the set team roles operation.
+
+	Typically these are written to a http.Request.
 */
 type SetTeamRolesParams struct {
 

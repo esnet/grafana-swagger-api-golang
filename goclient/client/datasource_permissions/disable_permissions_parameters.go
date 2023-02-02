@@ -52,10 +52,12 @@ func NewDisablePermissionsParamsWithHTTPClient(client *http.Client) *DisablePerm
 	}
 }
 
-/* DisablePermissionsParams contains all the parameters to send to the API endpoint
-   for the disable permissions operation.
+/*
+DisablePermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the disable permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type DisablePermissionsParams struct {
 

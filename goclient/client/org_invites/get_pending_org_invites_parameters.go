@@ -52,10 +52,12 @@ func NewGetPendingOrgInvitesParamsWithHTTPClient(client *http.Client) *GetPendin
 	}
 }
 
-/* GetPendingOrgInvitesParams contains all the parameters to send to the API endpoint
-   for the get pending org invites operation.
+/*
+GetPendingOrgInvitesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get pending org invites operation.
+
+	Typically these are written to a http.Request.
 */
 type GetPendingOrgInvitesParams struct {
 	timeout    time.Duration

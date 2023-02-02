@@ -52,10 +52,12 @@ func NewPostSLOParamsWithHTTPClient(client *http.Client) *PostSLOParams {
 	}
 }
 
-/* PostSLOParams contains all the parameters to send to the API endpoint
-   for the post s l o operation.
+/*
+PostSLOParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post s l o operation.
+
+	Typically these are written to a http.Request.
 */
 type PostSLOParams struct {
 

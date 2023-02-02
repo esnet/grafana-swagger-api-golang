@@ -45,7 +45,8 @@ func NewRefreshLicenseStatsOK() *RefreshLicenseStatsOK {
 	return &RefreshLicenseStatsOK{}
 }
 
-/* RefreshLicenseStatsOK describes a response with status code 200, with default header values.
+/*
+RefreshLicenseStatsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -77,7 +78,8 @@ func NewRefreshLicenseStatsInternalServerError() *RefreshLicenseStatsInternalSer
 	return &RefreshLicenseStatsInternalServerError{}
 }
 
-/* RefreshLicenseStatsInternalServerError describes a response with status code 500, with default header values.
+/*
+RefreshLicenseStatsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -51,7 +51,8 @@ func NewGetAlertByIDOK() *GetAlertByIDOK {
 	return &GetAlertByIDOK{}
 }
 
-/* GetAlertByIDOK describes a response with status code 200, with default header values.
+/*
+GetAlertByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetAlertByIDUnauthorized() *GetAlertByIDUnauthorized {
 	return &GetAlertByIDUnauthorized{}
 }
 
-/* GetAlertByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAlertByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetAlertByIDInternalServerError() *GetAlertByIDInternalServerError {
 	return &GetAlertByIDInternalServerError{}
 }
 
-/* GetAlertByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAlertByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

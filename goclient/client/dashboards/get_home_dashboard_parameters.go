@@ -52,10 +52,12 @@ func NewGetHomeDashboardParamsWithHTTPClient(client *http.Client) *GetHomeDashbo
 	}
 }
 
-/* GetHomeDashboardParams contains all the parameters to send to the API endpoint
-   for the get home dashboard operation.
+/*
+GetHomeDashboardParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get home dashboard operation.
+
+	Typically these are written to a http.Request.
 */
 type GetHomeDashboardParams struct {
 	timeout    time.Duration

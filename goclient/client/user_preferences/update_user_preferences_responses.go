@@ -57,7 +57,8 @@ func NewUpdateUserPreferencesOK() *UpdateUserPreferencesOK {
 	return &UpdateUserPreferencesOK{}
 }
 
-/* UpdateUserPreferencesOK describes a response with status code 200, with default header values.
+/*
+UpdateUserPreferencesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewUpdateUserPreferencesBadRequest() *UpdateUserPreferencesBadRequest {
 	return &UpdateUserPreferencesBadRequest{}
 }
 
-/* UpdateUserPreferencesBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateUserPreferencesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewUpdateUserPreferencesUnauthorized() *UpdateUserPreferencesUnauthorized {
 	return &UpdateUserPreferencesUnauthorized{}
 }
 
-/* UpdateUserPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateUserPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewUpdateUserPreferencesInternalServerError() *UpdateUserPreferencesInterna
 	return &UpdateUserPreferencesInternalServerError{}
 }
 
-/* UpdateUserPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateUserPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

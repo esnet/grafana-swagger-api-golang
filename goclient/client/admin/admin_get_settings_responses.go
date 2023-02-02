@@ -51,7 +51,8 @@ func NewAdminGetSettingsOK() *AdminGetSettingsOK {
 	return &AdminGetSettingsOK{}
 }
 
-/* AdminGetSettingsOK describes a response with status code 200, with default header values.
+/*
+AdminGetSettingsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -81,7 +82,8 @@ func NewAdminGetSettingsUnauthorized() *AdminGetSettingsUnauthorized {
 	return &AdminGetSettingsUnauthorized{}
 }
 
-/* AdminGetSettingsUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminGetSettingsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -113,7 +115,8 @@ func NewAdminGetSettingsForbidden() *AdminGetSettingsForbidden {
 	return &AdminGetSettingsForbidden{}
 }
 
-/* AdminGetSettingsForbidden describes a response with status code 403, with default header values.
+/*
+AdminGetSettingsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */

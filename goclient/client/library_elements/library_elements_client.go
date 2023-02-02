@@ -48,9 +48,9 @@ type ClientService interface {
 }
 
 /*
-  CreateLibraryElement creates library element
+CreateLibraryElement creates library element
 
-  Creates a new library element.
+Creates a new library element.
 */
 func (a *Client) CreateLibraryElement(params *CreateLibraryElementParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateLibraryElementOK, error) {
 	// TODO: Validate the params before sending
@@ -89,9 +89,10 @@ func (a *Client) CreateLibraryElement(params *CreateLibraryElementParams, authIn
 }
 
 /*
-  DeleteLibraryElementByUID deletes library element
+	DeleteLibraryElementByUID deletes library element
 
-  Deletes an existing library element as specified by the UID. This operation cannot be reverted.
+	Deletes an existing library element as specified by the UID. This operation cannot be reverted.
+
 You cannot delete a library element that is connected. This operation cannot be reverted.
 */
 func (a *Client) DeleteLibraryElementByUID(params *DeleteLibraryElementByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteLibraryElementByUIDOK, error) {
@@ -131,9 +132,9 @@ func (a *Client) DeleteLibraryElementByUID(params *DeleteLibraryElementByUIDPara
 }
 
 /*
-  GetLibraryElementByName gets library element by name
+GetLibraryElementByName gets library element by name
 
-  Returns a library element with the given name.
+Returns a library element with the given name.
 */
 func (a *Client) GetLibraryElementByName(params *GetLibraryElementByNameParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetLibraryElementByNameOK, error) {
 	// TODO: Validate the params before sending
@@ -172,9 +173,9 @@ func (a *Client) GetLibraryElementByName(params *GetLibraryElementByNameParams, 
 }
 
 /*
-  GetLibraryElementByUID gets library element by UID
+GetLibraryElementByUID gets library element by UID
 
-  Returns a library element with the given UID.
+Returns a library element with the given UID.
 */
 func (a *Client) GetLibraryElementByUID(params *GetLibraryElementByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetLibraryElementByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -213,9 +214,9 @@ func (a *Client) GetLibraryElementByUID(params *GetLibraryElementByUIDParams, au
 }
 
 /*
-  GetLibraryElementConnections gets library element connections
+GetLibraryElementConnections gets library element connections
 
-  Returns a list of connections for a library element based on the UID specified.
+Returns a list of connections for a library element based on the UID specified.
 */
 func (a *Client) GetLibraryElementConnections(params *GetLibraryElementConnectionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetLibraryElementConnectionsOK, error) {
 	// TODO: Validate the params before sending
@@ -254,9 +255,10 @@ func (a *Client) GetLibraryElementConnections(params *GetLibraryElementConnectio
 }
 
 /*
-  GetLibraryElements gets all library elements
+	GetLibraryElements gets all library elements
 
-  Returns a list of all library elements the authenticated user has permission to view.
+	Returns a list of all library elements the authenticated user has permission to view.
+
 Use the `perPage` query parameter to control the maximum number of library elements returned; the default limit is `100`.
 You can also use the `page` query parameter to fetch library elements from any page other than the first one.
 */
@@ -297,9 +299,9 @@ func (a *Client) GetLibraryElements(params *GetLibraryElementsParams, authInfo r
 }
 
 /*
-  UpdateLibraryElement updates library element
+UpdateLibraryElement updates library element
 
-  Updates an existing library element identified by uid.
+Updates an existing library element identified by uid.
 */
 func (a *Client) UpdateLibraryElement(params *UpdateLibraryElementParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateLibraryElementOK, error) {
 	// TODO: Validate the params before sending

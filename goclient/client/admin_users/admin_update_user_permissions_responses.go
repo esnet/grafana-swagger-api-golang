@@ -63,7 +63,8 @@ func NewAdminUpdateUserPermissionsOK() *AdminUpdateUserPermissionsOK {
 	return &AdminUpdateUserPermissionsOK{}
 }
 
-/* AdminUpdateUserPermissionsOK describes a response with status code 200, with default header values.
+/*
+AdminUpdateUserPermissionsOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewAdminUpdateUserPermissionsBadRequest() *AdminUpdateUserPermissionsBadReq
 	return &AdminUpdateUserPermissionsBadRequest{}
 }
 
-/* AdminUpdateUserPermissionsBadRequest describes a response with status code 400, with default header values.
+/*
+AdminUpdateUserPermissionsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewAdminUpdateUserPermissionsUnauthorized() *AdminUpdateUserPermissionsUnau
 	return &AdminUpdateUserPermissionsUnauthorized{}
 }
 
-/* AdminUpdateUserPermissionsUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminUpdateUserPermissionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewAdminUpdateUserPermissionsForbidden() *AdminUpdateUserPermissionsForbidd
 	return &AdminUpdateUserPermissionsForbidden{}
 }
 
-/* AdminUpdateUserPermissionsForbidden describes a response with status code 403, with default header values.
+/*
+AdminUpdateUserPermissionsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewAdminUpdateUserPermissionsInternalServerError() *AdminUpdateUserPermissi
 	return &AdminUpdateUserPermissionsInternalServerError{}
 }
 
-/* AdminUpdateUserPermissionsInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminUpdateUserPermissionsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

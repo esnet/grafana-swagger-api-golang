@@ -63,7 +63,8 @@ func NewRemoveOrgUserForCurrentOrgOK() *RemoveOrgUserForCurrentOrgOK {
 	return &RemoveOrgUserForCurrentOrgOK{}
 }
 
-/* RemoveOrgUserForCurrentOrgOK describes a response with status code 200, with default header values.
+/*
+RemoveOrgUserForCurrentOrgOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewRemoveOrgUserForCurrentOrgBadRequest() *RemoveOrgUserForCurrentOrgBadReq
 	return &RemoveOrgUserForCurrentOrgBadRequest{}
 }
 
-/* RemoveOrgUserForCurrentOrgBadRequest describes a response with status code 400, with default header values.
+/*
+RemoveOrgUserForCurrentOrgBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewRemoveOrgUserForCurrentOrgUnauthorized() *RemoveOrgUserForCurrentOrgUnau
 	return &RemoveOrgUserForCurrentOrgUnauthorized{}
 }
 
-/* RemoveOrgUserForCurrentOrgUnauthorized describes a response with status code 401, with default header values.
+/*
+RemoveOrgUserForCurrentOrgUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewRemoveOrgUserForCurrentOrgForbidden() *RemoveOrgUserForCurrentOrgForbidd
 	return &RemoveOrgUserForCurrentOrgForbidden{}
 }
 
-/* RemoveOrgUserForCurrentOrgForbidden describes a response with status code 403, with default header values.
+/*
+RemoveOrgUserForCurrentOrgForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewRemoveOrgUserForCurrentOrgInternalServerError() *RemoveOrgUserForCurrent
 	return &RemoveOrgUserForCurrentOrgInternalServerError{}
 }
 
-/* RemoveOrgUserForCurrentOrgInternalServerError describes a response with status code 500, with default header values.
+/*
+RemoveOrgUserForCurrentOrgInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

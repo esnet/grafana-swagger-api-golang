@@ -52,10 +52,12 @@ func NewRefreshLicenseStatsParamsWithHTTPClient(client *http.Client) *RefreshLic
 	}
 }
 
-/* RefreshLicenseStatsParams contains all the parameters to send to the API endpoint
-   for the refresh license stats operation.
+/*
+RefreshLicenseStatsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the refresh license stats operation.
+
+	Typically these are written to a http.Request.
 */
 type RefreshLicenseStatsParams struct {
 	timeout    time.Duration

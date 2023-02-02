@@ -52,10 +52,12 @@ func NewAdminProvisioningReloadDatasourcesParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/* AdminProvisioningReloadDatasourcesParams contains all the parameters to send to the API endpoint
-   for the admin provisioning reload datasources operation.
+/*
+AdminProvisioningReloadDatasourcesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin provisioning reload datasources operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminProvisioningReloadDatasourcesParams struct {
 	timeout    time.Duration

@@ -52,10 +52,12 @@ func NewStarQueryParamsWithHTTPClient(client *http.Client) *StarQueryParams {
 	}
 }
 
-/* StarQueryParams contains all the parameters to send to the API endpoint
-   for the star query operation.
+/*
+StarQueryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the star query operation.
+
+	Typically these are written to a http.Request.
 */
 type StarQueryParams struct {
 

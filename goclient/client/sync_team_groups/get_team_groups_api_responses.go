@@ -69,7 +69,8 @@ func NewGetTeamGroupsAPIOK() *GetTeamGroupsAPIOK {
 	return &GetTeamGroupsAPIOK{}
 }
 
-/* GetTeamGroupsAPIOK describes a response with status code 200, with default header values.
+/*
+GetTeamGroupsAPIOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -99,7 +100,8 @@ func NewGetTeamGroupsAPIBadRequest() *GetTeamGroupsAPIBadRequest {
 	return &GetTeamGroupsAPIBadRequest{}
 }
 
-/* GetTeamGroupsAPIBadRequest describes a response with status code 400, with default header values.
+/*
+GetTeamGroupsAPIBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -131,7 +133,8 @@ func NewGetTeamGroupsAPIUnauthorized() *GetTeamGroupsAPIUnauthorized {
 	return &GetTeamGroupsAPIUnauthorized{}
 }
 
-/* GetTeamGroupsAPIUnauthorized describes a response with status code 401, with default header values.
+/*
+GetTeamGroupsAPIUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -163,7 +166,8 @@ func NewGetTeamGroupsAPIForbidden() *GetTeamGroupsAPIForbidden {
 	return &GetTeamGroupsAPIForbidden{}
 }
 
-/* GetTeamGroupsAPIForbidden describes a response with status code 403, with default header values.
+/*
+GetTeamGroupsAPIForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -195,7 +199,8 @@ func NewGetTeamGroupsAPINotFound() *GetTeamGroupsAPINotFound {
 	return &GetTeamGroupsAPINotFound{}
 }
 
-/* GetTeamGroupsAPINotFound describes a response with status code 404, with default header values.
+/*
+GetTeamGroupsAPINotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -227,7 +232,8 @@ func NewGetTeamGroupsAPIInternalServerError() *GetTeamGroupsAPIInternalServerErr
 	return &GetTeamGroupsAPIInternalServerError{}
 }
 
-/* GetTeamGroupsAPIInternalServerError describes a response with status code 500, with default header values.
+/*
+GetTeamGroupsAPIInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -45,24 +45,25 @@ func NewRoutePutAlertRuleGroupOK() *RoutePutAlertRuleGroupOK {
 	return &RoutePutAlertRuleGroupOK{}
 }
 
-/* RoutePutAlertRuleGroupOK describes a response with status code 200, with default header values.
+/*
+RoutePutAlertRuleGroupOK describes a response with status code 200, with default header values.
 
-AlertRuleGroupMetadata
+AlertRuleGroup
 */
 type RoutePutAlertRuleGroupOK struct {
-	Payload *models.AlertRuleGroupMetadata
+	Payload *models.AlertRuleGroup
 }
 
 func (o *RoutePutAlertRuleGroupOK) Error() string {
 	return fmt.Sprintf("[PUT /api/v1/provisioning/folder/{FolderUID}/rule-groups/{Group}][%d] routePutAlertRuleGroupOK  %+v", 200, o.Payload)
 }
-func (o *RoutePutAlertRuleGroupOK) GetPayload() *models.AlertRuleGroupMetadata {
+func (o *RoutePutAlertRuleGroupOK) GetPayload() *models.AlertRuleGroup {
 	return o.Payload
 }
 
 func (o *RoutePutAlertRuleGroupOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.AlertRuleGroupMetadata)
+	o.Payload = new(models.AlertRuleGroup)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
@@ -77,7 +78,8 @@ func NewRoutePutAlertRuleGroupBadRequest() *RoutePutAlertRuleGroupBadRequest {
 	return &RoutePutAlertRuleGroupBadRequest{}
 }
 
-/* RoutePutAlertRuleGroupBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePutAlertRuleGroupBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

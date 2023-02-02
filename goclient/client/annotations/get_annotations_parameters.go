@@ -53,10 +53,12 @@ func NewGetAnnotationsParamsWithHTTPClient(client *http.Client) *GetAnnotationsP
 	}
 }
 
-/* GetAnnotationsParams contains all the parameters to send to the API endpoint
-   for the get annotations operation.
+/*
+GetAnnotationsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get annotations operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAnnotationsParams struct {
 
@@ -75,6 +77,12 @@ type GetAnnotationsParams struct {
 	   Format: int64
 	*/
 	DashboardID *int64
+
+	/* DashboardUID.
+
+	   Find annotations that are scoped to a specific dashboard
+	*/
+	DashboardUID *string
 
 	/* From.
 
@@ -209,6 +217,17 @@ func (o *GetAnnotationsParams) SetDashboardID(dashboardID *int64) {
 	o.DashboardID = dashboardID
 }
 
+// WithDashboardUID adds the dashboardUID to the get annotations params
+func (o *GetAnnotationsParams) WithDashboardUID(dashboardUID *string) *GetAnnotationsParams {
+	o.SetDashboardUID(dashboardUID)
+	return o
+}
+
+// SetDashboardUID adds the dashboardUid to the get annotations params
+func (o *GetAnnotationsParams) SetDashboardUID(dashboardUID *string) {
+	o.DashboardUID = dashboardUID
+}
+
 // WithFrom adds the from to the get annotations params
 func (o *GetAnnotationsParams) WithFrom(from *int64) *GetAnnotationsParams {
 	o.SetFrom(from)
@@ -334,6 +353,23 @@ func (o *GetAnnotationsParams) WriteToRequest(r runtime.ClientRequest, reg strfm
 		if qDashboardID != "" {
 
 			if err := r.SetQueryParam("dashboardId", qDashboardID); err != nil {
+				return err
+			}
+		}
+	}
+
+	if o.DashboardUID != nil {
+
+		// query param dashboardUID
+		var qrDashboardUID string
+
+		if o.DashboardUID != nil {
+			qrDashboardUID = *o.DashboardUID
+		}
+		qDashboardUID := qrDashboardUID
+		if qDashboardUID != "" {
+
+			if err := r.SetQueryParam("dashboardUID", qDashboardUID); err != nil {
 				return err
 			}
 		}

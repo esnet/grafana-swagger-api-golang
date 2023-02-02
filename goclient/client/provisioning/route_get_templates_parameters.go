@@ -52,10 +52,12 @@ func NewRouteGetTemplatesParamsWithHTTPClient(client *http.Client) *RouteGetTemp
 	}
 }
 
-/* RouteGetTemplatesParams contains all the parameters to send to the API endpoint
-   for the route get templates operation.
+/*
+RouteGetTemplatesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route get templates operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteGetTemplatesParams struct {
 	timeout    time.Duration

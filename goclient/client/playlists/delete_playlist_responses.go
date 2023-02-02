@@ -63,7 +63,8 @@ func NewDeletePlaylistOK() *DeletePlaylistOK {
 	return &DeletePlaylistOK{}
 }
 
-/* DeletePlaylistOK describes a response with status code 200, with default header values.
+/*
+DeletePlaylistOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewDeletePlaylistUnauthorized() *DeletePlaylistUnauthorized {
 	return &DeletePlaylistUnauthorized{}
 }
 
-/* DeletePlaylistUnauthorized describes a response with status code 401, with default header values.
+/*
+DeletePlaylistUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewDeletePlaylistForbidden() *DeletePlaylistForbidden {
 	return &DeletePlaylistForbidden{}
 }
 
-/* DeletePlaylistForbidden describes a response with status code 403, with default header values.
+/*
+DeletePlaylistForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewDeletePlaylistNotFound() *DeletePlaylistNotFound {
 	return &DeletePlaylistNotFound{}
 }
 
-/* DeletePlaylistNotFound describes a response with status code 404, with default header values.
+/*
+DeletePlaylistNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewDeletePlaylistInternalServerError() *DeletePlaylistInternalServerError {
 	return &DeletePlaylistInternalServerError{}
 }
 
-/* DeletePlaylistInternalServerError describes a response with status code 500, with default header values.
+/*
+DeletePlaylistInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

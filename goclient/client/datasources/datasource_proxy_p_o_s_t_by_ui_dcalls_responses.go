@@ -75,7 +75,8 @@ func NewDatasourceProxyPOSTByUIDcallsCreated() *DatasourceProxyPOSTByUIDcallsCre
 	return &DatasourceProxyPOSTByUIDcallsCreated{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsCreated describes a response with status code 201, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsCreated describes a response with status code 201, with default header values.
 
 (empty)
 */
@@ -96,7 +97,8 @@ func NewDatasourceProxyPOSTByUIDcallsAccepted() *DatasourceProxyPOSTByUIDcallsAc
 	return &DatasourceProxyPOSTByUIDcallsAccepted{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsAccepted describes a response with status code 202, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsAccepted describes a response with status code 202, with default header values.
 
 (empty)
 */
@@ -117,7 +119,8 @@ func NewDatasourceProxyPOSTByUIDcallsBadRequest() *DatasourceProxyPOSTByUIDcalls
 	return &DatasourceProxyPOSTByUIDcallsBadRequest{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -149,7 +152,8 @@ func NewDatasourceProxyPOSTByUIDcallsUnauthorized() *DatasourceProxyPOSTByUIDcal
 	return &DatasourceProxyPOSTByUIDcallsUnauthorized{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -181,7 +185,8 @@ func NewDatasourceProxyPOSTByUIDcallsForbidden() *DatasourceProxyPOSTByUIDcallsF
 	return &DatasourceProxyPOSTByUIDcallsForbidden{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -213,7 +218,8 @@ func NewDatasourceProxyPOSTByUIDcallsNotFound() *DatasourceProxyPOSTByUIDcallsNo
 	return &DatasourceProxyPOSTByUIDcallsNotFound{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -245,7 +251,8 @@ func NewDatasourceProxyPOSTByUIDcallsInternalServerError() *DatasourceProxyPOSTB
 	return &DatasourceProxyPOSTByUIDcallsInternalServerError{}
 }
 
-/* DatasourceProxyPOSTByUIDcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyPOSTByUIDcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

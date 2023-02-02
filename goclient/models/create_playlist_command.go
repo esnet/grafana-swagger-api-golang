@@ -23,7 +23,7 @@ type CreatePlaylistCommand struct {
 	Interval string `json:"interval,omitempty"`
 
 	// items
-	Items []*PlaylistItemDTO `json:"items"`
+	Items []*PlaylistItem `json:"items"`
 
 	// name
 	Name string `json:"name,omitempty"`

@@ -51,7 +51,8 @@ func NewDeleteQueryOK() *DeleteQueryOK {
 	return &DeleteQueryOK{}
 }
 
-/* DeleteQueryOK describes a response with status code 200, with default header values.
+/*
+DeleteQueryOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewDeleteQueryUnauthorized() *DeleteQueryUnauthorized {
 	return &DeleteQueryUnauthorized{}
 }
 
-/* DeleteQueryUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteQueryUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewDeleteQueryInternalServerError() *DeleteQueryInternalServerError {
 	return &DeleteQueryInternalServerError{}
 }
 
-/* DeleteQueryInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteQueryInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -69,7 +69,8 @@ func NewCallDatasourceResourceByIDOK() *CallDatasourceResourceByIDOK {
 	return &CallDatasourceResourceByIDOK{}
 }
 
-/* CallDatasourceResourceByIDOK describes a response with status code 200, with default header values.
+/*
+CallDatasourceResourceByIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewCallDatasourceResourceByIDBadRequest() *CallDatasourceResourceByIDBadReq
 	return &CallDatasourceResourceByIDBadRequest{}
 }
 
-/* CallDatasourceResourceByIDBadRequest describes a response with status code 400, with default header values.
+/*
+CallDatasourceResourceByIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewCallDatasourceResourceByIDUnauthorized() *CallDatasourceResourceByIDUnau
 	return &CallDatasourceResourceByIDUnauthorized{}
 }
 
-/* CallDatasourceResourceByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+CallDatasourceResourceByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewCallDatasourceResourceByIDForbidden() *CallDatasourceResourceByIDForbidd
 	return &CallDatasourceResourceByIDForbidden{}
 }
 
-/* CallDatasourceResourceByIDForbidden describes a response with status code 403, with default header values.
+/*
+CallDatasourceResourceByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewCallDatasourceResourceByIDNotFound() *CallDatasourceResourceByIDNotFound
 	return &CallDatasourceResourceByIDNotFound{}
 }
 
-/* CallDatasourceResourceByIDNotFound describes a response with status code 404, with default header values.
+/*
+CallDatasourceResourceByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewCallDatasourceResourceByIDInternalServerError() *CallDatasourceResourceB
 	return &CallDatasourceResourceByIDInternalServerError{}
 }
 
-/* CallDatasourceResourceByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+CallDatasourceResourceByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

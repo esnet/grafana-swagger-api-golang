@@ -55,10 +55,12 @@ func NewAdminUpdateUserPermissionsParamsWithHTTPClient(client *http.Client) *Adm
 	}
 }
 
-/* AdminUpdateUserPermissionsParams contains all the parameters to send to the API endpoint
-   for the admin update user permissions operation.
+/*
+AdminUpdateUserPermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin update user permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminUpdateUserPermissionsParams struct {
 

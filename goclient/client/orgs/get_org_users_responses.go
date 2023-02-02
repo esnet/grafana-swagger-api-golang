@@ -57,7 +57,8 @@ func NewGetOrgUsersOK() *GetOrgUsersOK {
 	return &GetOrgUsersOK{}
 }
 
-/* GetOrgUsersOK describes a response with status code 200, with default header values.
+/*
+GetOrgUsersOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetOrgUsersUnauthorized() *GetOrgUsersUnauthorized {
 	return &GetOrgUsersUnauthorized{}
 }
 
-/* GetOrgUsersUnauthorized describes a response with status code 401, with default header values.
+/*
+GetOrgUsersUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetOrgUsersForbidden() *GetOrgUsersForbidden {
 	return &GetOrgUsersForbidden{}
 }
 
-/* GetOrgUsersForbidden describes a response with status code 403, with default header values.
+/*
+GetOrgUsersForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetOrgUsersInternalServerError() *GetOrgUsersInternalServerError {
 	return &GetOrgUsersInternalServerError{}
 }
 
-/* GetOrgUsersInternalServerError describes a response with status code 500, with default header values.
+/*
+GetOrgUsersInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -54,10 +54,12 @@ func NewSaveReportSettingsParamsWithHTTPClient(client *http.Client) *SaveReportS
 	}
 }
 
-/* SaveReportSettingsParams contains all the parameters to send to the API endpoint
-   for the save report settings operation.
+/*
+SaveReportSettingsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the save report settings operation.
+
+	Typically these are written to a http.Request.
 */
 type SaveReportSettingsParams struct {
 

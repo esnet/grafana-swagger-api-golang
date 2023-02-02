@@ -36,9 +36,10 @@ func NewRouteDeleteAlertRuleNoContent() *RouteDeleteAlertRuleNoContent {
 	return &RouteDeleteAlertRuleNoContent{}
 }
 
-/* RouteDeleteAlertRuleNoContent describes a response with status code 204, with default header values.
+/*
+RouteDeleteAlertRuleNoContent describes a response with status code 204, with default header values.
 
-The alert rule was deleted successfully.
+	The alert rule was deleted successfully.
 */
 type RouteDeleteAlertRuleNoContent struct {
 }

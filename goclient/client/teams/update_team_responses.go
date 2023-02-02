@@ -69,7 +69,8 @@ func NewUpdateTeamOK() *UpdateTeamOK {
 	return &UpdateTeamOK{}
 }
 
-/* UpdateTeamOK describes a response with status code 200, with default header values.
+/*
+UpdateTeamOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewUpdateTeamUnauthorized() *UpdateTeamUnauthorized {
 	return &UpdateTeamUnauthorized{}
 }
 
-/* UpdateTeamUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateTeamUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -133,7 +135,8 @@ func NewUpdateTeamForbidden() *UpdateTeamForbidden {
 	return &UpdateTeamForbidden{}
 }
 
-/* UpdateTeamForbidden describes a response with status code 403, with default header values.
+/*
+UpdateTeamForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -165,7 +168,8 @@ func NewUpdateTeamNotFound() *UpdateTeamNotFound {
 	return &UpdateTeamNotFound{}
 }
 
-/* UpdateTeamNotFound describes a response with status code 404, with default header values.
+/*
+UpdateTeamNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -197,7 +201,8 @@ func NewUpdateTeamConflict() *UpdateTeamConflict {
 	return &UpdateTeamConflict{}
 }
 
-/* UpdateTeamConflict describes a response with status code 409, with default header values.
+/*
+UpdateTeamConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -229,7 +234,8 @@ func NewUpdateTeamInternalServerError() *UpdateTeamInternalServerError {
 	return &UpdateTeamInternalServerError{}
 }
 
-/* UpdateTeamInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateTeamInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

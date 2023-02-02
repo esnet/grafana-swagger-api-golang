@@ -54,10 +54,12 @@ func NewRoutePostMuteTimingParamsWithHTTPClient(client *http.Client) *RoutePostM
 	}
 }
 
-/* RoutePostMuteTimingParams contains all the parameters to send to the API endpoint
-   for the route post mute timing operation.
+/*
+RoutePostMuteTimingParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route post mute timing operation.
+
+	Typically these are written to a http.Request.
 */
 type RoutePostMuteTimingParams struct {
 

@@ -51,7 +51,8 @@ func NewSearchQueriesOK() *SearchQueriesOK {
 	return &SearchQueriesOK{}
 }
 
-/* SearchQueriesOK describes a response with status code 200, with default header values.
+/*
+SearchQueriesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewSearchQueriesUnauthorized() *SearchQueriesUnauthorized {
 	return &SearchQueriesUnauthorized{}
 }
 
-/* SearchQueriesUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchQueriesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewSearchQueriesInternalServerError() *SearchQueriesInternalServerError {
 	return &SearchQueriesInternalServerError{}
 }
 
-/* SearchQueriesInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchQueriesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

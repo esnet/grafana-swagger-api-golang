@@ -45,7 +45,8 @@ func NewListSortOptionsOK() *ListSortOptionsOK {
 	return &ListSortOptionsOK{}
 }
 
-/* ListSortOptionsOK describes a response with status code 200, with default header values.
+/*
+ListSortOptionsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -77,7 +78,8 @@ func NewListSortOptionsUnauthorized() *ListSortOptionsUnauthorized {
 	return &ListSortOptionsUnauthorized{}
 }
 
-/* ListSortOptionsUnauthorized describes a response with status code 401, with default header values.
+/*
+ListSortOptionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */

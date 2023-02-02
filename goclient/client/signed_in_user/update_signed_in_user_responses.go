@@ -57,7 +57,8 @@ func NewUpdateSignedInUserOK() *UpdateSignedInUserOK {
 	return &UpdateSignedInUserOK{}
 }
 
-/* UpdateSignedInUserOK describes a response with status code 200, with default header values.
+/*
+UpdateSignedInUserOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewUpdateSignedInUserUnauthorized() *UpdateSignedInUserUnauthorized {
 	return &UpdateSignedInUserUnauthorized{}
 }
 
-/* UpdateSignedInUserUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateSignedInUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewUpdateSignedInUserForbidden() *UpdateSignedInUserForbidden {
 	return &UpdateSignedInUserForbidden{}
 }
 
-/* UpdateSignedInUserForbidden describes a response with status code 403, with default header values.
+/*
+UpdateSignedInUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewUpdateSignedInUserInternalServerError() *UpdateSignedInUserInternalServe
 	return &UpdateSignedInUserInternalServerError{}
 }
 
-/* UpdateSignedInUserInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateSignedInUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

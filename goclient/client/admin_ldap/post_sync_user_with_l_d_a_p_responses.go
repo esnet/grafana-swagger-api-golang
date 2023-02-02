@@ -57,7 +57,8 @@ func NewPostSyncUserWithLDAPOK() *PostSyncUserWithLDAPOK {
 	return &PostSyncUserWithLDAPOK{}
 }
 
-/* PostSyncUserWithLDAPOK describes a response with status code 200, with default header values.
+/*
+PostSyncUserWithLDAPOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewPostSyncUserWithLDAPUnauthorized() *PostSyncUserWithLDAPUnauthorized {
 	return &PostSyncUserWithLDAPUnauthorized{}
 }
 
-/* PostSyncUserWithLDAPUnauthorized describes a response with status code 401, with default header values.
+/*
+PostSyncUserWithLDAPUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewPostSyncUserWithLDAPForbidden() *PostSyncUserWithLDAPForbidden {
 	return &PostSyncUserWithLDAPForbidden{}
 }
 
-/* PostSyncUserWithLDAPForbidden describes a response with status code 403, with default header values.
+/*
+PostSyncUserWithLDAPForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewPostSyncUserWithLDAPInternalServerError() *PostSyncUserWithLDAPInternalS
 	return &PostSyncUserWithLDAPInternalServerError{}
 }
 
-/* PostSyncUserWithLDAPInternalServerError describes a response with status code 500, with default header values.
+/*
+PostSyncUserWithLDAPInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

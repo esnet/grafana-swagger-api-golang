@@ -57,7 +57,8 @@ func NewGetSyncStatusOK() *GetSyncStatusOK {
 	return &GetSyncStatusOK{}
 }
 
-/* GetSyncStatusOK describes a response with status code 200, with default header values.
+/*
+GetSyncStatusOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewGetSyncStatusUnauthorized() *GetSyncStatusUnauthorized {
 	return &GetSyncStatusUnauthorized{}
 }
 
-/* GetSyncStatusUnauthorized describes a response with status code 401, with default header values.
+/*
+GetSyncStatusUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewGetSyncStatusForbidden() *GetSyncStatusForbidden {
 	return &GetSyncStatusForbidden{}
 }
 
-/* GetSyncStatusForbidden describes a response with status code 403, with default header values.
+/*
+GetSyncStatusForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewGetSyncStatusInternalServerError() *GetSyncStatusInternalServerError {
 	return &GetSyncStatusInternalServerError{}
 }
 
-/* GetSyncStatusInternalServerError describes a response with status code 500, with default header values.
+/*
+GetSyncStatusInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -63,7 +63,8 @@ func NewSearchUsersWithPagingOK() *SearchUsersWithPagingOK {
 	return &SearchUsersWithPagingOK{}
 }
 
-/* SearchUsersWithPagingOK describes a response with status code 200, with default header values.
+/*
+SearchUsersWithPagingOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewSearchUsersWithPagingUnauthorized() *SearchUsersWithPagingUnauthorized {
 	return &SearchUsersWithPagingUnauthorized{}
 }
 
-/* SearchUsersWithPagingUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchUsersWithPagingUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewSearchUsersWithPagingForbidden() *SearchUsersWithPagingForbidden {
 	return &SearchUsersWithPagingForbidden{}
 }
 
-/* SearchUsersWithPagingForbidden describes a response with status code 403, with default header values.
+/*
+SearchUsersWithPagingForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewSearchUsersWithPagingNotFound() *SearchUsersWithPagingNotFound {
 	return &SearchUsersWithPagingNotFound{}
 }
 
-/* SearchUsersWithPagingNotFound describes a response with status code 404, with default header values.
+/*
+SearchUsersWithPagingNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewSearchUsersWithPagingInternalServerError() *SearchUsersWithPagingInterna
 	return &SearchUsersWithPagingInternalServerError{}
 }
 
-/* SearchUsersWithPagingInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchUsersWithPagingInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

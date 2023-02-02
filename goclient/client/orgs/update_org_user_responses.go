@@ -63,7 +63,8 @@ func NewUpdateOrgUserOK() *UpdateOrgUserOK {
 	return &UpdateOrgUserOK{}
 }
 
-/* UpdateOrgUserOK describes a response with status code 200, with default header values.
+/*
+UpdateOrgUserOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUpdateOrgUserBadRequest() *UpdateOrgUserBadRequest {
 	return &UpdateOrgUserBadRequest{}
 }
 
-/* UpdateOrgUserBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateOrgUserBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUpdateOrgUserUnauthorized() *UpdateOrgUserUnauthorized {
 	return &UpdateOrgUserUnauthorized{}
 }
 
-/* UpdateOrgUserUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateOrgUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUpdateOrgUserForbidden() *UpdateOrgUserForbidden {
 	return &UpdateOrgUserForbidden{}
 }
 
-/* UpdateOrgUserForbidden describes a response with status code 403, with default header values.
+/*
+UpdateOrgUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUpdateOrgUserInternalServerError() *UpdateOrgUserInternalServerError {
 	return &UpdateOrgUserInternalServerError{}
 }
 
-/* UpdateOrgUserInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateOrgUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

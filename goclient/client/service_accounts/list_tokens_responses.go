@@ -63,7 +63,8 @@ func NewListTokensOK() *ListTokensOK {
 	return &ListTokensOK{}
 }
 
-/* ListTokensOK describes a response with status code 200, with default header values.
+/*
+ListTokensOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewListTokensBadRequest() *ListTokensBadRequest {
 	return &ListTokensBadRequest{}
 }
 
-/* ListTokensBadRequest describes a response with status code 400, with default header values.
+/*
+ListTokensBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewListTokensUnauthorized() *ListTokensUnauthorized {
 	return &ListTokensUnauthorized{}
 }
 
-/* ListTokensUnauthorized describes a response with status code 401, with default header values.
+/*
+ListTokensUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewListTokensForbidden() *ListTokensForbidden {
 	return &ListTokensForbidden{}
 }
 
-/* ListTokensForbidden describes a response with status code 403, with default header values.
+/*
+ListTokensForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewListTokensInternalServerError() *ListTokensInternalServerError {
 	return &ListTokensInternalServerError{}
 }
 
-/* ListTokensInternalServerError describes a response with status code 500, with default header values.
+/*
+ListTokensInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -52,10 +52,12 @@ func NewGetLibraryElementConnectionsParamsWithHTTPClient(client *http.Client) *G
 	}
 }
 
-/* GetLibraryElementConnectionsParams contains all the parameters to send to the API endpoint
-   for the get library element connections operation.
+/*
+GetLibraryElementConnectionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get library element connections operation.
+
+	Typically these are written to a http.Request.
 */
 type GetLibraryElementConnectionsParams struct {
 

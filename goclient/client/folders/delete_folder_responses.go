@@ -69,7 +69,8 @@ func NewDeleteFolderOK() *DeleteFolderOK {
 	return &DeleteFolderOK{}
 }
 
-/* DeleteFolderOK describes a response with status code 200, with default header values.
+/*
+DeleteFolderOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewDeleteFolderBadRequest() *DeleteFolderBadRequest {
 	return &DeleteFolderBadRequest{}
 }
 
-/* DeleteFolderBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteFolderBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteFolderUnauthorized() *DeleteFolderUnauthorized {
 	return &DeleteFolderUnauthorized{}
 }
 
-/* DeleteFolderUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteFolderUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteFolderForbidden() *DeleteFolderForbidden {
 	return &DeleteFolderForbidden{}
 }
 
-/* DeleteFolderForbidden describes a response with status code 403, with default header values.
+/*
+DeleteFolderForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteFolderNotFound() *DeleteFolderNotFound {
 	return &DeleteFolderNotFound{}
 }
 
-/* DeleteFolderNotFound describes a response with status code 404, with default header values.
+/*
+DeleteFolderNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewDeleteFolderInternalServerError() *DeleteFolderInternalServerError {
 	return &DeleteFolderInternalServerError{}
 }
 
-/* DeleteFolderInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteFolderInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

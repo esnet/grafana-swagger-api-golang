@@ -52,10 +52,12 @@ func NewGetLibraryElementByNameParamsWithHTTPClient(client *http.Client) *GetLib
 	}
 }
 
-/* GetLibraryElementByNameParams contains all the parameters to send to the API endpoint
-   for the get library element by name operation.
+/*
+GetLibraryElementByNameParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get library element by name operation.
+
+	Typically these are written to a http.Request.
 */
 type GetLibraryElementByNameParams struct {
 

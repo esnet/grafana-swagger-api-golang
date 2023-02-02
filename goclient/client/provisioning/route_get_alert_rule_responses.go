@@ -45,7 +45,8 @@ func NewRouteGetAlertRuleOK() *RouteGetAlertRuleOK {
 	return &RouteGetAlertRuleOK{}
 }
 
-/* RouteGetAlertRuleOK describes a response with status code 200, with default header values.
+/*
+RouteGetAlertRuleOK describes a response with status code 200, with default header values.
 
 ProvisionedAlertRule
 */
@@ -77,9 +78,10 @@ func NewRouteGetAlertRuleNotFound() *RouteGetAlertRuleNotFound {
 	return &RouteGetAlertRuleNotFound{}
 }
 
-/* RouteGetAlertRuleNotFound describes a response with status code 404, with default header values.
+/*
+RouteGetAlertRuleNotFound describes a response with status code 404, with default header values.
 
-Not found.
+	Not found.
 */
 type RouteGetAlertRuleNotFound struct {
 }

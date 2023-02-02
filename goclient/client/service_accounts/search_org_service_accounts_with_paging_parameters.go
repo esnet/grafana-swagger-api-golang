@@ -53,10 +53,12 @@ func NewSearchOrgServiceAccountsWithPagingParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/* SearchOrgServiceAccountsWithPagingParams contains all the parameters to send to the API endpoint
-   for the search org service accounts with paging operation.
+/*
+SearchOrgServiceAccountsWithPagingParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search org service accounts with paging operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchOrgServiceAccountsWithPagingParams struct {
 

@@ -46,9 +46,9 @@ type ClientService interface {
 }
 
 /*
-  GetDashboardVersionByID gets a specific dashboard version
+GetDashboardVersionByID gets a specific dashboard version
 
-  Please refer to [updated API](#/dashboard_versions/getDashboardVersionByUID) instead
+Please refer to [updated API](#/dashboard_versions/getDashboardVersionByUID) instead
 */
 func (a *Client) GetDashboardVersionByID(params *GetDashboardVersionByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardVersionByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -87,7 +87,7 @@ func (a *Client) GetDashboardVersionByID(params *GetDashboardVersionByIDParams, 
 }
 
 /*
-  GetDashboardVersionByUID gets a specific dashboard version using UID
+GetDashboardVersionByUID gets a specific dashboard version using UID
 */
 func (a *Client) GetDashboardVersionByUID(params *GetDashboardVersionByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardVersionByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -126,9 +126,9 @@ func (a *Client) GetDashboardVersionByUID(params *GetDashboardVersionByUIDParams
 }
 
 /*
-  GetDashboardVersionsByID gets all existing versions for the dashboard
+GetDashboardVersionsByID gets all existing versions for the dashboard
 
-  Please refer to [updated API](#/dashboard_versions/getDashboardVersionsByUID) instead
+Please refer to [updated API](#/dashboard_versions/getDashboardVersionsByUID) instead
 */
 func (a *Client) GetDashboardVersionsByID(params *GetDashboardVersionsByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardVersionsByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -167,7 +167,7 @@ func (a *Client) GetDashboardVersionsByID(params *GetDashboardVersionsByIDParams
 }
 
 /*
-  GetDashboardVersionsByUID gets all existing versions for the dashboard using UID
+GetDashboardVersionsByUID gets all existing versions for the dashboard using UID
 */
 func (a *Client) GetDashboardVersionsByUID(params *GetDashboardVersionsByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardVersionsByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -206,9 +206,9 @@ func (a *Client) GetDashboardVersionsByUID(params *GetDashboardVersionsByUIDPara
 }
 
 /*
-  RestoreDashboardVersionByID restores a dashboard to a given dashboard version
+RestoreDashboardVersionByID restores a dashboard to a given dashboard version
 
-  Please refer to [updated API](#/dashboard_versions/restoreDashboardVersionByUID) instead
+Please refer to [updated API](#/dashboard_versions/restoreDashboardVersionByUID) instead
 */
 func (a *Client) RestoreDashboardVersionByID(params *RestoreDashboardVersionByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RestoreDashboardVersionByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -247,7 +247,7 @@ func (a *Client) RestoreDashboardVersionByID(params *RestoreDashboardVersionByID
 }
 
 /*
-  RestoreDashboardVersionByUID restores a dashboard to a given dashboard version using UID
+RestoreDashboardVersionByUID restores a dashboard to a given dashboard version using UID
 */
 func (a *Client) RestoreDashboardVersionByUID(params *RestoreDashboardVersionByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RestoreDashboardVersionByUIDOK, error) {
 	// TODO: Validate the params before sending

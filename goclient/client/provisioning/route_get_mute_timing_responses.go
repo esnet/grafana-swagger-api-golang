@@ -45,7 +45,8 @@ func NewRouteGetMuteTimingOK() *RouteGetMuteTimingOK {
 	return &RouteGetMuteTimingOK{}
 }
 
-/* RouteGetMuteTimingOK describes a response with status code 200, with default header values.
+/*
+RouteGetMuteTimingOK describes a response with status code 200, with default header values.
 
 MuteTimeInterval
 */
@@ -77,9 +78,10 @@ func NewRouteGetMuteTimingNotFound() *RouteGetMuteTimingNotFound {
 	return &RouteGetMuteTimingNotFound{}
 }
 
-/* RouteGetMuteTimingNotFound describes a response with status code 404, with default header values.
+/*
+RouteGetMuteTimingNotFound describes a response with status code 404, with default header values.
 
-Not found.
+	Not found.
 */
 type RouteGetMuteTimingNotFound struct {
 }

@@ -57,7 +57,8 @@ func NewSearchUsersOK() *SearchUsersOK {
 	return &SearchUsersOK{}
 }
 
-/* SearchUsersOK describes a response with status code 200, with default header values.
+/*
+SearchUsersOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewSearchUsersUnauthorized() *SearchUsersUnauthorized {
 	return &SearchUsersUnauthorized{}
 }
 
-/* SearchUsersUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchUsersUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewSearchUsersForbidden() *SearchUsersForbidden {
 	return &SearchUsersForbidden{}
 }
 
-/* SearchUsersForbidden describes a response with status code 403, with default header values.
+/*
+SearchUsersForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewSearchUsersInternalServerError() *SearchUsersInternalServerError {
 	return &SearchUsersInternalServerError{}
 }
 
-/* SearchUsersInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchUsersInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

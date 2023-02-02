@@ -52,10 +52,12 @@ func NewGetAnnotationTagsParamsWithHTTPClient(client *http.Client) *GetAnnotatio
 	}
 }
 
-/* GetAnnotationTagsParams contains all the parameters to send to the API endpoint
-   for the get annotation tags operation.
+/*
+GetAnnotationTagsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get annotation tags operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAnnotationTagsParams struct {
 

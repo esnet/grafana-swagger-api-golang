@@ -21,11 +21,14 @@ import (
 // swagger:model DataResponse
 type DataResponse struct {
 
-	// Error is a property to be set if the the corresponding DataQuery has an error.
+	// Error is a property to be set if the corresponding DataQuery has an error.
 	Error string `json:"Error,omitempty"`
 
 	// frames
 	Frames Frames `json:"Frames,omitempty"`
+
+	// status
+	Status Status `json:"Status,omitempty"`
 }
 
 // Validate validates this data response
@@ -33,6 +36,10 @@ func (m *DataResponse) Validate(formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.validateFrames(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateStatus(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -59,11 +66,32 @@ func (m *DataResponse) validateFrames(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *DataResponse) validateStatus(formats strfmt.Registry) error {
+	if swag.IsZero(m.Status) { // not required
+		return nil
+	}
+
+	if err := m.Status.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("Status")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("Status")
+		}
+		return err
+	}
+
+	return nil
+}
+
 // ContextValidate validate this data response based on the context it is used
 func (m *DataResponse) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.contextValidateFrames(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateStatus(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -80,6 +108,20 @@ func (m *DataResponse) contextValidateFrames(ctx context.Context, formats strfmt
 			return ve.ValidateName("Frames")
 		} else if ce, ok := err.(*errors.CompositeError); ok {
 			return ce.ValidateName("Frames")
+		}
+		return err
+	}
+
+	return nil
+}
+
+func (m *DataResponse) contextValidateStatus(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.Status.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("Status")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("Status")
 		}
 		return err
 	}

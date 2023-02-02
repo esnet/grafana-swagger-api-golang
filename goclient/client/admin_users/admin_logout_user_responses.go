@@ -69,7 +69,8 @@ func NewAdminLogoutUserOK() *AdminLogoutUserOK {
 	return &AdminLogoutUserOK{}
 }
 
-/* AdminLogoutUserOK describes a response with status code 200, with default header values.
+/*
+AdminLogoutUserOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewAdminLogoutUserBadRequest() *AdminLogoutUserBadRequest {
 	return &AdminLogoutUserBadRequest{}
 }
 
-/* AdminLogoutUserBadRequest describes a response with status code 400, with default header values.
+/*
+AdminLogoutUserBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAdminLogoutUserUnauthorized() *AdminLogoutUserUnauthorized {
 	return &AdminLogoutUserUnauthorized{}
 }
 
-/* AdminLogoutUserUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminLogoutUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAdminLogoutUserForbidden() *AdminLogoutUserForbidden {
 	return &AdminLogoutUserForbidden{}
 }
 
-/* AdminLogoutUserForbidden describes a response with status code 403, with default header values.
+/*
+AdminLogoutUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAdminLogoutUserNotFound() *AdminLogoutUserNotFound {
 	return &AdminLogoutUserNotFound{}
 }
 
-/* AdminLogoutUserNotFound describes a response with status code 404, with default header values.
+/*
+AdminLogoutUserNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewAdminLogoutUserInternalServerError() *AdminLogoutUserInternalServerError
 	return &AdminLogoutUserInternalServerError{}
 }
 
-/* AdminLogoutUserInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminLogoutUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

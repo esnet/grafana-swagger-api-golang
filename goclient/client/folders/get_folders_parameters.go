@@ -53,10 +53,12 @@ func NewGetFoldersParamsWithHTTPClient(client *http.Client) *GetFoldersParams {
 	}
 }
 
-/* GetFoldersParams contains all the parameters to send to the API endpoint
-   for the get folders operation.
+/*
+GetFoldersParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get folders operation.
+
+	Typically these are written to a http.Request.
 */
 type GetFoldersParams struct {
 

@@ -47,6 +47,9 @@ type Folder struct {
 	// id
 	ID int64 `json:"id,omitempty"`
 
+	// only used if nested folders are enabled
+	ParentUID string `json:"parent_uid,omitempty"`
+
 	// title
 	Title string `json:"title,omitempty"`
 

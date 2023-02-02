@@ -53,10 +53,12 @@ func NewSearchParamsWithHTTPClient(client *http.Client) *SearchParams {
 	}
 }
 
-/* SearchParams contains all the parameters to send to the API endpoint
-   for the search operation.
+/*
+SearchParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchParams struct {
 
@@ -65,6 +67,12 @@ type SearchParams struct {
 	   List of dashboard id’s to search for
 	*/
 	DashboardIds []int64
+
+	/* DashboardUIDs.
+
+	   List of dashboard uid’s to search for
+	*/
+	DashboardUIDs []string
 
 	/* FolderIds.
 
@@ -206,6 +214,17 @@ func (o *SearchParams) SetDashboardIds(dashboardIds []int64) {
 	o.DashboardIds = dashboardIds
 }
 
+// WithDashboardUIDs adds the dashboardUIDs to the search params
+func (o *SearchParams) WithDashboardUIDs(dashboardUIDs []string) *SearchParams {
+	o.SetDashboardUIDs(dashboardUIDs)
+	return o
+}
+
+// SetDashboardUIDs adds the dashboardUiDs to the search params
+func (o *SearchParams) SetDashboardUIDs(dashboardUIDs []string) {
+	o.DashboardUIDs = dashboardUIDs
+}
+
 // WithFolderIds adds the folderIds to the search params
 func (o *SearchParams) WithFolderIds(folderIds []int64) *SearchParams {
 	o.SetFolderIds(folderIds)
@@ -320,6 +339,17 @@ func (o *SearchParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Regist
 
 		// query array param dashboardIds
 		if err := r.SetQueryParam("dashboardIds", joinedDashboardIds...); err != nil {
+			return err
+		}
+	}
+
+	if o.DashboardUIDs != nil {
+
+		// binding items for dashboardUIDs
+		joinedDashboardUIDs := o.bindParamDashboardUIDs(reg)
+
+		// query array param dashboardUIDs
+		if err := r.SetQueryParam("dashboardUIDs", joinedDashboardUIDs...); err != nil {
 			return err
 		}
 	}
@@ -486,6 +516,23 @@ func (o *SearchParams) bindParamDashboardIds(formats strfmt.Registry) []string {
 	dashboardIdsIS := swag.JoinByFormat(dashboardIdsIC, "")
 
 	return dashboardIdsIS
+}
+
+// bindParamSearch binds the parameter dashboardUIDs
+func (o *SearchParams) bindParamDashboardUIDs(formats strfmt.Registry) []string {
+	dashboardUIDsIR := o.DashboardUIDs
+
+	var dashboardUIDsIC []string
+	for _, dashboardUIDsIIR := range dashboardUIDsIR { // explode []string
+
+		dashboardUIDsIIV := dashboardUIDsIIR // string as string
+		dashboardUIDsIC = append(dashboardUIDsIC, dashboardUIDsIIV)
+	}
+
+	// items.CollectionFormat: ""
+	dashboardUIDsIS := swag.JoinByFormat(dashboardUIDsIC, "")
+
+	return dashboardUIDsIS
 }
 
 // bindParamSearch binds the parameter folderIds

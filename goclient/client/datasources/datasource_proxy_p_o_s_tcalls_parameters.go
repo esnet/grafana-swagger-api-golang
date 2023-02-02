@@ -52,10 +52,12 @@ func NewDatasourceProxyPOSTcallsParamsWithHTTPClient(client *http.Client) *Datas
 	}
 }
 
-/* DatasourceProxyPOSTcallsParams contains all the parameters to send to the API endpoint
-   for the datasource proxy p o s tcalls operation.
+/*
+DatasourceProxyPOSTcallsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the datasource proxy p o s tcalls operation.
+
+	Typically these are written to a http.Request.
 */
 type DatasourceProxyPOSTcallsParams struct {
 

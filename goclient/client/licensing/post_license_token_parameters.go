@@ -54,10 +54,12 @@ func NewPostLicenseTokenParamsWithHTTPClient(client *http.Client) *PostLicenseTo
 	}
 }
 
-/* PostLicenseTokenParams contains all the parameters to send to the API endpoint
-   for the post license token operation.
+/*
+PostLicenseTokenParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post license token operation.
+
+	Typically these are written to a http.Request.
 */
 type PostLicenseTokenParams struct {
 

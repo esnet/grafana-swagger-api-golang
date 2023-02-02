@@ -53,10 +53,12 @@ func NewDeleteOrgByIDParamsWithHTTPClient(client *http.Client) *DeleteOrgByIDPar
 	}
 }
 
-/* DeleteOrgByIDParams contains all the parameters to send to the API endpoint
-   for the delete org by ID operation.
+/*
+DeleteOrgByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete org by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteOrgByIDParams struct {
 

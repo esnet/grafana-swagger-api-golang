@@ -51,7 +51,8 @@ func NewGetSAMLLogoutFound() *GetSAMLLogoutFound {
 	return &GetSAMLLogoutFound{}
 }
 
-/* GetSAMLLogoutFound describes a response with status code 302, with default header values.
+/*
+GetSAMLLogoutFound describes a response with status code 302, with default header values.
 
 (empty)
 */
@@ -72,7 +73,8 @@ func NewGetSAMLLogoutNotFound() *GetSAMLLogoutNotFound {
 	return &GetSAMLLogoutNotFound{}
 }
 
-/* GetSAMLLogoutNotFound describes a response with status code 404, with default header values.
+/*
+GetSAMLLogoutNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -104,7 +106,8 @@ func NewGetSAMLLogoutInternalServerError() *GetSAMLLogoutInternalServerError {
 	return &GetSAMLLogoutInternalServerError{}
 }
 
-/* GetSAMLLogoutInternalServerError describes a response with status code 500, with default header values.
+/*
+GetSAMLLogoutInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

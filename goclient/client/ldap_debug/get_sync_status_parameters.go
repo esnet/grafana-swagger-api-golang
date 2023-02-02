@@ -52,10 +52,12 @@ func NewGetSyncStatusParamsWithHTTPClient(client *http.Client) *GetSyncStatusPar
 	}
 }
 
-/* GetSyncStatusParams contains all the parameters to send to the API endpoint
-   for the get sync status operation.
+/*
+GetSyncStatusParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get sync status operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSyncStatusParams struct {
 	timeout    time.Duration

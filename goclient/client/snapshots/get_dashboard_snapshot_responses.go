@@ -29,6 +29,12 @@ func (o *GetDashboardSnapshotReader) ReadResponse(response runtime.ClientRespons
 			return nil, err
 		}
 		return result, nil
+	case 400:
+		result := NewGetDashboardSnapshotBadRequest()
+		if err := result.readResponse(response, consumer, o.formats); err != nil {
+			return nil, err
+		}
+		return nil, result
 	case 404:
 		result := NewGetDashboardSnapshotNotFound()
 		if err := result.readResponse(response, consumer, o.formats); err != nil {
@@ -51,7 +57,8 @@ func NewGetDashboardSnapshotOK() *GetDashboardSnapshotOK {
 	return &GetDashboardSnapshotOK{}
 }
 
-/* GetDashboardSnapshotOK describes a response with status code 200, with default header values.
+/*
+GetDashboardSnapshotOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -67,12 +74,46 @@ func (o *GetDashboardSnapshotOK) readResponse(response runtime.ClientResponse, c
 	return nil
 }
 
+// NewGetDashboardSnapshotBadRequest creates a GetDashboardSnapshotBadRequest with default headers values
+func NewGetDashboardSnapshotBadRequest() *GetDashboardSnapshotBadRequest {
+	return &GetDashboardSnapshotBadRequest{}
+}
+
+/*
+GetDashboardSnapshotBadRequest describes a response with status code 400, with default header values.
+
+BadRequestError is returned when the request is invalid and it cannot be processed.
+*/
+type GetDashboardSnapshotBadRequest struct {
+	Payload *models.ErrorResponseBody
+}
+
+func (o *GetDashboardSnapshotBadRequest) Error() string {
+	return fmt.Sprintf("[GET /snapshots/{key}][%d] getDashboardSnapshotBadRequest  %+v", 400, o.Payload)
+}
+func (o *GetDashboardSnapshotBadRequest) GetPayload() *models.ErrorResponseBody {
+	return o.Payload
+}
+
+func (o *GetDashboardSnapshotBadRequest) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
+
+	o.Payload = new(models.ErrorResponseBody)
+
+	// response payload
+	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+		return err
+	}
+
+	return nil
+}
+
 // NewGetDashboardSnapshotNotFound creates a GetDashboardSnapshotNotFound with default headers values
 func NewGetDashboardSnapshotNotFound() *GetDashboardSnapshotNotFound {
 	return &GetDashboardSnapshotNotFound{}
 }
 
-/* GetDashboardSnapshotNotFound describes a response with status code 404, with default header values.
+/*
+GetDashboardSnapshotNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -104,7 +145,8 @@ func NewGetDashboardSnapshotInternalServerError() *GetDashboardSnapshotInternalS
 	return &GetDashboardSnapshotInternalServerError{}
 }
 
-/* GetDashboardSnapshotInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDashboardSnapshotInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

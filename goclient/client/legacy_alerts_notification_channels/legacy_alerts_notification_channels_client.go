@@ -54,9 +54,9 @@ type ClientService interface {
 }
 
 /*
-  CreateAlertNotificationChannel creates notification channel
+CreateAlertNotificationChannel creates notification channel
 
-  You can find the full list of [supported notifiers](https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.
+You can find the full list of [supported notifiers](https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/#list-of-supported-notifiers) on the alert notifiers page.
 */
 func (a *Client) CreateAlertNotificationChannel(params *CreateAlertNotificationChannelParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateAlertNotificationChannelOK, error) {
 	// TODO: Validate the params before sending
@@ -95,9 +95,9 @@ func (a *Client) CreateAlertNotificationChannel(params *CreateAlertNotificationC
 }
 
 /*
-  DeleteAlertNotificationChannel deletes alert notification by ID
+DeleteAlertNotificationChannel deletes alert notification by ID
 
-  Deletes an existing notification channel identified by ID.
+Deletes an existing notification channel identified by ID.
 */
 func (a *Client) DeleteAlertNotificationChannel(params *DeleteAlertNotificationChannelParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteAlertNotificationChannelOK, error) {
 	// TODO: Validate the params before sending
@@ -136,9 +136,9 @@ func (a *Client) DeleteAlertNotificationChannel(params *DeleteAlertNotificationC
 }
 
 /*
-  DeleteAlertNotificationChannelByUID deletes alert notification by UID
+DeleteAlertNotificationChannelByUID deletes alert notification by UID
 
-  Deletes an existing notification channel identified by UID.
+Deletes an existing notification channel identified by UID.
 */
 func (a *Client) DeleteAlertNotificationChannelByUID(params *DeleteAlertNotificationChannelByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteAlertNotificationChannelByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -177,9 +177,9 @@ func (a *Client) DeleteAlertNotificationChannelByUID(params *DeleteAlertNotifica
 }
 
 /*
-  GetAlertNotificationChannelByID gets notification channel by ID
+GetAlertNotificationChannelByID gets notification channel by ID
 
-  Returns the notification channel given the notification channel ID.
+Returns the notification channel given the notification channel ID.
 */
 func (a *Client) GetAlertNotificationChannelByID(params *GetAlertNotificationChannelByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertNotificationChannelByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -218,9 +218,9 @@ func (a *Client) GetAlertNotificationChannelByID(params *GetAlertNotificationCha
 }
 
 /*
-  GetAlertNotificationChannelByUID gets notification channel by UID
+GetAlertNotificationChannelByUID gets notification channel by UID
 
-  Returns the notification channel given the notification channel UID.
+Returns the notification channel given the notification channel UID.
 */
 func (a *Client) GetAlertNotificationChannelByUID(params *GetAlertNotificationChannelByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertNotificationChannelByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -259,9 +259,9 @@ func (a *Client) GetAlertNotificationChannelByUID(params *GetAlertNotificationCh
 }
 
 /*
-  GetAlertNotificationChannels gets all notification channels
+GetAlertNotificationChannels gets all notification channels
 
-  Returns all notification channels that the authenticated user has permission to view.
+Returns all notification channels that the authenticated user has permission to view.
 */
 func (a *Client) GetAlertNotificationChannels(params *GetAlertNotificationChannelsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertNotificationChannelsOK, error) {
 	// TODO: Validate the params before sending
@@ -300,9 +300,9 @@ func (a *Client) GetAlertNotificationChannels(params *GetAlertNotificationChanne
 }
 
 /*
-  GetAlertNotificationLookup gets all notification channels lookup
+GetAlertNotificationLookup gets all notification channels lookup
 
-  Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Grafana UI when configuring alert rule.
+Returns all notification channels, but with less detailed information. Accessible by any authenticated user and is mainly used by providing alert notification channels in Grafana UI when configuring alert rule.
 */
 func (a *Client) GetAlertNotificationLookup(params *GetAlertNotificationLookupParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAlertNotificationLookupOK, error) {
 	// TODO: Validate the params before sending
@@ -341,9 +341,9 @@ func (a *Client) GetAlertNotificationLookup(params *GetAlertNotificationLookupPa
 }
 
 /*
-  NotificationChannelTest tests notification channel
+NotificationChannelTest tests notification channel
 
-  Sends a test notification to the channel.
+Sends a test notification to the channel.
 */
 func (a *Client) NotificationChannelTest(params *NotificationChannelTestParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*NotificationChannelTestOK, error) {
 	// TODO: Validate the params before sending
@@ -382,9 +382,9 @@ func (a *Client) NotificationChannelTest(params *NotificationChannelTestParams, 
 }
 
 /*
-  UpdateAlertNotificationChannel updates notification channel by ID
+UpdateAlertNotificationChannel updates notification channel by ID
 
-  Updates an existing notification channel identified by ID.
+Updates an existing notification channel identified by ID.
 */
 func (a *Client) UpdateAlertNotificationChannel(params *UpdateAlertNotificationChannelParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateAlertNotificationChannelOK, error) {
 	// TODO: Validate the params before sending
@@ -423,9 +423,9 @@ func (a *Client) UpdateAlertNotificationChannel(params *UpdateAlertNotificationC
 }
 
 /*
-  UpdateAlertNotificationChannelByUID updates notification channel by UID
+UpdateAlertNotificationChannelByUID updates notification channel by UID
 
-  Updates an existing notification channel identified by uid.
+Updates an existing notification channel identified by uid.
 */
 func (a *Client) UpdateAlertNotificationChannelByUID(params *UpdateAlertNotificationChannelByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateAlertNotificationChannelByUIDOK, error) {
 	// TODO: Validate the params before sending

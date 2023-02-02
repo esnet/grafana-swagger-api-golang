@@ -55,10 +55,12 @@ func NewUpdateOrgUserForCurrentOrgParamsWithHTTPClient(client *http.Client) *Upd
 	}
 }
 
-/* UpdateOrgUserForCurrentOrgParams contains all the parameters to send to the API endpoint
-   for the update org user for current org operation.
+/*
+UpdateOrgUserForCurrentOrgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update org user for current org operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateOrgUserForCurrentOrgParams struct {
 

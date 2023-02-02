@@ -63,7 +63,8 @@ func NewCreateAlertNotificationChannelOK() *CreateAlertNotificationChannelOK {
 	return &CreateAlertNotificationChannelOK{}
 }
 
-/* CreateAlertNotificationChannelOK describes a response with status code 200, with default header values.
+/*
+CreateAlertNotificationChannelOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewCreateAlertNotificationChannelUnauthorized() *CreateAlertNotificationCha
 	return &CreateAlertNotificationChannelUnauthorized{}
 }
 
-/* CreateAlertNotificationChannelUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateAlertNotificationChannelUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewCreateAlertNotificationChannelForbidden() *CreateAlertNotificationChanne
 	return &CreateAlertNotificationChannelForbidden{}
 }
 
-/* CreateAlertNotificationChannelForbidden describes a response with status code 403, with default header values.
+/*
+CreateAlertNotificationChannelForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewCreateAlertNotificationChannelConflict() *CreateAlertNotificationChannel
 	return &CreateAlertNotificationChannelConflict{}
 }
 
-/* CreateAlertNotificationChannelConflict describes a response with status code 409, with default header values.
+/*
+CreateAlertNotificationChannelConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -191,7 +195,8 @@ func NewCreateAlertNotificationChannelInternalServerError() *CreateAlertNotifica
 	return &CreateAlertNotificationChannelInternalServerError{}
 }
 
-/* CreateAlertNotificationChannelInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateAlertNotificationChannelInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

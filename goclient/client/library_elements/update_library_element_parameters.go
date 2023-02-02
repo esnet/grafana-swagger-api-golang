@@ -54,10 +54,12 @@ func NewUpdateLibraryElementParamsWithHTTPClient(client *http.Client) *UpdateLib
 	}
 }
 
-/* UpdateLibraryElementParams contains all the parameters to send to the API endpoint
-   for the update library element operation.
+/*
+UpdateLibraryElementParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update library element operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateLibraryElementParams struct {
 

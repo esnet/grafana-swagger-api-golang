@@ -69,7 +69,8 @@ func NewUpdateDashboardPermissionsByIDOK() *UpdateDashboardPermissionsByIDOK {
 	return &UpdateDashboardPermissionsByIDOK{}
 }
 
-/* UpdateDashboardPermissionsByIDOK describes a response with status code 200, with default header values.
+/*
+UpdateDashboardPermissionsByIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewUpdateDashboardPermissionsByIDBadRequest() *UpdateDashboardPermissionsBy
 	return &UpdateDashboardPermissionsByIDBadRequest{}
 }
 
-/* UpdateDashboardPermissionsByIDBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateDashboardPermissionsByIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewUpdateDashboardPermissionsByIDUnauthorized() *UpdateDashboardPermissions
 	return &UpdateDashboardPermissionsByIDUnauthorized{}
 }
 
-/* UpdateDashboardPermissionsByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateDashboardPermissionsByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewUpdateDashboardPermissionsByIDForbidden() *UpdateDashboardPermissionsByI
 	return &UpdateDashboardPermissionsByIDForbidden{}
 }
 
-/* UpdateDashboardPermissionsByIDForbidden describes a response with status code 403, with default header values.
+/*
+UpdateDashboardPermissionsByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewUpdateDashboardPermissionsByIDNotFound() *UpdateDashboardPermissionsByID
 	return &UpdateDashboardPermissionsByIDNotFound{}
 }
 
-/* UpdateDashboardPermissionsByIDNotFound describes a response with status code 404, with default header values.
+/*
+UpdateDashboardPermissionsByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewUpdateDashboardPermissionsByIDInternalServerError() *UpdateDashboardPerm
 	return &UpdateDashboardPermissionsByIDInternalServerError{}
 }
 
-/* UpdateDashboardPermissionsByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateDashboardPermissionsByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

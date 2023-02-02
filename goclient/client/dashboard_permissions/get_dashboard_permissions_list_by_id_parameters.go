@@ -53,10 +53,12 @@ func NewGetDashboardPermissionsListByIDParamsWithHTTPClient(client *http.Client)
 	}
 }
 
-/* GetDashboardPermissionsListByIDParams contains all the parameters to send to the API endpoint
-   for the get dashboard permissions list by ID operation.
+/*
+GetDashboardPermissionsListByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard permissions list by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardPermissionsListByIDParams struct {
 

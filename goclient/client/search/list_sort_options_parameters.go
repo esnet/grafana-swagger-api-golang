@@ -52,10 +52,12 @@ func NewListSortOptionsParamsWithHTTPClient(client *http.Client) *ListSortOption
 	}
 }
 
-/* ListSortOptionsParams contains all the parameters to send to the API endpoint
-   for the list sort options operation.
+/*
+ListSortOptionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the list sort options operation.
+
+	Typically these are written to a http.Request.
 */
 type ListSortOptionsParams struct {
 	timeout    time.Duration

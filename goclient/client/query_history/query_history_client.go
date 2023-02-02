@@ -48,9 +48,9 @@ type ClientService interface {
 }
 
 /*
-  CreateQuery adds query to query history
+CreateQuery adds query to query history
 
-  Adds new query to query history.
+Adds new query to query history.
 */
 func (a *Client) CreateQuery(params *CreateQueryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateQueryOK, error) {
 	// TODO: Validate the params before sending
@@ -89,9 +89,9 @@ func (a *Client) CreateQuery(params *CreateQueryParams, authInfo runtime.ClientA
 }
 
 /*
-  DeleteQuery deletes query in query history
+DeleteQuery deletes query in query history
 
-  Deletes an existing query in query history as specified by the UID. This operation cannot be reverted.
+Deletes an existing query in query history as specified by the UID. This operation cannot be reverted.
 */
 func (a *Client) DeleteQuery(params *DeleteQueryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteQueryOK, error) {
 	// TODO: Validate the params before sending
@@ -130,9 +130,9 @@ func (a *Client) DeleteQuery(params *DeleteQueryParams, authInfo runtime.ClientA
 }
 
 /*
-  MigrateQueries migrates queries to query history
+MigrateQueries migrates queries to query history
 
-  Adds multiple queries to query history.
+Adds multiple queries to query history.
 */
 func (a *Client) MigrateQueries(params *MigrateQueriesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MigrateQueriesOK, error) {
 	// TODO: Validate the params before sending
@@ -171,9 +171,9 @@ func (a *Client) MigrateQueries(params *MigrateQueriesParams, authInfo runtime.C
 }
 
 /*
-  PatchQueryComment updates comment for query in query history
+PatchQueryComment updates comment for query in query history
 
-  Updates comment for query in query history as specified by the UID.
+Updates comment for query in query history as specified by the UID.
 */
 func (a *Client) PatchQueryComment(params *PatchQueryCommentParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PatchQueryCommentOK, error) {
 	// TODO: Validate the params before sending
@@ -212,9 +212,10 @@ func (a *Client) PatchQueryComment(params *PatchQueryCommentParams, authInfo run
 }
 
 /*
-  SearchQueries queries history search
+	SearchQueries queries history search
 
-  Returns a list of queries in the query history that matches the search criteria.
+	Returns a list of queries in the query history that matches the search criteria.
+
 Query history search supports pagination. Use the `limit` parameter to control the maximum number of queries returned; the default limit is 100.
 You can also use the `page` query parameter to fetch queries from any page other than the first one.
 */
@@ -255,9 +256,9 @@ func (a *Client) SearchQueries(params *SearchQueriesParams, authInfo runtime.Cli
 }
 
 /*
-  StarQuery adds star to query in query history
+StarQuery adds star to query in query history
 
-  Adds star to query in query history as specified by the UID.
+Adds star to query in query history as specified by the UID.
 */
 func (a *Client) StarQuery(params *StarQueryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StarQueryOK, error) {
 	// TODO: Validate the params before sending
@@ -296,9 +297,9 @@ func (a *Client) StarQuery(params *StarQueryParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  UnstarQuery removes star to query in query history
+UnstarQuery removes star to query in query history
 
-  Removes star from query in query history as specified by the UID.
+Removes star from query in query history as specified by the UID.
 */
 func (a *Client) UnstarQuery(params *UnstarQueryParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UnstarQueryOK, error) {
 	// TODO: Validate the params before sending

@@ -69,7 +69,8 @@ func NewDeleteOrgByIDOK() *DeleteOrgByIDOK {
 	return &DeleteOrgByIDOK{}
 }
 
-/* DeleteOrgByIDOK describes a response with status code 200, with default header values.
+/*
+DeleteOrgByIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewDeleteOrgByIDBadRequest() *DeleteOrgByIDBadRequest {
 	return &DeleteOrgByIDBadRequest{}
 }
 
-/* DeleteOrgByIDBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteOrgByIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteOrgByIDUnauthorized() *DeleteOrgByIDUnauthorized {
 	return &DeleteOrgByIDUnauthorized{}
 }
 
-/* DeleteOrgByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteOrgByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteOrgByIDForbidden() *DeleteOrgByIDForbidden {
 	return &DeleteOrgByIDForbidden{}
 }
 
-/* DeleteOrgByIDForbidden describes a response with status code 403, with default header values.
+/*
+DeleteOrgByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteOrgByIDNotFound() *DeleteOrgByIDNotFound {
 	return &DeleteOrgByIDNotFound{}
 }
 
-/* DeleteOrgByIDNotFound describes a response with status code 404, with default header values.
+/*
+DeleteOrgByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewDeleteOrgByIDInternalServerError() *DeleteOrgByIDInternalServerError {
 	return &DeleteOrgByIDInternalServerError{}
 }
 
-/* DeleteOrgByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteOrgByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

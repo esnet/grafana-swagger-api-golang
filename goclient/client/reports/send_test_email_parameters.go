@@ -54,10 +54,12 @@ func NewSendTestEmailParamsWithHTTPClient(client *http.Client) *SendTestEmailPar
 	}
 }
 
-/* SendTestEmailParams contains all the parameters to send to the API endpoint
-   for the send test email operation.
+/*
+SendTestEmailParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the send test email operation.
+
+	Typically these are written to a http.Request.
 */
 type SendTestEmailParams struct {
 

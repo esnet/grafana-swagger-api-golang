@@ -52,10 +52,12 @@ func NewGetTeamByIDParamsWithHTTPClient(client *http.Client) *GetTeamByIDParams 
 	}
 }
 
-/* GetTeamByIDParams contains all the parameters to send to the API endpoint
-   for the get team by ID operation.
+/*
+GetTeamByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get team by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetTeamByIDParams struct {
 

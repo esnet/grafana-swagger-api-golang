@@ -51,7 +51,8 @@ func NewGetRoleOK() *GetRoleOK {
 	return &GetRoleOK{}
 }
 
-/* GetRoleOK describes a response with status code 200, with default header values.
+/*
+GetRoleOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetRoleForbidden() *GetRoleForbidden {
 	return &GetRoleForbidden{}
 }
 
-/* GetRoleForbidden describes a response with status code 403, with default header values.
+/*
+GetRoleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -115,7 +117,8 @@ func NewGetRoleInternalServerError() *GetRoleInternalServerError {
 	return &GetRoleInternalServerError{}
 }
 
-/* GetRoleInternalServerError describes a response with status code 500, with default header values.
+/*
+GetRoleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -22,6 +22,9 @@ type LibraryElementConnectionDTO struct {
 	// connection Id
 	ConnectionID int64 `json:"connectionId,omitempty"`
 
+	// connection Uid
+	ConnectionUID string `json:"connectionUid,omitempty"`
+
 	// created
 	// Format: date-time
 	Created strfmt.DateTime `json:"created,omitempty"`

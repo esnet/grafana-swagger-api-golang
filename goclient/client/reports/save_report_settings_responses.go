@@ -63,7 +63,8 @@ func NewSaveReportSettingsOK() *SaveReportSettingsOK {
 	return &SaveReportSettingsOK{}
 }
 
-/* SaveReportSettingsOK describes a response with status code 200, with default header values.
+/*
+SaveReportSettingsOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewSaveReportSettingsBadRequest() *SaveReportSettingsBadRequest {
 	return &SaveReportSettingsBadRequest{}
 }
 
-/* SaveReportSettingsBadRequest describes a response with status code 400, with default header values.
+/*
+SaveReportSettingsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewSaveReportSettingsUnauthorized() *SaveReportSettingsUnauthorized {
 	return &SaveReportSettingsUnauthorized{}
 }
 
-/* SaveReportSettingsUnauthorized describes a response with status code 401, with default header values.
+/*
+SaveReportSettingsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewSaveReportSettingsForbidden() *SaveReportSettingsForbidden {
 	return &SaveReportSettingsForbidden{}
 }
 
-/* SaveReportSettingsForbidden describes a response with status code 403, with default header values.
+/*
+SaveReportSettingsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewSaveReportSettingsInternalServerError() *SaveReportSettingsInternalServe
 	return &SaveReportSettingsInternalServerError{}
 }
 
-/* SaveReportSettingsInternalServerError describes a response with status code 500, with default header values.
+/*
+SaveReportSettingsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

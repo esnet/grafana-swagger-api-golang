@@ -54,10 +54,12 @@ func NewUpdateTeamPreferencesParamsWithHTTPClient(client *http.Client) *UpdateTe
 	}
 }
 
-/* UpdateTeamPreferencesParams contains all the parameters to send to the API endpoint
-   for the update team preferences operation.
+/*
+UpdateTeamPreferencesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update team preferences operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateTeamPreferencesParams struct {
 

@@ -34,6 +34,8 @@ type ClientService interface {
 
 	GetSAMLLogout(params *GetSAMLLogoutParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error
 
+	GetSLO(params *GetSLOParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error
+
 	PostACS(params *PostACSParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error
 
 	PostSLO(params *PostSLOParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error
@@ -42,7 +44,7 @@ type ClientService interface {
 }
 
 /*
-  GetMetadata its exposes the s p grafana s metadata for the Id p s consumption
+GetMetadata its exposes the s p grafana s metadata for the Id p s consumption
 */
 func (a *Client) GetMetadata(params *GetMetadataParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetMetadataOK, error) {
 	// TODO: Validate the params before sending
@@ -81,7 +83,7 @@ func (a *Client) GetMetadata(params *GetMetadataParams, authInfo runtime.ClientA
 }
 
 /*
-  GetSAMLLogout gets logout initiates single logout process
+GetSAMLLogout gets logout initiates single logout process
 */
 func (a *Client) GetSAMLLogout(params *GetSAMLLogoutParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error {
 	// TODO: Validate the params before sending
@@ -113,7 +115,45 @@ func (a *Client) GetSAMLLogout(params *GetSAMLLogoutParams, authInfo runtime.Cli
 }
 
 /*
-  PostACS its performs assertion consumer service a c s
+	GetSLO its performs single logout s l o callback
+
+	There might be two possible requests:
+
+1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.
+2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,
+or in case of IdP-initiated logout.
+*/
+func (a *Client) GetSLO(params *GetSLOParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetSLOParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "getSLO",
+		Method:             "GET",
+		PathPattern:        "/saml/slo",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &GetSLOReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	_, err := a.transport.Submit(op)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+/*
+PostACS its performs assertion consumer service a c s
 */
 func (a *Client) PostACS(params *PostACSParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) error {
 	// TODO: Validate the params before sending
@@ -145,9 +185,10 @@ func (a *Client) PostACS(params *PostACSParams, authInfo runtime.ClientAuthInfoW
 }
 
 /*
-  PostSLO its performs single logout s l o callback
+	PostSLO its performs single logout s l o callback
 
-  There might be two possible requests:
+	There might be two possible requests:
+
 1. Logout response (callback) when Grafana initiates single logout and IdP returns response to logout request.
 2. Logout request when another SP initiates single logout and IdP sends logout request to the Grafana,
 or in case of IdP-initiated logout.

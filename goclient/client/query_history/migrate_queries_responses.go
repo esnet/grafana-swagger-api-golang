@@ -57,7 +57,8 @@ func NewMigrateQueriesOK() *MigrateQueriesOK {
 	return &MigrateQueriesOK{}
 }
 
-/* MigrateQueriesOK describes a response with status code 200, with default header values.
+/*
+MigrateQueriesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewMigrateQueriesBadRequest() *MigrateQueriesBadRequest {
 	return &MigrateQueriesBadRequest{}
 }
 
-/* MigrateQueriesBadRequest describes a response with status code 400, with default header values.
+/*
+MigrateQueriesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewMigrateQueriesUnauthorized() *MigrateQueriesUnauthorized {
 	return &MigrateQueriesUnauthorized{}
 }
 
-/* MigrateQueriesUnauthorized describes a response with status code 401, with default header values.
+/*
+MigrateQueriesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewMigrateQueriesInternalServerError() *MigrateQueriesInternalServerError {
 	return &MigrateQueriesInternalServerError{}
 }
 
-/* MigrateQueriesInternalServerError describes a response with status code 500, with default header values.
+/*
+MigrateQueriesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

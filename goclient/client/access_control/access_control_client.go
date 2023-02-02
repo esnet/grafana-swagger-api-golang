@@ -30,21 +30,19 @@ type ClientOption func(*runtime.ClientOperation)
 
 // ClientService is the interface for Client methods
 type ClientService interface {
-	AddBuiltinRole(params *AddBuiltinRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddBuiltinRoleOK, error)
-
 	AddTeamRole(params *AddTeamRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddTeamRoleOK, error)
 
 	AddUserRole(params *AddUserRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddUserRoleOK, error)
 
 	CreateRole(params *CreateRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateRoleCreated, error)
 
-	DeleteCustomRole(params *DeleteCustomRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteCustomRoleOK, error)
+	DeleteRole(params *DeleteRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteRoleOK, error)
 
 	GetAccessControlStatus(params *GetAccessControlStatusParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAccessControlStatusOK, error)
 
 	GetRole(params *GetRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetRoleOK, error)
 
-	ListBuiltinRoles(params *ListBuiltinRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListBuiltinRolesOK, error)
+	GetRoleAssignments(params *GetRoleAssignmentsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetRoleAssignmentsOK, error)
 
 	ListRoles(params *ListRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListRolesOK, error)
 
@@ -52,66 +50,25 @@ type ClientService interface {
 
 	ListUserRoles(params *ListUserRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListUserRolesOK, error)
 
-	RemoveBuiltinRole(params *RemoveBuiltinRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveBuiltinRoleOK, error)
-
 	RemoveTeamRole(params *RemoveTeamRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveTeamRoleOK, error)
 
 	RemoveUserRole(params *RemoveUserRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveUserRoleOK, error)
+
+	SetRoleAssignments(params *SetRoleAssignmentsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetRoleAssignmentsOK, error)
 
 	SetTeamRoles(params *SetTeamRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetTeamRolesOK, error)
 
 	SetUserRoles(params *SetUserRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetUserRolesOK, error)
 
-	UpdateRoleWithPermissions(params *UpdateRoleWithPermissionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateRoleWithPermissionsOK, error)
+	UpdateRole(params *UpdateRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateRoleOK, error)
 
 	SetTransport(transport runtime.ClientTransport)
 }
 
 /*
-  AddBuiltinRole creates a built in role assignment
+AddTeamRole adds team role
 
-  You need to have a permission with action `roles.builtin:add` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create built-in role assignments with the roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to create a built-in role assignment which will allow to do that. This is done to prevent escalation of privileges.
-*/
-func (a *Client) AddBuiltinRole(params *AddBuiltinRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddBuiltinRoleOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewAddBuiltinRoleParams()
-	}
-	op := &runtime.ClientOperation{
-		ID:                 "addBuiltinRole",
-		Method:             "POST",
-		PathPattern:        "/access-control/builtin-roles",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"http", "https"},
-		Params:             params,
-		Reader:             &AddBuiltinRoleReader{formats: a.formats},
-		AuthInfo:           authInfo,
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	}
-	for _, opt := range opts {
-		opt(op)
-	}
-
-	result, err := a.transport.Submit(op)
-	if err != nil {
-		return nil, err
-	}
-	success, ok := result.(*AddBuiltinRoleOK)
-	if ok {
-		return success, nil
-	}
-	// unexpected success response
-	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for addBuiltinRole: API contract not enforced by server. Client expected to get an error, but got: %T", result)
-	panic(msg)
-}
-
-/*
-  AddTeamRole adds team role
-
-  You need to have a permission with action `teams.roles:add` and scope `permissions:type:delegate`.
+You need to have a permission with action `teams.roles:add` and scope `permissions:type:delegate`.
 */
 func (a *Client) AddTeamRole(params *AddTeamRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddTeamRoleOK, error) {
 	// TODO: Validate the params before sending
@@ -150,9 +107,9 @@ func (a *Client) AddTeamRole(params *AddTeamRoleParams, authInfo runtime.ClientA
 }
 
 /*
-  AddUserRole adds a user role assignment
+	AddUserRole adds a user role assignment
 
-  Assign a role to a specific user. For bulk updates consider Set user role assignments.
+	Assign a role to a specific user. For bulk updates consider Set user role assignments.
 
 You need to have a permission with action `users.roles:add` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only assign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to assign a role which will allow to do that. This is done to prevent escalation of privileges.
 */
@@ -193,11 +150,11 @@ func (a *Client) AddUserRole(params *AddUserRoleParams, authInfo runtime.ClientA
 }
 
 /*
-  CreateRole creates a new custom role
+	CreateRole creates a new custom role
 
-  Creates a new custom role and maps given permissions to that role. Note that roles with the same prefix as Fixed Roles can’t be created.
+	Creates a new custom role and maps given permissions to that role. Note that roles with the same prefix as Fixed Roles can’t be created.
 
-You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate`` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
+You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
 For example, if a user does not have required permissions for creating users, they won’t be able to create a custom role which allows to do that. This is done to prevent escalation of privileges.
 */
 func (a *Client) CreateRole(params *CreateRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateRoleCreated, error) {
@@ -237,26 +194,26 @@ func (a *Client) CreateRole(params *CreateRoleParams, authInfo runtime.ClientAut
 }
 
 /*
-  DeleteCustomRole deletes a custom role
+	DeleteRole deletes a custom role
 
-  Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.
+	Delete a role with the given UID, and it’s permissions. If the role is assigned to a built-in role, the deletion operation will fail, unless force query param is set to true, and in that case all assignments will also be deleted.
 
 You need to have a permission with action `roles:delete` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only delete a custom role with the same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to delete a custom role which allows to do that.
 */
-func (a *Client) DeleteCustomRole(params *DeleteCustomRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteCustomRoleOK, error) {
+func (a *Client) DeleteRole(params *DeleteRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteRoleOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewDeleteCustomRoleParams()
+		params = NewDeleteRoleParams()
 	}
 	op := &runtime.ClientOperation{
-		ID:                 "deleteCustomRole",
+		ID:                 "deleteRole",
 		Method:             "DELETE",
 		PathPattern:        "/access-control/roles/{roleUID}",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http", "https"},
 		Params:             params,
-		Reader:             &DeleteCustomRoleReader{formats: a.formats},
+		Reader:             &DeleteRoleReader{formats: a.formats},
 		AuthInfo:           authInfo,
 		Context:            params.Context,
 		Client:             params.HTTPClient,
@@ -269,20 +226,20 @@ func (a *Client) DeleteCustomRole(params *DeleteCustomRoleParams, authInfo runti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*DeleteCustomRoleOK)
+	success, ok := result.(*DeleteRoleOK)
 	if ok {
 		return success, nil
 	}
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for deleteCustomRole: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	msg := fmt.Sprintf("unexpected success response for deleteRole: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 
 /*
-  GetAccessControlStatus gets status
+	GetAccessControlStatus gets status
 
-  Returns an indicator to check if fine-grained access control is enabled or not.
+	Returns an indicator to check if fine-grained access control is enabled or not.
 
 You need to have a permission with action `status:accesscontrol` and scope `services:accesscontrol`.
 */
@@ -323,9 +280,9 @@ func (a *Client) GetAccessControlStatus(params *GetAccessControlStatusParams, au
 }
 
 /*
-  GetRole gets a role
+	GetRole gets a role
 
-  Get a role for the given UID.
+	Get a role for the given UID.
 
 You need to have a permission with action `roles:read` and scope `roles:*`.
 */
@@ -366,24 +323,26 @@ func (a *Client) GetRole(params *GetRoleParams, authInfo runtime.ClientAuthInfoW
 }
 
 /*
-  ListBuiltinRoles gets all built in role assignments
+	GetRoleAssignments gets role assignments
 
-  You need to have a permission with action `roles.builtin:list` with scope `roles:*`.
+	Get role assignments for the role with the given UID.
+
+You need to have a permission with action `teams.roles:list` and scope `teams:id:*` and `users.roles:list` and scope `users:id:*`.
 */
-func (a *Client) ListBuiltinRoles(params *ListBuiltinRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListBuiltinRolesOK, error) {
+func (a *Client) GetRoleAssignments(params *GetRoleAssignmentsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetRoleAssignmentsOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewListBuiltinRolesParams()
+		params = NewGetRoleAssignmentsParams()
 	}
 	op := &runtime.ClientOperation{
-		ID:                 "listBuiltinRoles",
+		ID:                 "getRoleAssignments",
 		Method:             "GET",
-		PathPattern:        "/access-control/builtin-roles",
+		PathPattern:        "/access-control/roles/{roleUID}/assignments",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http", "https"},
 		Params:             params,
-		Reader:             &ListBuiltinRolesReader{formats: a.formats},
+		Reader:             &GetRoleAssignmentsReader{formats: a.formats},
 		AuthInfo:           authInfo,
 		Context:            params.Context,
 		Client:             params.HTTPClient,
@@ -396,22 +355,22 @@ func (a *Client) ListBuiltinRoles(params *ListBuiltinRolesParams, authInfo runti
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*ListBuiltinRolesOK)
+	success, ok := result.(*GetRoleAssignmentsOK)
 	if ok {
 		return success, nil
 	}
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for listBuiltinRoles: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	msg := fmt.Sprintf("unexpected success response for getRoleAssignments: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 
 /*
-  ListRoles gets all roles
+	ListRoles gets all roles
 
-  Gets all existing roles. The response contains all global and organization local roles, for the organization which user is signed in.
+	Gets all existing roles. The response contains all global and organization local roles, for the organization which user is signed in.
 
-You need to have a permission with action `roles:list` and scope `roles:*`.
+You need to have a permission with action `roles:read` and scope `roles:*`.
 */
 func (a *Client) ListRoles(params *ListRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListRolesOK, error) {
 	// TODO: Validate the params before sending
@@ -450,9 +409,9 @@ func (a *Client) ListRoles(params *ListRolesParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  ListTeamRoles gets team roles
+ListTeamRoles gets team roles
 
-  You need to have a permission with action `teams.roles:list` and scope `teams:id:<team ID>`.
+You need to have a permission with action `teams.roles:read` and scope `teams:id:<team ID>`.
 */
 func (a *Client) ListTeamRoles(params *ListTeamRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListTeamRolesOK, error) {
 	// TODO: Validate the params before sending
@@ -491,11 +450,11 @@ func (a *Client) ListTeamRoles(params *ListTeamRolesParams, authInfo runtime.Cli
 }
 
 /*
-  ListUserRoles lists roles assigned to a user
+	ListUserRoles lists roles assigned to a user
 
-  Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.
+	Lists the roles that have been directly assigned to a given user. The list does not include built-in roles (Viewer, Editor, Admin or Grafana Admin), and it does not include roles that have been inherited from a team.
 
-You need to have a permission with action `users.roles:list` and scope `users:id:<user ID>`.
+You need to have a permission with action `users.roles:read` and scope `users:id:<user ID>`.
 */
 func (a *Client) ListUserRoles(params *ListUserRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListUserRolesOK, error) {
 	// TODO: Validate the params before sending
@@ -534,52 +493,9 @@ func (a *Client) ListUserRoles(params *ListUserRolesParams, authInfo runtime.Cli
 }
 
 /*
-  RemoveBuiltinRole removes a built in role assignment
+RemoveTeamRole removes team role
 
-  Deletes a built-in role assignment (for one of Viewer, Editor, Admin, or Grafana Admin) to the role with the provided UID.
-
-You need to have a permission with action `roles.builtin:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only remove built-in role assignments with the roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to remove a built-in role assignment which allows to do that.
-*/
-func (a *Client) RemoveBuiltinRole(params *RemoveBuiltinRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveBuiltinRoleOK, error) {
-	// TODO: Validate the params before sending
-	if params == nil {
-		params = NewRemoveBuiltinRoleParams()
-	}
-	op := &runtime.ClientOperation{
-		ID:                 "removeBuiltinRole",
-		Method:             "DELETE",
-		PathPattern:        "/access-control/builtin-roles/{builtinRole}/roles/{roleUID}",
-		ProducesMediaTypes: []string{"application/json"},
-		ConsumesMediaTypes: []string{"application/json"},
-		Schemes:            []string{"http", "https"},
-		Params:             params,
-		Reader:             &RemoveBuiltinRoleReader{formats: a.formats},
-		AuthInfo:           authInfo,
-		Context:            params.Context,
-		Client:             params.HTTPClient,
-	}
-	for _, opt := range opts {
-		opt(op)
-	}
-
-	result, err := a.transport.Submit(op)
-	if err != nil {
-		return nil, err
-	}
-	success, ok := result.(*RemoveBuiltinRoleOK)
-	if ok {
-		return success, nil
-	}
-	// unexpected success response
-	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for removeBuiltinRole: API contract not enforced by server. Client expected to get an error, but got: %T", result)
-	panic(msg)
-}
-
-/*
-  RemoveTeamRole removes team role
-
-  You need to have a permission with action `teams.roles:remove` and scope `permissions:type:delegate`.
+You need to have a permission with action `teams.roles:remove` and scope `permissions:type:delegate`.
 */
 func (a *Client) RemoveTeamRole(params *RemoveTeamRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveTeamRoleOK, error) {
 	// TODO: Validate the params before sending
@@ -618,9 +534,9 @@ func (a *Client) RemoveTeamRole(params *RemoveTeamRoleParams, authInfo runtime.C
 }
 
 /*
-  RemoveUserRole removes a user role assignment
+	RemoveUserRole removes a user role assignment
 
-  Revoke a role from a user. For bulk updates consider Set user role assignments.
+	Revoke a role from a user. For bulk updates consider Set user role assignments.
 
 You need to have a permission with action `users.roles:remove` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to unassign a role which will allow to do that. This is done to prevent escalation of privileges.
 */
@@ -661,9 +577,52 @@ func (a *Client) RemoveUserRole(params *RemoveUserRoleParams, authInfo runtime.C
 }
 
 /*
-  SetTeamRoles updates team role
+	SetRoleAssignments sets role assignments
 
-  You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
+	Set role assignments for the role with the given UID.
+
+You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate`, and `users.roles:add` and `users.roles:remove` and scope `permissions:type:delegate`.
+*/
+func (a *Client) SetRoleAssignments(params *SetRoleAssignmentsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetRoleAssignmentsOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSetRoleAssignmentsParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "setRoleAssignments",
+		Method:             "PUT",
+		PathPattern:        "/access-control/roles/{roleUID}/assignments",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &SetRoleAssignmentsReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*SetRoleAssignmentsOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for setRoleAssignments: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+SetTeamRoles updates team role
+
+You need to have a permission with action `teams.roles:add` and `teams.roles:remove` and scope `permissions:type:delegate` for each.
 */
 func (a *Client) SetTeamRoles(params *SetTeamRolesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetTeamRolesOK, error) {
 	// TODO: Validate the params before sending
@@ -702,9 +661,10 @@ func (a *Client) SetTeamRoles(params *SetTeamRolesParams, authInfo runtime.Clien
 }
 
 /*
-  SetUserRoles sets user role assignments
+	SetUserRoles sets user role assignments
 
-  Update the user’s role assignments to match the provided set of UIDs. This will remove any assigned roles that aren’t in the request and add roles that are in the set but are not already assigned to the user.
+	Update the user’s role assignments to match the provided set of UIDs. This will remove any assigned roles that aren’t in the request and add roles that are in the set but are not already assigned to the user.
+
 If you want to add or remove a single role, consider using Add a user role assignment or Remove a user role assignment instead.
 
 You need to have a permission with action `users.roles:add` and `users.roles:remove` and scope `permissions:type:delegate` for each. `permissions:type:delegate`  scope ensures that users can only assign or unassign roles which have same, or a subset of permissions which the user has. For example, if a user does not have required permissions for creating users, they won’t be able to assign or unassign a role which will allow to do that. This is done to prevent escalation of privileges.
@@ -746,24 +706,24 @@ func (a *Client) SetUserRoles(params *SetUserRolesParams, authInfo runtime.Clien
 }
 
 /*
-  UpdateRoleWithPermissions updates a custom role
+UpdateRole updates a custom role
 
-  You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate`` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
+You need to have a permission with action `roles:write` and scope `permissions:type:delegate`. `permissions:type:delegate` scope ensures that users can only create custom roles with the same, or a subset of permissions which the user has.
 */
-func (a *Client) UpdateRoleWithPermissions(params *UpdateRoleWithPermissionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateRoleWithPermissionsOK, error) {
+func (a *Client) UpdateRole(params *UpdateRoleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateRoleOK, error) {
 	// TODO: Validate the params before sending
 	if params == nil {
-		params = NewUpdateRoleWithPermissionsParams()
+		params = NewUpdateRoleParams()
 	}
 	op := &runtime.ClientOperation{
-		ID:                 "updateRoleWithPermissions",
+		ID:                 "updateRole",
 		Method:             "PUT",
 		PathPattern:        "/access-control/roles/{roleUID}",
 		ProducesMediaTypes: []string{"application/json"},
 		ConsumesMediaTypes: []string{"application/json"},
 		Schemes:            []string{"http", "https"},
 		Params:             params,
-		Reader:             &UpdateRoleWithPermissionsReader{formats: a.formats},
+		Reader:             &UpdateRoleReader{formats: a.formats},
 		AuthInfo:           authInfo,
 		Context:            params.Context,
 		Client:             params.HTTPClient,
@@ -776,13 +736,13 @@ func (a *Client) UpdateRoleWithPermissions(params *UpdateRoleWithPermissionsPara
 	if err != nil {
 		return nil, err
 	}
-	success, ok := result.(*UpdateRoleWithPermissionsOK)
+	success, ok := result.(*UpdateRoleOK)
 	if ok {
 		return success, nil
 	}
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
-	msg := fmt.Sprintf("unexpected success response for updateRoleWithPermissions: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	msg := fmt.Sprintf("unexpected success response for updateRole: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 

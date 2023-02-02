@@ -54,10 +54,12 @@ func NewRoutePostAlertRuleParamsWithHTTPClient(client *http.Client) *RoutePostAl
 	}
 }
 
-/* RoutePostAlertRuleParams contains all the parameters to send to the API endpoint
-   for the route post alert rule operation.
+/*
+RoutePostAlertRuleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route post alert rule operation.
+
+	Typically these are written to a http.Request.
 */
 type RoutePostAlertRuleParams struct {
 

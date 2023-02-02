@@ -52,10 +52,12 @@ func NewGetPlaylistParamsWithHTTPClient(client *http.Client) *GetPlaylistParams 
 	}
 }
 
-/* GetPlaylistParams contains all the parameters to send to the API endpoint
-   for the get playlist operation.
+/*
+GetPlaylistParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get playlist operation.
+
+	Typically these are written to a http.Request.
 */
 type GetPlaylistParams struct {
 

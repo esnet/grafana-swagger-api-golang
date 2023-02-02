@@ -69,7 +69,8 @@ func NewDeleteTokenOK() *DeleteTokenOK {
 	return &DeleteTokenOK{}
 }
 
-/* DeleteTokenOK describes a response with status code 200, with default header values.
+/*
+DeleteTokenOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewDeleteTokenBadRequest() *DeleteTokenBadRequest {
 	return &DeleteTokenBadRequest{}
 }
 
-/* DeleteTokenBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteTokenUnauthorized() *DeleteTokenUnauthorized {
 	return &DeleteTokenUnauthorized{}
 }
 
-/* DeleteTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteTokenForbidden() *DeleteTokenForbidden {
 	return &DeleteTokenForbidden{}
 }
 
-/* DeleteTokenForbidden describes a response with status code 403, with default header values.
+/*
+DeleteTokenForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteTokenNotFound() *DeleteTokenNotFound {
 	return &DeleteTokenNotFound{}
 }
 
-/* DeleteTokenNotFound describes a response with status code 404, with default header values.
+/*
+DeleteTokenNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewDeleteTokenInternalServerError() *DeleteTokenInternalServerError {
 	return &DeleteTokenInternalServerError{}
 }
 
-/* DeleteTokenInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteTokenInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

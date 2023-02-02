@@ -52,10 +52,12 @@ func NewGetSignedInUserTeamListParamsWithHTTPClient(client *http.Client) *GetSig
 	}
 }
 
-/* GetSignedInUserTeamListParams contains all the parameters to send to the API endpoint
-   for the get signed in user team list operation.
+/*
+GetSignedInUserTeamListParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get signed in user team list operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSignedInUserTeamListParams struct {
 	timeout    time.Duration

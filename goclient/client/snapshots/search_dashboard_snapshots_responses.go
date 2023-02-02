@@ -45,7 +45,8 @@ func NewSearchDashboardSnapshotsOK() *SearchDashboardSnapshotsOK {
 	return &SearchDashboardSnapshotsOK{}
 }
 
-/* SearchDashboardSnapshotsOK describes a response with status code 200, with default header values.
+/*
+SearchDashboardSnapshotsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -75,7 +76,8 @@ func NewSearchDashboardSnapshotsInternalServerError() *SearchDashboardSnapshotsI
 	return &SearchDashboardSnapshotsInternalServerError{}
 }
 
-/* SearchDashboardSnapshotsInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchDashboardSnapshotsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

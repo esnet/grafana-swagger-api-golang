@@ -54,10 +54,12 @@ func NewUpdateRecordingRuleParamsWithHTTPClient(client *http.Client) *UpdateReco
 	}
 }
 
-/* UpdateRecordingRuleParams contains all the parameters to send to the API endpoint
-   for the update recording rule operation.
+/*
+UpdateRecordingRuleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update recording rule operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateRecordingRuleParams struct {
 

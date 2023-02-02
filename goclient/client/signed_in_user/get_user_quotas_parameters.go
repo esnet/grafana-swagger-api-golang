@@ -52,10 +52,12 @@ func NewGetUserQuotasParamsWithHTTPClient(client *http.Client) *GetUserQuotasPar
 	}
 }
 
-/* GetUserQuotasParams contains all the parameters to send to the API endpoint
-   for the get user quotas operation.
+/*
+GetUserQuotasParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get user quotas operation.
+
+	Typically these are written to a http.Request.
 */
 type GetUserQuotasParams struct {
 	timeout    time.Duration

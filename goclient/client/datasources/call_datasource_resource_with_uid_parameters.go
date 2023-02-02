@@ -52,10 +52,12 @@ func NewCallDatasourceResourceWithUIDParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/* CallDatasourceResourceWithUIDParams contains all the parameters to send to the API endpoint
-   for the call datasource resource with UID operation.
+/*
+CallDatasourceResourceWithUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the call datasource resource with UID operation.
+
+	Typically these are written to a http.Request.
 */
 type CallDatasourceResourceWithUIDParams struct {
 

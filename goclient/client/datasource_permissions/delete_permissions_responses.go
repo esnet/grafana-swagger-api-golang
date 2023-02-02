@@ -57,7 +57,8 @@ func NewDeletePermissionsOK() *DeletePermissionsOK {
 	return &DeletePermissionsOK{}
 }
 
-/* DeletePermissionsOK describes a response with status code 200, with default header values.
+/*
+DeletePermissionsOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewDeletePermissionsUnauthorized() *DeletePermissionsUnauthorized {
 	return &DeletePermissionsUnauthorized{}
 }
 
-/* DeletePermissionsUnauthorized describes a response with status code 401, with default header values.
+/*
+DeletePermissionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewDeletePermissionsForbidden() *DeletePermissionsForbidden {
 	return &DeletePermissionsForbidden{}
 }
 
-/* DeletePermissionsForbidden describes a response with status code 403, with default header values.
+/*
+DeletePermissionsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewDeletePermissionsNotFound() *DeletePermissionsNotFound {
 	return &DeletePermissionsNotFound{}
 }
 
-/* DeletePermissionsNotFound describes a response with status code 404, with default header values.
+/*
+DeletePermissionsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */

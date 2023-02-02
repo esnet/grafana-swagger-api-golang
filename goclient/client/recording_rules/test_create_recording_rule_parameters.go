@@ -54,10 +54,12 @@ func NewTestCreateRecordingRuleParamsWithHTTPClient(client *http.Client) *TestCr
 	}
 }
 
-/* TestCreateRecordingRuleParams contains all the parameters to send to the API endpoint
-   for the test create recording rule operation.
+/*
+TestCreateRecordingRuleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the test create recording rule operation.
+
+	Typically these are written to a http.Request.
 */
 type TestCreateRecordingRuleParams struct {
 

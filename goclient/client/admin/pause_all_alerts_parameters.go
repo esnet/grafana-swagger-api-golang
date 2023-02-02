@@ -54,10 +54,12 @@ func NewPauseAllAlertsParamsWithHTTPClient(client *http.Client) *PauseAllAlertsP
 	}
 }
 
-/* PauseAllAlertsParams contains all the parameters to send to the API endpoint
-   for the pause all alerts operation.
+/*
+PauseAllAlertsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the pause all alerts operation.
+
+	Typically these are written to a http.Request.
 */
 type PauseAllAlertsParams struct {
 

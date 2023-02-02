@@ -52,10 +52,12 @@ func NewAdminProvisioningReloadDashboardsParamsWithHTTPClient(client *http.Clien
 	}
 }
 
-/* AdminProvisioningReloadDashboardsParams contains all the parameters to send to the API endpoint
-   for the admin provisioning reload dashboards operation.
+/*
+AdminProvisioningReloadDashboardsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin provisioning reload dashboards operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminProvisioningReloadDashboardsParams struct {
 	timeout    time.Duration

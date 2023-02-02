@@ -52,10 +52,12 @@ func NewGetUserByLoginOrEmailParamsWithHTTPClient(client *http.Client) *GetUserB
 	}
 }
 
-/* GetUserByLoginOrEmailParams contains all the parameters to send to the API endpoint
-   for the get user by login or email operation.
+/*
+GetUserByLoginOrEmailParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get user by login or email operation.
+
+	Typically these are written to a http.Request.
 */
 type GetUserByLoginOrEmailParams struct {
 

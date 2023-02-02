@@ -76,9 +76,10 @@ type ClientService interface {
 }
 
 /*
-  AddDataSource creates a data source
+	AddDataSource creates a data source
 
-  By defining `password` and `basicAuthPassword` under secureJsonData property
+	By defining `password` and `basicAuthPassword` under secureJsonData property
+
 Grafana encrypts them securely as an encrypted blob in the database.
 The response then lists the encrypted fields under secureJsonFields.
 
@@ -122,9 +123,9 @@ func (a *Client) AddDataSource(params *AddDataSourceParams, authInfo runtime.Cli
 }
 
 /*
-  CallDatasourceResourceByID fetches data source resources by Id
+CallDatasourceResourceByID fetches data source resources by Id
 
-  Please refer to [updated API](#/datasources/callDatasourceResourceWithUID) instead
+Please refer to [updated API](#/datasources/callDatasourceResourceWithUID) instead
 */
 func (a *Client) CallDatasourceResourceByID(params *CallDatasourceResourceByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CallDatasourceResourceByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -163,7 +164,7 @@ func (a *Client) CallDatasourceResourceByID(params *CallDatasourceResourceByIDPa
 }
 
 /*
-  CallDatasourceResourceWithUID fetches data source resources
+CallDatasourceResourceWithUID fetches data source resources
 */
 func (a *Client) CallDatasourceResourceWithUID(params *CallDatasourceResourceWithUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CallDatasourceResourceWithUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -202,9 +203,9 @@ func (a *Client) CallDatasourceResourceWithUID(params *CallDatasourceResourceWit
 }
 
 /*
-  CheckDatasourceHealthByID sends a health check request to the plugin datasource identified by the ID
+CheckDatasourceHealthByID sends a health check request to the plugin datasource identified by the ID
 
-  Please refer to [updated API](#/datasources/checkDatasourceHealthWithUID) instead
+Please refer to [updated API](#/datasources/checkDatasourceHealthWithUID) instead
 */
 func (a *Client) CheckDatasourceHealthByID(params *CheckDatasourceHealthByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CheckDatasourceHealthByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -243,7 +244,7 @@ func (a *Client) CheckDatasourceHealthByID(params *CheckDatasourceHealthByIDPara
 }
 
 /*
-  CheckDatasourceHealthWithUID sends a health check request to the plugin datasource identified by the UID
+CheckDatasourceHealthWithUID sends a health check request to the plugin datasource identified by the UID
 */
 func (a *Client) CheckDatasourceHealthWithUID(params *CheckDatasourceHealthWithUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CheckDatasourceHealthWithUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -282,9 +283,9 @@ func (a *Client) CheckDatasourceHealthWithUID(params *CheckDatasourceHealthWithU
 }
 
 /*
-  DatasourceProxyDELETEByUIDcalls data source proxy d e l e t e calls
+DatasourceProxyDELETEByUIDcalls data source proxy d e l e t e calls
 
-  Proxies all calls to the actual data source.
+Proxies all calls to the actual data source.
 */
 func (a *Client) DatasourceProxyDELETEByUIDcalls(params *DatasourceProxyDELETEByUIDcallsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DatasourceProxyDELETEByUIDcallsAccepted, error) {
 	// TODO: Validate the params before sending
@@ -323,9 +324,9 @@ func (a *Client) DatasourceProxyDELETEByUIDcalls(params *DatasourceProxyDELETEBy
 }
 
 /*
-  DatasourceProxyDELETEcalls data source proxy d e l e t e calls
+	DatasourceProxyDELETEcalls data source proxy d e l e t e calls
 
-  Proxies all calls to the actual data source.
+	Proxies all calls to the actual data source.
 
 Please refer to [updated API](#/datasources/datasourceProxyDELETEByUIDcalls) instead
 */
@@ -366,9 +367,9 @@ func (a *Client) DatasourceProxyDELETEcalls(params *DatasourceProxyDELETEcallsPa
 }
 
 /*
-  DatasourceProxyGETByUIDcalls data source proxy g e t calls
+DatasourceProxyGETByUIDcalls data source proxy g e t calls
 
-  Proxies all calls to the actual data source.
+Proxies all calls to the actual data source.
 */
 func (a *Client) DatasourceProxyGETByUIDcalls(params *DatasourceProxyGETByUIDcallsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DatasourceProxyGETByUIDcallsOK, error) {
 	// TODO: Validate the params before sending
@@ -407,9 +408,9 @@ func (a *Client) DatasourceProxyGETByUIDcalls(params *DatasourceProxyGETByUIDcal
 }
 
 /*
-  DatasourceProxyGETcalls data source proxy g e t calls
+	DatasourceProxyGETcalls data source proxy g e t calls
 
-  Proxies all calls to the actual data source.
+	Proxies all calls to the actual data source.
 
 Please refer to [updated API](#/datasources/datasourceProxyGETByUIDcalls) instead
 */
@@ -450,9 +451,9 @@ func (a *Client) DatasourceProxyGETcalls(params *DatasourceProxyGETcallsParams, 
 }
 
 /*
-  DatasourceProxyPOSTByUIDcalls data source proxy p o s t calls
+DatasourceProxyPOSTByUIDcalls data source proxy p o s t calls
 
-  Proxies all calls to the actual data source. The data source should support POST methods for the specific path and role as defined
+Proxies all calls to the actual data source. The data source should support POST methods for the specific path and role as defined
 */
 func (a *Client) DatasourceProxyPOSTByUIDcalls(params *DatasourceProxyPOSTByUIDcallsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DatasourceProxyPOSTByUIDcallsCreated, *DatasourceProxyPOSTByUIDcallsAccepted, error) {
 	// TODO: Validate the params before sending
@@ -492,9 +493,9 @@ func (a *Client) DatasourceProxyPOSTByUIDcalls(params *DatasourceProxyPOSTByUIDc
 }
 
 /*
-  DatasourceProxyPOSTcalls data source proxy p o s t calls
+	DatasourceProxyPOSTcalls data source proxy p o s t calls
 
-  Proxies all calls to the actual data source. The data source should support POST methods for the specific path and role as defined
+	Proxies all calls to the actual data source. The data source should support POST methods for the specific path and role as defined
 
 Please refer to [updated API](#/datasources/datasourceProxyPOSTByUIDcalls) instead
 */
@@ -536,9 +537,10 @@ func (a *Client) DatasourceProxyPOSTcalls(params *DatasourceProxyPOSTcallsParams
 }
 
 /*
-  DeleteDataSourceByID deletes an existing data source by id
+	DeleteDataSourceByID deletes an existing data source by id
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).
 
 Please refer to [updated API](#/datasources/deleteDataSourceByUID) instead
@@ -580,9 +582,10 @@ func (a *Client) DeleteDataSourceByID(params *DeleteDataSourceByIDParams, authIn
 }
 
 /*
-  DeleteDataSourceByName deletes an existing data source by name
+	DeleteDataSourceByName deletes an existing data source by name
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).
 */
 func (a *Client) DeleteDataSourceByName(params *DeleteDataSourceByNameParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDataSourceByNameOK, error) {
@@ -622,9 +625,10 @@ func (a *Client) DeleteDataSourceByName(params *DeleteDataSourceByNameParams, au
 }
 
 /*
-  DeleteDataSourceByUID deletes an existing data source by UID
+	DeleteDataSourceByUID deletes an existing data source by UID
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:delete` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
 */
 func (a *Client) DeleteDataSourceByUID(params *DeleteDataSourceByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDataSourceByUIDOK, error) {
@@ -664,9 +668,10 @@ func (a *Client) DeleteDataSourceByUID(params *DeleteDataSourceByUIDParams, auth
 }
 
 /*
-  GetDataSourceByID gets a single data source by Id
+	GetDataSourceByID gets a single data source by Id
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:id:*` and `datasources:id:1` (single data source).
 
 Please refer to [updated API](#/datasources/getDataSourceByUID) instead
@@ -708,9 +713,10 @@ func (a *Client) GetDataSourceByID(params *GetDataSourceByIDParams, authInfo run
 }
 
 /*
-  GetDataSourceByName gets a single data source by name
+	GetDataSourceByName gets a single data source by name
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).
 */
 func (a *Client) GetDataSourceByName(params *GetDataSourceByNameParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourceByNameOK, error) {
@@ -750,9 +756,10 @@ func (a *Client) GetDataSourceByName(params *GetDataSourceByNameParams, authInfo
 }
 
 /*
-  GetDataSourceByUID gets a single data source by UID
+	GetDataSourceByUID gets a single data source by UID
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:uid:*` and `datasources:uid:kLtEtcRGk` (single data source).
 */
 func (a *Client) GetDataSourceByUID(params *GetDataSourceByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourceByUIDOK, error) {
@@ -792,9 +799,10 @@ func (a *Client) GetDataSourceByUID(params *GetDataSourceByUIDParams, authInfo r
 }
 
 /*
-  GetDataSourceIDByName gets data source Id by name
+	GetDataSourceIDByName gets data source Id by name
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:read` and scopes: `datasources:*`, `datasources:name:*` and `datasources:name:test_datasource` (single data source).
 */
 func (a *Client) GetDataSourceIDByName(params *GetDataSourceIDByNameParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourceIDByNameOK, error) {
@@ -834,9 +842,10 @@ func (a *Client) GetDataSourceIDByName(params *GetDataSourceIDByNameParams, auth
 }
 
 /*
-  GetDataSources gets all data sources
+	GetDataSources gets all data sources
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:read` and scope: `datasources:*`.
 */
 func (a *Client) GetDataSources(params *GetDataSourcesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDataSourcesOK, error) {
@@ -876,9 +885,10 @@ func (a *Client) GetDataSources(params *GetDataSourcesParams, authInfo runtime.C
 }
 
 /*
-  UpdateDataSourceByID updates an existing data source by its sequential ID
+	UpdateDataSourceByID updates an existing data source by its sequential ID
 
-  Similar to creating a data source, `password` and `basicAuthPassword` should be defined under
+	Similar to creating a data source, `password` and `basicAuthPassword` should be defined under
+
 secureJsonData in order to be stored securely as an encrypted blob in the database. Then, the
 encrypted fields are listed under secureJsonFields section in the response.
 
@@ -924,9 +934,10 @@ func (a *Client) UpdateDataSourceByID(params *UpdateDataSourceByIDParams, authIn
 }
 
 /*
-  UpdateDataSourceByUID updates an existing data source
+	UpdateDataSourceByUID updates an existing data source
 
-  Similar to creating a data source, `password` and `basicAuthPassword` should be defined under
+	Similar to creating a data source, `password` and `basicAuthPassword` should be defined under
+
 secureJsonData in order to be stored securely as an encrypted blob in the database. Then, the
 encrypted fields are listed under secureJsonFields section in the response.
 

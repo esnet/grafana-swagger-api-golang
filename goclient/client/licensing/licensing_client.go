@@ -50,9 +50,9 @@ type ClientService interface {
 }
 
 /*
-  DeleteLicenseToken removes license from database
+	DeleteLicenseToken removes license from database
 
-  Removes the license stored in the Grafana database. Available in Grafana Enterprise v7.4+.
+	Removes the license stored in the Grafana database. Available in Grafana Enterprise v7.4+.
 
 You need to have a permission with action `licensing:delete`.
 */
@@ -93,9 +93,9 @@ func (a *Client) DeleteLicenseToken(params *DeleteLicenseTokenParams, authInfo r
 }
 
 /*
-  GetCustomPermissionsCSV gets custom permissions report in c s v format
+GetCustomPermissionsCSV gets custom permissions report in c s v format
 
-  You need to have a permission with action `licensing.reports:read`.
+You need to have a permission with action `licensing.reports:read`.
 */
 func (a *Client) GetCustomPermissionsCSV(params *GetCustomPermissionsCSVParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetCustomPermissionsCSVOK, error) {
 	// TODO: Validate the params before sending
@@ -134,9 +134,9 @@ func (a *Client) GetCustomPermissionsCSV(params *GetCustomPermissionsCSVParams, 
 }
 
 /*
-  GetCustomPermissionsReport gets custom permissions report
+GetCustomPermissionsReport gets custom permissions report
 
-  You need to have a permission with action `licensing.reports:read`.
+You need to have a permission with action `licensing.reports:read`.
 */
 func (a *Client) GetCustomPermissionsReport(params *GetCustomPermissionsReportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetCustomPermissionsReportOK, error) {
 	// TODO: Validate the params before sending
@@ -175,9 +175,9 @@ func (a *Client) GetCustomPermissionsReport(params *GetCustomPermissionsReportPa
 }
 
 /*
-  GetLicenseToken gets license token
+GetLicenseToken gets license token
 
-  You need to have a permission with action `licensing:read`.
+You need to have a permission with action `licensing:read`.
 */
 func (a *Client) GetLicenseToken(params *GetLicenseTokenParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetLicenseTokenOK, error) {
 	// TODO: Validate the params before sending
@@ -216,7 +216,7 @@ func (a *Client) GetLicenseToken(params *GetLicenseTokenParams, authInfo runtime
 }
 
 /*
-  GetStatus checks license availability
+GetStatus checks license availability
 */
 func (a *Client) GetStatus(params *GetStatusParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetStatusOK, error) {
 	// TODO: Validate the params before sending
@@ -255,9 +255,9 @@ func (a *Client) GetStatus(params *GetStatusParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  PostLicenseToken creates license token
+PostLicenseToken creates license token
 
-  You need to have a permission with action `licensing:update`.
+You need to have a permission with action `licensing:update`.
 */
 func (a *Client) PostLicenseToken(params *PostLicenseTokenParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PostLicenseTokenOK, error) {
 	// TODO: Validate the params before sending
@@ -296,9 +296,9 @@ func (a *Client) PostLicenseToken(params *PostLicenseTokenParams, authInfo runti
 }
 
 /*
-  PostRenewLicenseToken manuallies force license refresh
+	PostRenewLicenseToken manuallies force license refresh
 
-  Manually ask license issuer for a new token. Available in Grafana Enterprise v7.4+.
+	Manually ask license issuer for a new token. Available in Grafana Enterprise v7.4+.
 
 You need to have a permission with action `licensing:update`.
 */
@@ -339,9 +339,9 @@ func (a *Client) PostRenewLicenseToken(params *PostRenewLicenseTokenParams, auth
 }
 
 /*
-  RefreshLicenseStats refreshes license stats
+RefreshLicenseStats refreshes license stats
 
-  You need to have a permission with action `licensing:read`.
+You need to have a permission with action `licensing:read`.
 */
 func (a *Client) RefreshLicenseStats(params *RefreshLicenseStatsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RefreshLicenseStatsOK, error) {
 	// TODO: Validate the params before sending

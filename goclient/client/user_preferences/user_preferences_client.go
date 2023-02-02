@@ -40,7 +40,7 @@ type ClientService interface {
 }
 
 /*
-  GetUserPreferences gets user preferences
+GetUserPreferences gets user preferences
 */
 func (a *Client) GetUserPreferences(params *GetUserPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserPreferencesOK, error) {
 	// TODO: Validate the params before sending
@@ -79,7 +79,7 @@ func (a *Client) GetUserPreferences(params *GetUserPreferencesParams, authInfo r
 }
 
 /*
-  PatchUserPreferences patches user preferences
+PatchUserPreferences patches user preferences
 */
 func (a *Client) PatchUserPreferences(params *PatchUserPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*PatchUserPreferencesOK, error) {
 	// TODO: Validate the params before sending
@@ -118,9 +118,9 @@ func (a *Client) PatchUserPreferences(params *PatchUserPreferencesParams, authIn
 }
 
 /*
-  UpdateUserPreferences updates user preferences
+UpdateUserPreferences updates user preferences
 
-  Omitting a key (`theme`, `homeDashboardId`, `timezone`) will cause the current value to be replaced with the system default value.
+Omitting a key (`theme`, `homeDashboardId`, `timezone`) will cause the current value to be replaced with the system default value.
 */
 func (a *Client) UpdateUserPreferences(params *UpdateUserPreferencesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateUserPreferencesOK, error) {
 	// TODO: Validate the params before sending

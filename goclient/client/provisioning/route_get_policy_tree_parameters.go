@@ -52,10 +52,12 @@ func NewRouteGetPolicyTreeParamsWithHTTPClient(client *http.Client) *RouteGetPol
 	}
 }
 
-/* RouteGetPolicyTreeParams contains all the parameters to send to the API endpoint
-   for the route get policy tree operation.
+/*
+RouteGetPolicyTreeParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route get policy tree operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteGetPolicyTreeParams struct {
 	timeout    time.Duration

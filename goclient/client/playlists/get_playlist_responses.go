@@ -63,24 +63,25 @@ func NewGetPlaylistOK() *GetPlaylistOK {
 	return &GetPlaylistOK{}
 }
 
-/* GetPlaylistOK describes a response with status code 200, with default header values.
+/*
+GetPlaylistOK describes a response with status code 200, with default header values.
 
 (empty)
 */
 type GetPlaylistOK struct {
-	Payload *models.PlaylistDTO
+	Payload *models.Model
 }
 
 func (o *GetPlaylistOK) Error() string {
 	return fmt.Sprintf("[GET /playlists/{uid}][%d] getPlaylistOK  %+v", 200, o.Payload)
 }
-func (o *GetPlaylistOK) GetPayload() *models.PlaylistDTO {
+func (o *GetPlaylistOK) GetPayload() *models.Model {
 	return o.Payload
 }
 
 func (o *GetPlaylistOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PlaylistDTO)
+	o.Payload = new(models.Model)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
@@ -95,7 +96,8 @@ func NewGetPlaylistUnauthorized() *GetPlaylistUnauthorized {
 	return &GetPlaylistUnauthorized{}
 }
 
-/* GetPlaylistUnauthorized describes a response with status code 401, with default header values.
+/*
+GetPlaylistUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetPlaylistForbidden() *GetPlaylistForbidden {
 	return &GetPlaylistForbidden{}
 }
 
-/* GetPlaylistForbidden describes a response with status code 403, with default header values.
+/*
+GetPlaylistForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetPlaylistNotFound() *GetPlaylistNotFound {
 	return &GetPlaylistNotFound{}
 }
 
-/* GetPlaylistNotFound describes a response with status code 404, with default header values.
+/*
+GetPlaylistNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetPlaylistInternalServerError() *GetPlaylistInternalServerError {
 	return &GetPlaylistInternalServerError{}
 }
 
-/* GetPlaylistInternalServerError describes a response with status code 500, with default header values.
+/*
+GetPlaylistInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

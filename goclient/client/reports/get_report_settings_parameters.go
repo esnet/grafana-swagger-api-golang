@@ -52,10 +52,12 @@ func NewGetReportSettingsParamsWithHTTPClient(client *http.Client) *GetReportSet
 	}
 }
 
-/* GetReportSettingsParams contains all the parameters to send to the API endpoint
-   for the get report settings operation.
+/*
+GetReportSettingsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get report settings operation.
+
+	Typically these are written to a http.Request.
 */
 type GetReportSettingsParams struct {
 	timeout    time.Duration

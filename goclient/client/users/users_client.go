@@ -48,7 +48,7 @@ type ClientService interface {
 }
 
 /*
-  GetUserByID gets user by id
+GetUserByID gets user by id
 */
 func (a *Client) GetUserByID(params *GetUserByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -87,7 +87,7 @@ func (a *Client) GetUserByID(params *GetUserByIDParams, authInfo runtime.ClientA
 }
 
 /*
-  GetUserByLoginOrEmail gets user by login or email
+GetUserByLoginOrEmail gets user by login or email
 */
 func (a *Client) GetUserByLoginOrEmail(params *GetUserByLoginOrEmailParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserByLoginOrEmailOK, error) {
 	// TODO: Validate the params before sending
@@ -126,9 +126,9 @@ func (a *Client) GetUserByLoginOrEmail(params *GetUserByLoginOrEmailParams, auth
 }
 
 /*
-  GetUserOrgList gets organizations for user
+GetUserOrgList gets organizations for user
 
-  Get organizations for user identified by id.
+Get organizations for user identified by id.
 */
 func (a *Client) GetUserOrgList(params *GetUserOrgListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserOrgListOK, error) {
 	// TODO: Validate the params before sending
@@ -167,9 +167,9 @@ func (a *Client) GetUserOrgList(params *GetUserOrgListParams, authInfo runtime.C
 }
 
 /*
-  GetUserTeams gets teams for user
+GetUserTeams gets teams for user
 
-  Get teams for user identified by id.
+Get teams for user identified by id.
 */
 func (a *Client) GetUserTeams(params *GetUserTeamsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserTeamsOK, error) {
 	// TODO: Validate the params before sending
@@ -208,9 +208,9 @@ func (a *Client) GetUserTeams(params *GetUserTeamsParams, authInfo runtime.Clien
 }
 
 /*
-  SearchUsers gets users
+SearchUsers gets users
 
-  Returns all users that the authenticated user has permission to view, admin permission required.
+Returns all users that the authenticated user has permission to view, admin permission required.
 */
 func (a *Client) SearchUsers(params *SearchUsersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchUsersOK, error) {
 	// TODO: Validate the params before sending
@@ -249,7 +249,7 @@ func (a *Client) SearchUsers(params *SearchUsersParams, authInfo runtime.ClientA
 }
 
 /*
-  SearchUsersWithPaging gets users with paging
+SearchUsersWithPaging gets users with paging
 */
 func (a *Client) SearchUsersWithPaging(params *SearchUsersWithPagingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchUsersWithPagingOK, error) {
 	// TODO: Validate the params before sending
@@ -288,9 +288,9 @@ func (a *Client) SearchUsersWithPaging(params *SearchUsersWithPagingParams, auth
 }
 
 /*
-  UpdateUser updates user
+UpdateUser updates user
 
-  Update the user identified by id.
+Update the user identified by id.
 */
 func (a *Client) UpdateUser(params *UpdateUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateUserOK, error) {
 	// TODO: Validate the params before sending

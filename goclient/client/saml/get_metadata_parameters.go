@@ -52,10 +52,12 @@ func NewGetMetadataParamsWithHTTPClient(client *http.Client) *GetMetadataParams 
 	}
 }
 
-/* GetMetadataParams contains all the parameters to send to the API endpoint
-   for the get metadata operation.
+/*
+GetMetadataParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get metadata operation.
+
+	Typically these are written to a http.Request.
 */
 type GetMetadataParams struct {
 	timeout    time.Duration

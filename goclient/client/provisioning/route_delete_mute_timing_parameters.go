@@ -52,10 +52,12 @@ func NewRouteDeleteMuteTimingParamsWithHTTPClient(client *http.Client) *RouteDel
 	}
 }
 
-/* RouteDeleteMuteTimingParams contains all the parameters to send to the API endpoint
-   for the route delete mute timing operation.
+/*
+RouteDeleteMuteTimingParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route delete mute timing operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteDeleteMuteTimingParams struct {
 

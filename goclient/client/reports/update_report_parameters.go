@@ -55,10 +55,12 @@ func NewUpdateReportParamsWithHTTPClient(client *http.Client) *UpdateReportParam
 	}
 }
 
-/* UpdateReportParams contains all the parameters to send to the API endpoint
-   for the update report operation.
+/*
+UpdateReportParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update report operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateReportParams struct {
 

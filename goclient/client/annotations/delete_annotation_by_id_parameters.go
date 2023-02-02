@@ -52,10 +52,12 @@ func NewDeleteAnnotationByIDParamsWithHTTPClient(client *http.Client) *DeleteAnn
 	}
 }
 
-/* DeleteAnnotationByIDParams contains all the parameters to send to the API endpoint
-   for the delete annotation by ID operation.
+/*
+DeleteAnnotationByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete annotation by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteAnnotationByIDParams struct {
 

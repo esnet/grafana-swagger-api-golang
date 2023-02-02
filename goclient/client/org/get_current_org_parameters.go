@@ -52,10 +52,12 @@ func NewGetCurrentOrgParamsWithHTTPClient(client *http.Client) *GetCurrentOrgPar
 	}
 }
 
-/* GetCurrentOrgParams contains all the parameters to send to the API endpoint
-   for the get current org operation.
+/*
+GetCurrentOrgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get current org operation.
+
+	Typically these are written to a http.Request.
 */
 type GetCurrentOrgParams struct {
 	timeout    time.Duration

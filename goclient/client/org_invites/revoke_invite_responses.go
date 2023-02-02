@@ -63,7 +63,8 @@ func NewRevokeInviteOK() *RevokeInviteOK {
 	return &RevokeInviteOK{}
 }
 
-/* RevokeInviteOK describes a response with status code 200, with default header values.
+/*
+RevokeInviteOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewRevokeInviteUnauthorized() *RevokeInviteUnauthorized {
 	return &RevokeInviteUnauthorized{}
 }
 
-/* RevokeInviteUnauthorized describes a response with status code 401, with default header values.
+/*
+RevokeInviteUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewRevokeInviteForbidden() *RevokeInviteForbidden {
 	return &RevokeInviteForbidden{}
 }
 
-/* RevokeInviteForbidden describes a response with status code 403, with default header values.
+/*
+RevokeInviteForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewRevokeInviteNotFound() *RevokeInviteNotFound {
 	return &RevokeInviteNotFound{}
 }
 
-/* RevokeInviteNotFound describes a response with status code 404, with default header values.
+/*
+RevokeInviteNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewRevokeInviteInternalServerError() *RevokeInviteInternalServerError {
 	return &RevokeInviteInternalServerError{}
 }
 
-/* RevokeInviteInternalServerError describes a response with status code 500, with default header values.
+/*
+RevokeInviteInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

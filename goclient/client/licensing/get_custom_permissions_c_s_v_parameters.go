@@ -52,10 +52,12 @@ func NewGetCustomPermissionsCSVParamsWithHTTPClient(client *http.Client) *GetCus
 	}
 }
 
-/* GetCustomPermissionsCSVParams contains all the parameters to send to the API endpoint
-   for the get custom permissions c s v operation.
+/*
+GetCustomPermissionsCSVParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get custom permissions c s v operation.
+
+	Typically these are written to a http.Request.
 */
 type GetCustomPermissionsCSVParams struct {
 	timeout    time.Duration

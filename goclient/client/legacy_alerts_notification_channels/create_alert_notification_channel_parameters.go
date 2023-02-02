@@ -54,10 +54,12 @@ func NewCreateAlertNotificationChannelParamsWithHTTPClient(client *http.Client) 
 	}
 }
 
-/* CreateAlertNotificationChannelParams contains all the parameters to send to the API endpoint
-   for the create alert notification channel operation.
+/*
+CreateAlertNotificationChannelParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create alert notification channel operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateAlertNotificationChannelParams struct {
 

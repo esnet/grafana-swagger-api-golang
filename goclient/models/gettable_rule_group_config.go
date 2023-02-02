@@ -36,6 +36,10 @@ type GettableRuleGroupConfig struct {
 func (m *GettableRuleGroupConfig) Validate(formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.validateInterval(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateRules(formats); err != nil {
 		res = append(res, err)
 	}
@@ -43,6 +47,23 @@ func (m *GettableRuleGroupConfig) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *GettableRuleGroupConfig) validateInterval(formats strfmt.Registry) error {
+	if swag.IsZero(m.Interval) { // not required
+		return nil
+	}
+
+	if err := m.Interval.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("interval")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("interval")
+		}
+		return err
+	}
+
 	return nil
 }
 
@@ -76,6 +97,10 @@ func (m *GettableRuleGroupConfig) validateRules(formats strfmt.Registry) error {
 func (m *GettableRuleGroupConfig) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateInterval(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateRules(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -83,6 +108,20 @@ func (m *GettableRuleGroupConfig) ContextValidate(ctx context.Context, formats s
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *GettableRuleGroupConfig) contextValidateInterval(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.Interval.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("interval")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("interval")
+		}
+		return err
+	}
+
 	return nil
 }
 

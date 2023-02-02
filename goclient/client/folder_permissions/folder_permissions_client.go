@@ -38,7 +38,7 @@ type ClientService interface {
 }
 
 /*
-  GetFolderPermissionList gets all existing permissions for the folder with the given uid
+GetFolderPermissionList gets all existing permissions for the folder with the given uid
 */
 func (a *Client) GetFolderPermissionList(params *GetFolderPermissionListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderPermissionListOK, error) {
 	// TODO: Validate the params before sending
@@ -77,7 +77,7 @@ func (a *Client) GetFolderPermissionList(params *GetFolderPermissionListParams, 
 }
 
 /*
-  UpdateFolderPermissions updates permissions for a folder this operation will remove existing permissions if they re not included in the request
+UpdateFolderPermissions updates permissions for a folder this operation will remove existing permissions if they re not included in the request
 */
 func (a *Client) UpdateFolderPermissions(params *UpdateFolderPermissionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateFolderPermissionsOK, error) {
 	// TODO: Validate the params before sending

@@ -57,7 +57,8 @@ func NewAdminProvisioningReloadDatasourcesOK() *AdminProvisioningReloadDatasourc
 	return &AdminProvisioningReloadDatasourcesOK{}
 }
 
-/* AdminProvisioningReloadDatasourcesOK describes a response with status code 200, with default header values.
+/*
+AdminProvisioningReloadDatasourcesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewAdminProvisioningReloadDatasourcesUnauthorized() *AdminProvisioningReloa
 	return &AdminProvisioningReloadDatasourcesUnauthorized{}
 }
 
-/* AdminProvisioningReloadDatasourcesUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminProvisioningReloadDatasourcesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewAdminProvisioningReloadDatasourcesForbidden() *AdminProvisioningReloadDa
 	return &AdminProvisioningReloadDatasourcesForbidden{}
 }
 
-/* AdminProvisioningReloadDatasourcesForbidden describes a response with status code 403, with default header values.
+/*
+AdminProvisioningReloadDatasourcesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewAdminProvisioningReloadDatasourcesInternalServerError() *AdminProvisioni
 	return &AdminProvisioningReloadDatasourcesInternalServerError{}
 }
 
-/* AdminProvisioningReloadDatasourcesInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminProvisioningReloadDatasourcesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

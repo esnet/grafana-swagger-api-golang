@@ -53,10 +53,12 @@ func NewSearchTeamsParamsWithHTTPClient(client *http.Client) *SearchTeamsParams 
 	}
 }
 
-/* SearchTeamsParams contains all the parameters to send to the API endpoint
-   for the search teams operation.
+/*
+SearchTeamsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search teams operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchTeamsParams struct {
 

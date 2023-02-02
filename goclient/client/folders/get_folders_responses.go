@@ -57,7 +57,8 @@ func NewGetFoldersOK() *GetFoldersOK {
 	return &GetFoldersOK{}
 }
 
-/* GetFoldersOK describes a response with status code 200, with default header values.
+/*
+GetFoldersOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetFoldersUnauthorized() *GetFoldersUnauthorized {
 	return &GetFoldersUnauthorized{}
 }
 
-/* GetFoldersUnauthorized describes a response with status code 401, with default header values.
+/*
+GetFoldersUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetFoldersForbidden() *GetFoldersForbidden {
 	return &GetFoldersForbidden{}
 }
 
-/* GetFoldersForbidden describes a response with status code 403, with default header values.
+/*
+GetFoldersForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetFoldersInternalServerError() *GetFoldersInternalServerError {
 	return &GetFoldersInternalServerError{}
 }
 
-/* GetFoldersInternalServerError describes a response with status code 500, with default header values.
+/*
+GetFoldersInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

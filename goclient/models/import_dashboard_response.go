@@ -26,6 +26,9 @@ type ImportDashboardResponse struct {
 	// folder Id
 	FolderID int64 `json:"folderId,omitempty"`
 
+	// folder Uid
+	FolderUID string `json:"folderUid,omitempty"`
+
 	// imported
 	Imported bool `json:"imported,omitempty"`
 

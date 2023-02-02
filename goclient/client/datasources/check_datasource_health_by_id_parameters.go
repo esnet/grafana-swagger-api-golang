@@ -52,10 +52,12 @@ func NewCheckDatasourceHealthByIDParamsWithHTTPClient(client *http.Client) *Chec
 	}
 }
 
-/* CheckDatasourceHealthByIDParams contains all the parameters to send to the API endpoint
-   for the check datasource health by ID operation.
+/*
+CheckDatasourceHealthByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the check datasource health by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type CheckDatasourceHealthByIDParams struct {
 

@@ -55,10 +55,12 @@ func NewRestoreDashboardVersionByIDParamsWithHTTPClient(client *http.Client) *Re
 	}
 }
 
-/* RestoreDashboardVersionByIDParams contains all the parameters to send to the API endpoint
-   for the restore dashboard version by ID operation.
+/*
+RestoreDashboardVersionByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the restore dashboard version by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type RestoreDashboardVersionByIDParams struct {
 

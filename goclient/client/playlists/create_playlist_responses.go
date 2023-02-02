@@ -63,7 +63,8 @@ func NewCreatePlaylistOK() *CreatePlaylistOK {
 	return &CreatePlaylistOK{}
 }
 
-/* CreatePlaylistOK describes a response with status code 200, with default header values.
+/*
+CreatePlaylistOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewCreatePlaylistUnauthorized() *CreatePlaylistUnauthorized {
 	return &CreatePlaylistUnauthorized{}
 }
 
-/* CreatePlaylistUnauthorized describes a response with status code 401, with default header values.
+/*
+CreatePlaylistUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewCreatePlaylistForbidden() *CreatePlaylistForbidden {
 	return &CreatePlaylistForbidden{}
 }
 
-/* CreatePlaylistForbidden describes a response with status code 403, with default header values.
+/*
+CreatePlaylistForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewCreatePlaylistNotFound() *CreatePlaylistNotFound {
 	return &CreatePlaylistNotFound{}
 }
 
-/* CreatePlaylistNotFound describes a response with status code 404, with default header values.
+/*
+CreatePlaylistNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewCreatePlaylistInternalServerError() *CreatePlaylistInternalServerError {
 	return &CreatePlaylistInternalServerError{}
 }
 
-/* CreatePlaylistInternalServerError describes a response with status code 500, with default header values.
+/*
+CreatePlaylistInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

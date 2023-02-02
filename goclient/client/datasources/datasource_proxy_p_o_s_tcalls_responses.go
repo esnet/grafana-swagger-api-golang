@@ -75,7 +75,8 @@ func NewDatasourceProxyPOSTcallsCreated() *DatasourceProxyPOSTcallsCreated {
 	return &DatasourceProxyPOSTcallsCreated{}
 }
 
-/* DatasourceProxyPOSTcallsCreated describes a response with status code 201, with default header values.
+/*
+DatasourceProxyPOSTcallsCreated describes a response with status code 201, with default header values.
 
 (empty)
 */
@@ -96,7 +97,8 @@ func NewDatasourceProxyPOSTcallsAccepted() *DatasourceProxyPOSTcallsAccepted {
 	return &DatasourceProxyPOSTcallsAccepted{}
 }
 
-/* DatasourceProxyPOSTcallsAccepted describes a response with status code 202, with default header values.
+/*
+DatasourceProxyPOSTcallsAccepted describes a response with status code 202, with default header values.
 
 (empty)
 */
@@ -117,7 +119,8 @@ func NewDatasourceProxyPOSTcallsBadRequest() *DatasourceProxyPOSTcallsBadRequest
 	return &DatasourceProxyPOSTcallsBadRequest{}
 }
 
-/* DatasourceProxyPOSTcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyPOSTcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -149,7 +152,8 @@ func NewDatasourceProxyPOSTcallsUnauthorized() *DatasourceProxyPOSTcallsUnauthor
 	return &DatasourceProxyPOSTcallsUnauthorized{}
 }
 
-/* DatasourceProxyPOSTcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyPOSTcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -181,7 +185,8 @@ func NewDatasourceProxyPOSTcallsForbidden() *DatasourceProxyPOSTcallsForbidden {
 	return &DatasourceProxyPOSTcallsForbidden{}
 }
 
-/* DatasourceProxyPOSTcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyPOSTcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -213,7 +218,8 @@ func NewDatasourceProxyPOSTcallsNotFound() *DatasourceProxyPOSTcallsNotFound {
 	return &DatasourceProxyPOSTcallsNotFound{}
 }
 
-/* DatasourceProxyPOSTcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyPOSTcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -245,7 +251,8 @@ func NewDatasourceProxyPOSTcallsInternalServerError() *DatasourceProxyPOSTcallsI
 	return &DatasourceProxyPOSTcallsInternalServerError{}
 }
 
-/* DatasourceProxyPOSTcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyPOSTcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

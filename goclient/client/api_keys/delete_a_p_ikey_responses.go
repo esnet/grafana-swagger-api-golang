@@ -63,7 +63,8 @@ func NewDeleteAPIkeyOK() *DeleteAPIkeyOK {
 	return &DeleteAPIkeyOK{}
 }
 
-/* DeleteAPIkeyOK describes a response with status code 200, with default header values.
+/*
+DeleteAPIkeyOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewDeleteAPIkeyUnauthorized() *DeleteAPIkeyUnauthorized {
 	return &DeleteAPIkeyUnauthorized{}
 }
 
-/* DeleteAPIkeyUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteAPIkeyUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewDeleteAPIkeyForbidden() *DeleteAPIkeyForbidden {
 	return &DeleteAPIkeyForbidden{}
 }
 
-/* DeleteAPIkeyForbidden describes a response with status code 403, with default header values.
+/*
+DeleteAPIkeyForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewDeleteAPIkeyNotFound() *DeleteAPIkeyNotFound {
 	return &DeleteAPIkeyNotFound{}
 }
 
-/* DeleteAPIkeyNotFound describes a response with status code 404, with default header values.
+/*
+DeleteAPIkeyNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewDeleteAPIkeyInternalServerError() *DeleteAPIkeyInternalServerError {
 	return &DeleteAPIkeyInternalServerError{}
 }
 
-/* DeleteAPIkeyInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteAPIkeyInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -53,10 +53,12 @@ func NewSearchDashboardSnapshotsParamsWithHTTPClient(client *http.Client) *Searc
 	}
 }
 
-/* SearchDashboardSnapshotsParams contains all the parameters to send to the API endpoint
-   for the search dashboard snapshots operation.
+/*
+SearchDashboardSnapshotsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search dashboard snapshots operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchDashboardSnapshotsParams struct {
 

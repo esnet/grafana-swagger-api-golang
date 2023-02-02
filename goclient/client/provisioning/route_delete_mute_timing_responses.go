@@ -36,9 +36,10 @@ func NewRouteDeleteMuteTimingNoContent() *RouteDeleteMuteTimingNoContent {
 	return &RouteDeleteMuteTimingNoContent{}
 }
 
-/* RouteDeleteMuteTimingNoContent describes a response with status code 204, with default header values.
+/*
+RouteDeleteMuteTimingNoContent describes a response with status code 204, with default header values.
 
-The mute timing was deleted successfully.
+	The mute timing was deleted successfully.
 */
 type RouteDeleteMuteTimingNoContent struct {
 }

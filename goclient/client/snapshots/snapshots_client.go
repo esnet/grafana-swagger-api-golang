@@ -46,9 +46,9 @@ type ClientService interface {
 }
 
 /*
-  CreateDashboardSnapshot whens creating a snapshot using the API you have to provide the full dashboard payload including the snapshot data this endpoint is designed for the grafana UI
+CreateDashboardSnapshot whens creating a snapshot using the API you have to provide the full dashboard payload including the snapshot data this endpoint is designed for the grafana UI
 
-  Snapshot public mode should be enabled or authentication is required.
+Snapshot public mode should be enabled or authentication is required.
 */
 func (a *Client) CreateDashboardSnapshot(params *CreateDashboardSnapshotParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateDashboardSnapshotOK, error) {
 	// TODO: Validate the params before sending
@@ -87,7 +87,7 @@ func (a *Client) CreateDashboardSnapshot(params *CreateDashboardSnapshotParams, 
 }
 
 /*
-  DeleteDashboardSnapshot deletes snapshot by key
+DeleteDashboardSnapshot deletes snapshot by key
 */
 func (a *Client) DeleteDashboardSnapshot(params *DeleteDashboardSnapshotParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDashboardSnapshotOK, error) {
 	// TODO: Validate the params before sending
@@ -126,9 +126,9 @@ func (a *Client) DeleteDashboardSnapshot(params *DeleteDashboardSnapshotParams, 
 }
 
 /*
-  DeleteDashboardSnapshotByDeleteKey deletes snapshot by delete key
+DeleteDashboardSnapshotByDeleteKey deletes snapshot by delete key
 
-  Snapshot public mode should be enabled or authentication is required.
+Snapshot public mode should be enabled or authentication is required.
 */
 func (a *Client) DeleteDashboardSnapshotByDeleteKey(params *DeleteDashboardSnapshotByDeleteKeyParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteDashboardSnapshotByDeleteKeyOK, error) {
 	// TODO: Validate the params before sending
@@ -167,7 +167,7 @@ func (a *Client) DeleteDashboardSnapshotByDeleteKey(params *DeleteDashboardSnaps
 }
 
 /*
-  GetDashboardSnapshot gets snapshot by key
+GetDashboardSnapshot gets snapshot by key
 */
 func (a *Client) GetDashboardSnapshot(params *GetDashboardSnapshotParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardSnapshotOK, error) {
 	// TODO: Validate the params before sending
@@ -206,7 +206,7 @@ func (a *Client) GetDashboardSnapshot(params *GetDashboardSnapshotParams, authIn
 }
 
 /*
-  GetSharingOptions gets snapshot sharing settings
+GetSharingOptions gets snapshot sharing settings
 */
 func (a *Client) GetSharingOptions(params *GetSharingOptionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetSharingOptionsOK, error) {
 	// TODO: Validate the params before sending
@@ -245,7 +245,7 @@ func (a *Client) GetSharingOptions(params *GetSharingOptionsParams, authInfo run
 }
 
 /*
-  SearchDashboardSnapshots lists snapshots
+SearchDashboardSnapshots lists snapshots
 */
 func (a *Client) SearchDashboardSnapshots(params *SearchDashboardSnapshotsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchDashboardSnapshotsOK, error) {
 	// TODO: Validate the params before sending

@@ -54,10 +54,12 @@ func NewAddOrgUserToCurrentOrgParamsWithHTTPClient(client *http.Client) *AddOrgU
 	}
 }
 
-/* AddOrgUserToCurrentOrgParams contains all the parameters to send to the API endpoint
-   for the add org user to current org operation.
+/*
+AddOrgUserToCurrentOrgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add org user to current org operation.
+
+	Typically these are written to a http.Request.
 */
 type AddOrgUserToCurrentOrgParams struct {
 

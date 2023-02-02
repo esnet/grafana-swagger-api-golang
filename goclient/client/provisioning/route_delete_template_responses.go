@@ -36,9 +36,10 @@ func NewRouteDeleteTemplateNoContent() *RouteDeleteTemplateNoContent {
 	return &RouteDeleteTemplateNoContent{}
 }
 
-/* RouteDeleteTemplateNoContent describes a response with status code 204, with default header values.
+/*
+RouteDeleteTemplateNoContent describes a response with status code 204, with default header values.
 
-The template was deleted successfully.
+	The template was deleted successfully.
 */
 type RouteDeleteTemplateNoContent struct {
 }

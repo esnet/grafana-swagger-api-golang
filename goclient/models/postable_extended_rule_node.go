@@ -28,7 +28,7 @@ type PostableExtendedRuleNode struct {
 	Expr string `json:"expr,omitempty"`
 
 	// for
-	For Duration `json:"for,omitempty"`
+	For string `json:"for,omitempty"`
 
 	// grafana alert
 	GrafanaAlert *PostableGrafanaRule `json:"grafana_alert,omitempty"`

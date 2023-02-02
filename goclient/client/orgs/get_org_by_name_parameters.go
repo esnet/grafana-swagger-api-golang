@@ -52,10 +52,12 @@ func NewGetOrgByNameParamsWithHTTPClient(client *http.Client) *GetOrgByNameParam
 	}
 }
 
-/* GetOrgByNameParams contains all the parameters to send to the API endpoint
-   for the get org by name operation.
+/*
+GetOrgByNameParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org by name operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgByNameParams struct {
 

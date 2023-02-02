@@ -57,27 +57,26 @@ func NewGetAccessControlStatusOK() *GetAccessControlStatusOK {
 	return &GetAccessControlStatusOK{}
 }
 
-/* GetAccessControlStatusOK describes a response with status code 200, with default header values.
+/*
+GetAccessControlStatusOK describes a response with status code 200, with default header values.
 
 (empty)
 */
 type GetAccessControlStatusOK struct {
-	Payload *models.Status
+	Payload models.Status
 }
 
 func (o *GetAccessControlStatusOK) Error() string {
 	return fmt.Sprintf("[GET /access-control/status][%d] getAccessControlStatusOK  %+v", 200, o.Payload)
 }
-func (o *GetAccessControlStatusOK) GetPayload() *models.Status {
+func (o *GetAccessControlStatusOK) GetPayload() models.Status {
 	return o.Payload
 }
 
 func (o *GetAccessControlStatusOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Status)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 
@@ -89,7 +88,8 @@ func NewGetAccessControlStatusForbidden() *GetAccessControlStatusForbidden {
 	return &GetAccessControlStatusForbidden{}
 }
 
-/* GetAccessControlStatusForbidden describes a response with status code 403, with default header values.
+/*
+GetAccessControlStatusForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -121,7 +121,8 @@ func NewGetAccessControlStatusNotFound() *GetAccessControlStatusNotFound {
 	return &GetAccessControlStatusNotFound{}
 }
 
-/* GetAccessControlStatusNotFound describes a response with status code 404, with default header values.
+/*
+GetAccessControlStatusNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -153,7 +154,8 @@ func NewGetAccessControlStatusInternalServerError() *GetAccessControlStatusInter
 	return &GetAccessControlStatusInternalServerError{}
 }
 
-/* GetAccessControlStatusInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAccessControlStatusInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

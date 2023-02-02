@@ -63,7 +63,8 @@ func NewGetDashboardPermissionsListByIDOK() *GetDashboardPermissionsListByIDOK {
 	return &GetDashboardPermissionsListByIDOK{}
 }
 
-/* GetDashboardPermissionsListByIDOK describes a response with status code 200, with default header values.
+/*
+GetDashboardPermissionsListByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetDashboardPermissionsListByIDUnauthorized() *GetDashboardPermissionsLi
 	return &GetDashboardPermissionsListByIDUnauthorized{}
 }
 
-/* GetDashboardPermissionsListByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDashboardPermissionsListByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetDashboardPermissionsListByIDForbidden() *GetDashboardPermissionsListB
 	return &GetDashboardPermissionsListByIDForbidden{}
 }
 
-/* GetDashboardPermissionsListByIDForbidden describes a response with status code 403, with default header values.
+/*
+GetDashboardPermissionsListByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetDashboardPermissionsListByIDNotFound() *GetDashboardPermissionsListBy
 	return &GetDashboardPermissionsListByIDNotFound{}
 }
 
-/* GetDashboardPermissionsListByIDNotFound describes a response with status code 404, with default header values.
+/*
+GetDashboardPermissionsListByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetDashboardPermissionsListByIDInternalServerError() *GetDashboardPermis
 	return &GetDashboardPermissionsListByIDInternalServerError{}
 }
 
-/* GetDashboardPermissionsListByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDashboardPermissionsListByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

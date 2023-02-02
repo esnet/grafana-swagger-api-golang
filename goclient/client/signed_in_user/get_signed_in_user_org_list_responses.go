@@ -57,7 +57,8 @@ func NewGetSignedInUserOrgListOK() *GetSignedInUserOrgListOK {
 	return &GetSignedInUserOrgListOK{}
 }
 
-/* GetSignedInUserOrgListOK describes a response with status code 200, with default header values.
+/*
+GetSignedInUserOrgListOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetSignedInUserOrgListUnauthorized() *GetSignedInUserOrgListUnauthorized
 	return &GetSignedInUserOrgListUnauthorized{}
 }
 
-/* GetSignedInUserOrgListUnauthorized describes a response with status code 401, with default header values.
+/*
+GetSignedInUserOrgListUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetSignedInUserOrgListForbidden() *GetSignedInUserOrgListForbidden {
 	return &GetSignedInUserOrgListForbidden{}
 }
 
-/* GetSignedInUserOrgListForbidden describes a response with status code 403, with default header values.
+/*
+GetSignedInUserOrgListForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetSignedInUserOrgListInternalServerError() *GetSignedInUserOrgListInter
 	return &GetSignedInUserOrgListInternalServerError{}
 }
 
-/* GetSignedInUserOrgListInternalServerError describes a response with status code 500, with default header values.
+/*
+GetSignedInUserOrgListInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

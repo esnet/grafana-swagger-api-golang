@@ -57,7 +57,8 @@ func NewSearchOrgServiceAccountsWithPagingOK() *SearchOrgServiceAccountsWithPagi
 	return &SearchOrgServiceAccountsWithPagingOK{}
 }
 
-/* SearchOrgServiceAccountsWithPagingOK describes a response with status code 200, with default header values.
+/*
+SearchOrgServiceAccountsWithPagingOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewSearchOrgServiceAccountsWithPagingUnauthorized() *SearchOrgServiceAccoun
 	return &SearchOrgServiceAccountsWithPagingUnauthorized{}
 }
 
-/* SearchOrgServiceAccountsWithPagingUnauthorized describes a response with status code 401, with default header values.
+/*
+SearchOrgServiceAccountsWithPagingUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewSearchOrgServiceAccountsWithPagingForbidden() *SearchOrgServiceAccountsW
 	return &SearchOrgServiceAccountsWithPagingForbidden{}
 }
 
-/* SearchOrgServiceAccountsWithPagingForbidden describes a response with status code 403, with default header values.
+/*
+SearchOrgServiceAccountsWithPagingForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewSearchOrgServiceAccountsWithPagingInternalServerError() *SearchOrgServic
 	return &SearchOrgServiceAccountsWithPagingInternalServerError{}
 }
 
-/* SearchOrgServiceAccountsWithPagingInternalServerError describes a response with status code 500, with default header values.
+/*
+SearchOrgServiceAccountsWithPagingInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

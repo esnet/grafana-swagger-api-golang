@@ -40,7 +40,7 @@ type ClientService interface {
 }
 
 /*
-  AddOrgInvite adds invite
+AddOrgInvite adds invite
 */
 func (a *Client) AddOrgInvite(params *AddOrgInviteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddOrgInviteOK, error) {
 	// TODO: Validate the params before sending
@@ -79,7 +79,7 @@ func (a *Client) AddOrgInvite(params *AddOrgInviteParams, authInfo runtime.Clien
 }
 
 /*
-  GetPendingOrgInvites gets pending invites
+GetPendingOrgInvites gets pending invites
 */
 func (a *Client) GetPendingOrgInvites(params *GetPendingOrgInvitesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetPendingOrgInvitesOK, error) {
 	// TODO: Validate the params before sending
@@ -118,7 +118,7 @@ func (a *Client) GetPendingOrgInvites(params *GetPendingOrgInvitesParams, authIn
 }
 
 /*
-  RevokeInvite revokes invite
+RevokeInvite revokes invite
 */
 func (a *Client) RevokeInvite(params *RevokeInviteParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RevokeInviteOK, error) {
 	// TODO: Validate the params before sending

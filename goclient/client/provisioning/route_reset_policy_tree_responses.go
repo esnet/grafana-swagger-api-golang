@@ -39,7 +39,8 @@ func NewRouteResetPolicyTreeAccepted() *RouteResetPolicyTreeAccepted {
 	return &RouteResetPolicyTreeAccepted{}
 }
 
-/* RouteResetPolicyTreeAccepted describes a response with status code 202, with default header values.
+/*
+RouteResetPolicyTreeAccepted describes a response with status code 202, with default header values.
 
 Ack
 */

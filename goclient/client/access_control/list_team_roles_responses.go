@@ -57,7 +57,8 @@ func NewListTeamRolesOK() *ListTeamRolesOK {
 	return &ListTeamRolesOK{}
 }
 
-/* ListTeamRolesOK describes a response with status code 200, with default header values.
+/*
+ListTeamRolesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewListTeamRolesBadRequest() *ListTeamRolesBadRequest {
 	return &ListTeamRolesBadRequest{}
 }
 
-/* ListTeamRolesBadRequest describes a response with status code 400, with default header values.
+/*
+ListTeamRolesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewListTeamRolesForbidden() *ListTeamRolesForbidden {
 	return &ListTeamRolesForbidden{}
 }
 
-/* ListTeamRolesForbidden describes a response with status code 403, with default header values.
+/*
+ListTeamRolesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewListTeamRolesInternalServerError() *ListTeamRolesInternalServerError {
 	return &ListTeamRolesInternalServerError{}
 }
 
-/* ListTeamRolesInternalServerError describes a response with status code 500, with default header values.
+/*
+ListTeamRolesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

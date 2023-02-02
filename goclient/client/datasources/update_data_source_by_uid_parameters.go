@@ -54,10 +54,12 @@ func NewUpdateDataSourceByUIDParamsWithHTTPClient(client *http.Client) *UpdateDa
 	}
 }
 
-/* UpdateDataSourceByUIDParams contains all the parameters to send to the API endpoint
-   for the update data source by UID operation.
+/*
+UpdateDataSourceByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update data source by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateDataSourceByUIDParams struct {
 

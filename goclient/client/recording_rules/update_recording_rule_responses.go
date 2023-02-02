@@ -63,7 +63,8 @@ func NewUpdateRecordingRuleOK() *UpdateRecordingRuleOK {
 	return &UpdateRecordingRuleOK{}
 }
 
-/* UpdateRecordingRuleOK describes a response with status code 200, with default header values.
+/*
+UpdateRecordingRuleOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewUpdateRecordingRuleUnauthorized() *UpdateRecordingRuleUnauthorized {
 	return &UpdateRecordingRuleUnauthorized{}
 }
 
-/* UpdateRecordingRuleUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateRecordingRuleUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewUpdateRecordingRuleForbidden() *UpdateRecordingRuleForbidden {
 	return &UpdateRecordingRuleForbidden{}
 }
 
-/* UpdateRecordingRuleForbidden describes a response with status code 403, with default header values.
+/*
+UpdateRecordingRuleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewUpdateRecordingRuleNotFound() *UpdateRecordingRuleNotFound {
 	return &UpdateRecordingRuleNotFound{}
 }
 
-/* UpdateRecordingRuleNotFound describes a response with status code 404, with default header values.
+/*
+UpdateRecordingRuleNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewUpdateRecordingRuleInternalServerError() *UpdateRecordingRuleInternalSer
 	return &UpdateRecordingRuleInternalServerError{}
 }
 
-/* UpdateRecordingRuleInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateRecordingRuleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

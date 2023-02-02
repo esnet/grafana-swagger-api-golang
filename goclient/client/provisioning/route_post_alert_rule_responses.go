@@ -45,7 +45,8 @@ func NewRoutePostAlertRuleCreated() *RoutePostAlertRuleCreated {
 	return &RoutePostAlertRuleCreated{}
 }
 
-/* RoutePostAlertRuleCreated describes a response with status code 201, with default header values.
+/*
+RoutePostAlertRuleCreated describes a response with status code 201, with default header values.
 
 ProvisionedAlertRule
 */
@@ -77,7 +78,8 @@ func NewRoutePostAlertRuleBadRequest() *RoutePostAlertRuleBadRequest {
 	return &RoutePostAlertRuleBadRequest{}
 }
 
-/* RoutePostAlertRuleBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePostAlertRuleBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

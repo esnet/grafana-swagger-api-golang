@@ -54,10 +54,12 @@ func NewCreateLibraryElementParamsWithHTTPClient(client *http.Client) *CreateLib
 	}
 }
 
-/* CreateLibraryElementParams contains all the parameters to send to the API endpoint
-   for the create library element operation.
+/*
+CreateLibraryElementParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create library element operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateLibraryElementParams struct {
 

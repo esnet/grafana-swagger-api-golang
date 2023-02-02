@@ -55,10 +55,12 @@ func NewAdminRevokeUserAuthTokenParamsWithHTTPClient(client *http.Client) *Admin
 	}
 }
 
-/* AdminRevokeUserAuthTokenParams contains all the parameters to send to the API endpoint
-   for the admin revoke user auth token operation.
+/*
+AdminRevokeUserAuthTokenParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin revoke user auth token operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminRevokeUserAuthTokenParams struct {
 

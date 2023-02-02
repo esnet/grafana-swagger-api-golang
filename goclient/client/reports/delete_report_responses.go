@@ -69,7 +69,8 @@ func NewDeleteReportOK() *DeleteReportOK {
 	return &DeleteReportOK{}
 }
 
-/* DeleteReportOK describes a response with status code 200, with default header values.
+/*
+DeleteReportOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewDeleteReportBadRequest() *DeleteReportBadRequest {
 	return &DeleteReportBadRequest{}
 }
 
-/* DeleteReportBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteReportBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteReportUnauthorized() *DeleteReportUnauthorized {
 	return &DeleteReportUnauthorized{}
 }
 
-/* DeleteReportUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteReportUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteReportForbidden() *DeleteReportForbidden {
 	return &DeleteReportForbidden{}
 }
 
-/* DeleteReportForbidden describes a response with status code 403, with default header values.
+/*
+DeleteReportForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteReportNotFound() *DeleteReportNotFound {
 	return &DeleteReportNotFound{}
 }
 
-/* DeleteReportNotFound describes a response with status code 404, with default header values.
+/*
+DeleteReportNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewDeleteReportInternalServerError() *DeleteReportInternalServerError {
 	return &DeleteReportInternalServerError{}
 }
 
-/* DeleteReportInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteReportInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -69,7 +69,8 @@ func NewTestCreateRecordingRuleOK() *TestCreateRecordingRuleOK {
 	return &TestCreateRecordingRuleOK{}
 }
 
-/* TestCreateRecordingRuleOK describes a response with status code 200, with default header values.
+/*
+TestCreateRecordingRuleOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewTestCreateRecordingRuleUnauthorized() *TestCreateRecordingRuleUnauthoriz
 	return &TestCreateRecordingRuleUnauthorized{}
 }
 
-/* TestCreateRecordingRuleUnauthorized describes a response with status code 401, with default header values.
+/*
+TestCreateRecordingRuleUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -133,7 +135,8 @@ func NewTestCreateRecordingRuleForbidden() *TestCreateRecordingRuleForbidden {
 	return &TestCreateRecordingRuleForbidden{}
 }
 
-/* TestCreateRecordingRuleForbidden describes a response with status code 403, with default header values.
+/*
+TestCreateRecordingRuleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -165,7 +168,8 @@ func NewTestCreateRecordingRuleNotFound() *TestCreateRecordingRuleNotFound {
 	return &TestCreateRecordingRuleNotFound{}
 }
 
-/* TestCreateRecordingRuleNotFound describes a response with status code 404, with default header values.
+/*
+TestCreateRecordingRuleNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -197,7 +201,8 @@ func NewTestCreateRecordingRuleUnprocessableEntity() *TestCreateRecordingRuleUnp
 	return &TestCreateRecordingRuleUnprocessableEntity{}
 }
 
-/* TestCreateRecordingRuleUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+TestCreateRecordingRuleUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -229,7 +234,8 @@ func NewTestCreateRecordingRuleInternalServerError() *TestCreateRecordingRuleInt
 	return &TestCreateRecordingRuleInternalServerError{}
 }
 
-/* TestCreateRecordingRuleInternalServerError describes a response with status code 500, with default header values.
+/*
+TestCreateRecordingRuleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

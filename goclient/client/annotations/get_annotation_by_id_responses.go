@@ -51,7 +51,8 @@ func NewGetAnnotationByIDOK() *GetAnnotationByIDOK {
 	return &GetAnnotationByIDOK{}
 }
 
-/* GetAnnotationByIDOK describes a response with status code 200, with default header values.
+/*
+GetAnnotationByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetAnnotationByIDUnauthorized() *GetAnnotationByIDUnauthorized {
 	return &GetAnnotationByIDUnauthorized{}
 }
 
-/* GetAnnotationByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAnnotationByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetAnnotationByIDInternalServerError() *GetAnnotationByIDInternalServerE
 	return &GetAnnotationByIDInternalServerError{}
 }
 
-/* GetAnnotationByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAnnotationByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

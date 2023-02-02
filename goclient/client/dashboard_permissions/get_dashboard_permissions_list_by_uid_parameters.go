@@ -52,10 +52,12 @@ func NewGetDashboardPermissionsListByUIDParamsWithHTTPClient(client *http.Client
 	}
 }
 
-/* GetDashboardPermissionsListByUIDParams contains all the parameters to send to the API endpoint
-   for the get dashboard permissions list by UID operation.
+/*
+GetDashboardPermissionsListByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get dashboard permissions list by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDashboardPermissionsListByUIDParams struct {
 

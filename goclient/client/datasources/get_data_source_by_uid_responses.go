@@ -69,7 +69,8 @@ func NewGetDataSourceByUIDOK() *GetDataSourceByUIDOK {
 	return &GetDataSourceByUIDOK{}
 }
 
-/* GetDataSourceByUIDOK describes a response with status code 200, with default header values.
+/*
+GetDataSourceByUIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewGetDataSourceByUIDBadRequest() *GetDataSourceByUIDBadRequest {
 	return &GetDataSourceByUIDBadRequest{}
 }
 
-/* GetDataSourceByUIDBadRequest describes a response with status code 400, with default header values.
+/*
+GetDataSourceByUIDBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewGetDataSourceByUIDUnauthorized() *GetDataSourceByUIDUnauthorized {
 	return &GetDataSourceByUIDUnauthorized{}
 }
 
-/* GetDataSourceByUIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDataSourceByUIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewGetDataSourceByUIDForbidden() *GetDataSourceByUIDForbidden {
 	return &GetDataSourceByUIDForbidden{}
 }
 
-/* GetDataSourceByUIDForbidden describes a response with status code 403, with default header values.
+/*
+GetDataSourceByUIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewGetDataSourceByUIDNotFound() *GetDataSourceByUIDNotFound {
 	return &GetDataSourceByUIDNotFound{}
 }
 
-/* GetDataSourceByUIDNotFound describes a response with status code 404, with default header values.
+/*
+GetDataSourceByUIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewGetDataSourceByUIDInternalServerError() *GetDataSourceByUIDInternalServe
 	return &GetDataSourceByUIDInternalServerError{}
 }
 
-/* GetDataSourceByUIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDataSourceByUIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

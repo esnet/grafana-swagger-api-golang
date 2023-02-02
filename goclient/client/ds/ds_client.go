@@ -36,9 +36,10 @@ type ClientService interface {
 }
 
 /*
-  QueryMetricsWithExpressions data source query metrics with expressions
+	QueryMetricsWithExpressions data source query metrics with expressions
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `datasources:query`.
 */
 func (a *Client) QueryMetricsWithExpressions(params *QueryMetricsWithExpressionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*QueryMetricsWithExpressionsOK, *QueryMetricsWithExpressionsMultiStatus, error) {

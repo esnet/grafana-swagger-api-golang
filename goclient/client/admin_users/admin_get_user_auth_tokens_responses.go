@@ -57,7 +57,8 @@ func NewAdminGetUserAuthTokensOK() *AdminGetUserAuthTokensOK {
 	return &AdminGetUserAuthTokensOK{}
 }
 
-/* AdminGetUserAuthTokensOK describes a response with status code 200, with default header values.
+/*
+AdminGetUserAuthTokensOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewAdminGetUserAuthTokensUnauthorized() *AdminGetUserAuthTokensUnauthorized
 	return &AdminGetUserAuthTokensUnauthorized{}
 }
 
-/* AdminGetUserAuthTokensUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminGetUserAuthTokensUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewAdminGetUserAuthTokensForbidden() *AdminGetUserAuthTokensForbidden {
 	return &AdminGetUserAuthTokensForbidden{}
 }
 
-/* AdminGetUserAuthTokensForbidden describes a response with status code 403, with default header values.
+/*
+AdminGetUserAuthTokensForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewAdminGetUserAuthTokensInternalServerError() *AdminGetUserAuthTokensInter
 	return &AdminGetUserAuthTokensInternalServerError{}
 }
 
-/* AdminGetUserAuthTokensInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminGetUserAuthTokensInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -54,10 +54,12 @@ func NewCreateDashboardSnapshotParamsWithHTTPClient(client *http.Client) *Create
 	}
 }
 
-/* CreateDashboardSnapshotParams contains all the parameters to send to the API endpoint
-   for the create dashboard snapshot operation.
+/*
+CreateDashboardSnapshotParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create dashboard snapshot operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateDashboardSnapshotParams struct {
 

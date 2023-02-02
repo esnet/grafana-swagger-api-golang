@@ -57,7 +57,8 @@ func NewAddOrgUserOK() *AddOrgUserOK {
 	return &AddOrgUserOK{}
 }
 
-/* AddOrgUserOK describes a response with status code 200, with default header values.
+/*
+AddOrgUserOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewAddOrgUserUnauthorized() *AddOrgUserUnauthorized {
 	return &AddOrgUserUnauthorized{}
 }
 
-/* AddOrgUserUnauthorized describes a response with status code 401, with default header values.
+/*
+AddOrgUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewAddOrgUserForbidden() *AddOrgUserForbidden {
 	return &AddOrgUserForbidden{}
 }
 
-/* AddOrgUserForbidden describes a response with status code 403, with default header values.
+/*
+AddOrgUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewAddOrgUserInternalServerError() *AddOrgUserInternalServerError {
 	return &AddOrgUserInternalServerError{}
 }
 
-/* AddOrgUserInternalServerError describes a response with status code 500, with default header values.
+/*
+AddOrgUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

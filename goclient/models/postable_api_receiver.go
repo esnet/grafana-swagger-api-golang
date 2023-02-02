@@ -43,6 +43,9 @@ type PostableAPIReceiver struct {
 	// sns configs
 	SnsConfigs []*SNSConfig `json:"sns_configs"`
 
+	// telegram configs
+	TelegramConfigs []*TelegramConfig `json:"telegram_configs"`
+
 	// victorops configs
 	VictoropsConfigs []*VictorOpsConfig `json:"victorops_configs"`
 
@@ -82,6 +85,10 @@ func (m *PostableAPIReceiver) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateSnsConfigs(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateTelegramConfigs(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -285,6 +292,32 @@ func (m *PostableAPIReceiver) validateSnsConfigs(formats strfmt.Registry) error 
 	return nil
 }
 
+func (m *PostableAPIReceiver) validateTelegramConfigs(formats strfmt.Registry) error {
+	if swag.IsZero(m.TelegramConfigs) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(m.TelegramConfigs); i++ {
+		if swag.IsZero(m.TelegramConfigs[i]) { // not required
+			continue
+		}
+
+		if m.TelegramConfigs[i] != nil {
+			if err := m.TelegramConfigs[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("telegram_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("telegram_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
 func (m *PostableAPIReceiver) validateVictoropsConfigs(formats strfmt.Registry) error {
 	if swag.IsZero(m.VictoropsConfigs) { // not required
 		return nil
@@ -392,6 +425,10 @@ func (m *PostableAPIReceiver) ContextValidate(ctx context.Context, formats strfm
 	}
 
 	if err := m.contextValidateSnsConfigs(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateTelegramConfigs(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -543,6 +580,26 @@ func (m *PostableAPIReceiver) contextValidateSnsConfigs(ctx context.Context, for
 					return ve.ValidateName("sns_configs" + "." + strconv.Itoa(i))
 				} else if ce, ok := err.(*errors.CompositeError); ok {
 					return ce.ValidateName("sns_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (m *PostableAPIReceiver) contextValidateTelegramConfigs(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(m.TelegramConfigs); i++ {
+
+		if m.TelegramConfigs[i] != nil {
+			if err := m.TelegramConfigs[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("telegram_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("telegram_configs" + "." + strconv.Itoa(i))
 				}
 				return err
 			}

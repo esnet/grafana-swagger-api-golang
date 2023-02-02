@@ -53,10 +53,12 @@ func NewRenderReportPDFParamsWithHTTPClient(client *http.Client) *RenderReportPD
 	}
 }
 
-/* RenderReportPDFParams contains all the parameters to send to the API endpoint
-   for the render report p d f operation.
+/*
+RenderReportPDFParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the render report p d f operation.
+
+	Typically these are written to a http.Request.
 */
 type RenderReportPDFParams struct {
 

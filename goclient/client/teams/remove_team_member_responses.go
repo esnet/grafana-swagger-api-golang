@@ -63,7 +63,8 @@ func NewRemoveTeamMemberOK() *RemoveTeamMemberOK {
 	return &RemoveTeamMemberOK{}
 }
 
-/* RemoveTeamMemberOK describes a response with status code 200, with default header values.
+/*
+RemoveTeamMemberOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewRemoveTeamMemberUnauthorized() *RemoveTeamMemberUnauthorized {
 	return &RemoveTeamMemberUnauthorized{}
 }
 
-/* RemoveTeamMemberUnauthorized describes a response with status code 401, with default header values.
+/*
+RemoveTeamMemberUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewRemoveTeamMemberForbidden() *RemoveTeamMemberForbidden {
 	return &RemoveTeamMemberForbidden{}
 }
 
-/* RemoveTeamMemberForbidden describes a response with status code 403, with default header values.
+/*
+RemoveTeamMemberForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewRemoveTeamMemberNotFound() *RemoveTeamMemberNotFound {
 	return &RemoveTeamMemberNotFound{}
 }
 
-/* RemoveTeamMemberNotFound describes a response with status code 404, with default header values.
+/*
+RemoveTeamMemberNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewRemoveTeamMemberInternalServerError() *RemoveTeamMemberInternalServerErr
 	return &RemoveTeamMemberInternalServerError{}
 }
 
-/* RemoveTeamMemberInternalServerError describes a response with status code 500, with default header values.
+/*
+RemoveTeamMemberInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

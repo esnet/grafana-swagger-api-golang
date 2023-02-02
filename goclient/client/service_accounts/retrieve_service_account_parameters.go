@@ -53,10 +53,12 @@ func NewRetrieveServiceAccountParamsWithHTTPClient(client *http.Client) *Retriev
 	}
 }
 
-/* RetrieveServiceAccountParams contains all the parameters to send to the API endpoint
-   for the retrieve service account operation.
+/*
+RetrieveServiceAccountParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the retrieve service account operation.
+
+	Typically these are written to a http.Request.
 */
 type RetrieveServiceAccountParams struct {
 

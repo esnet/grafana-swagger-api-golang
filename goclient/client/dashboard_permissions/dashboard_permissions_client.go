@@ -42,9 +42,9 @@ type ClientService interface {
 }
 
 /*
-  GetDashboardPermissionsListByID gets all existing permissions for the given dashboard
+GetDashboardPermissionsListByID gets all existing permissions for the given dashboard
 
-  Please refer to [updated API](#/dashboard_permissions/getDashboardPermissionsListByUID) instead
+Please refer to [updated API](#/dashboard_permissions/getDashboardPermissionsListByUID) instead
 */
 func (a *Client) GetDashboardPermissionsListByID(params *GetDashboardPermissionsListByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardPermissionsListByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -83,7 +83,7 @@ func (a *Client) GetDashboardPermissionsListByID(params *GetDashboardPermissions
 }
 
 /*
-  GetDashboardPermissionsListByUID gets all existing permissions for the given dashboard
+GetDashboardPermissionsListByUID gets all existing permissions for the given dashboard
 */
 func (a *Client) GetDashboardPermissionsListByUID(params *GetDashboardPermissionsListByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetDashboardPermissionsListByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -122,9 +122,9 @@ func (a *Client) GetDashboardPermissionsListByUID(params *GetDashboardPermission
 }
 
 /*
-  UpdateDashboardPermissionsByID updates permissions for a dashboard
+	UpdateDashboardPermissionsByID updates permissions for a dashboard
 
-  Please refer to [updated API](#/dashboard_permissions/updateDashboardPermissionsByUID) instead
+	Please refer to [updated API](#/dashboard_permissions/updateDashboardPermissionsByUID) instead
 
 This operation will remove existing permissions if they’re not included in the request.
 */
@@ -165,9 +165,9 @@ func (a *Client) UpdateDashboardPermissionsByID(params *UpdateDashboardPermissio
 }
 
 /*
-  UpdateDashboardPermissionsByUID updates permissions for a dashboard
+UpdateDashboardPermissionsByUID updates permissions for a dashboard
 
-  This operation will remove existing permissions if they’re not included in the request.
+This operation will remove existing permissions if they’re not included in the request.
 */
 func (a *Client) UpdateDashboardPermissionsByUID(params *UpdateDashboardPermissionsByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateDashboardPermissionsByUIDOK, error) {
 	// TODO: Validate the params before sending

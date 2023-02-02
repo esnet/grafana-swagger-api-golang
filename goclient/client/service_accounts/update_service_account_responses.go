@@ -69,7 +69,8 @@ func NewUpdateServiceAccountOK() *UpdateServiceAccountOK {
 	return &UpdateServiceAccountOK{}
 }
 
-/* UpdateServiceAccountOK describes a response with status code 200, with default header values.
+/*
+UpdateServiceAccountOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewUpdateServiceAccountBadRequest() *UpdateServiceAccountBadRequest {
 	return &UpdateServiceAccountBadRequest{}
 }
 
-/* UpdateServiceAccountBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateServiceAccountBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewUpdateServiceAccountUnauthorized() *UpdateServiceAccountUnauthorized {
 	return &UpdateServiceAccountUnauthorized{}
 }
 
-/* UpdateServiceAccountUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateServiceAccountUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewUpdateServiceAccountForbidden() *UpdateServiceAccountForbidden {
 	return &UpdateServiceAccountForbidden{}
 }
 
-/* UpdateServiceAccountForbidden describes a response with status code 403, with default header values.
+/*
+UpdateServiceAccountForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewUpdateServiceAccountNotFound() *UpdateServiceAccountNotFound {
 	return &UpdateServiceAccountNotFound{}
 }
 
-/* UpdateServiceAccountNotFound describes a response with status code 404, with default header values.
+/*
+UpdateServiceAccountNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewUpdateServiceAccountInternalServerError() *UpdateServiceAccountInternalS
 	return &UpdateServiceAccountInternalServerError{}
 }
 
-/* UpdateServiceAccountInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateServiceAccountInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

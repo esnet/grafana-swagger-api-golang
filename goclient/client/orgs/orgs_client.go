@@ -60,9 +60,9 @@ type ClientService interface {
 }
 
 /*
-  AddOrgUser adds a new user to the current organization
+	AddOrgUser adds a new user to the current organization
 
-  Adds a global user to the current organization.
+	Adds a global user to the current organization.
 
 If you are running Grafana Enterprise and have Fine-grained access control enabled
 you need to have a permission with action: `org.users:add` with scope `users:*`.
@@ -104,9 +104,9 @@ func (a *Client) AddOrgUser(params *AddOrgUserParams, authInfo runtime.ClientAut
 }
 
 /*
-  CreateOrg creates organization
+CreateOrg creates organization
 
-  Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.
+Only works if [users.allow_org_create](https://grafana.com/docs/grafana/latest/administration/configuration/#allow_org_create) is set.
 */
 func (a *Client) CreateOrg(params *CreateOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateOrgOK, error) {
 	// TODO: Validate the params before sending
@@ -145,7 +145,7 @@ func (a *Client) CreateOrg(params *CreateOrgParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  DeleteOrgByID deletes organization
+DeleteOrgByID deletes organization
 */
 func (a *Client) DeleteOrgByID(params *DeleteOrgByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteOrgByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -184,7 +184,7 @@ func (a *Client) DeleteOrgByID(params *DeleteOrgByIDParams, authInfo runtime.Cli
 }
 
 /*
-  GetOrgByID gets organization by ID
+GetOrgByID gets organization by ID
 */
 func (a *Client) GetOrgByID(params *GetOrgByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrgByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -223,7 +223,7 @@ func (a *Client) GetOrgByID(params *GetOrgByIDParams, authInfo runtime.ClientAut
 }
 
 /*
-  GetOrgByName gets organization by ID
+GetOrgByName gets organization by ID
 */
 func (a *Client) GetOrgByName(params *GetOrgByNameParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrgByNameOK, error) {
 	// TODO: Validate the params before sending
@@ -262,10 +262,9 @@ func (a *Client) GetOrgByName(params *GetOrgByNameParams, authInfo runtime.Clien
 }
 
 /*
-  GetOrgQuota fetches organization quota
+GetOrgQuota fetches organization quota
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).
-list
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:read` and scope `org:id:1` (orgIDScope).
 */
 func (a *Client) GetOrgQuota(params *GetOrgQuotaParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrgQuotaOK, error) {
 	// TODO: Validate the params before sending
@@ -304,9 +303,10 @@ func (a *Client) GetOrgQuota(params *GetOrgQuotaParams, authInfo runtime.ClientA
 }
 
 /*
-  GetOrgUsers gets users in organization
+	GetOrgUsers gets users in organization
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `org.users:read` with scope `users:*`.
 */
 func (a *Client) GetOrgUsers(params *GetOrgUsersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetOrgUsersOK, error) {
@@ -346,9 +346,10 @@ func (a *Client) GetOrgUsers(params *GetOrgUsersParams, authInfo runtime.ClientA
 }
 
 /*
-  RemoveOrgUser deletes user in current organization
+	RemoveOrgUser deletes user in current organization
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `org.users:remove` with scope `users:*`.
 */
 func (a *Client) RemoveOrgUser(params *RemoveOrgUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveOrgUserOK, error) {
@@ -388,7 +389,7 @@ func (a *Client) RemoveOrgUser(params *RemoveOrgUserParams, authInfo runtime.Cli
 }
 
 /*
-  SearchOrgs Search all Organizations
+SearchOrgs searches all organizations
 */
 func (a *Client) SearchOrgs(params *SearchOrgsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOrgsOK, error) {
 	// TODO: Validate the params before sending
@@ -427,7 +428,7 @@ func (a *Client) SearchOrgs(params *SearchOrgsParams, authInfo runtime.ClientAut
 }
 
 /*
-  UpdateOrg updates organization
+UpdateOrg updates organization
 */
 func (a *Client) UpdateOrg(params *UpdateOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgOK, error) {
 	// TODO: Validate the params before sending
@@ -466,7 +467,7 @@ func (a *Client) UpdateOrg(params *UpdateOrgParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  UpdateOrgAddress updates organization s address
+UpdateOrgAddress updates organization s address
 */
 func (a *Client) UpdateOrgAddress(params *UpdateOrgAddressParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgAddressOK, error) {
 	// TODO: Validate the params before sending
@@ -505,9 +506,9 @@ func (a *Client) UpdateOrgAddress(params *UpdateOrgAddressParams, authInfo runti
 }
 
 /*
-  UpdateOrgQuota updates user quota
+UpdateOrgQuota updates user quota
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).
+If you are running Grafana Enterprise and have Fine-grained access control enabled, you need to have a permission with action `orgs.quotas:write` and scope `org:id:1` (orgIDScope).
 */
 func (a *Client) UpdateOrgQuota(params *UpdateOrgQuotaParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgQuotaOK, error) {
 	// TODO: Validate the params before sending
@@ -546,9 +547,10 @@ func (a *Client) UpdateOrgQuota(params *UpdateOrgQuotaParams, authInfo runtime.C
 }
 
 /*
-  UpdateOrgUser updates users in organization
+	UpdateOrgUser updates users in organization
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `org.users.role:update` with scope `users:*`.
 */
 func (a *Client) UpdateOrgUser(params *UpdateOrgUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgUserOK, error) {

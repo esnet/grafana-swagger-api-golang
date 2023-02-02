@@ -63,7 +63,8 @@ func NewPatchOrgPreferencesOK() *PatchOrgPreferencesOK {
 	return &PatchOrgPreferencesOK{}
 }
 
-/* PatchOrgPreferencesOK describes a response with status code 200, with default header values.
+/*
+PatchOrgPreferencesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewPatchOrgPreferencesBadRequest() *PatchOrgPreferencesBadRequest {
 	return &PatchOrgPreferencesBadRequest{}
 }
 
-/* PatchOrgPreferencesBadRequest describes a response with status code 400, with default header values.
+/*
+PatchOrgPreferencesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewPatchOrgPreferencesUnauthorized() *PatchOrgPreferencesUnauthorized {
 	return &PatchOrgPreferencesUnauthorized{}
 }
 
-/* PatchOrgPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+PatchOrgPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewPatchOrgPreferencesForbidden() *PatchOrgPreferencesForbidden {
 	return &PatchOrgPreferencesForbidden{}
 }
 
-/* PatchOrgPreferencesForbidden describes a response with status code 403, with default header values.
+/*
+PatchOrgPreferencesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewPatchOrgPreferencesInternalServerError() *PatchOrgPreferencesInternalSer
 	return &PatchOrgPreferencesInternalServerError{}
 }
 
-/* PatchOrgPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+PatchOrgPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

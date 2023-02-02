@@ -57,7 +57,8 @@ func NewGetAlertNotificationChannelsOK() *GetAlertNotificationChannelsOK {
 	return &GetAlertNotificationChannelsOK{}
 }
 
-/* GetAlertNotificationChannelsOK describes a response with status code 200, with default header values.
+/*
+GetAlertNotificationChannelsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetAlertNotificationChannelsUnauthorized() *GetAlertNotificationChannels
 	return &GetAlertNotificationChannelsUnauthorized{}
 }
 
-/* GetAlertNotificationChannelsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAlertNotificationChannelsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetAlertNotificationChannelsForbidden() *GetAlertNotificationChannelsFor
 	return &GetAlertNotificationChannelsForbidden{}
 }
 
-/* GetAlertNotificationChannelsForbidden describes a response with status code 403, with default header values.
+/*
+GetAlertNotificationChannelsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetAlertNotificationChannelsInternalServerError() *GetAlertNotificationC
 	return &GetAlertNotificationChannelsInternalServerError{}
 }
 
-/* GetAlertNotificationChannelsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAlertNotificationChannelsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

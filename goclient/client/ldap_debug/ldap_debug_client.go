@@ -36,9 +36,9 @@ type ClientService interface {
 }
 
 /*
-  GetSyncStatus returns the current state of the l d a p background sync integration
+GetSyncStatus returns the current state of the l d a p background sync integration
 
-  You need to have a permission with action `ldap.status:read`.
+You need to have a permission with action `ldap.status:read`.
 */
 func (a *Client) GetSyncStatus(params *GetSyncStatusParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetSyncStatusOK, error) {
 	// TODO: Validate the params before sending

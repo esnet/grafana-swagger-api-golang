@@ -53,10 +53,12 @@ func NewPostSyncUserWithLDAPParamsWithHTTPClient(client *http.Client) *PostSyncU
 	}
 }
 
-/* PostSyncUserWithLDAPParams contains all the parameters to send to the API endpoint
-   for the post sync user with l d a p operation.
+/*
+PostSyncUserWithLDAPParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post sync user with l d a p operation.
+
+	Typically these are written to a http.Request.
 */
 type PostSyncUserWithLDAPParams struct {
 

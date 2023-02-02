@@ -69,7 +69,8 @@ func NewImportDashboardOK() *ImportDashboardOK {
 	return &ImportDashboardOK{}
 }
 
-/* ImportDashboardOK describes a response with status code 200, with default header values.
+/*
+ImportDashboardOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewImportDashboardBadRequest() *ImportDashboardBadRequest {
 	return &ImportDashboardBadRequest{}
 }
 
-/* ImportDashboardBadRequest describes a response with status code 400, with default header values.
+/*
+ImportDashboardBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewImportDashboardUnauthorized() *ImportDashboardUnauthorized {
 	return &ImportDashboardUnauthorized{}
 }
 
-/* ImportDashboardUnauthorized describes a response with status code 401, with default header values.
+/*
+ImportDashboardUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewImportDashboardPreconditionFailed() *ImportDashboardPreconditionFailed {
 	return &ImportDashboardPreconditionFailed{}
 }
 
-/* ImportDashboardPreconditionFailed describes a response with status code 412, with default header values.
+/*
+ImportDashboardPreconditionFailed describes a response with status code 412, with default header values.
 
 PreconditionFailedError
 */
@@ -197,7 +201,8 @@ func NewImportDashboardUnprocessableEntity() *ImportDashboardUnprocessableEntity
 	return &ImportDashboardUnprocessableEntity{}
 }
 
-/* ImportDashboardUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+ImportDashboardUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -229,7 +234,8 @@ func NewImportDashboardInternalServerError() *ImportDashboardInternalServerError
 	return &ImportDashboardInternalServerError{}
 }
 
-/* ImportDashboardInternalServerError describes a response with status code 500, with default header values.
+/*
+ImportDashboardInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -54,10 +54,12 @@ func NewUpdateDashboardPermissionsByUIDParamsWithHTTPClient(client *http.Client)
 	}
 }
 
-/* UpdateDashboardPermissionsByUIDParams contains all the parameters to send to the API endpoint
-   for the update dashboard permissions by UID operation.
+/*
+UpdateDashboardPermissionsByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update dashboard permissions by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateDashboardPermissionsByUIDParams struct {
 

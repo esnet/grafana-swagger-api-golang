@@ -54,10 +54,12 @@ func NewPostDashboardParamsWithHTTPClient(client *http.Client) *PostDashboardPar
 	}
 }
 
-/* PostDashboardParams contains all the parameters to send to the API endpoint
-   for the post dashboard operation.
+/*
+PostDashboardParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post dashboard operation.
+
+	Typically these are written to a http.Request.
 */
 type PostDashboardParams struct {
 

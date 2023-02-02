@@ -8,6 +8,7 @@ package models
 import (
 	"context"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
@@ -29,17 +30,69 @@ type TLSConfig struct {
 	// The client key file for the targets.
 	KeyFile string `json:"key_file,omitempty"`
 
+	// min version
+	MinVersion TLSVersion `json:"min_version,omitempty"`
+
 	// Used to verify the hostname for the targets.
 	ServerName string `json:"server_name,omitempty"`
 }
 
 // Validate validates this TLS config
 func (m *TLSConfig) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateMinVersion(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
 	return nil
 }
 
-// ContextValidate validates this TLS config based on context it is used
+func (m *TLSConfig) validateMinVersion(formats strfmt.Registry) error {
+	if swag.IsZero(m.MinVersion) { // not required
+		return nil
+	}
+
+	if err := m.MinVersion.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("min_version")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("min_version")
+		}
+		return err
+	}
+
+	return nil
+}
+
+// ContextValidate validate this TLS config based on the context it is used
 func (m *TLSConfig) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.contextValidateMinVersion(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *TLSConfig) contextValidateMinVersion(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.MinVersion.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("min_version")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("min_version")
+		}
+		return err
+	}
+
 	return nil
 }
 

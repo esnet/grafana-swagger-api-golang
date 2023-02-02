@@ -54,10 +54,12 @@ func NewUpdateCurrentOrgAddressParamsWithHTTPClient(client *http.Client) *Update
 	}
 }
 
-/* UpdateCurrentOrgAddressParams contains all the parameters to send to the API endpoint
-   for the update current org address operation.
+/*
+UpdateCurrentOrgAddressParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update current org address operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateCurrentOrgAddressParams struct {
 

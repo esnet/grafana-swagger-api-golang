@@ -63,7 +63,8 @@ func NewGetDataSourceIDByNameOK() *GetDataSourceIDByNameOK {
 	return &GetDataSourceIDByNameOK{}
 }
 
-/* GetDataSourceIDByNameOK describes a response with status code 200, with default header values.
+/*
+GetDataSourceIDByNameOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewGetDataSourceIDByNameUnauthorized() *GetDataSourceIDByNameUnauthorized {
 	return &GetDataSourceIDByNameUnauthorized{}
 }
 
-/* GetDataSourceIDByNameUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDataSourceIDByNameUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetDataSourceIDByNameForbidden() *GetDataSourceIDByNameForbidden {
 	return &GetDataSourceIDByNameForbidden{}
 }
 
-/* GetDataSourceIDByNameForbidden describes a response with status code 403, with default header values.
+/*
+GetDataSourceIDByNameForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetDataSourceIDByNameNotFound() *GetDataSourceIDByNameNotFound {
 	return &GetDataSourceIDByNameNotFound{}
 }
 
-/* GetDataSourceIDByNameNotFound describes a response with status code 404, with default header values.
+/*
+GetDataSourceIDByNameNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetDataSourceIDByNameInternalServerError() *GetDataSourceIDByNameInterna
 	return &GetDataSourceIDByNameInternalServerError{}
 }
 
-/* GetDataSourceIDByNameInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDataSourceIDByNameInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

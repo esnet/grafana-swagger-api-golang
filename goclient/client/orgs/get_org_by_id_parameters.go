@@ -53,10 +53,12 @@ func NewGetOrgByIDParamsWithHTTPClient(client *http.Client) *GetOrgByIDParams {
 	}
 }
 
-/* GetOrgByIDParams contains all the parameters to send to the API endpoint
-   for the get org by ID operation.
+/*
+GetOrgByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgByIDParams struct {
 

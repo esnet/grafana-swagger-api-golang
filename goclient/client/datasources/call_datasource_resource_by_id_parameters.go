@@ -52,10 +52,12 @@ func NewCallDatasourceResourceByIDParamsWithHTTPClient(client *http.Client) *Cal
 	}
 }
 
-/* CallDatasourceResourceByIDParams contains all the parameters to send to the API endpoint
-   for the call datasource resource by ID operation.
+/*
+CallDatasourceResourceByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the call datasource resource by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type CallDatasourceResourceByIDParams struct {
 

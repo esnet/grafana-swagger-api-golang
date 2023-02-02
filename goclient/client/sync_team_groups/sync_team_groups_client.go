@@ -40,7 +40,7 @@ type ClientService interface {
 }
 
 /*
-  AddTeamGroupAPI adds external group
+AddTeamGroupAPI adds external group
 */
 func (a *Client) AddTeamGroupAPI(params *AddTeamGroupAPIParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddTeamGroupAPIOK, error) {
 	// TODO: Validate the params before sending
@@ -79,7 +79,7 @@ func (a *Client) AddTeamGroupAPI(params *AddTeamGroupAPIParams, authInfo runtime
 }
 
 /*
-  GetTeamGroupsAPI gets external groups
+GetTeamGroupsAPI gets external groups
 */
 func (a *Client) GetTeamGroupsAPI(params *GetTeamGroupsAPIParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetTeamGroupsAPIOK, error) {
 	// TODO: Validate the params before sending
@@ -118,7 +118,7 @@ func (a *Client) GetTeamGroupsAPI(params *GetTeamGroupsAPIParams, authInfo runti
 }
 
 /*
-  RemoveTeamGroupAPI removes external group
+RemoveTeamGroupAPI removes external group
 */
 func (a *Client) RemoveTeamGroupAPI(params *RemoveTeamGroupAPIParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveTeamGroupAPIOK, error) {
 	// TODO: Validate the params before sending

@@ -52,10 +52,12 @@ func NewGetRecordingRuleWriteTargetParamsWithHTTPClient(client *http.Client) *Ge
 	}
 }
 
-/* GetRecordingRuleWriteTargetParams contains all the parameters to send to the API endpoint
-   for the get recording rule write target operation.
+/*
+GetRecordingRuleWriteTargetParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get recording rule write target operation.
+
+	Typically these are written to a http.Request.
 */
 type GetRecordingRuleWriteTargetParams struct {
 	timeout    time.Duration

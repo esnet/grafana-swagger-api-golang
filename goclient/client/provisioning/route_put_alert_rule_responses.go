@@ -45,7 +45,8 @@ func NewRoutePutAlertRuleOK() *RoutePutAlertRuleOK {
 	return &RoutePutAlertRuleOK{}
 }
 
-/* RoutePutAlertRuleOK describes a response with status code 200, with default header values.
+/*
+RoutePutAlertRuleOK describes a response with status code 200, with default header values.
 
 ProvisionedAlertRule
 */
@@ -77,7 +78,8 @@ func NewRoutePutAlertRuleBadRequest() *RoutePutAlertRuleBadRequest {
 	return &RoutePutAlertRuleBadRequest{}
 }
 
-/* RoutePutAlertRuleBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePutAlertRuleBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

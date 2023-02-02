@@ -57,7 +57,8 @@ func NewGetReportsOK() *GetReportsOK {
 	return &GetReportsOK{}
 }
 
-/* GetReportsOK describes a response with status code 200, with default header values.
+/*
+GetReportsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetReportsUnauthorized() *GetReportsUnauthorized {
 	return &GetReportsUnauthorized{}
 }
 
-/* GetReportsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetReportsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetReportsForbidden() *GetReportsForbidden {
 	return &GetReportsForbidden{}
 }
 
-/* GetReportsForbidden describes a response with status code 403, with default header values.
+/*
+GetReportsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetReportsInternalServerError() *GetReportsInternalServerError {
 	return &GetReportsInternalServerError{}
 }
 
-/* GetReportsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetReportsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

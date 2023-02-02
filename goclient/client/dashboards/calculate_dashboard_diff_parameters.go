@@ -54,10 +54,12 @@ func NewCalculateDashboardDiffParamsWithHTTPClient(client *http.Client) *Calcula
 	}
 }
 
-/* CalculateDashboardDiffParams contains all the parameters to send to the API endpoint
-   for the calculate dashboard diff operation.
+/*
+CalculateDashboardDiffParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the calculate dashboard diff operation.
+
+	Typically these are written to a http.Request.
 */
 type CalculateDashboardDiffParams struct {
 

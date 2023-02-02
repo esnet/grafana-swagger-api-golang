@@ -52,10 +52,12 @@ func NewDatasourceProxyPOSTByUIDcallsParamsWithHTTPClient(client *http.Client) *
 	}
 }
 
-/* DatasourceProxyPOSTByUIDcallsParams contains all the parameters to send to the API endpoint
-   for the datasource proxy p o s t by UI dcalls operation.
+/*
+DatasourceProxyPOSTByUIDcallsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the datasource proxy p o s t by UI dcalls operation.
+
+	Typically these are written to a http.Request.
 */
 type DatasourceProxyPOSTByUIDcallsParams struct {
 

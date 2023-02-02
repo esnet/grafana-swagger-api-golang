@@ -54,10 +54,12 @@ func NewNotificationChannelTestParamsWithHTTPClient(client *http.Client) *Notifi
 	}
 }
 
-/* NotificationChannelTestParams contains all the parameters to send to the API endpoint
-   for the notification channel test operation.
+/*
+NotificationChannelTestParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the notification channel test operation.
+
+	Typically these are written to a http.Request.
 */
 type NotificationChannelTestParams struct {
 

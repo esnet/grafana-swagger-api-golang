@@ -57,7 +57,8 @@ func NewCreateQueryOK() *CreateQueryOK {
 	return &CreateQueryOK{}
 }
 
-/* CreateQueryOK describes a response with status code 200, with default header values.
+/*
+CreateQueryOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewCreateQueryBadRequest() *CreateQueryBadRequest {
 	return &CreateQueryBadRequest{}
 }
 
-/* CreateQueryBadRequest describes a response with status code 400, with default header values.
+/*
+CreateQueryBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -121,7 +123,8 @@ func NewCreateQueryUnauthorized() *CreateQueryUnauthorized {
 	return &CreateQueryUnauthorized{}
 }
 
-/* CreateQueryUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateQueryUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -153,7 +156,8 @@ func NewCreateQueryInternalServerError() *CreateQueryInternalServerError {
 	return &CreateQueryInternalServerError{}
 }
 
-/* CreateQueryInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateQueryInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

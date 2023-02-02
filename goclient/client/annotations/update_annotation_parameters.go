@@ -54,10 +54,12 @@ func NewUpdateAnnotationParamsWithHTTPClient(client *http.Client) *UpdateAnnotat
 	}
 }
 
-/* UpdateAnnotationParams contains all the parameters to send to the API endpoint
-   for the update annotation operation.
+/*
+UpdateAnnotationParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update annotation operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateAnnotationParams struct {
 

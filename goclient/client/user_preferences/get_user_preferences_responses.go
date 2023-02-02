@@ -51,7 +51,8 @@ func NewGetUserPreferencesOK() *GetUserPreferencesOK {
 	return &GetUserPreferencesOK{}
 }
 
-/* GetUserPreferencesOK describes a response with status code 200, with default header values.
+/*
+GetUserPreferencesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetUserPreferencesUnauthorized() *GetUserPreferencesUnauthorized {
 	return &GetUserPreferencesUnauthorized{}
 }
 
-/* GetUserPreferencesUnauthorized describes a response with status code 401, with default header values.
+/*
+GetUserPreferencesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetUserPreferencesInternalServerError() *GetUserPreferencesInternalServe
 	return &GetUserPreferencesInternalServerError{}
 }
 
-/* GetUserPreferencesInternalServerError describes a response with status code 500, with default header values.
+/*
+GetUserPreferencesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

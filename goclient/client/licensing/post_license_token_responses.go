@@ -45,7 +45,8 @@ func NewPostLicenseTokenOK() *PostLicenseTokenOK {
 	return &PostLicenseTokenOK{}
 }
 
-/* PostLicenseTokenOK describes a response with status code 200, with default header values.
+/*
+PostLicenseTokenOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -77,7 +78,8 @@ func NewPostLicenseTokenBadRequest() *PostLicenseTokenBadRequest {
 	return &PostLicenseTokenBadRequest{}
 }
 
-/* PostLicenseTokenBadRequest describes a response with status code 400, with default header values.
+/*
+PostLicenseTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */

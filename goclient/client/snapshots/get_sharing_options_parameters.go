@@ -52,10 +52,12 @@ func NewGetSharingOptionsParamsWithHTTPClient(client *http.Client) *GetSharingOp
 	}
 }
 
-/* GetSharingOptionsParams contains all the parameters to send to the API endpoint
-   for the get sharing options operation.
+/*
+GetSharingOptionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get sharing options operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSharingOptionsParams struct {
 	timeout    time.Duration

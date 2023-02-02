@@ -69,7 +69,8 @@ func NewDeleteLicenseTokenAccepted() *DeleteLicenseTokenAccepted {
 	return &DeleteLicenseTokenAccepted{}
 }
 
-/* DeleteLicenseTokenAccepted describes a response with status code 202, with default header values.
+/*
+DeleteLicenseTokenAccepted describes a response with status code 202, with default header values.
 
 AcceptedResponse
 */
@@ -101,7 +102,8 @@ func NewDeleteLicenseTokenBadRequest() *DeleteLicenseTokenBadRequest {
 	return &DeleteLicenseTokenBadRequest{}
 }
 
-/* DeleteLicenseTokenBadRequest describes a response with status code 400, with default header values.
+/*
+DeleteLicenseTokenBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewDeleteLicenseTokenUnauthorized() *DeleteLicenseTokenUnauthorized {
 	return &DeleteLicenseTokenUnauthorized{}
 }
 
-/* DeleteLicenseTokenUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteLicenseTokenUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewDeleteLicenseTokenForbidden() *DeleteLicenseTokenForbidden {
 	return &DeleteLicenseTokenForbidden{}
 }
 
-/* DeleteLicenseTokenForbidden describes a response with status code 403, with default header values.
+/*
+DeleteLicenseTokenForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewDeleteLicenseTokenUnprocessableEntity() *DeleteLicenseTokenUnprocessable
 	return &DeleteLicenseTokenUnprocessableEntity{}
 }
 
-/* DeleteLicenseTokenUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+DeleteLicenseTokenUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -229,7 +234,8 @@ func NewDeleteLicenseTokenInternalServerError() *DeleteLicenseTokenInternalServe
 	return &DeleteLicenseTokenInternalServerError{}
 }
 
-/* DeleteLicenseTokenInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteLicenseTokenInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -52,10 +52,12 @@ func NewGetCustomPermissionsReportParamsWithHTTPClient(client *http.Client) *Get
 	}
 }
 
-/* GetCustomPermissionsReportParams contains all the parameters to send to the API endpoint
-   for the get custom permissions report operation.
+/*
+GetCustomPermissionsReportParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get custom permissions report operation.
+
+	Typically these are written to a http.Request.
 */
 type GetCustomPermissionsReportParams struct {
 	timeout    time.Duration

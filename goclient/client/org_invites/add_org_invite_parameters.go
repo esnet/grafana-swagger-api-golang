@@ -54,10 +54,12 @@ func NewAddOrgInviteParamsWithHTTPClient(client *http.Client) *AddOrgInviteParam
 	}
 }
 
-/* AddOrgInviteParams contains all the parameters to send to the API endpoint
-   for the add org invite operation.
+/*
+AddOrgInviteParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add org invite operation.
+
+	Typically these are written to a http.Request.
 */
 type AddOrgInviteParams struct {
 

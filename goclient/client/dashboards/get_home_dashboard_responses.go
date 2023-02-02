@@ -51,7 +51,8 @@ func NewGetHomeDashboardOK() *GetHomeDashboardOK {
 	return &GetHomeDashboardOK{}
 }
 
-/* GetHomeDashboardOK describes a response with status code 200, with default header values.
+/*
+GetHomeDashboardOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetHomeDashboardUnauthorized() *GetHomeDashboardUnauthorized {
 	return &GetHomeDashboardUnauthorized{}
 }
 
-/* GetHomeDashboardUnauthorized describes a response with status code 401, with default header values.
+/*
+GetHomeDashboardUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetHomeDashboardInternalServerError() *GetHomeDashboardInternalServerErr
 	return &GetHomeDashboardInternalServerError{}
 }
 
-/* GetHomeDashboardInternalServerError describes a response with status code 500, with default header values.
+/*
+GetHomeDashboardInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

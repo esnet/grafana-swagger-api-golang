@@ -63,7 +63,8 @@ func NewAddPermissionOK() *AddPermissionOK {
 	return &AddPermissionOK{}
 }
 
-/* AddPermissionOK describes a response with status code 200, with default header values.
+/*
+AddPermissionOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewAddPermissionUnauthorized() *AddPermissionUnauthorized {
 	return &AddPermissionUnauthorized{}
 }
 
-/* AddPermissionUnauthorized describes a response with status code 401, with default header values.
+/*
+AddPermissionUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewAddPermissionForbidden() *AddPermissionForbidden {
 	return &AddPermissionForbidden{}
 }
 
-/* AddPermissionForbidden describes a response with status code 403, with default header values.
+/*
+AddPermissionForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewAddPermissionNotFound() *AddPermissionNotFound {
 	return &AddPermissionNotFound{}
 }
 
-/* AddPermissionNotFound describes a response with status code 404, with default header values.
+/*
+AddPermissionNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewAddPermissionInternalServerError() *AddPermissionInternalServerError {
 	return &AddPermissionInternalServerError{}
 }
 
-/* AddPermissionInternalServerError describes a response with status code 500, with default header values.
+/*
+AddPermissionInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

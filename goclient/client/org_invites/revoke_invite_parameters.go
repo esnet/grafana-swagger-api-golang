@@ -52,10 +52,12 @@ func NewRevokeInviteParamsWithHTTPClient(client *http.Client) *RevokeInviteParam
 	}
 }
 
-/* RevokeInviteParams contains all the parameters to send to the API endpoint
-   for the revoke invite operation.
+/*
+RevokeInviteParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the revoke invite operation.
+
+	Typically these are written to a http.Request.
 */
 type RevokeInviteParams struct {
 

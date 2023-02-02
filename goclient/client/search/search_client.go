@@ -38,7 +38,7 @@ type ClientService interface {
 }
 
 /*
-  ListSortOptions List search sorting options
+ListSortOptions lists search sorting options
 */
 func (a *Client) ListSortOptions(params *ListSortOptionsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListSortOptionsOK, error) {
 	// TODO: Validate the params before sending
@@ -77,7 +77,7 @@ func (a *Client) ListSortOptions(params *ListSortOptionsParams, authInfo runtime
 }
 
 /*
-  Search search API
+Search search API
 */
 func (a *Client) Search(params *SearchParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOK, error) {
 	// TODO: Validate the params before sending

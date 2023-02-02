@@ -63,7 +63,8 @@ func NewCreateTeamOK() *CreateTeamOK {
 	return &CreateTeamOK{}
 }
 
-/* CreateTeamOK describes a response with status code 200, with default header values.
+/*
+CreateTeamOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewCreateTeamUnauthorized() *CreateTeamUnauthorized {
 	return &CreateTeamUnauthorized{}
 }
 
-/* CreateTeamUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateTeamUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewCreateTeamForbidden() *CreateTeamForbidden {
 	return &CreateTeamForbidden{}
 }
 
-/* CreateTeamForbidden describes a response with status code 403, with default header values.
+/*
+CreateTeamForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewCreateTeamConflict() *CreateTeamConflict {
 	return &CreateTeamConflict{}
 }
 
-/* CreateTeamConflict describes a response with status code 409, with default header values.
+/*
+CreateTeamConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -191,7 +195,8 @@ func NewCreateTeamInternalServerError() *CreateTeamInternalServerError {
 	return &CreateTeamInternalServerError{}
 }
 
-/* CreateTeamInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateTeamInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

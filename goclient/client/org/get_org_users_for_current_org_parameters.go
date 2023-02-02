@@ -52,10 +52,12 @@ func NewGetOrgUsersForCurrentOrgParamsWithHTTPClient(client *http.Client) *GetOr
 	}
 }
 
-/* GetOrgUsersForCurrentOrgParams contains all the parameters to send to the API endpoint
-   for the get org users for current org operation.
+/*
+GetOrgUsersForCurrentOrgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org users for current org operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgUsersForCurrentOrgParams struct {
 	timeout    time.Duration

@@ -57,7 +57,8 @@ func NewAddUserRoleOK() *AddUserRoleOK {
 	return &AddUserRoleOK{}
 }
 
-/* AddUserRoleOK describes a response with status code 200, with default header values.
+/*
+AddUserRoleOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewAddUserRoleForbidden() *AddUserRoleForbidden {
 	return &AddUserRoleForbidden{}
 }
 
-/* AddUserRoleForbidden describes a response with status code 403, with default header values.
+/*
+AddUserRoleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -121,7 +123,8 @@ func NewAddUserRoleNotFound() *AddUserRoleNotFound {
 	return &AddUserRoleNotFound{}
 }
 
-/* AddUserRoleNotFound describes a response with status code 404, with default header values.
+/*
+AddUserRoleNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -153,7 +156,8 @@ func NewAddUserRoleInternalServerError() *AddUserRoleInternalServerError {
 	return &AddUserRoleInternalServerError{}
 }
 
-/* AddUserRoleInternalServerError describes a response with status code 500, with default header values.
+/*
+AddUserRoleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

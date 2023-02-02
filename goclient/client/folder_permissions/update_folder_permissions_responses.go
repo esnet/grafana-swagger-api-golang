@@ -63,7 +63,8 @@ func NewUpdateFolderPermissionsOK() *UpdateFolderPermissionsOK {
 	return &UpdateFolderPermissionsOK{}
 }
 
-/* UpdateFolderPermissionsOK describes a response with status code 200, with default header values.
+/*
+UpdateFolderPermissionsOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUpdateFolderPermissionsUnauthorized() *UpdateFolderPermissionsUnauthoriz
 	return &UpdateFolderPermissionsUnauthorized{}
 }
 
-/* UpdateFolderPermissionsUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateFolderPermissionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewUpdateFolderPermissionsForbidden() *UpdateFolderPermissionsForbidden {
 	return &UpdateFolderPermissionsForbidden{}
 }
 
-/* UpdateFolderPermissionsForbidden describes a response with status code 403, with default header values.
+/*
+UpdateFolderPermissionsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewUpdateFolderPermissionsNotFound() *UpdateFolderPermissionsNotFound {
 	return &UpdateFolderPermissionsNotFound{}
 }
 
-/* UpdateFolderPermissionsNotFound describes a response with status code 404, with default header values.
+/*
+UpdateFolderPermissionsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewUpdateFolderPermissionsInternalServerError() *UpdateFolderPermissionsInt
 	return &UpdateFolderPermissionsInternalServerError{}
 }
 
-/* UpdateFolderPermissionsInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateFolderPermissionsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

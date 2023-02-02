@@ -45,7 +45,8 @@ func NewRoutePutTemplateAccepted() *RoutePutTemplateAccepted {
 	return &RoutePutTemplateAccepted{}
 }
 
-/* RoutePutTemplateAccepted describes a response with status code 202, with default header values.
+/*
+RoutePutTemplateAccepted describes a response with status code 202, with default header values.
 
 MessageTemplate
 */
@@ -77,7 +78,8 @@ func NewRoutePutTemplateBadRequest() *RoutePutTemplateBadRequest {
 	return &RoutePutTemplateBadRequest{}
 }
 
-/* RoutePutTemplateBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePutTemplateBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

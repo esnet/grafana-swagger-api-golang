@@ -69,7 +69,8 @@ func NewCreateFolderOK() *CreateFolderOK {
 	return &CreateFolderOK{}
 }
 
-/* CreateFolderOK describes a response with status code 200, with default header values.
+/*
+CreateFolderOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewCreateFolderBadRequest() *CreateFolderBadRequest {
 	return &CreateFolderBadRequest{}
 }
 
-/* CreateFolderBadRequest describes a response with status code 400, with default header values.
+/*
+CreateFolderBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewCreateFolderUnauthorized() *CreateFolderUnauthorized {
 	return &CreateFolderUnauthorized{}
 }
 
-/* CreateFolderUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateFolderUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewCreateFolderForbidden() *CreateFolderForbidden {
 	return &CreateFolderForbidden{}
 }
 
-/* CreateFolderForbidden describes a response with status code 403, with default header values.
+/*
+CreateFolderForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewCreateFolderConflict() *CreateFolderConflict {
 	return &CreateFolderConflict{}
 }
 
-/* CreateFolderConflict describes a response with status code 409, with default header values.
+/*
+CreateFolderConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -229,7 +234,8 @@ func NewCreateFolderInternalServerError() *CreateFolderInternalServerError {
 	return &CreateFolderInternalServerError{}
 }
 
-/* CreateFolderInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateFolderInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

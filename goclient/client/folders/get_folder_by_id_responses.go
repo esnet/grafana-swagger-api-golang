@@ -63,7 +63,8 @@ func NewGetFolderByIDOK() *GetFolderByIDOK {
 	return &GetFolderByIDOK{}
 }
 
-/* GetFolderByIDOK describes a response with status code 200, with default header values.
+/*
+GetFolderByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewGetFolderByIDUnauthorized() *GetFolderByIDUnauthorized {
 	return &GetFolderByIDUnauthorized{}
 }
 
-/* GetFolderByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetFolderByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetFolderByIDForbidden() *GetFolderByIDForbidden {
 	return &GetFolderByIDForbidden{}
 }
 
-/* GetFolderByIDForbidden describes a response with status code 403, with default header values.
+/*
+GetFolderByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetFolderByIDNotFound() *GetFolderByIDNotFound {
 	return &GetFolderByIDNotFound{}
 }
 
-/* GetFolderByIDNotFound describes a response with status code 404, with default header values.
+/*
+GetFolderByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetFolderByIDInternalServerError() *GetFolderByIDInternalServerError {
 	return &GetFolderByIDInternalServerError{}
 }
 
-/* GetFolderByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetFolderByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

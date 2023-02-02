@@ -52,10 +52,12 @@ func NewAdminGetSettingsParamsWithHTTPClient(client *http.Client) *AdminGetSetti
 	}
 }
 
-/* AdminGetSettingsParams contains all the parameters to send to the API endpoint
-   for the admin get settings operation.
+/*
+AdminGetSettingsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin get settings operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminGetSettingsParams struct {
 	timeout    time.Duration

@@ -63,7 +63,8 @@ func NewSetTeamRolesOK() *SetTeamRolesOK {
 	return &SetTeamRolesOK{}
 }
 
-/* SetTeamRolesOK describes a response with status code 200, with default header values.
+/*
+SetTeamRolesOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewSetTeamRolesBadRequest() *SetTeamRolesBadRequest {
 	return &SetTeamRolesBadRequest{}
 }
 
-/* SetTeamRolesBadRequest describes a response with status code 400, with default header values.
+/*
+SetTeamRolesBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewSetTeamRolesForbidden() *SetTeamRolesForbidden {
 	return &SetTeamRolesForbidden{}
 }
 
-/* SetTeamRolesForbidden describes a response with status code 403, with default header values.
+/*
+SetTeamRolesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewSetTeamRolesNotFound() *SetTeamRolesNotFound {
 	return &SetTeamRolesNotFound{}
 }
 
-/* SetTeamRolesNotFound describes a response with status code 404, with default header values.
+/*
+SetTeamRolesNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewSetTeamRolesInternalServerError() *SetTeamRolesInternalServerError {
 	return &SetTeamRolesInternalServerError{}
 }
 
-/* SetTeamRolesInternalServerError describes a response with status code 500, with default header values.
+/*
+SetTeamRolesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

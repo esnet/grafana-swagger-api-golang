@@ -69,7 +69,8 @@ func NewSendTestEmailOK() *SendTestEmailOK {
 	return &SendTestEmailOK{}
 }
 
-/* SendTestEmailOK describes a response with status code 200, with default header values.
+/*
+SendTestEmailOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewSendTestEmailBadRequest() *SendTestEmailBadRequest {
 	return &SendTestEmailBadRequest{}
 }
 
-/* SendTestEmailBadRequest describes a response with status code 400, with default header values.
+/*
+SendTestEmailBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewSendTestEmailUnauthorized() *SendTestEmailUnauthorized {
 	return &SendTestEmailUnauthorized{}
 }
 
-/* SendTestEmailUnauthorized describes a response with status code 401, with default header values.
+/*
+SendTestEmailUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewSendTestEmailForbidden() *SendTestEmailForbidden {
 	return &SendTestEmailForbidden{}
 }
 
-/* SendTestEmailForbidden describes a response with status code 403, with default header values.
+/*
+SendTestEmailForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewSendTestEmailNotFound() *SendTestEmailNotFound {
 	return &SendTestEmailNotFound{}
 }
 
-/* SendTestEmailNotFound describes a response with status code 404, with default header values.
+/*
+SendTestEmailNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -229,7 +234,8 @@ func NewSendTestEmailInternalServerError() *SendTestEmailInternalServerError {
 	return &SendTestEmailInternalServerError{}
 }
 
-/* SendTestEmailInternalServerError describes a response with status code 500, with default header values.
+/*
+SendTestEmailInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

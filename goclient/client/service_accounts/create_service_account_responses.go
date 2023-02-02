@@ -63,7 +63,8 @@ func NewCreateServiceAccountCreated() *CreateServiceAccountCreated {
 	return &CreateServiceAccountCreated{}
 }
 
-/* CreateServiceAccountCreated describes a response with status code 201, with default header values.
+/*
+CreateServiceAccountCreated describes a response with status code 201, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewCreateServiceAccountBadRequest() *CreateServiceAccountBadRequest {
 	return &CreateServiceAccountBadRequest{}
 }
 
-/* CreateServiceAccountBadRequest describes a response with status code 400, with default header values.
+/*
+CreateServiceAccountBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewCreateServiceAccountUnauthorized() *CreateServiceAccountUnauthorized {
 	return &CreateServiceAccountUnauthorized{}
 }
 
-/* CreateServiceAccountUnauthorized describes a response with status code 401, with default header values.
+/*
+CreateServiceAccountUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewCreateServiceAccountForbidden() *CreateServiceAccountForbidden {
 	return &CreateServiceAccountForbidden{}
 }
 
-/* CreateServiceAccountForbidden describes a response with status code 403, with default header values.
+/*
+CreateServiceAccountForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewCreateServiceAccountInternalServerError() *CreateServiceAccountInternalS
 	return &CreateServiceAccountInternalServerError{}
 }
 
-/* CreateServiceAccountInternalServerError describes a response with status code 500, with default header values.
+/*
+CreateServiceAccountInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

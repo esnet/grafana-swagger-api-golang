@@ -69,7 +69,8 @@ func NewAdminCreateUserOK() *AdminCreateUserOK {
 	return &AdminCreateUserOK{}
 }
 
-/* AdminCreateUserOK describes a response with status code 200, with default header values.
+/*
+AdminCreateUserOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -101,7 +102,8 @@ func NewAdminCreateUserBadRequest() *AdminCreateUserBadRequest {
 	return &AdminCreateUserBadRequest{}
 }
 
-/* AdminCreateUserBadRequest describes a response with status code 400, with default header values.
+/*
+AdminCreateUserBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewAdminCreateUserUnauthorized() *AdminCreateUserUnauthorized {
 	return &AdminCreateUserUnauthorized{}
 }
 
-/* AdminCreateUserUnauthorized describes a response with status code 401, with default header values.
+/*
+AdminCreateUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewAdminCreateUserForbidden() *AdminCreateUserForbidden {
 	return &AdminCreateUserForbidden{}
 }
 
-/* AdminCreateUserForbidden describes a response with status code 403, with default header values.
+/*
+AdminCreateUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewAdminCreateUserPreconditionFailed() *AdminCreateUserPreconditionFailed {
 	return &AdminCreateUserPreconditionFailed{}
 }
 
-/* AdminCreateUserPreconditionFailed describes a response with status code 412, with default header values.
+/*
+AdminCreateUserPreconditionFailed describes a response with status code 412, with default header values.
 
 PreconditionFailedError
 */
@@ -229,7 +234,8 @@ func NewAdminCreateUserInternalServerError() *AdminCreateUserInternalServerError
 	return &AdminCreateUserInternalServerError{}
 }
 
-/* AdminCreateUserInternalServerError describes a response with status code 500, with default header values.
+/*
+AdminCreateUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

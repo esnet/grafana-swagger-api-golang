@@ -63,18 +63,19 @@ func NewGetPlaylistItemsOK() *GetPlaylistItemsOK {
 	return &GetPlaylistItemsOK{}
 }
 
-/* GetPlaylistItemsOK describes a response with status code 200, with default header values.
+/*
+GetPlaylistItemsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
 type GetPlaylistItemsOK struct {
-	Payload []*models.PlaylistItemDTO
+	Payload []*models.PlaylistItem
 }
 
 func (o *GetPlaylistItemsOK) Error() string {
 	return fmt.Sprintf("[GET /playlists/{uid}/items][%d] getPlaylistItemsOK  %+v", 200, o.Payload)
 }
-func (o *GetPlaylistItemsOK) GetPayload() []*models.PlaylistItemDTO {
+func (o *GetPlaylistItemsOK) GetPayload() []*models.PlaylistItem {
 	return o.Payload
 }
 
@@ -93,7 +94,8 @@ func NewGetPlaylistItemsUnauthorized() *GetPlaylistItemsUnauthorized {
 	return &GetPlaylistItemsUnauthorized{}
 }
 
-/* GetPlaylistItemsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetPlaylistItemsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetPlaylistItemsForbidden() *GetPlaylistItemsForbidden {
 	return &GetPlaylistItemsForbidden{}
 }
 
-/* GetPlaylistItemsForbidden describes a response with status code 403, with default header values.
+/*
+GetPlaylistItemsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetPlaylistItemsNotFound() *GetPlaylistItemsNotFound {
 	return &GetPlaylistItemsNotFound{}
 }
 
-/* GetPlaylistItemsNotFound describes a response with status code 404, with default header values.
+/*
+GetPlaylistItemsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetPlaylistItemsInternalServerError() *GetPlaylistItemsInternalServerErr
 	return &GetPlaylistItemsInternalServerError{}
 }
 
-/* GetPlaylistItemsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetPlaylistItemsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

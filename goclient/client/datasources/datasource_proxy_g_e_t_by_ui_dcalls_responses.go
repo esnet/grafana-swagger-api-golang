@@ -69,7 +69,8 @@ func NewDatasourceProxyGETByUIDcallsOK() *DatasourceProxyGETByUIDcallsOK {
 	return &DatasourceProxyGETByUIDcallsOK{}
 }
 
-/* DatasourceProxyGETByUIDcallsOK describes a response with status code 200, with default header values.
+/*
+DatasourceProxyGETByUIDcallsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -90,7 +91,8 @@ func NewDatasourceProxyGETByUIDcallsBadRequest() *DatasourceProxyGETByUIDcallsBa
 	return &DatasourceProxyGETByUIDcallsBadRequest{}
 }
 
-/* DatasourceProxyGETByUIDcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyGETByUIDcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -122,7 +124,8 @@ func NewDatasourceProxyGETByUIDcallsUnauthorized() *DatasourceProxyGETByUIDcalls
 	return &DatasourceProxyGETByUIDcallsUnauthorized{}
 }
 
-/* DatasourceProxyGETByUIDcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyGETByUIDcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -154,7 +157,8 @@ func NewDatasourceProxyGETByUIDcallsForbidden() *DatasourceProxyGETByUIDcallsFor
 	return &DatasourceProxyGETByUIDcallsForbidden{}
 }
 
-/* DatasourceProxyGETByUIDcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyGETByUIDcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -186,7 +190,8 @@ func NewDatasourceProxyGETByUIDcallsNotFound() *DatasourceProxyGETByUIDcallsNotF
 	return &DatasourceProxyGETByUIDcallsNotFound{}
 }
 
-/* DatasourceProxyGETByUIDcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyGETByUIDcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -218,7 +223,8 @@ func NewDatasourceProxyGETByUIDcallsInternalServerError() *DatasourceProxyGETByU
 	return &DatasourceProxyGETByUIDcallsInternalServerError{}
 }
 
-/* DatasourceProxyGETByUIDcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyGETByUIDcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -52,10 +52,12 @@ func NewGetUserAuthTokensParamsWithHTTPClient(client *http.Client) *GetUserAuthT
 	}
 }
 
-/* GetUserAuthTokensParams contains all the parameters to send to the API endpoint
-   for the get user auth tokens operation.
+/*
+GetUserAuthTokensParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get user auth tokens operation.
+
+	Typically these are written to a http.Request.
 */
 type GetUserAuthTokensParams struct {
 	timeout    time.Duration

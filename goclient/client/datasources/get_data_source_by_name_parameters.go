@@ -52,10 +52,12 @@ func NewGetDataSourceByNameParamsWithHTTPClient(client *http.Client) *GetDataSou
 	}
 }
 
-/* GetDataSourceByNameParams contains all the parameters to send to the API endpoint
-   for the get data source by name operation.
+/*
+GetDataSourceByNameParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get data source by name operation.
+
+	Typically these are written to a http.Request.
 */
 type GetDataSourceByNameParams struct {
 

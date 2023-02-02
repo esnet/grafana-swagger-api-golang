@@ -54,10 +54,12 @@ func NewAddTeamMemberParamsWithHTTPClient(client *http.Client) *AddTeamMemberPar
 	}
 }
 
-/* AddTeamMemberParams contains all the parameters to send to the API endpoint
-   for the add team member operation.
+/*
+AddTeamMemberParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add team member operation.
+
+	Typically these are written to a http.Request.
 */
 type AddTeamMemberParams struct {
 

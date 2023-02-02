@@ -41,6 +41,10 @@ type SyncResult struct {
 func (m *SyncResult) Validate(formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.validateElapsed(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateFailedUsers(formats); err != nil {
 		res = append(res, err)
 	}
@@ -52,6 +56,23 @@ func (m *SyncResult) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *SyncResult) validateElapsed(formats strfmt.Registry) error {
+	if swag.IsZero(m.Elapsed) { // not required
+		return nil
+	}
+
+	if err := m.Elapsed.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("Elapsed")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("Elapsed")
+		}
+		return err
+	}
+
 	return nil
 }
 
@@ -97,6 +118,10 @@ func (m *SyncResult) validateStarted(formats strfmt.Registry) error {
 func (m *SyncResult) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateElapsed(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateFailedUsers(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -104,6 +129,20 @@ func (m *SyncResult) ContextValidate(ctx context.Context, formats strfmt.Registr
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *SyncResult) contextValidateElapsed(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.Elapsed.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("Elapsed")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("Elapsed")
+		}
+		return err
+	}
+
 	return nil
 }
 

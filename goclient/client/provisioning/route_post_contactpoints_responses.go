@@ -45,7 +45,8 @@ func NewRoutePostContactpointsAccepted() *RoutePostContactpointsAccepted {
 	return &RoutePostContactpointsAccepted{}
 }
 
-/* RoutePostContactpointsAccepted describes a response with status code 202, with default header values.
+/*
+RoutePostContactpointsAccepted describes a response with status code 202, with default header values.
 
 EmbeddedContactPoint
 */
@@ -77,7 +78,8 @@ func NewRoutePostContactpointsBadRequest() *RoutePostContactpointsBadRequest {
 	return &RoutePostContactpointsBadRequest{}
 }
 
-/* RoutePostContactpointsBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePostContactpointsBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

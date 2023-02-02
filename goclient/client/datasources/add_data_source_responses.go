@@ -63,7 +63,8 @@ func NewAddDataSourceOK() *AddDataSourceOK {
 	return &AddDataSourceOK{}
 }
 
-/* AddDataSourceOK describes a response with status code 200, with default header values.
+/*
+AddDataSourceOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewAddDataSourceUnauthorized() *AddDataSourceUnauthorized {
 	return &AddDataSourceUnauthorized{}
 }
 
-/* AddDataSourceUnauthorized describes a response with status code 401, with default header values.
+/*
+AddDataSourceUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewAddDataSourceForbidden() *AddDataSourceForbidden {
 	return &AddDataSourceForbidden{}
 }
 
-/* AddDataSourceForbidden describes a response with status code 403, with default header values.
+/*
+AddDataSourceForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewAddDataSourceConflict() *AddDataSourceConflict {
 	return &AddDataSourceConflict{}
 }
 
-/* AddDataSourceConflict describes a response with status code 409, with default header values.
+/*
+AddDataSourceConflict describes a response with status code 409, with default header values.
 
 ConflictError
 */
@@ -191,7 +195,8 @@ func NewAddDataSourceInternalServerError() *AddDataSourceInternalServerError {
 	return &AddDataSourceInternalServerError{}
 }
 
-/* AddDataSourceInternalServerError describes a response with status code 500, with default header values.
+/*
+AddDataSourceInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

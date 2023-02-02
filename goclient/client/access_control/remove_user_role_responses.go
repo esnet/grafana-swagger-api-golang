@@ -63,7 +63,8 @@ func NewRemoveUserRoleOK() *RemoveUserRoleOK {
 	return &RemoveUserRoleOK{}
 }
 
-/* RemoveUserRoleOK describes a response with status code 200, with default header values.
+/*
+RemoveUserRoleOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewRemoveUserRoleBadRequest() *RemoveUserRoleBadRequest {
 	return &RemoveUserRoleBadRequest{}
 }
 
-/* RemoveUserRoleBadRequest describes a response with status code 400, with default header values.
+/*
+RemoveUserRoleBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewRemoveUserRoleForbidden() *RemoveUserRoleForbidden {
 	return &RemoveUserRoleForbidden{}
 }
 
-/* RemoveUserRoleForbidden describes a response with status code 403, with default header values.
+/*
+RemoveUserRoleForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewRemoveUserRoleNotFound() *RemoveUserRoleNotFound {
 	return &RemoveUserRoleNotFound{}
 }
 
-/* RemoveUserRoleNotFound describes a response with status code 404, with default header values.
+/*
+RemoveUserRoleNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewRemoveUserRoleInternalServerError() *RemoveUserRoleInternalServerError {
 	return &RemoveUserRoleInternalServerError{}
 }
 
-/* RemoveUserRoleInternalServerError describes a response with status code 500, with default header values.
+/*
+RemoveUserRoleInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

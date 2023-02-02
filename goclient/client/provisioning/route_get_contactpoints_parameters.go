@@ -52,10 +52,12 @@ func NewRouteGetContactpointsParamsWithHTTPClient(client *http.Client) *RouteGet
 	}
 }
 
-/* RouteGetContactpointsParams contains all the parameters to send to the API endpoint
-   for the route get contactpoints operation.
+/*
+RouteGetContactpointsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route get contactpoints operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteGetContactpointsParams struct {
 

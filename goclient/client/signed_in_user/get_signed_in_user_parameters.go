@@ -52,10 +52,12 @@ func NewGetSignedInUserParamsWithHTTPClient(client *http.Client) *GetSignedInUse
 	}
 }
 
-/* GetSignedInUserParams contains all the parameters to send to the API endpoint
-   for the get signed in user operation.
+/*
+GetSignedInUserParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get signed in user operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSignedInUserParams struct {
 	timeout    time.Duration

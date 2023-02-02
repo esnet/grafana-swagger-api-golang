@@ -69,7 +69,8 @@ func NewDatasourceProxyDELETEcallsAccepted() *DatasourceProxyDELETEcallsAccepted
 	return &DatasourceProxyDELETEcallsAccepted{}
 }
 
-/* DatasourceProxyDELETEcallsAccepted describes a response with status code 202, with default header values.
+/*
+DatasourceProxyDELETEcallsAccepted describes a response with status code 202, with default header values.
 
 (empty)
 */
@@ -90,7 +91,8 @@ func NewDatasourceProxyDELETEcallsBadRequest() *DatasourceProxyDELETEcallsBadReq
 	return &DatasourceProxyDELETEcallsBadRequest{}
 }
 
-/* DatasourceProxyDELETEcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyDELETEcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -122,7 +124,8 @@ func NewDatasourceProxyDELETEcallsUnauthorized() *DatasourceProxyDELETEcallsUnau
 	return &DatasourceProxyDELETEcallsUnauthorized{}
 }
 
-/* DatasourceProxyDELETEcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyDELETEcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -154,7 +157,8 @@ func NewDatasourceProxyDELETEcallsForbidden() *DatasourceProxyDELETEcallsForbidd
 	return &DatasourceProxyDELETEcallsForbidden{}
 }
 
-/* DatasourceProxyDELETEcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyDELETEcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -186,7 +190,8 @@ func NewDatasourceProxyDELETEcallsNotFound() *DatasourceProxyDELETEcallsNotFound
 	return &DatasourceProxyDELETEcallsNotFound{}
 }
 
-/* DatasourceProxyDELETEcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyDELETEcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -218,7 +223,8 @@ func NewDatasourceProxyDELETEcallsInternalServerError() *DatasourceProxyDELETEca
 	return &DatasourceProxyDELETEcallsInternalServerError{}
 }
 
-/* DatasourceProxyDELETEcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyDELETEcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

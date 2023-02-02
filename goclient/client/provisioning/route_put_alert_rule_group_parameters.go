@@ -54,15 +54,17 @@ func NewRoutePutAlertRuleGroupParamsWithHTTPClient(client *http.Client) *RoutePu
 	}
 }
 
-/* RoutePutAlertRuleGroupParams contains all the parameters to send to the API endpoint
-   for the route put alert rule group operation.
+/*
+RoutePutAlertRuleGroupParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route put alert rule group operation.
+
+	Typically these are written to a http.Request.
 */
 type RoutePutAlertRuleGroupParams struct {
 
 	// Body.
-	Body *models.AlertRuleGroupMetadata
+	Body *models.AlertRuleGroup
 
 	// FolderUID.
 	FolderUID string
@@ -124,13 +126,13 @@ func (o *RoutePutAlertRuleGroupParams) SetHTTPClient(client *http.Client) {
 }
 
 // WithBody adds the body to the route put alert rule group params
-func (o *RoutePutAlertRuleGroupParams) WithBody(body *models.AlertRuleGroupMetadata) *RoutePutAlertRuleGroupParams {
+func (o *RoutePutAlertRuleGroupParams) WithBody(body *models.AlertRuleGroup) *RoutePutAlertRuleGroupParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the route put alert rule group params
-func (o *RoutePutAlertRuleGroupParams) SetBody(body *models.AlertRuleGroupMetadata) {
+func (o *RoutePutAlertRuleGroupParams) SetBody(body *models.AlertRuleGroup) {
 	o.Body = body
 }
 

@@ -63,7 +63,8 @@ func NewUpdateOrgUserForCurrentOrgOK() *UpdateOrgUserForCurrentOrgOK {
 	return &UpdateOrgUserForCurrentOrgOK{}
 }
 
-/* UpdateOrgUserForCurrentOrgOK describes a response with status code 200, with default header values.
+/*
+UpdateOrgUserForCurrentOrgOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUpdateOrgUserForCurrentOrgBadRequest() *UpdateOrgUserForCurrentOrgBadReq
 	return &UpdateOrgUserForCurrentOrgBadRequest{}
 }
 
-/* UpdateOrgUserForCurrentOrgBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateOrgUserForCurrentOrgBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUpdateOrgUserForCurrentOrgUnauthorized() *UpdateOrgUserForCurrentOrgUnau
 	return &UpdateOrgUserForCurrentOrgUnauthorized{}
 }
 
-/* UpdateOrgUserForCurrentOrgUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateOrgUserForCurrentOrgUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUpdateOrgUserForCurrentOrgForbidden() *UpdateOrgUserForCurrentOrgForbidd
 	return &UpdateOrgUserForCurrentOrgForbidden{}
 }
 
-/* UpdateOrgUserForCurrentOrgForbidden describes a response with status code 403, with default header values.
+/*
+UpdateOrgUserForCurrentOrgForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUpdateOrgUserForCurrentOrgInternalServerError() *UpdateOrgUserForCurrent
 	return &UpdateOrgUserForCurrentOrgInternalServerError{}
 }
 
-/* UpdateOrgUserForCurrentOrgInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateOrgUserForCurrentOrgInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

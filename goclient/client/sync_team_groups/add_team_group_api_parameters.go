@@ -55,10 +55,12 @@ func NewAddTeamGroupAPIParamsWithHTTPClient(client *http.Client) *AddTeamGroupAP
 	}
 }
 
-/* AddTeamGroupAPIParams contains all the parameters to send to the API endpoint
-   for the add team group Api operation.
+/*
+AddTeamGroupAPIParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the add team group Api operation.
+
+	Typically these are written to a http.Request.
 */
 type AddTeamGroupAPIParams struct {
 

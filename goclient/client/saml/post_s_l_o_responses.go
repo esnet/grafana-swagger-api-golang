@@ -57,7 +57,8 @@ func NewPostSLOFound() *PostSLOFound {
 	return &PostSLOFound{}
 }
 
-/* PostSLOFound describes a response with status code 302, with default header values.
+/*
+PostSLOFound describes a response with status code 302, with default header values.
 
 (empty)
 */
@@ -78,7 +79,8 @@ func NewPostSLOBadRequest() *PostSLOBadRequest {
 	return &PostSLOBadRequest{}
 }
 
-/* PostSLOBadRequest describes a response with status code 400, with default header values.
+/*
+PostSLOBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -110,7 +112,8 @@ func NewPostSLOForbidden() *PostSLOForbidden {
 	return &PostSLOForbidden{}
 }
 
-/* PostSLOForbidden describes a response with status code 403, with default header values.
+/*
+PostSLOForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -142,7 +145,8 @@ func NewPostSLOInternalServerError() *PostSLOInternalServerError {
 	return &PostSLOInternalServerError{}
 }
 
-/* PostSLOInternalServerError describes a response with status code 500, with default header values.
+/*
+PostSLOInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

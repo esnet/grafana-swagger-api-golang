@@ -18,6 +18,7 @@ import (
 	"github.com/grafana/grafana-api-golang-client/goclient/client/admin_users"
 	"github.com/grafana/grafana-api-golang-client/goclient/client/annotations"
 	"github.com/grafana/grafana-api-golang-client/goclient/client/api_keys"
+	"github.com/grafana/grafana-api-golang-client/goclient/client/correlations"
 	"github.com/grafana/grafana-api-golang-client/goclient/client/dashboard_permissions"
 	"github.com/grafana/grafana-api-golang-client/goclient/client/dashboard_versions"
 	"github.com/grafana/grafana-api-golang-client/goclient/client/dashboards"
@@ -101,6 +102,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *GrafanaHTT
 	cli.AdminUsers = admin_users.New(transport, formats)
 	cli.Annotations = annotations.New(transport, formats)
 	cli.APIKeys = api_keys.New(transport, formats)
+	cli.Correlations = correlations.New(transport, formats)
 	cli.DashboardPermissions = dashboard_permissions.New(transport, formats)
 	cli.DashboardVersions = dashboard_versions.New(transport, formats)
 	cli.Dashboards = dashboards.New(transport, formats)
@@ -192,6 +194,8 @@ type GrafanaHTTPAPI struct {
 
 	APIKeys api_keys.ClientService
 
+	Correlations correlations.ClientService
+
 	DashboardPermissions dashboard_permissions.ClientService
 
 	DashboardVersions dashboard_versions.ClientService
@@ -268,6 +272,7 @@ func (c *GrafanaHTTPAPI) SetTransport(transport runtime.ClientTransport) {
 	c.AdminUsers.SetTransport(transport)
 	c.Annotations.SetTransport(transport)
 	c.APIKeys.SetTransport(transport)
+	c.Correlations.SetTransport(transport)
 	c.DashboardPermissions.SetTransport(transport)
 	c.DashboardVersions.SetTransport(transport)
 	c.Dashboards.SetTransport(transport)

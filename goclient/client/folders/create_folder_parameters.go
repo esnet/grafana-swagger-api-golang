@@ -54,10 +54,12 @@ func NewCreateFolderParamsWithHTTPClient(client *http.Client) *CreateFolderParam
 	}
 }
 
-/* CreateFolderParams contains all the parameters to send to the API endpoint
-   for the create folder operation.
+/*
+CreateFolderParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create folder operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateFolderParams struct {
 

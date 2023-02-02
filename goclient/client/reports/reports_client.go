@@ -56,9 +56,9 @@ type ClientService interface {
 }
 
 /*
-  CreateReport creates a report
+	CreateReport creates a report
 
-  Available to org admins only and with a valid license.
+	Available to org admins only and with a valid license.
 
 You need to have a permission with action `reports.admin:create`.
 */
@@ -99,9 +99,9 @@ func (a *Client) CreateReport(params *CreateReportParams, authInfo runtime.Clien
 }
 
 /*
-  DeleteReport deletes a report
+	DeleteReport deletes a report
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports.delete` with scope `reports:id:<report ID>`.
 */
@@ -142,9 +142,9 @@ func (a *Client) DeleteReport(params *DeleteReportParams, authInfo runtime.Clien
 }
 
 /*
-  GetReport gets a report
+	GetReport gets a report
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports:read` with scope `reports:id:<report ID>`.
 */
@@ -185,9 +185,9 @@ func (a *Client) GetReport(params *GetReportParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  GetReportSettings gets settings
+	GetReportSettings gets settings
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports.settings:read`x.
 */
@@ -228,9 +228,9 @@ func (a *Client) GetReportSettings(params *GetReportSettingsParams, authInfo run
 }
 
 /*
-  GetReports lists reports
+	GetReports lists reports
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports:read` with scope `reports:*`.
 */
@@ -271,9 +271,9 @@ func (a *Client) GetReports(params *GetReportsParams, authInfo runtime.ClientAut
 }
 
 /*
-  RenderReportPDF renders report for dashboard
+RenderReportPDF renders report for dashboard
 
-  Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Grafana 10.
+Please refer to [reports enterprise](#/reports/renderReportPDFs) instead. This will be removed in Grafana 10.
 */
 func (a *Client) RenderReportPDF(params *RenderReportPDFParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RenderReportPDFOK, error) {
 	// TODO: Validate the params before sending
@@ -312,9 +312,9 @@ func (a *Client) RenderReportPDF(params *RenderReportPDFParams, authInfo runtime
 }
 
 /*
-  RenderReportPDFs renders report for multiple dashboards
+RenderReportPDFs renders report for multiple dashboards
 
-  Available to all users and with a valid license.
+Available to all users and with a valid license.
 */
 func (a *Client) RenderReportPDFs(params *RenderReportPDFsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RenderReportPDFsOK, error) {
 	// TODO: Validate the params before sending
@@ -353,9 +353,9 @@ func (a *Client) RenderReportPDFs(params *RenderReportPDFsParams, authInfo runti
 }
 
 /*
-  SaveReportSettings saves settings
+	SaveReportSettings saves settings
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports.settings:write`xx.
 */
@@ -396,9 +396,9 @@ func (a *Client) SaveReportSettings(params *SaveReportSettingsParams, authInfo r
 }
 
 /*
-  SendReport sends a report
+	SendReport sends a report
 
-  Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.
+	Generate and send a report. This API waits for the report to be generated before returning. We recommend that you set the client’s timeout to at least 60 seconds. Available to org admins only and with a valid license.
 
 Only available in Grafana Enterprise v7.0+.
 This API endpoint is experimental and may be deprecated in a future release. On deprecation, a migration strategy will be provided and the endpoint will remain functional until the next major release of Grafana.
@@ -442,9 +442,9 @@ func (a *Client) SendReport(params *SendReportParams, authInfo runtime.ClientAut
 }
 
 /*
-  SendTestEmail sends test report via email
+	SendTestEmail sends test report via email
 
-  Available to org admins only and with a valid license.
+	Available to org admins only and with a valid license.
 
 You need to have a permission with action `reports:send`.
 */
@@ -485,9 +485,9 @@ func (a *Client) SendTestEmail(params *SendTestEmailParams, authInfo runtime.Cli
 }
 
 /*
-  UpdateReport updates a report
+	UpdateReport updates a report
 
-  Available to org admins only and with a valid or expired license
+	Available to org admins only and with a valid or expired license.
 
 You need to have a permission with action `reports.admin:write` with scope `reports:id:<report ID>`.
 */

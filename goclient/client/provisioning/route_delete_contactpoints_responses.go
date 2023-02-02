@@ -36,9 +36,10 @@ func NewRouteDeleteContactpointsNoContent() *RouteDeleteContactpointsNoContent {
 	return &RouteDeleteContactpointsNoContent{}
 }
 
-/* RouteDeleteContactpointsNoContent describes a response with status code 204, with default header values.
+/*
+RouteDeleteContactpointsNoContent describes a response with status code 204, with default header values.
 
-The contact point was deleted successfully.
+	The contact point was deleted successfully.
 */
 type RouteDeleteContactpointsNoContent struct {
 }

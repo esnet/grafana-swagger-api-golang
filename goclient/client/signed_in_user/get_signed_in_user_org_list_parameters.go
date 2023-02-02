@@ -52,10 +52,12 @@ func NewGetSignedInUserOrgListParamsWithHTTPClient(client *http.Client) *GetSign
 	}
 }
 
-/* GetSignedInUserOrgListParams contains all the parameters to send to the API endpoint
-   for the get signed in user org list operation.
+/*
+GetSignedInUserOrgListParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get signed in user org list operation.
+
+	Typically these are written to a http.Request.
 */
 type GetSignedInUserOrgListParams struct {
 	timeout    time.Duration

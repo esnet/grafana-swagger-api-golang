@@ -53,10 +53,12 @@ func NewSearchOrgsParamsWithHTTPClient(client *http.Client) *SearchOrgsParams {
 	}
 }
 
-/* SearchOrgsParams contains all the parameters to send to the API endpoint
-   for the search orgs operation.
+/*
+SearchOrgsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the search orgs operation.
+
+	Typically these are written to a http.Request.
 */
 type SearchOrgsParams struct {
 

@@ -52,10 +52,12 @@ func NewDeleteDashboardSnapshotByDeleteKeyParamsWithHTTPClient(client *http.Clie
 	}
 }
 
-/* DeleteDashboardSnapshotByDeleteKeyParams contains all the parameters to send to the API endpoint
-   for the delete dashboard snapshot by delete key operation.
+/*
+DeleteDashboardSnapshotByDeleteKeyParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete dashboard snapshot by delete key operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteDashboardSnapshotByDeleteKeyParams struct {
 

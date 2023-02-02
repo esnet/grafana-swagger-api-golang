@@ -54,10 +54,12 @@ func NewCreateRecordingRuleParamsWithHTTPClient(client *http.Client) *CreateReco
 	}
 }
 
-/* CreateRecordingRuleParams contains all the parameters to send to the API endpoint
-   for the create recording rule operation.
+/*
+CreateRecordingRuleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the create recording rule operation.
+
+	Typically these are written to a http.Request.
 */
 type CreateRecordingRuleParams struct {
 

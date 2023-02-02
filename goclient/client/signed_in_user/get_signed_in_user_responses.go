@@ -63,7 +63,8 @@ func NewGetSignedInUserOK() *GetSignedInUserOK {
 	return &GetSignedInUserOK{}
 }
 
-/* GetSignedInUserOK describes a response with status code 200, with default header values.
+/*
+GetSignedInUserOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewGetSignedInUserUnauthorized() *GetSignedInUserUnauthorized {
 	return &GetSignedInUserUnauthorized{}
 }
 
-/* GetSignedInUserUnauthorized describes a response with status code 401, with default header values.
+/*
+GetSignedInUserUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetSignedInUserForbidden() *GetSignedInUserForbidden {
 	return &GetSignedInUserForbidden{}
 }
 
-/* GetSignedInUserForbidden describes a response with status code 403, with default header values.
+/*
+GetSignedInUserForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetSignedInUserNotFound() *GetSignedInUserNotFound {
 	return &GetSignedInUserNotFound{}
 }
 
-/* GetSignedInUserNotFound describes a response with status code 404, with default header values.
+/*
+GetSignedInUserNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetSignedInUserInternalServerError() *GetSignedInUserInternalServerError
 	return &GetSignedInUserInternalServerError{}
 }
 
-/* GetSignedInUserInternalServerError describes a response with status code 500, with default header values.
+/*
+GetSignedInUserInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -24,10 +24,10 @@ type QueryStat struct {
 
 	// Map values to a display color
 	// NOTE: this interface is under development in the frontend... so simple map for now
-	Color map[string]interface{} `json:"color,omitempty"`
+	Color interface{} `json:"color,omitempty"`
 
 	// Panel Specific Values
-	Custom map[string]interface{} `json:"custom,omitempty"`
+	Custom interface{} `json:"custom,omitempty"`
 
 	// decimals
 	Decimals uint16 `json:"decimals,omitempty"`

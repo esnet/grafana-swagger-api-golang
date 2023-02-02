@@ -46,7 +46,9 @@ type ClientService interface {
 }
 
 /*
-  CreateFolder creates folder
+CreateFolder creates folder
+
+If nested folders are enabled then it additionally expects the parent folder UID.
 */
 func (a *Client) CreateFolder(params *CreateFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateFolderOK, error) {
 	// TODO: Validate the params before sending
@@ -85,9 +87,11 @@ func (a *Client) CreateFolder(params *CreateFolderParams, authInfo runtime.Clien
 }
 
 /*
-  DeleteFolder deletes folder
+	DeleteFolder deletes folder
 
-  Deletes an existing folder identified by UID along with all dashboards (and their alerts) stored in the folder. This operation cannot be reverted.
+	Deletes an existing folder identified by UID along with all dashboards (and their alerts) stored in the folder. This operation cannot be reverted.
+
+If nested folders are enabled then it also deletes all the subfolders.
 */
 func (a *Client) DeleteFolder(params *DeleteFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteFolderOK, error) {
 	// TODO: Validate the params before sending
@@ -126,9 +130,9 @@ func (a *Client) DeleteFolder(params *DeleteFolderParams, authInfo runtime.Clien
 }
 
 /*
-  GetFolderByID gets folder by id
+GetFolderByID gets folder by id
 
-  Returns the folder identified by id.
+Returns the folder identified by id.
 */
 func (a *Client) GetFolderByID(params *GetFolderByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -167,7 +171,7 @@ func (a *Client) GetFolderByID(params *GetFolderByIDParams, authInfo runtime.Cli
 }
 
 /*
-  GetFolderByUID gets folder by uid
+GetFolderByUID gets folder by uid
 */
 func (a *Client) GetFolderByUID(params *GetFolderByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderByUIDOK, error) {
 	// TODO: Validate the params before sending
@@ -206,9 +210,9 @@ func (a *Client) GetFolderByUID(params *GetFolderByUIDParams, authInfo runtime.C
 }
 
 /*
-  GetFolders gets all folders
+GetFolders gets all folders
 
-  Returns all folders that the authenticated user has permission to view.
+Returns all folders that the authenticated user has permission to view.
 */
 func (a *Client) GetFolders(params *GetFoldersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFoldersOK, error) {
 	// TODO: Validate the params before sending
@@ -247,7 +251,11 @@ func (a *Client) GetFolders(params *GetFoldersParams, authInfo runtime.ClientAut
 }
 
 /*
-  UpdateFolder updates folder
+	UpdateFolder updates folder
+
+	If nested folders are enabled then it optionally expects a new parent folder UID that moves the folder and
+
+includes it into the response.
 */
 func (a *Client) UpdateFolder(params *UpdateFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateFolderOK, error) {
 	// TODO: Validate the params before sending

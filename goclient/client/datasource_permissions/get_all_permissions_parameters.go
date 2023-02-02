@@ -52,10 +52,12 @@ func NewGetAllPermissionsParamsWithHTTPClient(client *http.Client) *GetAllPermis
 	}
 }
 
-/* GetAllPermissionsParams contains all the parameters to send to the API endpoint
-   for the get all permissions operation.
+/*
+GetAllPermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get all permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAllPermissionsParams struct {
 

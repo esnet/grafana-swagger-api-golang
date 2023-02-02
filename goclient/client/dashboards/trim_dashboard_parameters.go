@@ -54,10 +54,12 @@ func NewTrimDashboardParamsWithHTTPClient(client *http.Client) *TrimDashboardPar
 	}
 }
 
-/* TrimDashboardParams contains all the parameters to send to the API endpoint
-   for the trim dashboard operation.
+/*
+TrimDashboardParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the trim dashboard operation.
+
+	Typically these are written to a http.Request.
 */
 type TrimDashboardParams struct {
 

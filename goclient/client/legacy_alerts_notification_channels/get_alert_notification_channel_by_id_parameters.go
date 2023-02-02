@@ -53,10 +53,12 @@ func NewGetAlertNotificationChannelByIDParamsWithHTTPClient(client *http.Client)
 	}
 }
 
-/* GetAlertNotificationChannelByIDParams contains all the parameters to send to the API endpoint
-   for the get alert notification channel by ID operation.
+/*
+GetAlertNotificationChannelByIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get alert notification channel by ID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAlertNotificationChannelByIDParams struct {
 

@@ -51,7 +51,8 @@ func NewGetAnnotationTagsOK() *GetAnnotationTagsOK {
 	return &GetAnnotationTagsOK{}
 }
 
-/* GetAnnotationTagsOK describes a response with status code 200, with default header values.
+/*
+GetAnnotationTagsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -83,7 +84,8 @@ func NewGetAnnotationTagsUnauthorized() *GetAnnotationTagsUnauthorized {
 	return &GetAnnotationTagsUnauthorized{}
 }
 
-/* GetAnnotationTagsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAnnotationTagsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -115,7 +117,8 @@ func NewGetAnnotationTagsInternalServerError() *GetAnnotationTagsInternalServerE
 	return &GetAnnotationTagsInternalServerError{}
 }
 
-/* GetAnnotationTagsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAnnotationTagsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

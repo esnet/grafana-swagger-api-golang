@@ -52,10 +52,12 @@ func NewSetHelpFlagParamsWithHTTPClient(client *http.Client) *SetHelpFlagParams 
 	}
 }
 
-/* SetHelpFlagParams contains all the parameters to send to the API endpoint
-   for the set help flag operation.
+/*
+SetHelpFlagParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the set help flag operation.
+
+	Typically these are written to a http.Request.
 */
 type SetHelpFlagParams struct {
 

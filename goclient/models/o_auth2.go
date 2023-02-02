@@ -33,6 +33,9 @@ type OAuth2 struct {
 	// endpoint params
 	EndpointParams map[string]string `json:"endpoint_params,omitempty"`
 
+	// proxy url
+	ProxyURL *URL `json:"proxy_url,omitempty"`
+
 	// scopes
 	Scopes []string `json:"scopes"`
 
@@ -49,6 +52,10 @@ func (m *OAuth2) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateClientSecret(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateProxyURL(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -94,6 +101,25 @@ func (m *OAuth2) validateClientSecret(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *OAuth2) validateProxyURL(formats strfmt.Registry) error {
+	if swag.IsZero(m.ProxyURL) { // not required
+		return nil
+	}
+
+	if m.ProxyURL != nil {
+		if err := m.ProxyURL.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("proxy_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("proxy_url")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // ContextValidate validate this o auth2 based on the context it is used
 func (m *OAuth2) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
@@ -103,6 +129,10 @@ func (m *OAuth2) ContextValidate(ctx context.Context, formats strfmt.Registry) e
 	}
 
 	if err := m.contextValidateClientSecret(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateProxyURL(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -137,6 +167,22 @@ func (m *OAuth2) contextValidateClientSecret(ctx context.Context, formats strfmt
 			return ce.ValidateName("client_secret")
 		}
 		return err
+	}
+
+	return nil
+}
+
+func (m *OAuth2) contextValidateProxyURL(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.ProxyURL != nil {
+		if err := m.ProxyURL.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("proxy_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("proxy_url")
+			}
+			return err
+		}
 	}
 
 	return nil

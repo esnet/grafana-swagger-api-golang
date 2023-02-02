@@ -63,7 +63,8 @@ func NewUpdateCurrentOrgAddressOK() *UpdateCurrentOrgAddressOK {
 	return &UpdateCurrentOrgAddressOK{}
 }
 
-/* UpdateCurrentOrgAddressOK describes a response with status code 200, with default header values.
+/*
+UpdateCurrentOrgAddressOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUpdateCurrentOrgAddressBadRequest() *UpdateCurrentOrgAddressBadRequest {
 	return &UpdateCurrentOrgAddressBadRequest{}
 }
 
-/* UpdateCurrentOrgAddressBadRequest describes a response with status code 400, with default header values.
+/*
+UpdateCurrentOrgAddressBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUpdateCurrentOrgAddressUnauthorized() *UpdateCurrentOrgAddressUnauthoriz
 	return &UpdateCurrentOrgAddressUnauthorized{}
 }
 
-/* UpdateCurrentOrgAddressUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdateCurrentOrgAddressUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUpdateCurrentOrgAddressForbidden() *UpdateCurrentOrgAddressForbidden {
 	return &UpdateCurrentOrgAddressForbidden{}
 }
 
-/* UpdateCurrentOrgAddressForbidden describes a response with status code 403, with default header values.
+/*
+UpdateCurrentOrgAddressForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUpdateCurrentOrgAddressInternalServerError() *UpdateCurrentOrgAddressInt
 	return &UpdateCurrentOrgAddressInternalServerError{}
 }
 
-/* UpdateCurrentOrgAddressInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdateCurrentOrgAddressInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

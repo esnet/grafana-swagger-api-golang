@@ -24,6 +24,9 @@ type EmailConfig struct {
 	// auth password
 	AuthPassword Secret `json:"auth_password,omitempty"`
 
+	// auth password file
+	AuthPasswordFile string `json:"auth_password_file,omitempty"`
+
 	// auth secret
 	AuthSecret Secret `json:"auth_secret,omitempty"`
 

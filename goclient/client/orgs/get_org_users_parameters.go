@@ -53,10 +53,12 @@ func NewGetOrgUsersParamsWithHTTPClient(client *http.Client) *GetOrgUsersParams 
 	}
 }
 
-/* GetOrgUsersParams contains all the parameters to send to the API endpoint
-   for the get org users operation.
+/*
+GetOrgUsersParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get org users operation.
+
+	Typically these are written to a http.Request.
 */
 type GetOrgUsersParams struct {
 

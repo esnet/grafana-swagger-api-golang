@@ -57,7 +57,8 @@ func NewGetAlertNotificationLookupOK() *GetAlertNotificationLookupOK {
 	return &GetAlertNotificationLookupOK{}
 }
 
-/* GetAlertNotificationLookupOK describes a response with status code 200, with default header values.
+/*
+GetAlertNotificationLookupOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetAlertNotificationLookupUnauthorized() *GetAlertNotificationLookupUnau
 	return &GetAlertNotificationLookupUnauthorized{}
 }
 
-/* GetAlertNotificationLookupUnauthorized describes a response with status code 401, with default header values.
+/*
+GetAlertNotificationLookupUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetAlertNotificationLookupForbidden() *GetAlertNotificationLookupForbidd
 	return &GetAlertNotificationLookupForbidden{}
 }
 
-/* GetAlertNotificationLookupForbidden describes a response with status code 403, with default header values.
+/*
+GetAlertNotificationLookupForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetAlertNotificationLookupInternalServerError() *GetAlertNotificationLoo
 	return &GetAlertNotificationLookupInternalServerError{}
 }
 
-/* GetAlertNotificationLookupInternalServerError describes a response with status code 500, with default header values.
+/*
+GetAlertNotificationLookupInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -45,7 +45,8 @@ func NewRoutePutContactpointAccepted() *RoutePutContactpointAccepted {
 	return &RoutePutContactpointAccepted{}
 }
 
-/* RoutePutContactpointAccepted describes a response with status code 202, with default header values.
+/*
+RoutePutContactpointAccepted describes a response with status code 202, with default header values.
 
 Ack
 */
@@ -75,7 +76,8 @@ func NewRoutePutContactpointBadRequest() *RoutePutContactpointBadRequest {
 	return &RoutePutContactpointBadRequest{}
 }
 
-/* RoutePutContactpointBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePutContactpointBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

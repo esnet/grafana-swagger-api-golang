@@ -44,9 +44,9 @@ type ClientService interface {
 }
 
 /*
-  AddPermission adds permissions for a data source
+AddPermission adds permissions for a data source
 
-  You need to have a permission with action `datasources.permissions:read` and scopes `datasources:*`, `datasources:id:*`, `datasources:id:1` (single data source).
+You need to have a permission with action `datasources.permissions:read` and scopes `datasources:*`, `datasources:id:*`, `datasources:id:1` (single data source).
 */
 func (a *Client) AddPermission(params *AddPermissionParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddPermissionOK, error) {
 	// TODO: Validate the params before sending
@@ -85,9 +85,9 @@ func (a *Client) AddPermission(params *AddPermissionParams, authInfo runtime.Cli
 }
 
 /*
-  DeletePermissions removes permission for a data source
+	DeletePermissions removes permission for a data source
 
-  Removes the permission with the given permissionId for the data source with the given id.
+	Removes the permission with the given permissionId for the data source with the given id.
 
 You need to have a permission with action `datasources.permissions:delete` and scopes `datasources:*`, `datasources:id:*`, `datasources:id:1` (single data source).
 */
@@ -128,9 +128,9 @@ func (a *Client) DeletePermissions(params *DeletePermissionsParams, authInfo run
 }
 
 /*
-  DisablePermissions disables permissions for a data source
+	DisablePermissions disables permissions for a data source
 
-  Disables permissions for the data source with the given id. All existing permissions will be removed and anyone will be able to query the data source.
+	Disables permissions for the data source with the given id. All existing permissions will be removed and anyone will be able to query the data source.
 
 You need to have a permission with action `datasources.permissions:toggle` and scopes `datasources:*`, `datasources:id:*`, `datasources:id:1` (single data source).
 */
@@ -171,9 +171,10 @@ func (a *Client) DisablePermissions(params *DisablePermissionsParams, authInfo r
 }
 
 /*
-  EnablePermissions enables permissions for a data source
+	EnablePermissions enables permissions for a data source
 
-  Enables permissions for the data source with the given id.
+	Enables permissions for the data source with the given id.
+
 No one except Org Admins will be able to query the data source until permissions have been added
 which permit certain users or teams to query the data source.
 
@@ -216,9 +217,9 @@ func (a *Client) EnablePermissions(params *EnablePermissionsParams, authInfo run
 }
 
 /*
-  GetAllPermissions gets permissions for a data source
+	GetAllPermissions gets permissions for a data source
 
-  Gets all existing permissions for the data source with the given id.
+	Gets all existing permissions for the data source with the given id.
 
 You need to have a permission with action `datasources.permissions:read` and scopes `datasources:*`, `datasources:id:*`, `datasources:id:1` (single data source).
 */

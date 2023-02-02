@@ -50,7 +50,7 @@ type ClientService interface {
 }
 
 /*
-  CreateRecordingRule Create a recording rule that is then registered and started
+CreateRecordingRule creates a recording rule that is then registered and started
 */
 func (a *Client) CreateRecordingRule(params *CreateRecordingRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateRecordingRuleOK, error) {
 	// TODO: Validate the params before sending
@@ -89,9 +89,9 @@ func (a *Client) CreateRecordingRule(params *CreateRecordingRuleParams, authInfo
 }
 
 /*
-  CreateRecordingRuleWriteTarget creates a remote write target
+CreateRecordingRuleWriteTarget creates a remote write target
 
-  It returns a 422 if there is not an existing prometheus data source configured
+It returns a 422 if there is not an existing prometheus data source configured.
 */
 func (a *Client) CreateRecordingRuleWriteTarget(params *CreateRecordingRuleWriteTargetParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreateRecordingRuleWriteTargetOK, error) {
 	// TODO: Validate the params before sending
@@ -130,7 +130,7 @@ func (a *Client) CreateRecordingRuleWriteTarget(params *CreateRecordingRuleWrite
 }
 
 /*
-  DeleteRecordingRule deletes removes the rule from the registry and stops it
+DeleteRecordingRule deletes removes the rule from the registry and stops it
 */
 func (a *Client) DeleteRecordingRule(params *DeleteRecordingRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteRecordingRuleOK, error) {
 	// TODO: Validate the params before sending
@@ -169,7 +169,7 @@ func (a *Client) DeleteRecordingRule(params *DeleteRecordingRuleParams, authInfo
 }
 
 /*
-  DeleteRecordingRuleWriteTarget deletes the remote write target
+DeleteRecordingRuleWriteTarget deletes the remote write target
 */
 func (a *Client) DeleteRecordingRuleWriteTarget(params *DeleteRecordingRuleWriteTargetParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteRecordingRuleWriteTargetOK, error) {
 	// TODO: Validate the params before sending
@@ -208,7 +208,7 @@ func (a *Client) DeleteRecordingRuleWriteTarget(params *DeleteRecordingRuleWrite
 }
 
 /*
-  GetRecordingRuleWriteTarget Return the prometheus remote write target
+GetRecordingRuleWriteTarget returns the prometheus remote write target
 */
 func (a *Client) GetRecordingRuleWriteTarget(params *GetRecordingRuleWriteTargetParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetRecordingRuleWriteTargetOK, error) {
 	// TODO: Validate the params before sending
@@ -247,7 +247,7 @@ func (a *Client) GetRecordingRuleWriteTarget(params *GetRecordingRuleWriteTarget
 }
 
 /*
-  ListRecordingRules Lists all rules in the database: active or deleted
+ListRecordingRules lists all rules in the database active or deleted
 */
 func (a *Client) ListRecordingRules(params *ListRecordingRulesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ListRecordingRulesOK, error) {
 	// TODO: Validate the params before sending
@@ -286,7 +286,7 @@ func (a *Client) ListRecordingRules(params *ListRecordingRulesParams, authInfo r
 }
 
 /*
-  TestCreateRecordingRule tests a recording rule
+TestCreateRecordingRule tests a recording rule
 */
 func (a *Client) TestCreateRecordingRule(params *TestCreateRecordingRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*TestCreateRecordingRuleOK, error) {
 	// TODO: Validate the params before sending
@@ -325,7 +325,7 @@ func (a *Client) TestCreateRecordingRule(params *TestCreateRecordingRuleParams, 
 }
 
 /*
-  UpdateRecordingRule Update the active status of a rule
+UpdateRecordingRule updates the active status of a rule
 */
 func (a *Client) UpdateRecordingRule(params *UpdateRecordingRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateRecordingRuleOK, error) {
 	// TODO: Validate the params before sending

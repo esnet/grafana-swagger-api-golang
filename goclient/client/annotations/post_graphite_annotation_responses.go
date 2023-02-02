@@ -63,7 +63,8 @@ func NewPostGraphiteAnnotationOK() *PostGraphiteAnnotationOK {
 	return &PostGraphiteAnnotationOK{}
 }
 
-/* PostGraphiteAnnotationOK describes a response with status code 200, with default header values.
+/*
+PostGraphiteAnnotationOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewPostGraphiteAnnotationBadRequest() *PostGraphiteAnnotationBadRequest {
 	return &PostGraphiteAnnotationBadRequest{}
 }
 
-/* PostGraphiteAnnotationBadRequest describes a response with status code 400, with default header values.
+/*
+PostGraphiteAnnotationBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewPostGraphiteAnnotationUnauthorized() *PostGraphiteAnnotationUnauthorized
 	return &PostGraphiteAnnotationUnauthorized{}
 }
 
-/* PostGraphiteAnnotationUnauthorized describes a response with status code 401, with default header values.
+/*
+PostGraphiteAnnotationUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewPostGraphiteAnnotationForbidden() *PostGraphiteAnnotationForbidden {
 	return &PostGraphiteAnnotationForbidden{}
 }
 
-/* PostGraphiteAnnotationForbidden describes a response with status code 403, with default header values.
+/*
+PostGraphiteAnnotationForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewPostGraphiteAnnotationInternalServerError() *PostGraphiteAnnotationInter
 	return &PostGraphiteAnnotationInternalServerError{}
 }
 
-/* PostGraphiteAnnotationInternalServerError describes a response with status code 500, with default header values.
+/*
+PostGraphiteAnnotationInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

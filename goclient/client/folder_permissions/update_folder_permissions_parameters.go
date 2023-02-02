@@ -54,10 +54,12 @@ func NewUpdateFolderPermissionsParamsWithHTTPClient(client *http.Client) *Update
 	}
 }
 
-/* UpdateFolderPermissionsParams contains all the parameters to send to the API endpoint
-   for the update folder permissions operation.
+/*
+UpdateFolderPermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update folder permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateFolderPermissionsParams struct {
 

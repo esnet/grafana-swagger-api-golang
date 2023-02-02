@@ -52,10 +52,12 @@ func NewEnablePermissionsParamsWithHTTPClient(client *http.Client) *EnablePermis
 	}
 }
 
-/* EnablePermissionsParams contains all the parameters to send to the API endpoint
-   for the enable permissions operation.
+/*
+EnablePermissionsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the enable permissions operation.
+
+	Typically these are written to a http.Request.
 */
 type EnablePermissionsParams struct {
 

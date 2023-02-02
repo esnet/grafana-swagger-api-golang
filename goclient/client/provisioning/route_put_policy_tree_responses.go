@@ -45,7 +45,8 @@ func NewRoutePutPolicyTreeAccepted() *RoutePutPolicyTreeAccepted {
 	return &RoutePutPolicyTreeAccepted{}
 }
 
-/* RoutePutPolicyTreeAccepted describes a response with status code 202, with default header values.
+/*
+RoutePutPolicyTreeAccepted describes a response with status code 202, with default header values.
 
 Ack
 */
@@ -75,7 +76,8 @@ func NewRoutePutPolicyTreeBadRequest() *RoutePutPolicyTreeBadRequest {
 	return &RoutePutPolicyTreeBadRequest{}
 }
 
-/* RoutePutPolicyTreeBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePutPolicyTreeBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

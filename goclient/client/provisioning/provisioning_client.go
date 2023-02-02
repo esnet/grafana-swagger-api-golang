@@ -78,7 +78,7 @@ type ClientService interface {
 }
 
 /*
-  RouteDeleteAlertRule deletes a specific alert rule by UID
+RouteDeleteAlertRule deletes a specific alert rule by UID
 */
 func (a *Client) RouteDeleteAlertRule(params *RouteDeleteAlertRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteDeleteAlertRuleNoContent, error) {
 	// TODO: Validate the params before sending
@@ -117,7 +117,7 @@ func (a *Client) RouteDeleteAlertRule(params *RouteDeleteAlertRuleParams, authIn
 }
 
 /*
-  RouteDeleteContactpoints deletes a contact point
+RouteDeleteContactpoints deletes a contact point
 */
 func (a *Client) RouteDeleteContactpoints(params *RouteDeleteContactpointsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteDeleteContactpointsNoContent, error) {
 	// TODO: Validate the params before sending
@@ -156,7 +156,7 @@ func (a *Client) RouteDeleteContactpoints(params *RouteDeleteContactpointsParams
 }
 
 /*
-  RouteDeleteMuteTiming deletes a mute timing
+RouteDeleteMuteTiming deletes a mute timing
 */
 func (a *Client) RouteDeleteMuteTiming(params *RouteDeleteMuteTimingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteDeleteMuteTimingNoContent, error) {
 	// TODO: Validate the params before sending
@@ -195,7 +195,7 @@ func (a *Client) RouteDeleteMuteTiming(params *RouteDeleteMuteTimingParams, auth
 }
 
 /*
-  RouteDeleteTemplate deletes a template
+RouteDeleteTemplate deletes a template
 */
 func (a *Client) RouteDeleteTemplate(params *RouteDeleteTemplateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteDeleteTemplateNoContent, error) {
 	// TODO: Validate the params before sending
@@ -234,7 +234,7 @@ func (a *Client) RouteDeleteTemplate(params *RouteDeleteTemplateParams, authInfo
 }
 
 /*
-  RouteGetAlertRule gets a specific alert rule by UID
+RouteGetAlertRule gets a specific alert rule by UID
 */
 func (a *Client) RouteGetAlertRule(params *RouteGetAlertRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleOK, error) {
 	// TODO: Validate the params before sending
@@ -273,7 +273,7 @@ func (a *Client) RouteGetAlertRule(params *RouteGetAlertRuleParams, authInfo run
 }
 
 /*
-  RouteGetAlertRuleGroup gets a rule group
+RouteGetAlertRuleGroup gets a rule group
 */
 func (a *Client) RouteGetAlertRuleGroup(params *RouteGetAlertRuleGroupParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleGroupOK, error) {
 	// TODO: Validate the params before sending
@@ -312,7 +312,7 @@ func (a *Client) RouteGetAlertRuleGroup(params *RouteGetAlertRuleGroupParams, au
 }
 
 /*
-  RouteGetContactpoints gets all the contact points
+RouteGetContactpoints gets all the contact points
 */
 func (a *Client) RouteGetContactpoints(params *RouteGetContactpointsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetContactpointsOK, error) {
 	// TODO: Validate the params before sending
@@ -351,7 +351,7 @@ func (a *Client) RouteGetContactpoints(params *RouteGetContactpointsParams, auth
 }
 
 /*
-  RouteGetMuteTiming gets a mute timing
+RouteGetMuteTiming gets a mute timing
 */
 func (a *Client) RouteGetMuteTiming(params *RouteGetMuteTimingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetMuteTimingOK, error) {
 	// TODO: Validate the params before sending
@@ -390,7 +390,7 @@ func (a *Client) RouteGetMuteTiming(params *RouteGetMuteTimingParams, authInfo r
 }
 
 /*
-  RouteGetMuteTimings gets all the mute timings
+RouteGetMuteTimings gets all the mute timings
 */
 func (a *Client) RouteGetMuteTimings(params *RouteGetMuteTimingsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetMuteTimingsOK, error) {
 	// TODO: Validate the params before sending
@@ -429,7 +429,7 @@ func (a *Client) RouteGetMuteTimings(params *RouteGetMuteTimingsParams, authInfo
 }
 
 /*
-  RouteGetPolicyTree gets the notification policy tree
+RouteGetPolicyTree gets the notification policy tree
 */
 func (a *Client) RouteGetPolicyTree(params *RouteGetPolicyTreeParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetPolicyTreeOK, error) {
 	// TODO: Validate the params before sending
@@ -468,7 +468,7 @@ func (a *Client) RouteGetPolicyTree(params *RouteGetPolicyTreeParams, authInfo r
 }
 
 /*
-  RouteGetTemplate gets a message template
+RouteGetTemplate gets a message template
 */
 func (a *Client) RouteGetTemplate(params *RouteGetTemplateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetTemplateOK, error) {
 	// TODO: Validate the params before sending
@@ -507,7 +507,7 @@ func (a *Client) RouteGetTemplate(params *RouteGetTemplateParams, authInfo runti
 }
 
 /*
-  RouteGetTemplates gets all message templates
+RouteGetTemplates gets all message templates
 */
 func (a *Client) RouteGetTemplates(params *RouteGetTemplatesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetTemplatesOK, error) {
 	// TODO: Validate the params before sending
@@ -546,7 +546,7 @@ func (a *Client) RouteGetTemplates(params *RouteGetTemplatesParams, authInfo run
 }
 
 /*
-  RoutePostAlertRule creates a new alert rule
+RoutePostAlertRule creates a new alert rule
 */
 func (a *Client) RoutePostAlertRule(params *RoutePostAlertRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePostAlertRuleCreated, error) {
 	// TODO: Validate the params before sending
@@ -585,7 +585,7 @@ func (a *Client) RoutePostAlertRule(params *RoutePostAlertRuleParams, authInfo r
 }
 
 /*
-  RoutePostContactpoints creates a contact point
+RoutePostContactpoints creates a contact point
 */
 func (a *Client) RoutePostContactpoints(params *RoutePostContactpointsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePostContactpointsAccepted, error) {
 	// TODO: Validate the params before sending
@@ -624,7 +624,7 @@ func (a *Client) RoutePostContactpoints(params *RoutePostContactpointsParams, au
 }
 
 /*
-  RoutePostMuteTiming creates a new mute timing
+RoutePostMuteTiming creates a new mute timing
 */
 func (a *Client) RoutePostMuteTiming(params *RoutePostMuteTimingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePostMuteTimingCreated, error) {
 	// TODO: Validate the params before sending
@@ -663,7 +663,7 @@ func (a *Client) RoutePostMuteTiming(params *RoutePostMuteTimingParams, authInfo
 }
 
 /*
-  RoutePutAlertRule updates an existing alert rule
+RoutePutAlertRule updates an existing alert rule
 */
 func (a *Client) RoutePutAlertRule(params *RoutePutAlertRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutAlertRuleOK, error) {
 	// TODO: Validate the params before sending
@@ -702,7 +702,7 @@ func (a *Client) RoutePutAlertRule(params *RoutePutAlertRuleParams, authInfo run
 }
 
 /*
-  RoutePutAlertRuleGroup updates the interval of a rule group
+RoutePutAlertRuleGroup updates the interval of a rule group
 */
 func (a *Client) RoutePutAlertRuleGroup(params *RoutePutAlertRuleGroupParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutAlertRuleGroupOK, error) {
 	// TODO: Validate the params before sending
@@ -741,7 +741,7 @@ func (a *Client) RoutePutAlertRuleGroup(params *RoutePutAlertRuleGroupParams, au
 }
 
 /*
-  RoutePutContactpoint updates an existing contact point
+RoutePutContactpoint updates an existing contact point
 */
 func (a *Client) RoutePutContactpoint(params *RoutePutContactpointParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutContactpointAccepted, error) {
 	// TODO: Validate the params before sending
@@ -780,7 +780,7 @@ func (a *Client) RoutePutContactpoint(params *RoutePutContactpointParams, authIn
 }
 
 /*
-  RoutePutMuteTiming replaces an existing mute timing
+RoutePutMuteTiming replaces an existing mute timing
 */
 func (a *Client) RoutePutMuteTiming(params *RoutePutMuteTimingParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutMuteTimingOK, error) {
 	// TODO: Validate the params before sending
@@ -819,7 +819,7 @@ func (a *Client) RoutePutMuteTiming(params *RoutePutMuteTimingParams, authInfo r
 }
 
 /*
-  RoutePutPolicyTree sets the notification policy tree
+RoutePutPolicyTree sets the notification policy tree
 */
 func (a *Client) RoutePutPolicyTree(params *RoutePutPolicyTreeParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutPolicyTreeAccepted, error) {
 	// TODO: Validate the params before sending
@@ -858,7 +858,7 @@ func (a *Client) RoutePutPolicyTree(params *RoutePutPolicyTreeParams, authInfo r
 }
 
 /*
-  RoutePutTemplate updates an existing template
+RoutePutTemplate updates an existing template
 */
 func (a *Client) RoutePutTemplate(params *RoutePutTemplateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutTemplateAccepted, error) {
 	// TODO: Validate the params before sending
@@ -897,7 +897,7 @@ func (a *Client) RoutePutTemplate(params *RoutePutTemplateParams, authInfo runti
 }
 
 /*
-  RouteResetPolicyTree clears the notification policy tree
+RouteResetPolicyTree clears the notification policy tree
 */
 func (a *Client) RouteResetPolicyTree(params *RouteResetPolicyTreeParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteResetPolicyTreeAccepted, error) {
 	// TODO: Validate the params before sending

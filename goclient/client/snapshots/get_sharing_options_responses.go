@@ -45,7 +45,8 @@ func NewGetSharingOptionsOK() *GetSharingOptionsOK {
 	return &GetSharingOptionsOK{}
 }
 
-/* GetSharingOptionsOK describes a response with status code 200, with default header values.
+/*
+GetSharingOptionsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -77,7 +78,8 @@ func NewGetSharingOptionsUnauthorized() *GetSharingOptionsUnauthorized {
 	return &GetSharingOptionsUnauthorized{}
 }
 
-/* GetSharingOptionsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetSharingOptionsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */

@@ -26,7 +26,7 @@ type AlertRuleGroup struct {
 	Interval int64 `json:"interval,omitempty"`
 
 	// rules
-	Rules []*AlertRule `json:"rules"`
+	Rules []*ProvisionedAlertRule `json:"rules"`
 
 	// title
 	Title string `json:"title,omitempty"`

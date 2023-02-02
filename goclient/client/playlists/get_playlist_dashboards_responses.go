@@ -63,7 +63,8 @@ func NewGetPlaylistDashboardsOK() *GetPlaylistDashboardsOK {
 	return &GetPlaylistDashboardsOK{}
 }
 
-/* GetPlaylistDashboardsOK describes a response with status code 200, with default header values.
+/*
+GetPlaylistDashboardsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetPlaylistDashboardsUnauthorized() *GetPlaylistDashboardsUnauthorized {
 	return &GetPlaylistDashboardsUnauthorized{}
 }
 
-/* GetPlaylistDashboardsUnauthorized describes a response with status code 401, with default header values.
+/*
+GetPlaylistDashboardsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetPlaylistDashboardsForbidden() *GetPlaylistDashboardsForbidden {
 	return &GetPlaylistDashboardsForbidden{}
 }
 
-/* GetPlaylistDashboardsForbidden describes a response with status code 403, with default header values.
+/*
+GetPlaylistDashboardsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetPlaylistDashboardsNotFound() *GetPlaylistDashboardsNotFound {
 	return &GetPlaylistDashboardsNotFound{}
 }
 
-/* GetPlaylistDashboardsNotFound describes a response with status code 404, with default header values.
+/*
+GetPlaylistDashboardsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetPlaylistDashboardsInternalServerError() *GetPlaylistDashboardsInterna
 	return &GetPlaylistDashboardsInternalServerError{}
 }
 
-/* GetPlaylistDashboardsInternalServerError describes a response with status code 500, with default header values.
+/*
+GetPlaylistDashboardsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

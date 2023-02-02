@@ -57,7 +57,8 @@ func NewGetPendingOrgInvitesOK() *GetPendingOrgInvitesOK {
 	return &GetPendingOrgInvitesOK{}
 }
 
-/* GetPendingOrgInvitesOK describes a response with status code 200, with default header values.
+/*
+GetPendingOrgInvitesOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -87,7 +88,8 @@ func NewGetPendingOrgInvitesUnauthorized() *GetPendingOrgInvitesUnauthorized {
 	return &GetPendingOrgInvitesUnauthorized{}
 }
 
-/* GetPendingOrgInvitesUnauthorized describes a response with status code 401, with default header values.
+/*
+GetPendingOrgInvitesUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -119,7 +121,8 @@ func NewGetPendingOrgInvitesForbidden() *GetPendingOrgInvitesForbidden {
 	return &GetPendingOrgInvitesForbidden{}
 }
 
-/* GetPendingOrgInvitesForbidden describes a response with status code 403, with default header values.
+/*
+GetPendingOrgInvitesForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -151,7 +154,8 @@ func NewGetPendingOrgInvitesInternalServerError() *GetPendingOrgInvitesInternalS
 	return &GetPendingOrgInvitesInternalServerError{}
 }
 
-/* GetPendingOrgInvitesInternalServerError describes a response with status code 500, with default header values.
+/*
+GetPendingOrgInvitesInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

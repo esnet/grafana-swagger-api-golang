@@ -48,7 +48,7 @@ type ClientService interface {
 }
 
 /*
-  CreatePlaylist creates playlist
+CreatePlaylist creates playlist
 */
 func (a *Client) CreatePlaylist(params *CreatePlaylistParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*CreatePlaylistOK, error) {
 	// TODO: Validate the params before sending
@@ -87,7 +87,7 @@ func (a *Client) CreatePlaylist(params *CreatePlaylistParams, authInfo runtime.C
 }
 
 /*
-  DeletePlaylist deletes playlist
+DeletePlaylist deletes playlist
 */
 func (a *Client) DeletePlaylist(params *DeletePlaylistParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeletePlaylistOK, error) {
 	// TODO: Validate the params before sending
@@ -126,7 +126,7 @@ func (a *Client) DeletePlaylist(params *DeletePlaylistParams, authInfo runtime.C
 }
 
 /*
-  GetPlaylist gets playlist
+GetPlaylist gets playlist
 */
 func (a *Client) GetPlaylist(params *GetPlaylistParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetPlaylistOK, error) {
 	// TODO: Validate the params before sending
@@ -165,7 +165,7 @@ func (a *Client) GetPlaylist(params *GetPlaylistParams, authInfo runtime.ClientA
 }
 
 /*
-  GetPlaylistDashboards gets playlist dashboards
+GetPlaylistDashboards gets playlist dashboards
 */
 func (a *Client) GetPlaylistDashboards(params *GetPlaylistDashboardsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetPlaylistDashboardsOK, error) {
 	// TODO: Validate the params before sending
@@ -204,7 +204,7 @@ func (a *Client) GetPlaylistDashboards(params *GetPlaylistDashboardsParams, auth
 }
 
 /*
-  GetPlaylistItems gets playlist items
+GetPlaylistItems gets playlist items
 */
 func (a *Client) GetPlaylistItems(params *GetPlaylistItemsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetPlaylistItemsOK, error) {
 	// TODO: Validate the params before sending
@@ -243,7 +243,7 @@ func (a *Client) GetPlaylistItems(params *GetPlaylistItemsParams, authInfo runti
 }
 
 /*
-  SearchPlaylists gets playlists
+SearchPlaylists gets playlists
 */
 func (a *Client) SearchPlaylists(params *SearchPlaylistsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchPlaylistsOK, error) {
 	// TODO: Validate the params before sending
@@ -282,7 +282,7 @@ func (a *Client) SearchPlaylists(params *SearchPlaylistsParams, authInfo runtime
 }
 
 /*
-  UpdatePlaylist updates playlist
+UpdatePlaylist updates playlist
 */
 func (a *Client) UpdatePlaylist(params *UpdatePlaylistParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdatePlaylistOK, error) {
 	// TODO: Validate the params before sending

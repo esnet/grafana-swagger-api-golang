@@ -63,7 +63,8 @@ func NewUserSetUsingOrgOK() *UserSetUsingOrgOK {
 	return &UserSetUsingOrgOK{}
 }
 
-/* UserSetUsingOrgOK describes a response with status code 200, with default header values.
+/*
+UserSetUsingOrgOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -95,7 +96,8 @@ func NewUserSetUsingOrgBadRequest() *UserSetUsingOrgBadRequest {
 	return &UserSetUsingOrgBadRequest{}
 }
 
-/* UserSetUsingOrgBadRequest describes a response with status code 400, with default header values.
+/*
+UserSetUsingOrgBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewUserSetUsingOrgUnauthorized() *UserSetUsingOrgUnauthorized {
 	return &UserSetUsingOrgUnauthorized{}
 }
 
-/* UserSetUsingOrgUnauthorized describes a response with status code 401, with default header values.
+/*
+UserSetUsingOrgUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewUserSetUsingOrgForbidden() *UserSetUsingOrgForbidden {
 	return &UserSetUsingOrgForbidden{}
 }
 
-/* UserSetUsingOrgForbidden describes a response with status code 403, with default header values.
+/*
+UserSetUsingOrgForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewUserSetUsingOrgInternalServerError() *UserSetUsingOrgInternalServerError
 	return &UserSetUsingOrgInternalServerError{}
 }
 
-/* UserSetUsingOrgInternalServerError describes a response with status code 500, with default header values.
+/*
+UserSetUsingOrgInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

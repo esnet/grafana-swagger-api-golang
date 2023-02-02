@@ -50,7 +50,11 @@ type ClientService interface {
 
 	StarDashboard(params *StarDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StarDashboardOK, error)
 
+	StarDashboardByUID(params *StarDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StarDashboardByUIDOK, error)
+
 	UnstarDashboard(params *UnstarDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UnstarDashboardOK, error)
+
+	UnstarDashboardByUID(params *UnstarDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UnstarDashboardByUIDOK, error)
 
 	UpdateSignedInUser(params *UpdateSignedInUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateSignedInUserOK, error)
 
@@ -60,9 +64,9 @@ type ClientService interface {
 }
 
 /*
-  ChangeUserPassword changes password
+ChangeUserPassword changes password
 
-  Changes the password for the user.
+Changes the password for the user.
 */
 func (a *Client) ChangeUserPassword(params *ChangeUserPasswordParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ChangeUserPasswordOK, error) {
 	// TODO: Validate the params before sending
@@ -101,7 +105,7 @@ func (a *Client) ChangeUserPassword(params *ChangeUserPasswordParams, authInfo r
 }
 
 /*
-  ClearHelpFlags clears user help flag
+ClearHelpFlags clears user help flag
 */
 func (a *Client) ClearHelpFlags(params *ClearHelpFlagsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*ClearHelpFlagsOK, error) {
 	// TODO: Validate the params before sending
@@ -140,7 +144,7 @@ func (a *Client) ClearHelpFlags(params *ClearHelpFlagsParams, authInfo runtime.C
 }
 
 /*
-  GetSignedInUser Get (current authenticated user)
+GetSignedInUser Get (current authenticated user)
 */
 func (a *Client) GetSignedInUser(params *GetSignedInUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetSignedInUserOK, error) {
 	// TODO: Validate the params before sending
@@ -179,9 +183,9 @@ func (a *Client) GetSignedInUser(params *GetSignedInUserParams, authInfo runtime
 }
 
 /*
-  GetSignedInUserOrgList organizations of the actual user
+GetSignedInUserOrgList organizations of the actual user
 
-  Return a list of all organizations of the current user.
+Return a list of all organizations of the current user.
 */
 func (a *Client) GetSignedInUserOrgList(params *GetSignedInUserOrgListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetSignedInUserOrgListOK, error) {
 	// TODO: Validate the params before sending
@@ -220,9 +224,9 @@ func (a *Client) GetSignedInUserOrgList(params *GetSignedInUserOrgListParams, au
 }
 
 /*
-  GetSignedInUserTeamList teams that the actual user is member of
+GetSignedInUserTeamList teams that the actual user is member of
 
-  Return a list of all teams that the current user is member of.
+Return a list of all teams that the current user is member of.
 */
 func (a *Client) GetSignedInUserTeamList(params *GetSignedInUserTeamListParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetSignedInUserTeamListOK, error) {
 	// TODO: Validate the params before sending
@@ -261,9 +265,9 @@ func (a *Client) GetSignedInUserTeamList(params *GetSignedInUserTeamListParams, 
 }
 
 /*
-  GetUserAuthTokens auths tokens of the actual user
+GetUserAuthTokens auths tokens of the actual user
 
-  Return a list of all auth tokens (devices) that the actual user currently have logged in from.
+Return a list of all auth tokens (devices) that the actual user currently have logged in from.
 */
 func (a *Client) GetUserAuthTokens(params *GetUserAuthTokensParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserAuthTokensOK, error) {
 	// TODO: Validate the params before sending
@@ -302,7 +306,7 @@ func (a *Client) GetUserAuthTokens(params *GetUserAuthTokensParams, authInfo run
 }
 
 /*
-  GetUserQuotas fetches user quota
+GetUserQuotas fetches user quota
 */
 func (a *Client) GetUserQuotas(params *GetUserQuotasParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetUserQuotasOK, error) {
 	// TODO: Validate the params before sending
@@ -341,9 +345,9 @@ func (a *Client) GetUserQuotas(params *GetUserQuotasParams, authInfo runtime.Cli
 }
 
 /*
-  RevokeUserAuthToken revokes an auth token of the actual user
+RevokeUserAuthToken revokes an auth token of the actual user
 
-  Revokes the given auth token (device) for the actual user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.
+Revokes the given auth token (device) for the actual user. User of issued auth token (device) will no longer be logged in and will be required to authenticate again upon next activity.
 */
 func (a *Client) RevokeUserAuthToken(params *RevokeUserAuthTokenParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RevokeUserAuthTokenOK, error) {
 	// TODO: Validate the params before sending
@@ -382,7 +386,7 @@ func (a *Client) RevokeUserAuthToken(params *RevokeUserAuthTokenParams, authInfo
 }
 
 /*
-  SetHelpFlag sets user help flag
+SetHelpFlag sets user help flag
 */
 func (a *Client) SetHelpFlag(params *SetHelpFlagParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SetHelpFlagOK, error) {
 	// TODO: Validate the params before sending
@@ -421,9 +425,9 @@ func (a *Client) SetHelpFlag(params *SetHelpFlagParams, authInfo runtime.ClientA
 }
 
 /*
-  StarDashboard stars a dashboard
+StarDashboard stars a dashboard
 
-  Stars the given Dashboard for the actual user.
+Stars the given Dashboard for the actual user.
 */
 func (a *Client) StarDashboard(params *StarDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StarDashboardOK, error) {
 	// TODO: Validate the params before sending
@@ -462,9 +466,50 @@ func (a *Client) StarDashboard(params *StarDashboardParams, authInfo runtime.Cli
 }
 
 /*
-  UnstarDashboard unstars a dashboard
+StarDashboardByUID stars a dashboard
 
-  Deletes the starring of the given Dashboard for the actual user.
+Stars the given Dashboard for the actual user.
+*/
+func (a *Client) StarDashboardByUID(params *StarDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*StarDashboardByUIDOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewStarDashboardByUIDParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "starDashboardByUID",
+		Method:             "POST",
+		PathPattern:        "/user/stars/dashboard/uid/{dashboard_uid}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &StarDashboardByUIDReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*StarDashboardByUIDOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for starDashboardByUID: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+UnstarDashboard unstars a dashboard
+
+Deletes the starring of the given Dashboard for the actual user.
 */
 func (a *Client) UnstarDashboard(params *UnstarDashboardParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UnstarDashboardOK, error) {
 	// TODO: Validate the params before sending
@@ -503,7 +548,48 @@ func (a *Client) UnstarDashboard(params *UnstarDashboardParams, authInfo runtime
 }
 
 /*
-  UpdateSignedInUser updates signed in user
+UnstarDashboardByUID unstars a dashboard
+
+Deletes the starring of the given Dashboard for the actual user.
+*/
+func (a *Client) UnstarDashboardByUID(params *UnstarDashboardByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UnstarDashboardByUIDOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewUnstarDashboardByUIDParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "unstarDashboardByUID",
+		Method:             "DELETE",
+		PathPattern:        "/user/stars/dashboard/uid/{dashboard_uid}",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &UnstarDashboardByUIDReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*UnstarDashboardByUIDOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for unstarDashboardByUID: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+UpdateSignedInUser updates signed in user
 */
 func (a *Client) UpdateSignedInUser(params *UpdateSignedInUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateSignedInUserOK, error) {
 	// TODO: Validate the params before sending
@@ -542,9 +628,9 @@ func (a *Client) UpdateSignedInUser(params *UpdateSignedInUserParams, authInfo r
 }
 
 /*
-  UserSetUsingOrg switches user context for signed in user
+UserSetUsingOrg switches user context for signed in user
 
-  Switch user context to the given organization.
+Switch user context to the given organization.
 */
 func (a *Client) UserSetUsingOrg(params *UserSetUsingOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UserSetUsingOrgOK, error) {
 	// TODO: Validate the params before sending

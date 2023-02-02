@@ -40,9 +40,9 @@ type ClientService interface {
 }
 
 /*
-  AddAPIkey creates an API key
+AddAPIkey creates an API key
 
-  Will return details of the created API key
+Will return details of the created API key.
 */
 func (a *Client) AddAPIkey(params *AddAPIkeyParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*AddAPIkeyOK, error) {
 	// TODO: Validate the params before sending
@@ -81,7 +81,7 @@ func (a *Client) AddAPIkey(params *AddAPIkeyParams, authInfo runtime.ClientAuthI
 }
 
 /*
-  DeleteAPIkey deletes API key
+DeleteAPIkey deletes API key
 */
 func (a *Client) DeleteAPIkey(params *DeleteAPIkeyParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteAPIkeyOK, error) {
 	// TODO: Validate the params before sending
@@ -120,9 +120,9 @@ func (a *Client) DeleteAPIkey(params *DeleteAPIkeyParams, authInfo runtime.Clien
 }
 
 /*
-  GetAPIkeys gets auth keys
+GetAPIkeys gets auth keys
 
-  Will return auth keys.
+Will return auth keys.
 */
 func (a *Client) GetAPIkeys(params *GetAPIkeysParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAPIkeysOK, error) {
 	// TODO: Validate the params before sending

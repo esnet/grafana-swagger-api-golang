@@ -63,24 +63,25 @@ func NewUpdatePlaylistOK() *UpdatePlaylistOK {
 	return &UpdatePlaylistOK{}
 }
 
-/* UpdatePlaylistOK describes a response with status code 200, with default header values.
+/*
+UpdatePlaylistOK describes a response with status code 200, with default header values.
 
 (empty)
 */
 type UpdatePlaylistOK struct {
-	Payload *models.PlaylistDTO
+	Payload *models.Model
 }
 
 func (o *UpdatePlaylistOK) Error() string {
 	return fmt.Sprintf("[PUT /playlists/{uid}][%d] updatePlaylistOK  %+v", 200, o.Payload)
 }
-func (o *UpdatePlaylistOK) GetPayload() *models.PlaylistDTO {
+func (o *UpdatePlaylistOK) GetPayload() *models.Model {
 	return o.Payload
 }
 
 func (o *UpdatePlaylistOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.PlaylistDTO)
+	o.Payload = new(models.Model)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
@@ -95,7 +96,8 @@ func NewUpdatePlaylistUnauthorized() *UpdatePlaylistUnauthorized {
 	return &UpdatePlaylistUnauthorized{}
 }
 
-/* UpdatePlaylistUnauthorized describes a response with status code 401, with default header values.
+/*
+UpdatePlaylistUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewUpdatePlaylistForbidden() *UpdatePlaylistForbidden {
 	return &UpdatePlaylistForbidden{}
 }
 
-/* UpdatePlaylistForbidden describes a response with status code 403, with default header values.
+/*
+UpdatePlaylistForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewUpdatePlaylistNotFound() *UpdatePlaylistNotFound {
 	return &UpdatePlaylistNotFound{}
 }
 
-/* UpdatePlaylistNotFound describes a response with status code 404, with default header values.
+/*
+UpdatePlaylistNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewUpdatePlaylistInternalServerError() *UpdatePlaylistInternalServerError {
 	return &UpdatePlaylistInternalServerError{}
 }
 
-/* UpdatePlaylistInternalServerError describes a response with status code 500, with default header values.
+/*
+UpdatePlaylistInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

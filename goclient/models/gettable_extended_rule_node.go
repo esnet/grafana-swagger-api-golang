@@ -28,7 +28,7 @@ type GettableExtendedRuleNode struct {
 	Expr string `json:"expr,omitempty"`
 
 	// for
-	For Duration `json:"for,omitempty"`
+	For string `json:"for,omitempty"`
 
 	// grafana alert
 	GrafanaAlert *GettableGrafanaRule `json:"grafana_alert,omitempty"`

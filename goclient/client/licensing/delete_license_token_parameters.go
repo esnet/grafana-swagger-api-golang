@@ -54,10 +54,12 @@ func NewDeleteLicenseTokenParamsWithHTTPClient(client *http.Client) *DeleteLicen
 	}
 }
 
-/* DeleteLicenseTokenParams contains all the parameters to send to the API endpoint
-   for the delete license token operation.
+/*
+DeleteLicenseTokenParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete license token operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteLicenseTokenParams struct {
 

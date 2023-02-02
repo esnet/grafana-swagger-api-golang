@@ -63,7 +63,8 @@ func NewPostAnnotationOK() *PostAnnotationOK {
 	return &PostAnnotationOK{}
 }
 
-/* PostAnnotationOK describes a response with status code 200, with default header values.
+/*
+PostAnnotationOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewPostAnnotationBadRequest() *PostAnnotationBadRequest {
 	return &PostAnnotationBadRequest{}
 }
 
-/* PostAnnotationBadRequest describes a response with status code 400, with default header values.
+/*
+PostAnnotationBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewPostAnnotationUnauthorized() *PostAnnotationUnauthorized {
 	return &PostAnnotationUnauthorized{}
 }
 
-/* PostAnnotationUnauthorized describes a response with status code 401, with default header values.
+/*
+PostAnnotationUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -159,7 +162,8 @@ func NewPostAnnotationForbidden() *PostAnnotationForbidden {
 	return &PostAnnotationForbidden{}
 }
 
-/* PostAnnotationForbidden describes a response with status code 403, with default header values.
+/*
+PostAnnotationForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -191,7 +195,8 @@ func NewPostAnnotationInternalServerError() *PostAnnotationInternalServerError {
 	return &PostAnnotationInternalServerError{}
 }
 
-/* PostAnnotationInternalServerError describes a response with status code 500, with default header values.
+/*
+PostAnnotationInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

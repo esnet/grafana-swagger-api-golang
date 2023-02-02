@@ -53,10 +53,12 @@ func NewAdminLogoutUserParamsWithHTTPClient(client *http.Client) *AdminLogoutUse
 	}
 }
 
-/* AdminLogoutUserParams contains all the parameters to send to the API endpoint
-   for the admin logout user operation.
+/*
+AdminLogoutUserParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the admin logout user operation.
+
+	Typically these are written to a http.Request.
 */
 type AdminLogoutUserParams struct {
 

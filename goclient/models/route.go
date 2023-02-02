@@ -27,10 +27,10 @@ type Route struct {
 	GroupBy []string `json:"group_by"`
 
 	// group interval
-	GroupInterval Duration `json:"group_interval,omitempty"`
+	GroupInterval string `json:"group_interval,omitempty"`
 
 	// group wait
-	GroupWait Duration `json:"group_wait,omitempty"`
+	GroupWait string `json:"group_wait,omitempty"`
 
 	// Deprecated. Remove before v1.0 release.
 	Match map[string]string `json:"match,omitempty"`
@@ -54,7 +54,7 @@ type Route struct {
 	Receiver string `json:"receiver,omitempty"`
 
 	// repeat interval
-	RepeatInterval Duration `json:"repeat_interval,omitempty"`
+	RepeatInterval string `json:"repeat_interval,omitempty"`
 
 	// routes
 	Routes []*Route `json:"routes"`

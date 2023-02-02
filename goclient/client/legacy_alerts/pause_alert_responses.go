@@ -63,7 +63,8 @@ func NewPauseAlertOK() *PauseAlertOK {
 	return &PauseAlertOK{}
 }
 
-/* PauseAlertOK describes a response with status code 200, with default header values.
+/*
+PauseAlertOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewPauseAlertUnauthorized() *PauseAlertUnauthorized {
 	return &PauseAlertUnauthorized{}
 }
 
-/* PauseAlertUnauthorized describes a response with status code 401, with default header values.
+/*
+PauseAlertUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewPauseAlertForbidden() *PauseAlertForbidden {
 	return &PauseAlertForbidden{}
 }
 
-/* PauseAlertForbidden describes a response with status code 403, with default header values.
+/*
+PauseAlertForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewPauseAlertNotFound() *PauseAlertNotFound {
 	return &PauseAlertNotFound{}
 }
 
-/* PauseAlertNotFound describes a response with status code 404, with default header values.
+/*
+PauseAlertNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewPauseAlertInternalServerError() *PauseAlertInternalServerError {
 	return &PauseAlertInternalServerError{}
 }
 
-/* PauseAlertInternalServerError describes a response with status code 500, with default header values.
+/*
+PauseAlertInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

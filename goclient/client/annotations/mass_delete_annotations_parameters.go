@@ -54,10 +54,12 @@ func NewMassDeleteAnnotationsParamsWithHTTPClient(client *http.Client) *MassDele
 	}
 }
 
-/* MassDeleteAnnotationsParams contains all the parameters to send to the API endpoint
-   for the mass delete annotations operation.
+/*
+MassDeleteAnnotationsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the mass delete annotations operation.
+
+	Typically these are written to a http.Request.
 */
 type MassDeleteAnnotationsParams struct {
 

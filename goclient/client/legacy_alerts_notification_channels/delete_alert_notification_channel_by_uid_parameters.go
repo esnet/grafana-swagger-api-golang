@@ -52,10 +52,12 @@ func NewDeleteAlertNotificationChannelByUIDParamsWithHTTPClient(client *http.Cli
 	}
 }
 
-/* DeleteAlertNotificationChannelByUIDParams contains all the parameters to send to the API endpoint
-   for the delete alert notification channel by UID operation.
+/*
+DeleteAlertNotificationChannelByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete alert notification channel by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteAlertNotificationChannelByUIDParams struct {
 

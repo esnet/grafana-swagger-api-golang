@@ -51,7 +51,8 @@ func NewPostACSFound() *PostACSFound {
 	return &PostACSFound{}
 }
 
-/* PostACSFound describes a response with status code 302, with default header values.
+/*
+PostACSFound describes a response with status code 302, with default header values.
 
 (empty)
 */
@@ -72,7 +73,8 @@ func NewPostACSForbidden() *PostACSForbidden {
 	return &PostACSForbidden{}
 }
 
-/* PostACSForbidden describes a response with status code 403, with default header values.
+/*
+PostACSForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -104,7 +106,8 @@ func NewPostACSInternalServerError() *PostACSInternalServerError {
 	return &PostACSInternalServerError{}
 }
 
-/* PostACSInternalServerError describes a response with status code 500, with default header values.
+/*
+PostACSInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

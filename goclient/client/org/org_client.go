@@ -50,9 +50,9 @@ type ClientService interface {
 }
 
 /*
-  AddOrgUserToCurrentOrg adds a new user to the current organization
+	AddOrgUserToCurrentOrg adds a new user to the current organization
 
-  Adds a global user to the current organization.
+	Adds a global user to the current organization.
 
 If you are running Grafana Enterprise and have Fine-grained access control enabled
 you need to have a permission with action: `org.users:add` with scope `users:*`.
@@ -94,7 +94,7 @@ func (a *Client) AddOrgUserToCurrentOrg(params *AddOrgUserToCurrentOrgParams, au
 }
 
 /*
-  GetCurrentOrg Get current Organization
+GetCurrentOrg gets current organization
 */
 func (a *Client) GetCurrentOrg(params *GetCurrentOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetCurrentOrgOK, error) {
 	// TODO: Validate the params before sending
@@ -133,9 +133,10 @@ func (a *Client) GetCurrentOrg(params *GetCurrentOrgParams, authInfo runtime.Cli
 }
 
 /*
-  GetOrgUsersForCurrentOrg gets all users within the current organization
+	GetOrgUsersForCurrentOrg gets all users within the current organization
 
-  Returns all org users within the current organization. Accessible to users with org admin role.
+	Returns all org users within the current organization. Accessible to users with org admin role.
+
 If you are running Grafana Enterprise and have Fine-grained access control enabled
 you need to have a permission with action: `org.users:read` with scope `users:*`.
 */
@@ -176,9 +177,10 @@ func (a *Client) GetOrgUsersForCurrentOrg(params *GetOrgUsersForCurrentOrgParams
 }
 
 /*
-  GetOrgUsersForCurrentOrgLookup gets all users within the current organization lookup
+	GetOrgUsersForCurrentOrgLookup gets all users within the current organization lookup
 
-  Returns all org users within the current organization, but with less detailed information.
+	Returns all org users within the current organization, but with less detailed information.
+
 Accessible to users with org admin role, admin in any folder or admin of any team.
 Mainly used by Grafana UI for providing list of users when adding team members and when editing folder/dashboard permissions.
 */
@@ -219,9 +221,10 @@ func (a *Client) GetOrgUsersForCurrentOrgLookup(params *GetOrgUsersForCurrentOrg
 }
 
 /*
-  RemoveOrgUserForCurrentOrg deletes user in current organization
+	RemoveOrgUserForCurrentOrg deletes user in current organization
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `org.users:remove` with scope `users:*`.
 */
 func (a *Client) RemoveOrgUserForCurrentOrg(params *RemoveOrgUserForCurrentOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveOrgUserForCurrentOrgOK, error) {
@@ -261,7 +264,7 @@ func (a *Client) RemoveOrgUserForCurrentOrg(params *RemoveOrgUserForCurrentOrgPa
 }
 
 /*
-  UpdateCurrentOrg updates current organization
+UpdateCurrentOrg updates current organization
 */
 func (a *Client) UpdateCurrentOrg(params *UpdateCurrentOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateCurrentOrgOK, error) {
 	// TODO: Validate the params before sending
@@ -300,7 +303,7 @@ func (a *Client) UpdateCurrentOrg(params *UpdateCurrentOrgParams, authInfo runti
 }
 
 /*
-  UpdateCurrentOrgAddress updates current organization s address
+UpdateCurrentOrgAddress updates current organization s address
 */
 func (a *Client) UpdateCurrentOrgAddress(params *UpdateCurrentOrgAddressParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateCurrentOrgAddressOK, error) {
 	// TODO: Validate the params before sending
@@ -339,9 +342,10 @@ func (a *Client) UpdateCurrentOrgAddress(params *UpdateCurrentOrgAddressParams, 
 }
 
 /*
-  UpdateOrgUserForCurrentOrg updates the given user
+	UpdateOrgUserForCurrentOrg updates the given user
 
-  If you are running Grafana Enterprise and have Fine-grained access control enabled
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
 you need to have a permission with action: `org.users.role:update` with scope `users:*`.
 */
 func (a *Client) UpdateOrgUserForCurrentOrg(params *UpdateOrgUserForCurrentOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgUserForCurrentOrgOK, error) {

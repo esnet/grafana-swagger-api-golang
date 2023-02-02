@@ -55,10 +55,12 @@ func NewUpdateAlertNotificationChannelParamsWithHTTPClient(client *http.Client) 
 	}
 }
 
-/* UpdateAlertNotificationChannelParams contains all the parameters to send to the API endpoint
-   for the update alert notification channel operation.
+/*
+UpdateAlertNotificationChannelParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the update alert notification channel operation.
+
+	Typically these are written to a http.Request.
 */
 type UpdateAlertNotificationChannelParams struct {
 

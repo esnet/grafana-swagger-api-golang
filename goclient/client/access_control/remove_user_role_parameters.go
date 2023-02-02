@@ -53,10 +53,12 @@ func NewRemoveUserRoleParamsWithHTTPClient(client *http.Client) *RemoveUserRoleP
 	}
 }
 
-/* RemoveUserRoleParams contains all the parameters to send to the API endpoint
-   for the remove user role operation.
+/*
+RemoveUserRoleParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the remove user role operation.
+
+	Typically these are written to a http.Request.
 */
 type RemoveUserRoleParams struct {
 

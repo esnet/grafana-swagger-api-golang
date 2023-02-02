@@ -69,7 +69,8 @@ func NewNotificationChannelTestOK() *NotificationChannelTestOK {
 	return &NotificationChannelTestOK{}
 }
 
-/* NotificationChannelTestOK describes a response with status code 200, with default header values.
+/*
+NotificationChannelTestOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -101,7 +102,8 @@ func NewNotificationChannelTestBadRequest() *NotificationChannelTestBadRequest {
 	return &NotificationChannelTestBadRequest{}
 }
 
-/* NotificationChannelTestBadRequest describes a response with status code 400, with default header values.
+/*
+NotificationChannelTestBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -133,7 +135,8 @@ func NewNotificationChannelTestUnauthorized() *NotificationChannelTestUnauthoriz
 	return &NotificationChannelTestUnauthorized{}
 }
 
-/* NotificationChannelTestUnauthorized describes a response with status code 401, with default header values.
+/*
+NotificationChannelTestUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -165,7 +168,8 @@ func NewNotificationChannelTestForbidden() *NotificationChannelTestForbidden {
 	return &NotificationChannelTestForbidden{}
 }
 
-/* NotificationChannelTestForbidden describes a response with status code 403, with default header values.
+/*
+NotificationChannelTestForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -197,7 +201,8 @@ func NewNotificationChannelTestPreconditionFailed() *NotificationChannelTestPrec
 	return &NotificationChannelTestPreconditionFailed{}
 }
 
-/* NotificationChannelTestPreconditionFailed describes a response with status code 412, with default header values.
+/*
+NotificationChannelTestPreconditionFailed describes a response with status code 412, with default header values.
 
 (empty)
 */
@@ -218,7 +223,8 @@ func NewNotificationChannelTestInternalServerError() *NotificationChannelTestInt
 	return &NotificationChannelTestInternalServerError{}
 }
 
-/* NotificationChannelTestInternalServerError describes a response with status code 500, with default header values.
+/*
+NotificationChannelTestInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -54,10 +54,12 @@ func NewRoutePutPolicyTreeParamsWithHTTPClient(client *http.Client) *RoutePutPol
 	}
 }
 
-/* RoutePutPolicyTreeParams contains all the parameters to send to the API endpoint
-   for the route put policy tree operation.
+/*
+RoutePutPolicyTreeParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route put policy tree operation.
+
+	Typically these are written to a http.Request.
 */
 type RoutePutPolicyTreeParams struct {
 

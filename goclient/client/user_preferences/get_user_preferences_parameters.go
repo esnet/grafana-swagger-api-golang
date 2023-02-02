@@ -52,10 +52,12 @@ func NewGetUserPreferencesParamsWithHTTPClient(client *http.Client) *GetUserPref
 	}
 }
 
-/* GetUserPreferencesParams contains all the parameters to send to the API endpoint
-   for the get user preferences operation.
+/*
+GetUserPreferencesParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get user preferences operation.
+
+	Typically these are written to a http.Request.
 */
 type GetUserPreferencesParams struct {
 	timeout    time.Duration

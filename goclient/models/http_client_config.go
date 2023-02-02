@@ -31,6 +31,11 @@ type HTTPClientConfig struct {
 	// Authorization.CredentialsFile.
 	BearerTokenFile string `json:"bearer_token_file,omitempty"`
 
+	// EnableHTTP2 specifies whether the client should configure HTTP2.
+	// The omitempty flag is not set, because it would be hidden from the
+	// marshalled configuration when set to false.
+	EnableHttp2 bool `json:"enable_http2,omitempty"`
+
 	// FollowRedirects specifies whether the client should follow HTTP 3xx redirects.
 	// The omitempty flag is not set, because it would be hidden from the
 	// marshalled configuration when set to false.

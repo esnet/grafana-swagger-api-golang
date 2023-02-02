@@ -63,7 +63,8 @@ func NewGetUserByIDOK() *GetUserByIDOK {
 	return &GetUserByIDOK{}
 }
 
-/* GetUserByIDOK describes a response with status code 200, with default header values.
+/*
+GetUserByIDOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewGetUserByIDUnauthorized() *GetUserByIDUnauthorized {
 	return &GetUserByIDUnauthorized{}
 }
 
-/* GetUserByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+GetUserByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -127,7 +129,8 @@ func NewGetUserByIDForbidden() *GetUserByIDForbidden {
 	return &GetUserByIDForbidden{}
 }
 
-/* GetUserByIDForbidden describes a response with status code 403, with default header values.
+/*
+GetUserByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewGetUserByIDNotFound() *GetUserByIDNotFound {
 	return &GetUserByIDNotFound{}
 }
 
-/* GetUserByIDNotFound describes a response with status code 404, with default header values.
+/*
+GetUserByIDNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -191,7 +195,8 @@ func NewGetUserByIDInternalServerError() *GetUserByIDInternalServerError {
 	return &GetUserByIDInternalServerError{}
 }
 
-/* GetUserByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+GetUserByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

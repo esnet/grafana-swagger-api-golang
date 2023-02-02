@@ -52,10 +52,12 @@ func NewRouteGetMuteTimingsParamsWithHTTPClient(client *http.Client) *RouteGetMu
 	}
 }
 
-/* RouteGetMuteTimingsParams contains all the parameters to send to the API endpoint
-   for the route get mute timings operation.
+/*
+RouteGetMuteTimingsParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route get mute timings operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteGetMuteTimingsParams struct {
 	timeout    time.Duration

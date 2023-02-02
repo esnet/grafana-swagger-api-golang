@@ -63,7 +63,8 @@ func NewTestAlertOK() *TestAlertOK {
 	return &TestAlertOK{}
 }
 
-/* TestAlertOK describes a response with status code 200, with default header values.
+/*
+TestAlertOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -95,7 +96,8 @@ func NewTestAlertBadRequest() *TestAlertBadRequest {
 	return &TestAlertBadRequest{}
 }
 
-/* TestAlertBadRequest describes a response with status code 400, with default header values.
+/*
+TestAlertBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -127,7 +129,8 @@ func NewTestAlertForbidden() *TestAlertForbidden {
 	return &TestAlertForbidden{}
 }
 
-/* TestAlertForbidden describes a response with status code 403, with default header values.
+/*
+TestAlertForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -159,7 +162,8 @@ func NewTestAlertUnprocessableEntity() *TestAlertUnprocessableEntity {
 	return &TestAlertUnprocessableEntity{}
 }
 
-/* TestAlertUnprocessableEntity describes a response with status code 422, with default header values.
+/*
+TestAlertUnprocessableEntity describes a response with status code 422, with default header values.
 
 UnprocessableEntityError
 */
@@ -191,7 +195,8 @@ func NewTestAlertInternalServerError() *TestAlertInternalServerError {
 	return &TestAlertInternalServerError{}
 }
 
-/* TestAlertInternalServerError describes a response with status code 500, with default header values.
+/*
+TestAlertInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

@@ -19,7 +19,7 @@ import (
 type PushoverConfig struct {
 
 	// expire
-	Expire Duration `json:"expire,omitempty"`
+	Expire string `json:"expire,omitempty"`
 
 	// html
 	HTML bool `json:"html,omitempty"`
@@ -34,7 +34,7 @@ type PushoverConfig struct {
 	Priority string `json:"priority,omitempty"`
 
 	// retry
-	Retry Duration `json:"retry,omitempty"`
+	Retry string `json:"retry,omitempty"`
 
 	// send resolved
 	SendResolved bool `json:"send_resolved,omitempty"`

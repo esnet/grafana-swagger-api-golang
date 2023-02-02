@@ -37,6 +37,10 @@ type TokenDTO struct {
 	// Example: 1
 	ID int64 `json:"id,omitempty"`
 
+	// is revoked
+	// Example: false
+	IsRevoked bool `json:"isRevoked,omitempty"`
+
 	// last used at
 	// Example: 2022-03-23T10:31:02Z
 	// Format: date-time

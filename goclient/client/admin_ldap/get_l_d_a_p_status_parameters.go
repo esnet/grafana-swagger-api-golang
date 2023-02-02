@@ -52,10 +52,12 @@ func NewGetLDAPStatusParamsWithHTTPClient(client *http.Client) *GetLDAPStatusPar
 	}
 }
 
-/* GetLDAPStatusParams contains all the parameters to send to the API endpoint
-   for the get l d a p status operation.
+/*
+GetLDAPStatusParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get l d a p status operation.
+
+	Typically these are written to a http.Request.
 */
 type GetLDAPStatusParams struct {
 	timeout    time.Duration

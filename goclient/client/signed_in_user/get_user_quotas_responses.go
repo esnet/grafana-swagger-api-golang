@@ -63,7 +63,8 @@ func NewGetUserQuotasOK() *GetUserQuotasOK {
 	return &GetUserQuotasOK{}
 }
 
-/* GetUserQuotasOK describes a response with status code 200, with default header values.
+/*
+GetUserQuotasOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetUserQuotasUnauthorized() *GetUserQuotasUnauthorized {
 	return &GetUserQuotasUnauthorized{}
 }
 
-/* GetUserQuotasUnauthorized describes a response with status code 401, with default header values.
+/*
+GetUserQuotasUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetUserQuotasForbidden() *GetUserQuotasForbidden {
 	return &GetUserQuotasForbidden{}
 }
 
-/* GetUserQuotasForbidden describes a response with status code 403, with default header values.
+/*
+GetUserQuotasForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetUserQuotasNotFound() *GetUserQuotasNotFound {
 	return &GetUserQuotasNotFound{}
 }
 
-/* GetUserQuotasNotFound describes a response with status code 404, with default header values.
+/*
+GetUserQuotasNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetUserQuotasInternalServerError() *GetUserQuotasInternalServerError {
 	return &GetUserQuotasInternalServerError{}
 }
 
-/* GetUserQuotasInternalServerError describes a response with status code 500, with default header values.
+/*
+GetUserQuotasInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

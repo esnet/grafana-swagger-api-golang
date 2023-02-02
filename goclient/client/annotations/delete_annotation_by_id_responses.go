@@ -57,7 +57,8 @@ func NewDeleteAnnotationByIDOK() *DeleteAnnotationByIDOK {
 	return &DeleteAnnotationByIDOK{}
 }
 
-/* DeleteAnnotationByIDOK describes a response with status code 200, with default header values.
+/*
+DeleteAnnotationByIDOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewDeleteAnnotationByIDUnauthorized() *DeleteAnnotationByIDUnauthorized {
 	return &DeleteAnnotationByIDUnauthorized{}
 }
 
-/* DeleteAnnotationByIDUnauthorized describes a response with status code 401, with default header values.
+/*
+DeleteAnnotationByIDUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewDeleteAnnotationByIDForbidden() *DeleteAnnotationByIDForbidden {
 	return &DeleteAnnotationByIDForbidden{}
 }
 
-/* DeleteAnnotationByIDForbidden describes a response with status code 403, with default header values.
+/*
+DeleteAnnotationByIDForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewDeleteAnnotationByIDInternalServerError() *DeleteAnnotationByIDInternalS
 	return &DeleteAnnotationByIDInternalServerError{}
 }
 
-/* DeleteAnnotationByIDInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteAnnotationByIDInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

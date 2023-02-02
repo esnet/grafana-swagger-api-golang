@@ -28,6 +28,9 @@ type OrgUserDTO struct {
 	// email
 	Email string `json:"email,omitempty"`
 
+	// is disabled
+	IsDisabled bool `json:"isDisabled,omitempty"`
+
 	// last seen at
 	// Format: date-time
 	LastSeenAt strfmt.DateTime `json:"lastSeenAt,omitempty"`

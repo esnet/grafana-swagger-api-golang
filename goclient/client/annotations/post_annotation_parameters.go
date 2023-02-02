@@ -54,10 +54,12 @@ func NewPostAnnotationParamsWithHTTPClient(client *http.Client) *PostAnnotationP
 	}
 }
 
-/* PostAnnotationParams contains all the parameters to send to the API endpoint
-   for the post annotation operation.
+/*
+PostAnnotationParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the post annotation operation.
+
+	Typically these are written to a http.Request.
 */
 type PostAnnotationParams struct {
 

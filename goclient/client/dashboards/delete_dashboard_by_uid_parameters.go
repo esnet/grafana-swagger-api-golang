@@ -52,10 +52,12 @@ func NewDeleteDashboardByUIDParamsWithHTTPClient(client *http.Client) *DeleteDas
 	}
 }
 
-/* DeleteDashboardByUIDParams contains all the parameters to send to the API endpoint
-   for the delete dashboard by UID operation.
+/*
+DeleteDashboardByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the delete dashboard by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type DeleteDashboardByUIDParams struct {
 

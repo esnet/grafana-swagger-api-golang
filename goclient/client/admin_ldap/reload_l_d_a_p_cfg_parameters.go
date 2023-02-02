@@ -52,10 +52,12 @@ func NewReloadLDAPCfgParamsWithHTTPClient(client *http.Client) *ReloadLDAPCfgPar
 	}
 }
 
-/* ReloadLDAPCfgParams contains all the parameters to send to the API endpoint
-   for the reload l d a p cfg operation.
+/*
+ReloadLDAPCfgParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the reload l d a p cfg operation.
+
+	Typically these are written to a http.Request.
 */
 type ReloadLDAPCfgParams struct {
 	timeout    time.Duration

@@ -57,7 +57,8 @@ func NewGetDataSourceByNameOK() *GetDataSourceByNameOK {
 	return &GetDataSourceByNameOK{}
 }
 
-/* GetDataSourceByNameOK describes a response with status code 200, with default header values.
+/*
+GetDataSourceByNameOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -89,7 +90,8 @@ func NewGetDataSourceByNameUnauthorized() *GetDataSourceByNameUnauthorized {
 	return &GetDataSourceByNameUnauthorized{}
 }
 
-/* GetDataSourceByNameUnauthorized describes a response with status code 401, with default header values.
+/*
+GetDataSourceByNameUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -121,7 +123,8 @@ func NewGetDataSourceByNameForbidden() *GetDataSourceByNameForbidden {
 	return &GetDataSourceByNameForbidden{}
 }
 
-/* GetDataSourceByNameForbidden describes a response with status code 403, with default header values.
+/*
+GetDataSourceByNameForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -153,7 +156,8 @@ func NewGetDataSourceByNameInternalServerError() *GetDataSourceByNameInternalSer
 	return &GetDataSourceByNameInternalServerError{}
 }
 
-/* GetDataSourceByNameInternalServerError describes a response with status code 500, with default header values.
+/*
+GetDataSourceByNameInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

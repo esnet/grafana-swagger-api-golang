@@ -45,7 +45,8 @@ func NewRoutePostMuteTimingCreated() *RoutePostMuteTimingCreated {
 	return &RoutePostMuteTimingCreated{}
 }
 
-/* RoutePostMuteTimingCreated describes a response with status code 201, with default header values.
+/*
+RoutePostMuteTimingCreated describes a response with status code 201, with default header values.
 
 MuteTimeInterval
 */
@@ -77,7 +78,8 @@ func NewRoutePostMuteTimingBadRequest() *RoutePostMuteTimingBadRequest {
 	return &RoutePostMuteTimingBadRequest{}
 }
 
-/* RoutePostMuteTimingBadRequest describes a response with status code 400, with default header values.
+/*
+RoutePostMuteTimingBadRequest describes a response with status code 400, with default header values.
 
 ValidationError
 */

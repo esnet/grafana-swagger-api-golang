@@ -37,7 +37,8 @@ func NewGetMetadataOK() *GetMetadataOK {
 	return &GetMetadataOK{}
 }
 
-/* GetMetadataOK describes a response with status code 200, with default header values.
+/*
+GetMetadataOK describes a response with status code 200, with default header values.
 
 (empty)
 */

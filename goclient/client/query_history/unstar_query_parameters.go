@@ -52,10 +52,12 @@ func NewUnstarQueryParamsWithHTTPClient(client *http.Client) *UnstarQueryParams 
 	}
 }
 
-/* UnstarQueryParams contains all the parameters to send to the API endpoint
-   for the unstar query operation.
+/*
+UnstarQueryParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the unstar query operation.
+
+	Typically these are written to a http.Request.
 */
 type UnstarQueryParams struct {
 

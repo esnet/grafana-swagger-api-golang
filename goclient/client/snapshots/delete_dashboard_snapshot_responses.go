@@ -57,7 +57,8 @@ func NewDeleteDashboardSnapshotOK() *DeleteDashboardSnapshotOK {
 	return &DeleteDashboardSnapshotOK{}
 }
 
-/* DeleteDashboardSnapshotOK describes a response with status code 200, with default header values.
+/*
+DeleteDashboardSnapshotOK describes a response with status code 200, with default header values.
 
 An OKResponse is returned if the request was successful.
 */
@@ -89,7 +90,8 @@ func NewDeleteDashboardSnapshotForbidden() *DeleteDashboardSnapshotForbidden {
 	return &DeleteDashboardSnapshotForbidden{}
 }
 
-/* DeleteDashboardSnapshotForbidden describes a response with status code 403, with default header values.
+/*
+DeleteDashboardSnapshotForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -121,7 +123,8 @@ func NewDeleteDashboardSnapshotNotFound() *DeleteDashboardSnapshotNotFound {
 	return &DeleteDashboardSnapshotNotFound{}
 }
 
-/* DeleteDashboardSnapshotNotFound describes a response with status code 404, with default header values.
+/*
+DeleteDashboardSnapshotNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -153,7 +156,8 @@ func NewDeleteDashboardSnapshotInternalServerError() *DeleteDashboardSnapshotInt
 	return &DeleteDashboardSnapshotInternalServerError{}
 }
 
-/* DeleteDashboardSnapshotInternalServerError describes a response with status code 500, with default header values.
+/*
+DeleteDashboardSnapshotInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

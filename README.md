@@ -2,13 +2,11 @@
 
 This library provides a low-level client to access Grafana [HTTP API](https://grafana.com/docs/grafana/latest/http_api/).
 
-:warning: This repository is still active but not under heavy development.
-Contributions to this library offering support for the [Terraform provider for Grafana](https://github.com/grafana/terraform-provider-grafana) will be prioritized over generic ones.
+## Generating New GoModels
 
-## Tests
+`GRAFANA_TARGET_VERSION=v9.3.6 make generate`
 
-To run the tests:
 
-```
-go test
-```
+This project is heavily inspired by the work from @papagian which can be found on [here](https://github.com/grafana/grafana-api-golang-client/tree/papagian/generate-client-from-swagger)
+
+Initially, API version will match the grafana version.

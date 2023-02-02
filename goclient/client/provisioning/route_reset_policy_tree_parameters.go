@@ -52,10 +52,12 @@ func NewRouteResetPolicyTreeParamsWithHTTPClient(client *http.Client) *RouteRese
 	}
 }
 
-/* RouteResetPolicyTreeParams contains all the parameters to send to the API endpoint
-   for the route reset policy tree operation.
+/*
+RouteResetPolicyTreeParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the route reset policy tree operation.
+
+	Typically these are written to a http.Request.
 */
 type RouteResetPolicyTreeParams struct {
 	timeout    time.Duration

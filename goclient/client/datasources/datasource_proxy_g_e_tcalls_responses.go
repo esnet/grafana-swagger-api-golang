@@ -69,7 +69,8 @@ func NewDatasourceProxyGETcallsOK() *DatasourceProxyGETcallsOK {
 	return &DatasourceProxyGETcallsOK{}
 }
 
-/* DatasourceProxyGETcallsOK describes a response with status code 200, with default header values.
+/*
+DatasourceProxyGETcallsOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -90,7 +91,8 @@ func NewDatasourceProxyGETcallsBadRequest() *DatasourceProxyGETcallsBadRequest {
 	return &DatasourceProxyGETcallsBadRequest{}
 }
 
-/* DatasourceProxyGETcallsBadRequest describes a response with status code 400, with default header values.
+/*
+DatasourceProxyGETcallsBadRequest describes a response with status code 400, with default header values.
 
 BadRequestError is returned when the request is invalid and it cannot be processed.
 */
@@ -122,7 +124,8 @@ func NewDatasourceProxyGETcallsUnauthorized() *DatasourceProxyGETcallsUnauthoriz
 	return &DatasourceProxyGETcallsUnauthorized{}
 }
 
-/* DatasourceProxyGETcallsUnauthorized describes a response with status code 401, with default header values.
+/*
+DatasourceProxyGETcallsUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -154,7 +157,8 @@ func NewDatasourceProxyGETcallsForbidden() *DatasourceProxyGETcallsForbidden {
 	return &DatasourceProxyGETcallsForbidden{}
 }
 
-/* DatasourceProxyGETcallsForbidden describes a response with status code 403, with default header values.
+/*
+DatasourceProxyGETcallsForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -186,7 +190,8 @@ func NewDatasourceProxyGETcallsNotFound() *DatasourceProxyGETcallsNotFound {
 	return &DatasourceProxyGETcallsNotFound{}
 }
 
-/* DatasourceProxyGETcallsNotFound describes a response with status code 404, with default header values.
+/*
+DatasourceProxyGETcallsNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -218,7 +223,8 @@ func NewDatasourceProxyGETcallsInternalServerError() *DatasourceProxyGETcallsInt
 	return &DatasourceProxyGETcallsInternalServerError{}
 }
 
-/* DatasourceProxyGETcallsInternalServerError describes a response with status code 500, with default header values.
+/*
+DatasourceProxyGETcallsInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */

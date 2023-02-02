@@ -52,10 +52,12 @@ func NewGetAlertNotificationChannelByUIDParamsWithHTTPClient(client *http.Client
 	}
 }
 
-/* GetAlertNotificationChannelByUIDParams contains all the parameters to send to the API endpoint
-   for the get alert notification channel by UID operation.
+/*
+GetAlertNotificationChannelByUIDParams contains all the parameters to send to the API endpoint
 
-   Typically these are written to a http.Request.
+	for the get alert notification channel by UID operation.
+
+	Typically these are written to a http.Request.
 */
 type GetAlertNotificationChannelByUIDParams struct {
 

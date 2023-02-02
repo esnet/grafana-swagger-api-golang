@@ -63,7 +63,8 @@ func NewGetTeamMembersOK() *GetTeamMembersOK {
 	return &GetTeamMembersOK{}
 }
 
-/* GetTeamMembersOK describes a response with status code 200, with default header values.
+/*
+GetTeamMembersOK describes a response with status code 200, with default header values.
 
 (empty)
 */
@@ -93,7 +94,8 @@ func NewGetTeamMembersUnauthorized() *GetTeamMembersUnauthorized {
 	return &GetTeamMembersUnauthorized{}
 }
 
-/* GetTeamMembersUnauthorized describes a response with status code 401, with default header values.
+/*
+GetTeamMembersUnauthorized describes a response with status code 401, with default header values.
 
 UnauthorizedError is returned when the request is not authenticated.
 */
@@ -125,7 +127,8 @@ func NewGetTeamMembersForbidden() *GetTeamMembersForbidden {
 	return &GetTeamMembersForbidden{}
 }
 
-/* GetTeamMembersForbidden describes a response with status code 403, with default header values.
+/*
+GetTeamMembersForbidden describes a response with status code 403, with default header values.
 
 ForbiddenError is returned if the user/token has insufficient permissions to access the requested resource.
 */
@@ -157,7 +160,8 @@ func NewGetTeamMembersNotFound() *GetTeamMembersNotFound {
 	return &GetTeamMembersNotFound{}
 }
 
-/* GetTeamMembersNotFound describes a response with status code 404, with default header values.
+/*
+GetTeamMembersNotFound describes a response with status code 404, with default header values.
 
 NotFoundError is returned when the requested resource was not found.
 */
@@ -189,7 +193,8 @@ func NewGetTeamMembersInternalServerError() *GetTeamMembersInternalServerError {
 	return &GetTeamMembersInternalServerError{}
 }
 
-/* GetTeamMembersInternalServerError describes a response with status code 500, with default header values.
+/*
+GetTeamMembersInternalServerError describes a response with status code 500, with default header values.
 
 InternalServerError is a general error indicating something went wrong internally.
 */
