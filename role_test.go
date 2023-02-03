@@ -3,9 +3,9 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/access_control"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/access_control"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
@@ -152,10 +152,7 @@ func TestUpdateRole(t *testing.T) {
 		},
 	}
 
-	_, err := client.AccessControl.UpdateRoleWithPermissions(
-		access_control.NewUpdateRoleWithPermissionsParams().WithBody(&roleReq),
-		nil,
-	)
+	_, err := client.AccessControl.UpdateRole(access_control.NewUpdateRoleParams().WithBody(&roleReq), nil)
 	if err != nil {
 		t.Error(err)
 	}

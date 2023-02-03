@@ -4,10 +4,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/admin"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/admin_users"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/admin"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/admin_users"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
@@ -109,7 +109,8 @@ func TestPauseAllAlerts_500(t *testing.T) {
 	defer server.Close()
 
 	_, err := client.Admin.PauseAllAlerts(admin.NewPauseAllAlertsParams(), nil)
-	if !strings.Contains(err.Error(), "status: 500") {
+	if !strings.Contains(*err.(*admin.PauseAllAlertsInternalServerError).Payload.Message, "alert paused") {
 		t.Errorf("expected error to contain 'status: 500'; got: %s", err.Error())
 	}
+
 }

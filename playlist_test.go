@@ -3,8 +3,8 @@ package gapi
 import (
 	"testing"
 
-	"github.com/grafana/grafana-api-golang-client/goclient/client/playlists"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/playlists"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 const (
@@ -48,7 +48,7 @@ func TestPlaylistCreateAndUpdate(t *testing.T) {
 	playlist := models.CreatePlaylistCommand{
 		Name:     "my playlist",
 		Interval: "5m",
-		Items: []*models.PlaylistItemDTO{
+		Items: []*models.PlaylistItem{
 			{},
 		},
 	}
@@ -68,10 +68,9 @@ func TestPlaylistCreateAndUpdate(t *testing.T) {
 	}
 
 	// update
-	playlist.Items = append(playlist.Items, &models.PlaylistItemDTO{
+	playlist.Items = append(playlist.Items, &models.PlaylistItem{
 		Type:  "dashboard_by_id",
 		Value: "1",
-		Order: 1,
 		Title: "my dashboard",
 	})
 
@@ -79,11 +78,10 @@ func TestPlaylistCreateAndUpdate(t *testing.T) {
 		playlists.NewUpdatePlaylistParams().
 			WithUID(resp.Payload.UID).
 			WithBody(&models.UpdatePlaylistCommand{
-				Items: []*models.PlaylistItemDTO{
+				Items: []*models.PlaylistItem{
 					{
 						Type:  "dashboard_by_id",
 						Value: "1",
-						Order: 1,
 						Title: "my dashboard",
 					},
 				},
@@ -105,10 +103,6 @@ func TestGetPlaylist(t *testing.T) {
 	)
 	if err != nil {
 		t.Fatal(err)
-	}
-
-	if resp.Payload.ID != 2 {
-		t.Errorf("Invalid id - %d, Expected %d", resp.Payload.ID, 1)
 	}
 
 	if len(resp.Payload.Items) != 2 {

@@ -1,13 +1,13 @@
 package gapi
 
 import (
-	"testing"
-
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/datasource_permissions"
 	"github.com/gobs/pretty"
 	"github.com/google/go-cmp/cmp"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/dashboard_permissions"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/datasource_permissions"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"testing"
+
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/dashboard_permissions"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 const (
@@ -22,9 +22,7 @@ const (
 			"userEmail": "user@test.com",
 			"userAvatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
 			"permission": 1,
-			"permissionName": "Query",
-			"created": "2017-06-20T02:00:00+02:00",
-			"updated": "2017-06-20T02:00:00+02:00"
+			"permissionName": "Query"
 		},
 		{
 			"datasourceId": 2,
@@ -32,9 +30,7 @@ const (
 			"team": "A Team",
 			"teamAvatarUrl": "/avatar/46d229b033af06a191ff2267bca9ae56",
 			"permission": 1,
-			"permissionName": "Query",
-			"created": "2017-06-20T02:00:00+02:00",
-			"updated": "2017-06-20T02:00:00+02:00"
+			"permissionName": "Query"
 		}
 	]
 }`
@@ -60,12 +56,17 @@ func TestDatasourcePermissions(t *testing.T) {
 	expects := []*models.DataSourcePermissionsDTO{
 		{
 			DatasourceID: 1,
+			Enabled:      true,
 			Permissions: []*models.DataSourcePermissionRuleDTO{
 				{
 					UserID:         1,
+					DatasourceID:   1,
 					TeamID:         0,
 					Permission:     1,
 					PermissionName: "Query",
+					UserAvatarURL:  "/avatar/46d229b033af06a191ff2267bca9ae56",
+					UserEmail:      "user@test.com",
+					UserLogin:      "user",
 				},
 			},
 		},
@@ -75,20 +76,21 @@ func TestDatasourcePermissions(t *testing.T) {
 				{
 					UserID:         0,
 					TeamID:         1,
+					DatasourceID:   2,
 					Permission:     1,
+					Team:           "A Team",
 					PermissionName: "Query",
+					TeamAvatarURL:  "/avatar/46d229b033af06a191ff2267bca9ae56",
 				},
 			},
 		},
 	}
-
-	for _, expect := range expects {
-		t.Run("check data", func(t *testing.T) {
-			if cmp.Diff(resp.Payload, expect) != "" {
-				t.Error("Not correctly parsing returned datasource permission")
-			}
-		})
+	for i := 0; i < 2; i++ {
+		if cmp.Diff(resp.Payload.Permissions[i], expects[i].Permissions[0]) != "" {
+			t.Error("Not correctly parsing returned datasource permission")
+		}
 	}
+
 }
 
 func TestAddDatasourcePermissions(t *testing.T) {

@@ -3,9 +3,9 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/annotations"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/annotations"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
@@ -74,6 +74,10 @@ func TestAnnotations(t *testing.T) {
 	}
 }
 
+func toPtr[T any](t T) *T {
+	return &t
+}
+
 func TestNewAnnotation(t *testing.T) {
 	mocksrv, client := gapiTestTools(t, 200, newAnnotationJSON)
 	defer mocksrv.Close()
@@ -85,7 +89,7 @@ func TestNewAnnotation(t *testing.T) {
 		//IsRegion:    true,
 		TimeEnd: 1507180805056,
 		Tags:    []string{"tag1", "tag2"},
-		Text:    "text description",
+		Text:    toPtr("text description"),
 	}
 	res, err := client.Annotations.PostAnnotation(
 		annotations.NewPostAnnotationParams().

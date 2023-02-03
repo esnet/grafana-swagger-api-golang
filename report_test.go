@@ -3,10 +3,10 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/reports"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/go-openapi/strfmt"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/reports"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 	"github.com/stretchr/testify/require"
 )
 

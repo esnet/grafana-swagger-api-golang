@@ -3,10 +3,10 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/teams"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
 	"github.com/google/go-cmp/cmp"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/teams"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
@@ -114,7 +114,7 @@ func TestSearchTeam(t *testing.T) {
 				OrgID:       1,
 				Name:        "MyTestTeam",
 				Email:       "",
-				AvatarURL:   "avatar/3f49c15916554246daa714b9bd0ee398",
+				AvatarURL:   "/avatar/3f49c15916554246daa714b9bd0ee398",
 				MemberCount: 1,
 				Permission:  0,
 			},
