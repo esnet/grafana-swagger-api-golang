@@ -1,3 +1,6 @@
+![Go workflow](https://github.com/esnet/grafana-swagger-api-golang/actions/workflows/go.yml/badge.svg)
+
+
 # Grafana HTTP API Client for Go
 
 This library provides a low-level client to access Grafana [HTTP API](https://grafana.com/docs/grafana/latest/http_api/).
