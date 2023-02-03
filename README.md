@@ -7,6 +7,6 @@ This library provides a low-level client to access Grafana [HTTP API](https://gr
 `GRAFANA_TARGET_VERSION=v9.3.6 make generate`
 
 
-This project is heavily inspired by the work from @papagian which can be found on [here](https://github.com/grafana/grafana-api-golang-client/tree/papagian/generate-client-from-swagger)
+This project is heavily inspired by the work from @papagian which can be found on [here](https://github.com/esnet/grafana-swagger-api-golang/tree/papagian/generate-client-from-swagger)
 
 Initially, API version will match the grafana version.

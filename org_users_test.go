@@ -1,11 +1,12 @@
 package gapi
 
 import (
+	"github.com/stretchr/testify/assert"
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/orgs"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/orgs"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
@@ -32,9 +33,13 @@ func TestOrgUsersCurrent(t *testing.T) {
 		Role:   "Admin",
 	}
 
-	if resp.Payload[0] != user {
-		t.Error("Not correctly parsing returned organization users.")
-	}
+	respUser := resp.Payload[0]
+	assert.Equal(t, respUser.OrgID, user.OrgID)
+	assert.Equal(t, respUser.UserID, user.UserID)
+	assert.Equal(t, respUser.Email, user.Email)
+	assert.Equal(t, respUser.Login, user.Login)
+	assert.Equal(t, respUser.Role, user.Role)
+
 }
 
 func TestOrgUsers(t *testing.T) {
@@ -59,9 +64,12 @@ func TestOrgUsers(t *testing.T) {
 		Role:   "Admin",
 	}
 
-	if resp.Payload[0] != user {
-		t.Error("Not correctly parsing returned organization users.")
-	}
+	respUser := resp.Payload[0]
+	assert.Equal(t, respUser.OrgID, user.OrgID)
+	assert.Equal(t, respUser.UserID, user.UserID)
+	assert.Equal(t, respUser.Email, user.Email)
+	assert.Equal(t, respUser.Login, user.Login)
+	assert.Equal(t, respUser.Role, user.Role)
 }
 
 func TestAddOrgUser(t *testing.T) {

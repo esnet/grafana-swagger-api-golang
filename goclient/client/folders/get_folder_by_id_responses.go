@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 // GetFolderByIDReader is a Reader for the GetFolderByID structure.

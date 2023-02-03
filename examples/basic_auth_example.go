@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	gapi "github.com/grafana/grafana-api-golang-client"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/datasources"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	gapi "github.com/esnet/grafana-swagger-api-golang"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/datasources"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 func main() {

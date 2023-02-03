@@ -3,9 +3,8 @@ package gapi
 import (
 	"testing"
 
-	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/folder_permissions"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/folder_permissions"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 const (
@@ -71,11 +70,11 @@ func TestFolderPermissions(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	t.Log(pretty.PrettyFormat(resp))
+	//t.Log(pretty.PrettyFormat(resp))
 
 	expects := []*models.DashboardACLInfoDTO{
 		{
-			UID:            "perm-1",
+			UID:            "nErXDvCkzz",
 			UserID:         0,
 			TeamID:         0,
 			Role:           "Viewer",
@@ -86,7 +85,7 @@ func TestFolderPermissions(t *testing.T) {
 			DashboardID:    0,
 		},
 		{
-			UID:            "perm-2",
+			UID:            "",
 			UserID:         0,
 			TeamID:         0,
 			Role:           "Editor",

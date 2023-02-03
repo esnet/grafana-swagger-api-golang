@@ -3,17 +3,16 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/library_elements"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/search"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/library_elements"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/search"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 	"github.com/stretchr/testify/require"
 )
 
 const (
 	getLibraryElementNameResponse = `{
-		"result": [
-	    {
+		"result": {
 				"id": 25,
 				"orgId": 1,
 				"folderId": 0,
@@ -43,7 +42,7 @@ const (
 					}
 				}
 	 		}
-		]
+
 	}`
 
 	getLibraryElementUIDResponse = `{

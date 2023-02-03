@@ -16,7 +16,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 // NewRestoreDashboardVersionByIDParams creates a new RestoreDashboardVersionByIDParams object,

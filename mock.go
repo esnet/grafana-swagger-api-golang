@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/grafana/grafana-api-golang-client/goclient/client"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client"
 )
 
 type mockServer struct {
@@ -17,6 +17,10 @@ type mockServer struct {
 
 func (m *mockServer) Close() {
 	m.server.Close()
+}
+
+func ToPtr[T any](t T) *T {
+	return &t
 }
 
 func gapiTestTools(t *testing.T, code int, body string) (*mockServer, *client.GrafanaHTTPAPI) {

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/provisioning"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/provisioning"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 	"github.com/stretchr/testify/require"
 )
 
@@ -63,7 +63,7 @@ func TestContactPoints(t *testing.T) {
 	})
 
 	t.Run("create contact point succeeds", func(t *testing.T) {
-		mocksrv, client := gapiTestTools(t, 201, writeContactPointJSON)
+		mocksrv, client := gapiTestTools(t, 202, writeContactPointJSON)
 		defer mocksrv.Close()
 		p := createContactPoint()
 
@@ -82,7 +82,7 @@ func TestContactPoints(t *testing.T) {
 	})
 
 	t.Run("update contact point succeeds", func(t *testing.T) {
-		mocksrv, client := gapiTestTools(t, 200, writeContactPointJSON)
+		mocksrv, client := gapiTestTools(t, 202, writeContactPointJSON)
 		defer mocksrv.Close()
 		p := createContactPoint()
 		existingUID := p.UID

@@ -1,10 +1,11 @@
 package gapi
 
 import (
+	"github.com/google/go-cmp/cmp"
 	"testing"
 
-	"github.com/grafana/grafana-api-golang-client/goclient/client/access_control"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/access_control"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 )
 
 const (
@@ -14,26 +15,23 @@ const (
 }
 `
 	getBuiltInRoleAssignmentsResponse = `
-{
-    "Grafana Admin": [
-        {
-            "version": 1,
-            "uid": "tJTyTNqMk",
-            "name": "grafana:roles:users:admin:read",
-            "description": "",
-            "global": true
-        }
-    ],
-    "Viewer": [
-        {
-            "version": 2,
-            "uid": "tJTyTNqMk1",
-            "name": "custom:reports:editor",
-            "description": "Role to allow users to create/read reports",
-            "global": false
-        }
-    ]
-}
+	[
+    	{
+				"displayName": "Grafana Admin",
+    	        "description": "",
+    	        "name": "grafana:roles:users:admin:read",
+    	        "uid": "tJTyTNqMk",
+    	        "version": 1
+    	},
+		{
+				"displayName": "Viewer",
+    	        "description": "Role to allow users to create/read reports",
+    	        "name": "custom:reports:editor",
+    	        "uid": "tJTyTNqMk1",
+    	        "version": 2
+    	}
+
+]
 `
 
 	removeBuiltInRoleAssignmentResponse = `
@@ -49,16 +47,12 @@ func TestNewBuiltInRoleAssignment(t *testing.T) {
 		mocksrv.Close()
 	})
 
-	br := models.AddBuiltInRoleCommand{
-		Global:      false,
-		RoleUID:     "test:policy",
-		BuiltInRole: "Viewer",
+	br := models.AddUserRoleCommand{
+		Global:  false,
+		RoleUID: "test:policy",
 	}
 
-	_, err := client.AccessControl.AddBuiltinRole(
-		access_control.NewAddBuiltinRoleParams().WithBody(&br),
-		nil,
-	)
+	_, err := client.AccessControl.AddUserRole(access_control.NewAddUserRoleParams().WithBody(&br), nil)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -70,7 +64,7 @@ func TestGetBuiltInRoleAssignments(t *testing.T) {
 		mocksrv.Close()
 	})
 
-	resp, err := client.AccessControl.ListBuiltinRoles(access_control.NewListBuiltinRolesParams(), nil)
+	resp, err := client.AccessControl.ListRoles(access_control.NewListRolesParams(), nil)
 
 	if err != nil {
 		t.Error(err)
@@ -80,6 +74,7 @@ func TestGetBuiltInRoleAssignments(t *testing.T) {
 		"Grafana Admin": {
 			{
 				Version:     1,
+				DisplayName: "Grafana Admin",
 				Name:        "grafana:roles:users:admin:read",
 				UID:         "tJTyTNqMk",
 				Description: "",
@@ -88,16 +83,20 @@ func TestGetBuiltInRoleAssignments(t *testing.T) {
 		"Viewer": {
 			{
 				Version:     2,
+				DisplayName: "Viewer",
 				Name:        "custom:reports:editor",
 				UID:         "tJTyTNqMk1",
 				Description: "Role to allow users to create/read reports",
 			},
 		},
 	}
-
-	if len(expected["Viewer"]) != len(resp.Payload["Viewer"]) || len(expected["Grafana Admin"]) != len(resp.Payload["Grafana Admin"]) {
+	if cmp.Diff(expected["Grafana Admin"][0], resp.Payload[0]) != "" {
 		t.Error("Unexpected built-in role assignments.")
 	}
+	if cmp.Diff(expected["Viewer"][0], resp.Payload[1]) != "" {
+		t.Error("Unexpected built-in role assignments.")
+	}
+
 }
 
 func TestDeleteBuiltInRoleAssignment(t *testing.T) {
@@ -108,13 +107,13 @@ func TestDeleteBuiltInRoleAssignment(t *testing.T) {
 
 	global := false
 
-	_, err := client.AccessControl.RemoveBuiltinRole(
-		access_control.NewRemoveBuiltinRoleParams().
+	_, err := client.AccessControl.RemoveUserRole(
+		access_control.NewRemoveUserRoleParams().
 			WithRoleUID("test:policy").
-			WithBuiltinRole("Viewer").
 			WithGlobal(&global),
 		nil,
 	)
+
 	if err != nil {
 		t.Error(err)
 	}

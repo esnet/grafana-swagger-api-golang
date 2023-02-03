@@ -3,9 +3,9 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/datasources"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/datasources"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (

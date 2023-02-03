@@ -3,9 +3,9 @@ package gapi
 import (
 	"testing"
 
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/legacy_alerts_notification_channels"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/models"
 	"github.com/gobs/pretty"
-	"github.com/grafana/grafana-api-golang-client/goclient/client/legacy_alerts_notification_channels"
-	"github.com/grafana/grafana-api-golang-client/goclient/models"
 )
 
 const (
