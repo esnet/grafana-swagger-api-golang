@@ -18,7 +18,7 @@ import (
 // swagger:model AlertQuery
 type AlertQuery struct {
 
-	// Grafana data source unique identifier; it should be '-100' for a Server Side Expression operation.
+	// Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation.
 	DatasourceUID string `json:"datasourceUid,omitempty"`
 
 	// JSON is the raw JSON query and includes the above properties as well as custom properties.

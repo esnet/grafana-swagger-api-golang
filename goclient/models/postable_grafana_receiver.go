@@ -27,7 +27,7 @@ type PostableGrafanaReceiver struct {
 	SecureSettings map[string]string `json:"secureSettings,omitempty"`
 
 	// settings
-	Settings JSON `json:"settings,omitempty"`
+	Settings RawMessage `json:"settings,omitempty"`
 
 	// type
 	Type string `json:"type,omitempty"`

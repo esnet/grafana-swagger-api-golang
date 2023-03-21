@@ -19,6 +19,9 @@ import (
 // swagger:model GettableApiReceiver
 type GettableAPIReceiver struct {
 
+	// discord configs
+	DiscordConfigs []*DiscordConfig `json:"discord_configs"`
+
 	// email configs
 	EmailConfigs []*EmailConfig `json:"email_configs"`
 
@@ -49,6 +52,9 @@ type GettableAPIReceiver struct {
 	// victorops configs
 	VictoropsConfigs []*VictorOpsConfig `json:"victorops_configs"`
 
+	// webex configs
+	WebexConfigs []*WebexConfig `json:"webex_configs"`
+
 	// webhook configs
 	WebhookConfigs []*WebhookConfig `json:"webhook_configs"`
 
@@ -59,6 +65,10 @@ type GettableAPIReceiver struct {
 // Validate validates this gettable Api receiver
 func (m *GettableAPIReceiver) Validate(formats strfmt.Registry) error {
 	var res []error
+
+	if err := m.validateDiscordConfigs(formats); err != nil {
+		res = append(res, err)
+	}
 
 	if err := m.validateEmailConfigs(formats); err != nil {
 		res = append(res, err)
@@ -96,6 +106,10 @@ func (m *GettableAPIReceiver) Validate(formats strfmt.Registry) error {
 		res = append(res, err)
 	}
 
+	if err := m.validateWebexConfigs(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateWebhookConfigs(formats); err != nil {
 		res = append(res, err)
 	}
@@ -107,6 +121,32 @@ func (m *GettableAPIReceiver) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *GettableAPIReceiver) validateDiscordConfigs(formats strfmt.Registry) error {
+	if swag.IsZero(m.DiscordConfigs) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(m.DiscordConfigs); i++ {
+		if swag.IsZero(m.DiscordConfigs[i]) { // not required
+			continue
+		}
+
+		if m.DiscordConfigs[i] != nil {
+			if err := m.DiscordConfigs[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("discord_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("discord_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
 	return nil
 }
 
@@ -344,6 +384,32 @@ func (m *GettableAPIReceiver) validateVictoropsConfigs(formats strfmt.Registry) 
 	return nil
 }
 
+func (m *GettableAPIReceiver) validateWebexConfigs(formats strfmt.Registry) error {
+	if swag.IsZero(m.WebexConfigs) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(m.WebexConfigs); i++ {
+		if swag.IsZero(m.WebexConfigs[i]) { // not required
+			continue
+		}
+
+		if m.WebexConfigs[i] != nil {
+			if err := m.WebexConfigs[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("webex_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("webex_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
 func (m *GettableAPIReceiver) validateWebhookConfigs(formats strfmt.Registry) error {
 	if swag.IsZero(m.WebhookConfigs) { // not required
 		return nil
@@ -400,6 +466,10 @@ func (m *GettableAPIReceiver) validateWechatConfigs(formats strfmt.Registry) err
 func (m *GettableAPIReceiver) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateDiscordConfigs(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateEmailConfigs(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -436,6 +506,10 @@ func (m *GettableAPIReceiver) ContextValidate(ctx context.Context, formats strfm
 		res = append(res, err)
 	}
 
+	if err := m.contextValidateWebexConfigs(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateWebhookConfigs(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -447,6 +521,26 @@ func (m *GettableAPIReceiver) ContextValidate(ctx context.Context, formats strfm
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *GettableAPIReceiver) contextValidateDiscordConfigs(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(m.DiscordConfigs); i++ {
+
+		if m.DiscordConfigs[i] != nil {
+			if err := m.DiscordConfigs[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("discord_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("discord_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
 	return nil
 }
 
@@ -620,6 +714,26 @@ func (m *GettableAPIReceiver) contextValidateVictoropsConfigs(ctx context.Contex
 					return ve.ValidateName("victorops_configs" + "." + strconv.Itoa(i))
 				} else if ce, ok := err.(*errors.CompositeError); ok {
 					return ce.ValidateName("victorops_configs" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
+	return nil
+}
+
+func (m *GettableAPIReceiver) contextValidateWebexConfigs(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(m.WebexConfigs); i++ {
+
+		if m.WebexConfigs[i] != nil {
+			if err := m.WebexConfigs[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("webex_configs" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("webex_configs" + "." + strconv.Itoa(i))
 				}
 				return err
 			}

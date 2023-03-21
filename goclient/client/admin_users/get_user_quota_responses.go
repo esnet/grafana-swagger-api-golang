@@ -69,13 +69,13 @@ GetUserQuotaOK describes a response with status code 200, with default header va
 (empty)
 */
 type GetUserQuotaOK struct {
-	Payload []*models.UserQuotaDTO
+	Payload []*models.QuotaDTO
 }
 
 func (o *GetUserQuotaOK) Error() string {
 	return fmt.Sprintf("[GET /admin/users/{user_id}/quotas][%d] getUserQuotaOK  %+v", 200, o.Payload)
 }
-func (o *GetUserQuotaOK) GetPayload() []*models.UserQuotaDTO {
+func (o *GetUserQuotaOK) GetPayload() []*models.QuotaDTO {
 	return o.Payload
 }
 

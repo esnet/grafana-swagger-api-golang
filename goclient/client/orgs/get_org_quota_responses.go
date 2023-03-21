@@ -69,13 +69,13 @@ GetOrgQuotaOK describes a response with status code 200, with default header val
 (empty)
 */
 type GetOrgQuotaOK struct {
-	Payload []*models.UserQuotaDTO
+	Payload []*models.QuotaDTO
 }
 
 func (o *GetOrgQuotaOK) Error() string {
 	return fmt.Sprintf("[GET /orgs/{org_id}/quotas][%d] getOrgQuotaOK  %+v", 200, o.Payload)
 }
-func (o *GetOrgQuotaOK) GetPayload() []*models.UserQuotaDTO {
+func (o *GetOrgQuotaOK) GetPayload() []*models.QuotaDTO {
 	return o.Payload
 }
 

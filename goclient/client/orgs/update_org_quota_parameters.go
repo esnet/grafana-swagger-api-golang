@@ -65,7 +65,7 @@ UpdateOrgQuotaParams contains all the parameters to send to the API endpoint
 type UpdateOrgQuotaParams struct {
 
 	// Body.
-	Body *models.UpdateOrgQuotaCmd
+	Body *models.UpdateQuotaCmd
 
 	// OrgID.
 	//
@@ -129,13 +129,13 @@ func (o *UpdateOrgQuotaParams) SetHTTPClient(client *http.Client) {
 }
 
 // WithBody adds the body to the update org quota params
-func (o *UpdateOrgQuotaParams) WithBody(body *models.UpdateOrgQuotaCmd) *UpdateOrgQuotaParams {
+func (o *UpdateOrgQuotaParams) WithBody(body *models.UpdateQuotaCmd) *UpdateOrgQuotaParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update org quota params
-func (o *UpdateOrgQuotaParams) SetBody(body *models.UpdateOrgQuotaCmd) {
+func (o *UpdateOrgQuotaParams) SetBody(body *models.UpdateQuotaCmd) {
 	o.Body = body
 }
 

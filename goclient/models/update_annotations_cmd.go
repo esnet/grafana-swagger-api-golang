@@ -17,6 +17,9 @@ import (
 // swagger:model UpdateAnnotationsCmd
 type UpdateAnnotationsCmd struct {
 
+	// data
+	Data JSON `json:"data,omitempty"`
+
 	// id
 	ID int64 `json:"id,omitempty"`
 

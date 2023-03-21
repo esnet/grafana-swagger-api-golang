@@ -31,6 +31,9 @@ type PostableGrafanaRule struct {
 	// Enum: [OK Alerting Error]
 	ExecErrState string `json:"exec_err_state,omitempty"`
 
+	// is paused
+	IsPaused bool `json:"is_paused,omitempty"`
+
 	// no data state
 	// Enum: [Alerting NoData OK]
 	NoDataState string `json:"no_data_state,omitempty"`

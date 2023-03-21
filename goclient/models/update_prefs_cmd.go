@@ -26,8 +26,8 @@ type UpdatePrefsCmd struct {
 	// home dashboard UID
 	HomeDashboardUID string `json:"homeDashboardUID,omitempty"`
 
-	// locale
-	Locale string `json:"locale,omitempty"`
+	// language
+	Language string `json:"language,omitempty"`
 
 	// navbar
 	Navbar *NavbarPreference `json:"navbar,omitempty"`

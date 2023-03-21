@@ -20,8 +20,8 @@ type UpdateTeamCommand struct {
 	// email
 	Email string `json:"Email,omitempty"`
 
-	// Id
-	ID int64 `json:"Id,omitempty"`
+	// ID
+	ID int64 `json:"ID,omitempty"`
 
 	// name
 	Name string `json:"Name,omitempty"`

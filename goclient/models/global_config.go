@@ -76,8 +76,14 @@ type GlobalConfig struct {
 	// victorops api key
 	VictoropsAPIKey Secret `json:"victorops_api_key,omitempty"`
 
+	// victorops api key file
+	VictoropsAPIKeyFile string `json:"victorops_api_key_file,omitempty"`
+
 	// victorops api url
 	VictoropsAPIURL *URL `json:"victorops_api_url,omitempty"`
+
+	// webex api url
+	WebexAPIURL *URL `json:"webex_api_url,omitempty"`
 
 	// wechat api corp id
 	WechatAPICorpID string `json:"wechat_api_corp_id,omitempty"`
@@ -138,6 +144,10 @@ func (m *GlobalConfig) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateVictoropsAPIURL(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateWebexAPIURL(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -373,6 +383,25 @@ func (m *GlobalConfig) validateVictoropsAPIURL(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *GlobalConfig) validateWebexAPIURL(formats strfmt.Registry) error {
+	if swag.IsZero(m.WebexAPIURL) { // not required
+		return nil
+	}
+
+	if m.WebexAPIURL != nil {
+		if err := m.WebexAPIURL.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("webex_api_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("webex_api_url")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 func (m *GlobalConfig) validateWechatAPISecret(formats strfmt.Registry) error {
 	if swag.IsZero(m.WechatAPISecret) { // not required
 		return nil
@@ -458,6 +487,10 @@ func (m *GlobalConfig) ContextValidate(ctx context.Context, formats strfmt.Regis
 	}
 
 	if err := m.contextValidateVictoropsAPIURL(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateWebexAPIURL(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -649,6 +682,22 @@ func (m *GlobalConfig) contextValidateVictoropsAPIURL(ctx context.Context, forma
 				return ve.ValidateName("victorops_api_url")
 			} else if ce, ok := err.(*errors.CompositeError); ok {
 				return ce.ValidateName("victorops_api_url")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (m *GlobalConfig) contextValidateWebexAPIURL(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.WebexAPIURL != nil {
+		if err := m.WebexAPIURL.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("webex_api_url")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("webex_api_url")
 			}
 			return err
 		}

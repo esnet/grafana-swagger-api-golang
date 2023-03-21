@@ -30,6 +30,9 @@ type TLSConfig struct {
 	// The client key file for the targets.
 	KeyFile string `json:"key_file,omitempty"`
 
+	// max version
+	MaxVersion TLSVersion `json:"max_version,omitempty"`
+
 	// min version
 	MinVersion TLSVersion `json:"min_version,omitempty"`
 
@@ -41,6 +44,10 @@ type TLSConfig struct {
 func (m *TLSConfig) Validate(formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.validateMaxVersion(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateMinVersion(formats); err != nil {
 		res = append(res, err)
 	}
@@ -48,6 +55,23 @@ func (m *TLSConfig) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *TLSConfig) validateMaxVersion(formats strfmt.Registry) error {
+	if swag.IsZero(m.MaxVersion) { // not required
+		return nil
+	}
+
+	if err := m.MaxVersion.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("max_version")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("max_version")
+		}
+		return err
+	}
+
 	return nil
 }
 
@@ -72,6 +96,10 @@ func (m *TLSConfig) validateMinVersion(formats strfmt.Registry) error {
 func (m *TLSConfig) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateMaxVersion(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateMinVersion(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -79,6 +107,20 @@ func (m *TLSConfig) ContextValidate(ctx context.Context, formats strfmt.Registry
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *TLSConfig) contextValidateMaxVersion(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.MaxVersion.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("max_version")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("max_version")
+		}
+		return err
+	}
+
 	return nil
 }
 

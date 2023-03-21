@@ -48,22 +48,22 @@ func NewRoutePutTemplateAccepted() *RoutePutTemplateAccepted {
 /*
 RoutePutTemplateAccepted describes a response with status code 202, with default header values.
 
-MessageTemplate
+NotificationTemplate
 */
 type RoutePutTemplateAccepted struct {
-	Payload *models.MessageTemplate
+	Payload *models.NotificationTemplate
 }
 
 func (o *RoutePutTemplateAccepted) Error() string {
 	return fmt.Sprintf("[PUT /api/v1/provisioning/templates/{name}][%d] routePutTemplateAccepted  %+v", 202, o.Payload)
 }
-func (o *RoutePutTemplateAccepted) GetPayload() *models.MessageTemplate {
+func (o *RoutePutTemplateAccepted) GetPayload() *models.NotificationTemplate {
 	return o.Payload
 }
 
 func (o *RoutePutTemplateAccepted) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.MessageTemplate)
+	o.Payload = new(models.NotificationTemplate)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

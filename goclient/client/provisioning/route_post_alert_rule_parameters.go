@@ -66,6 +66,9 @@ type RoutePostAlertRuleParams struct {
 	// Body.
 	Body *models.ProvisionedAlertRule
 
+	// XDisableProvenance.
+	XDisableProvenance *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -130,6 +133,17 @@ func (o *RoutePostAlertRuleParams) SetBody(body *models.ProvisionedAlertRule) {
 	o.Body = body
 }
 
+// WithXDisableProvenance adds the xDisableProvenance to the route post alert rule params
+func (o *RoutePostAlertRuleParams) WithXDisableProvenance(xDisableProvenance *string) *RoutePostAlertRuleParams {
+	o.SetXDisableProvenance(xDisableProvenance)
+	return o
+}
+
+// SetXDisableProvenance adds the xDisableProvenance to the route post alert rule params
+func (o *RoutePostAlertRuleParams) SetXDisableProvenance(xDisableProvenance *string) {
+	o.XDisableProvenance = xDisableProvenance
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *RoutePostAlertRuleParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -139,6 +153,14 @@ func (o *RoutePostAlertRuleParams) WriteToRequest(r runtime.ClientRequest, reg s
 	var res []error
 	if o.Body != nil {
 		if err := r.SetBodyParam(o.Body); err != nil {
+			return err
+		}
+	}
+
+	if o.XDisableProvenance != nil {
+
+		// header param X-Disable-Provenance
+		if err := r.SetHeaderParam("X-Disable-Provenance", *o.XDisableProvenance); err != nil {
 			return err
 		}
 	}

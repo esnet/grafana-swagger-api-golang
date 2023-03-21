@@ -64,7 +64,7 @@ RoutePutTemplateParams contains all the parameters to send to the API endpoint
 type RoutePutTemplateParams struct {
 
 	// Body.
-	Body *models.MessageTemplateContent
+	Body *models.NotificationTemplateContent
 
 	/* Name.
 
@@ -126,13 +126,13 @@ func (o *RoutePutTemplateParams) SetHTTPClient(client *http.Client) {
 }
 
 // WithBody adds the body to the route put template params
-func (o *RoutePutTemplateParams) WithBody(body *models.MessageTemplateContent) *RoutePutTemplateParams {
+func (o *RoutePutTemplateParams) WithBody(body *models.NotificationTemplateContent) *RoutePutTemplateParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the route put template params
-func (o *RoutePutTemplateParams) SetBody(body *models.MessageTemplateContent) {
+func (o *RoutePutTemplateParams) SetBody(body *models.NotificationTemplateContent) {
 	o.Body = body
 }
 

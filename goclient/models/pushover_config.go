@@ -48,6 +48,9 @@ type PushoverConfig struct {
 	// token
 	Token Secret `json:"token,omitempty"`
 
+	// token file
+	TokenFile string `json:"token_file,omitempty"`
+
 	// url
 	URL string `json:"url,omitempty"`
 
@@ -56,6 +59,9 @@ type PushoverConfig struct {
 
 	// user key
 	UserKey Secret `json:"user_key,omitempty"`
+
+	// user key file
+	UserKeyFile string `json:"user_key_file,omitempty"`
 }
 
 // Validate validates this pushover config

@@ -65,7 +65,7 @@ UpdateUserQuotaParams contains all the parameters to send to the API endpoint
 type UpdateUserQuotaParams struct {
 
 	// Body.
-	Body *models.UpdateUserQuotaCmd
+	Body *models.UpdateQuotaCmd
 
 	// QuotaTarget.
 	QuotaTarget string
@@ -129,13 +129,13 @@ func (o *UpdateUserQuotaParams) SetHTTPClient(client *http.Client) {
 }
 
 // WithBody adds the body to the update user quota params
-func (o *UpdateUserQuotaParams) WithBody(body *models.UpdateUserQuotaCmd) *UpdateUserQuotaParams {
+func (o *UpdateUserQuotaParams) WithBody(body *models.UpdateQuotaCmd) *UpdateUserQuotaParams {
 	o.SetBody(body)
 	return o
 }
 
 // SetBody adds the body to the update user quota params
-func (o *UpdateUserQuotaParams) SetBody(body *models.UpdateUserQuotaCmd) {
+func (o *UpdateUserQuotaParams) SetBody(body *models.UpdateQuotaCmd) {
 	o.Body = body
 }
 

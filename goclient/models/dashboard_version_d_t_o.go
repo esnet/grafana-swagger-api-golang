@@ -23,15 +23,17 @@ type DashboardVersionDTO struct {
 	// Format: date-time
 	Created strfmt.DateTime `json:"created,omitempty"`
 
-	// Since we get created by with left join user table, this can be null technically,
-	// but in reality it will always be set, when database is not corrupted.
-	CreatedBy string `json:"createdBy,omitempty"`
+	// created by
+	CreatedBy int64 `json:"createdBy,omitempty"`
 
 	// dashboard Id
 	DashboardID int64 `json:"dashboardId,omitempty"`
 
 	// dashboard Uid
 	DashboardUID string `json:"dashboardUid,omitempty"`
+
+	// data
+	Data JSON `json:"data,omitempty"`
 
 	// id
 	ID int64 `json:"id,omitempty"`

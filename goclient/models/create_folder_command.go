@@ -21,8 +21,8 @@ type CreateFolderCommand struct {
 	// description
 	Description string `json:"description,omitempty"`
 
-	// parent uid
-	ParentUID string `json:"parent_uid,omitempty"`
+	// parent Uid
+	ParentUID string `json:"parentUid,omitempty"`
 
 	// title
 	Title string `json:"title,omitempty"`

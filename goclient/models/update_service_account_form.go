@@ -29,6 +29,9 @@ type UpdateServiceAccountForm struct {
 	// role
 	// Enum: [Viewer Editor Admin]
 	Role string `json:"role,omitempty"`
+
+	// service account Id
+	ServiceAccountID int64 `json:"serviceAccountId,omitempty"`
 }
 
 // Validate validates this update service account form

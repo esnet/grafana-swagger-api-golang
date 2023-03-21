@@ -22,6 +22,9 @@ type OrgUserDTO struct {
 	// access control
 	AccessControl map[string]bool `json:"accessControl,omitempty"`
 
+	// auth labels
+	AuthLabels []string `json:"authLabels"`
+
 	// avatar Url
 	AvatarURL string `json:"avatarUrl,omitempty"`
 

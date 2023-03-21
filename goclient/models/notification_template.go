@@ -13,10 +13,10 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// MessageTemplate message template
+// NotificationTemplate notification template
 //
-// swagger:model MessageTemplate
-type MessageTemplate struct {
+// swagger:model NotificationTemplate
+type NotificationTemplate struct {
 
 	// name
 	Name string `json:"name,omitempty"`
@@ -28,8 +28,8 @@ type MessageTemplate struct {
 	Template string `json:"template,omitempty"`
 }
 
-// Validate validates this message template
-func (m *MessageTemplate) Validate(formats strfmt.Registry) error {
+// Validate validates this notification template
+func (m *NotificationTemplate) Validate(formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.validateProvenance(formats); err != nil {
@@ -42,7 +42,7 @@ func (m *MessageTemplate) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-func (m *MessageTemplate) validateProvenance(formats strfmt.Registry) error {
+func (m *NotificationTemplate) validateProvenance(formats strfmt.Registry) error {
 	if swag.IsZero(m.Provenance) { // not required
 		return nil
 	}
@@ -59,8 +59,8 @@ func (m *MessageTemplate) validateProvenance(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validate this message template based on the context it is used
-func (m *MessageTemplate) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validate this notification template based on the context it is used
+func (m *NotificationTemplate) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.contextValidateProvenance(ctx, formats); err != nil {
@@ -73,7 +73,7 @@ func (m *MessageTemplate) ContextValidate(ctx context.Context, formats strfmt.Re
 	return nil
 }
 
-func (m *MessageTemplate) contextValidateProvenance(ctx context.Context, formats strfmt.Registry) error {
+func (m *NotificationTemplate) contextValidateProvenance(ctx context.Context, formats strfmt.Registry) error {
 
 	if err := m.Provenance.ContextValidate(ctx, formats); err != nil {
 		if ve, ok := err.(*errors.Validation); ok {
@@ -88,7 +88,7 @@ func (m *MessageTemplate) contextValidateProvenance(ctx context.Context, formats
 }
 
 // MarshalBinary interface implementation
-func (m *MessageTemplate) MarshalBinary() ([]byte, error) {
+func (m *NotificationTemplate) MarshalBinary() ([]byte, error) {
 	if m == nil {
 		return nil, nil
 	}
@@ -96,8 +96,8 @@ func (m *MessageTemplate) MarshalBinary() ([]byte, error) {
 }
 
 // UnmarshalBinary interface implementation
-func (m *MessageTemplate) UnmarshalBinary(b []byte) error {
-	var res MessageTemplate
+func (m *NotificationTemplate) UnmarshalBinary(b []byte) error {
+	var res NotificationTemplate
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

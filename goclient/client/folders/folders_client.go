@@ -210,9 +210,12 @@ func (a *Client) GetFolderByUID(params *GetFolderByUIDParams, authInfo runtime.C
 }
 
 /*
-GetFolders gets all folders
+	GetFolders gets all folders
 
-Returns all folders that the authenticated user has permission to view.
+	Returns all folders that the authenticated user has permission to view.
+
+If nested folders are enabled, it expects an additional query parameter with the parent folder UID
+and returns the immediate subfolders.
 */
 func (a *Client) GetFolders(params *GetFoldersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFoldersOK, error) {
 	// TODO: Validate the params before sending

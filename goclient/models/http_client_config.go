@@ -44,6 +44,9 @@ type HTTPClientConfig struct {
 	// oauth2
 	Oauth2 *OAuth2 `json:"oauth2,omitempty"`
 
+	// proxy connect header
+	ProxyConnectHeader Header `json:"proxy_connect_header,omitempty"`
+
 	// proxy url
 	ProxyURL *URL `json:"proxy_url,omitempty"`
 
@@ -68,6 +71,10 @@ func (m *HTTPClientConfig) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateOauth2(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateProxyConnectHeader(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -159,6 +166,25 @@ func (m *HTTPClientConfig) validateOauth2(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *HTTPClientConfig) validateProxyConnectHeader(formats strfmt.Registry) error {
+	if swag.IsZero(m.ProxyConnectHeader) { // not required
+		return nil
+	}
+
+	if m.ProxyConnectHeader != nil {
+		if err := m.ProxyConnectHeader.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("proxy_connect_header")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("proxy_connect_header")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 func (m *HTTPClientConfig) validateProxyURL(formats strfmt.Registry) error {
 	if swag.IsZero(m.ProxyURL) { // not required
 		return nil
@@ -214,6 +240,10 @@ func (m *HTTPClientConfig) ContextValidate(ctx context.Context, formats strfmt.R
 	}
 
 	if err := m.contextValidateOauth2(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateProxyConnectHeader(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -288,6 +318,20 @@ func (m *HTTPClientConfig) contextValidateOauth2(ctx context.Context, formats st
 			}
 			return err
 		}
+	}
+
+	return nil
+}
+
+func (m *HTTPClientConfig) contextValidateProxyConnectHeader(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.ProxyConnectHeader.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("proxy_connect_header")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("proxy_connect_header")
+		}
+		return err
 	}
 
 	return nil

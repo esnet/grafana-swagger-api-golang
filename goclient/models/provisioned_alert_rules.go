@@ -14,13 +14,13 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// MessageTemplates message templates
+// ProvisionedAlertRules provisioned alert rules
 //
-// swagger:model MessageTemplates
-type MessageTemplates []*MessageTemplate
+// swagger:model ProvisionedAlertRules
+type ProvisionedAlertRules []*ProvisionedAlertRule
 
-// Validate validates this message templates
-func (m MessageTemplates) Validate(formats strfmt.Registry) error {
+// Validate validates this provisioned alert rules
+func (m ProvisionedAlertRules) Validate(formats strfmt.Registry) error {
 	var res []error
 
 	for i := 0; i < len(m); i++ {
@@ -47,8 +47,8 @@ func (m MessageTemplates) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validate this message templates based on the context it is used
-func (m MessageTemplates) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validate this provisioned alert rules based on the context it is used
+func (m ProvisionedAlertRules) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	for i := 0; i < len(m); i++ {

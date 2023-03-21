@@ -12,21 +12,25 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// UpdateFolderCommand update folder command
+// UpdateFolderCommand UpdateFolderCommand captures the information required by the folder service
+// to update a folder. Use Move to update a folder's parent folder.
 //
 // swagger:model UpdateFolderCommand
 type UpdateFolderCommand struct {
 
-	// overwrite
+	// NewDescription it's an optional parameter used for overriding the existing folder description
+	Description string `json:"description,omitempty"`
+
+	// Overwrite only used by the legacy folder implementation
 	Overwrite bool `json:"overwrite,omitempty"`
 
-	// title
+	// NewTitle it's an optional parameter used for overriding the existing folder title
 	Title string `json:"title,omitempty"`
 
-	// uid
+	// NewUID it's an optional parameter used for overriding the existing folder UID
 	UID string `json:"uid,omitempty"`
 
-	// version
+	// Version only used by the legacy folder implementation
 	Version int64 `json:"version,omitempty"`
 }
 

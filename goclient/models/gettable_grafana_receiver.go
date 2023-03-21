@@ -31,7 +31,7 @@ type GettableGrafanaReceiver struct {
 	SecureFields map[string]bool `json:"secureFields,omitempty"`
 
 	// settings
-	Settings JSON `json:"settings,omitempty"`
+	Settings RawMessage `json:"settings,omitempty"`
 
 	// type
 	Type string `json:"type,omitempty"`

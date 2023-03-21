@@ -14,10 +14,10 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// SearchServiceAccountsResult swagger: model
+// SearchOrgServiceAccountsResult swagger: model
 //
-// swagger:model SearchServiceAccountsResult
-type SearchServiceAccountsResult struct {
+// swagger:model SearchOrgServiceAccountsResult
+type SearchOrgServiceAccountsResult struct {
 
 	// page
 	Page int64 `json:"page,omitempty"`
@@ -34,8 +34,8 @@ type SearchServiceAccountsResult struct {
 	TotalCount int64 `json:"totalCount,omitempty"`
 }
 
-// Validate validates this search service accounts result
-func (m *SearchServiceAccountsResult) Validate(formats strfmt.Registry) error {
+// Validate validates this search org service accounts result
+func (m *SearchOrgServiceAccountsResult) Validate(formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.validateServiceAccounts(formats); err != nil {
@@ -48,7 +48,7 @@ func (m *SearchServiceAccountsResult) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-func (m *SearchServiceAccountsResult) validateServiceAccounts(formats strfmt.Registry) error {
+func (m *SearchOrgServiceAccountsResult) validateServiceAccounts(formats strfmt.Registry) error {
 	if swag.IsZero(m.ServiceAccounts) { // not required
 		return nil
 	}
@@ -74,8 +74,8 @@ func (m *SearchServiceAccountsResult) validateServiceAccounts(formats strfmt.Reg
 	return nil
 }
 
-// ContextValidate validate this search service accounts result based on the context it is used
-func (m *SearchServiceAccountsResult) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validate this search org service accounts result based on the context it is used
+func (m *SearchOrgServiceAccountsResult) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	if err := m.contextValidateServiceAccounts(ctx, formats); err != nil {
@@ -88,7 +88,7 @@ func (m *SearchServiceAccountsResult) ContextValidate(ctx context.Context, forma
 	return nil
 }
 
-func (m *SearchServiceAccountsResult) contextValidateServiceAccounts(ctx context.Context, formats strfmt.Registry) error {
+func (m *SearchOrgServiceAccountsResult) contextValidateServiceAccounts(ctx context.Context, formats strfmt.Registry) error {
 
 	for i := 0; i < len(m.ServiceAccounts); i++ {
 
@@ -109,7 +109,7 @@ func (m *SearchServiceAccountsResult) contextValidateServiceAccounts(ctx context
 }
 
 // MarshalBinary interface implementation
-func (m *SearchServiceAccountsResult) MarshalBinary() ([]byte, error) {
+func (m *SearchOrgServiceAccountsResult) MarshalBinary() ([]byte, error) {
 	if m == nil {
 		return nil, nil
 	}
@@ -117,8 +117,8 @@ func (m *SearchServiceAccountsResult) MarshalBinary() ([]byte, error) {
 }
 
 // UnmarshalBinary interface implementation
-func (m *SearchServiceAccountsResult) UnmarshalBinary(b []byte) error {
-	var res SearchServiceAccountsResult
+func (m *SearchOrgServiceAccountsResult) UnmarshalBinary(b []byte) error {
+	var res SearchOrgServiceAccountsResult
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

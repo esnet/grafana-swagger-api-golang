@@ -24,6 +24,9 @@ type FolderSearchHit struct {
 	// id
 	ID int64 `json:"id,omitempty"`
 
+	// parent Uid
+	ParentUID string `json:"parentUid,omitempty"`
+
 	// title
 	Title string `json:"title,omitempty"`
 

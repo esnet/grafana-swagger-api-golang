@@ -13,6 +13,8 @@ import (
 
 // DataTopic DataTopic is used to identify which topic the frame should be assigned to.
 //
+// nolint:revive
+//
 // swagger:model DataTopic
 type DataTopic string
 

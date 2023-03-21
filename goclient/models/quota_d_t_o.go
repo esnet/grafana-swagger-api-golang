@@ -12,30 +12,39 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// UpdateOrgQuotaCmd update org quota cmd
+// QuotaDTO quota d t o
 //
-// swagger:model UpdateOrgQuotaCmd
-type UpdateOrgQuotaCmd struct {
+// swagger:model QuotaDTO
+type QuotaDTO struct {
 
 	// limit
 	Limit int64 `json:"limit,omitempty"`
 
+	// org id
+	OrgID int64 `json:"org_id,omitempty"`
+
 	// target
 	Target string `json:"target,omitempty"`
+
+	// used
+	Used int64 `json:"used,omitempty"`
+
+	// user id
+	UserID int64 `json:"user_id,omitempty"`
 }
 
-// Validate validates this update org quota cmd
-func (m *UpdateOrgQuotaCmd) Validate(formats strfmt.Registry) error {
+// Validate validates this quota d t o
+func (m *QuotaDTO) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validates this update org quota cmd based on context it is used
-func (m *UpdateOrgQuotaCmd) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validates this quota d t o based on context it is used
+func (m *QuotaDTO) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	return nil
 }
 
 // MarshalBinary interface implementation
-func (m *UpdateOrgQuotaCmd) MarshalBinary() ([]byte, error) {
+func (m *QuotaDTO) MarshalBinary() ([]byte, error) {
 	if m == nil {
 		return nil, nil
 	}
@@ -43,8 +52,8 @@ func (m *UpdateOrgQuotaCmd) MarshalBinary() ([]byte, error) {
 }
 
 // UnmarshalBinary interface implementation
-func (m *UpdateOrgQuotaCmd) UnmarshalBinary(b []byte) error {
-	var res UpdateOrgQuotaCmd
+func (m *QuotaDTO) UnmarshalBinary(b []byte) error {
+	var res QuotaDTO
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

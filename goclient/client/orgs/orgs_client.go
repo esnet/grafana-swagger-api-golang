@@ -46,6 +46,8 @@ type ClientService interface {
 
 	RemoveOrgUser(params *RemoveOrgUserParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RemoveOrgUserOK, error)
 
+	SearchOrgUsers(params *SearchOrgUsersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOrgUsersOK, error)
+
 	SearchOrgs(params *SearchOrgsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOrgsOK, error)
 
 	UpdateOrg(params *UpdateOrgParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateOrgOK, error)
@@ -385,6 +387,49 @@ func (a *Client) RemoveOrgUser(params *RemoveOrgUserParams, authInfo runtime.Cli
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for removeOrgUser: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+	SearchOrgUsers searches users in organization
+
+	If you are running Grafana Enterprise and have Fine-grained access control enabled
+
+you need to have a permission with action: `org.users:read` with scope `users:*`.
+*/
+func (a *Client) SearchOrgUsers(params *SearchOrgUsersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*SearchOrgUsersOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewSearchOrgUsersParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "searchOrgUsers",
+		Method:             "GET",
+		PathPattern:        "/orgs/{org_id}/users/search",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &SearchOrgUsersReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*SearchOrgUsersOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for searchOrgUsers: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 

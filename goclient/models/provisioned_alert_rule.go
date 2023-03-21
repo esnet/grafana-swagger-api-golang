@@ -31,7 +31,7 @@ type ProvisionedAlertRule struct {
 	Condition *string `json:"condition"`
 
 	// data
-	// Example: [{"datasourceUid":"-100","model":{"conditions":[{"evaluator":{"params":[0,0],"type":"gt"},"operator":{"type":"and"},"query":{"params":[]},"reducer":{"params":[],"type":"avg"},"type":"query"}],"datasource":{"type":"__expr__","uid":"__expr__"},"expression":"1 == 1","hide":false,"intervalMs":1000,"maxDataPoints":43200,"refId":"A","type":"math"},"queryType":"","refId":"A","relativeTimeRange":{"from":0,"to":0}}]
+	// Example: [{"datasourceUid":"__expr__","model":{"conditions":[{"evaluator":{"params":[0,0],"type":"gt"},"operator":{"type":"and"},"query":{"params":[]},"reducer":{"params":[],"type":"avg"},"type":"query"}],"datasource":{"type":"__expr__","uid":"__expr__"},"expression":"1 == 1","hide":false,"intervalMs":1000,"maxDataPoints":43200,"refId":"A","type":"math"},"queryType":"","refId":"A","relativeTimeRange":{"from":0,"to":0}}]
 	// Required: true
 	Data []*AlertQuery `json:"data"`
 
@@ -51,6 +51,10 @@ type ProvisionedAlertRule struct {
 
 	// id
 	ID int64 `json:"id,omitempty"`
+
+	// is paused
+	// Example: true
+	IsPaused bool `json:"isPaused,omitempty"`
 
 	// labels
 	// Example: {"team":"sre-team-1"}

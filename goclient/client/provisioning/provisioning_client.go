@@ -40,7 +40,15 @@ type ClientService interface {
 
 	RouteGetAlertRule(params *RouteGetAlertRuleParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleOK, error)
 
+	RouteGetAlertRuleExport(params *RouteGetAlertRuleExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleExportOK, error)
+
 	RouteGetAlertRuleGroup(params *RouteGetAlertRuleGroupParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleGroupOK, error)
+
+	RouteGetAlertRuleGroupExport(params *RouteGetAlertRuleGroupExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleGroupExportOK, error)
+
+	RouteGetAlertRules(params *RouteGetAlertRulesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRulesOK, error)
+
+	RouteGetAlertRulesExport(params *RouteGetAlertRulesExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRulesExportOK, error)
 
 	RouteGetContactpoints(params *RouteGetContactpointsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetContactpointsOK, error)
 
@@ -273,6 +281,45 @@ func (a *Client) RouteGetAlertRule(params *RouteGetAlertRuleParams, authInfo run
 }
 
 /*
+RouteGetAlertRuleExport exports an alert rule in provisioning file format
+*/
+func (a *Client) RouteGetAlertRuleExport(params *RouteGetAlertRuleExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleExportOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRouteGetAlertRuleExportParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "RouteGetAlertRuleExport",
+		Method:             "GET",
+		PathPattern:        "/api/v1/provisioning/alert-rules/{UID}/export",
+		ProducesMediaTypes: []string{"application/json", "application/yaml", "text/yaml"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &RouteGetAlertRuleExportReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*RouteGetAlertRuleExportOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for RouteGetAlertRuleExport: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
 RouteGetAlertRuleGroup gets a rule group
 */
 func (a *Client) RouteGetAlertRuleGroup(params *RouteGetAlertRuleGroupParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleGroupOK, error) {
@@ -308,6 +355,123 @@ func (a *Client) RouteGetAlertRuleGroup(params *RouteGetAlertRuleGroupParams, au
 	// unexpected success response
 	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
 	msg := fmt.Sprintf("unexpected success response for RouteGetAlertRuleGroup: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+RouteGetAlertRuleGroupExport exports an alert rule group in provisioning file format
+*/
+func (a *Client) RouteGetAlertRuleGroupExport(params *RouteGetAlertRuleGroupExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRuleGroupExportOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRouteGetAlertRuleGroupExportParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "RouteGetAlertRuleGroupExport",
+		Method:             "GET",
+		PathPattern:        "/api/v1/provisioning/folder/{FolderUID}/rule-groups/{Group}/export",
+		ProducesMediaTypes: []string{"application/json", "application/yaml", "text/yaml"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &RouteGetAlertRuleGroupExportReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*RouteGetAlertRuleGroupExportOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for RouteGetAlertRuleGroupExport: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+RouteGetAlertRules gets all the alert rules
+*/
+func (a *Client) RouteGetAlertRules(params *RouteGetAlertRulesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRulesOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRouteGetAlertRulesParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "RouteGetAlertRules",
+		Method:             "GET",
+		PathPattern:        "/api/v1/provisioning/alert-rules",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &RouteGetAlertRulesReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*RouteGetAlertRulesOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for RouteGetAlertRules: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
+RouteGetAlertRulesExport exports all alert rules in provisioning file format
+*/
+func (a *Client) RouteGetAlertRulesExport(params *RouteGetAlertRulesExportParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetAlertRulesExportOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewRouteGetAlertRulesExportParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "RouteGetAlertRulesExport",
+		Method:             "GET",
+		PathPattern:        "/api/v1/provisioning/alert-rules/export",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &RouteGetAlertRulesExportReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*RouteGetAlertRulesExportOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for RouteGetAlertRulesExport: API contract not enforced by server. Client expected to get an error, but got: %T", result)
 	panic(msg)
 }
 
@@ -468,7 +632,7 @@ func (a *Client) RouteGetPolicyTree(params *RouteGetPolicyTreeParams, authInfo r
 }
 
 /*
-RouteGetTemplate gets a message template
+RouteGetTemplate gets a notification template
 */
 func (a *Client) RouteGetTemplate(params *RouteGetTemplateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetTemplateOK, error) {
 	// TODO: Validate the params before sending
@@ -507,7 +671,7 @@ func (a *Client) RouteGetTemplate(params *RouteGetTemplateParams, authInfo runti
 }
 
 /*
-RouteGetTemplates gets all message templates
+RouteGetTemplates gets all notification templates
 */
 func (a *Client) RouteGetTemplates(params *RouteGetTemplatesParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RouteGetTemplatesOK, error) {
 	// TODO: Validate the params before sending
@@ -858,7 +1022,7 @@ func (a *Client) RoutePutPolicyTree(params *RoutePutPolicyTreeParams, authInfo r
 }
 
 /*
-RoutePutTemplate updates an existing template
+RoutePutTemplate updates an existing notification template
 */
 func (a *Client) RoutePutTemplate(params *RoutePutTemplateParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*RoutePutTemplateAccepted, error) {
 	// TODO: Validate the params before sending

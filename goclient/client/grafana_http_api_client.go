@@ -27,6 +27,7 @@ import (
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/ds"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/folder_permissions"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/folders"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/get_current_org"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/ldap_debug"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/legacy_alerts"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/legacy_alerts_notification_channels"
@@ -111,6 +112,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *GrafanaHTT
 	cli.Ds = ds.New(transport, formats)
 	cli.FolderPermissions = folder_permissions.New(transport, formats)
 	cli.Folders = folders.New(transport, formats)
+	cli.GetCurrentOrg = get_current_org.New(transport, formats)
 	cli.LdapDebug = ldap_debug.New(transport, formats)
 	cli.LegacyAlerts = legacy_alerts.New(transport, formats)
 	cli.LegacyAlertsNotificationChannels = legacy_alerts_notification_channels.New(transport, formats)
@@ -212,6 +214,8 @@ type GrafanaHTTPAPI struct {
 
 	Folders folders.ClientService
 
+	GetCurrentOrg get_current_org.ClientService
+
 	LdapDebug ldap_debug.ClientService
 
 	LegacyAlerts legacy_alerts.ClientService
@@ -281,6 +285,7 @@ func (c *GrafanaHTTPAPI) SetTransport(transport runtime.ClientTransport) {
 	c.Ds.SetTransport(transport)
 	c.FolderPermissions.SetTransport(transport)
 	c.Folders.SetTransport(transport)
+	c.GetCurrentOrg.SetTransport(transport)
 	c.LdapDebug.SetTransport(transport)
 	c.LegacyAlerts.SetTransport(transport)
 	c.LegacyAlertsNotificationChannels.SetTransport(transport)

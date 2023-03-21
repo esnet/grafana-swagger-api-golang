@@ -52,14 +52,23 @@ type PagerdutyConfig struct {
 	// routing key
 	RoutingKey Secret `json:"routing_key,omitempty"`
 
+	// routing key file
+	RoutingKeyFile string `json:"routing_key_file,omitempty"`
+
 	// send resolved
 	SendResolved bool `json:"send_resolved,omitempty"`
 
 	// service key
 	ServiceKey Secret `json:"service_key,omitempty"`
 
+	// service key file
+	ServiceKeyFile string `json:"service_key_file,omitempty"`
+
 	// severity
 	Severity string `json:"severity,omitempty"`
+
+	// source
+	Source string `json:"source,omitempty"`
 
 	// url
 	URL *URL `json:"url,omitempty"`

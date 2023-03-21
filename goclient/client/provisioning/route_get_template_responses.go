@@ -48,22 +48,22 @@ func NewRouteGetTemplateOK() *RouteGetTemplateOK {
 /*
 RouteGetTemplateOK describes a response with status code 200, with default header values.
 
-MessageTemplate
+NotificationTemplate
 */
 type RouteGetTemplateOK struct {
-	Payload *models.MessageTemplate
+	Payload *models.NotificationTemplate
 }
 
 func (o *RouteGetTemplateOK) Error() string {
 	return fmt.Sprintf("[GET /api/v1/provisioning/templates/{name}][%d] routeGetTemplateOK  %+v", 200, o.Payload)
 }
-func (o *RouteGetTemplateOK) GetPayload() *models.MessageTemplate {
+func (o *RouteGetTemplateOK) GetPayload() *models.NotificationTemplate {
 	return o.Payload
 }
 
 func (o *RouteGetTemplateOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.MessageTemplate)
+	o.Payload = new(models.NotificationTemplate)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

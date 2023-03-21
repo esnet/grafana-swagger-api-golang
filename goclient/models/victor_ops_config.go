@@ -22,7 +22,7 @@ type VictorOpsConfig struct {
 	APIKey Secret `json:"api_key,omitempty"`
 
 	// api key file
-	APIKeyFile Secret `json:"api_key_file,omitempty"`
+	APIKeyFile string `json:"api_key_file,omitempty"`
 
 	// api url
 	APIURL *URL `json:"api_url,omitempty"`
@@ -60,10 +60,6 @@ func (m *VictorOpsConfig) Validate(formats strfmt.Registry) error {
 		res = append(res, err)
 	}
 
-	if err := m.validateAPIKeyFile(formats); err != nil {
-		res = append(res, err)
-	}
-
 	if err := m.validateAPIURL(formats); err != nil {
 		res = append(res, err)
 	}
@@ -88,23 +84,6 @@ func (m *VictorOpsConfig) validateAPIKey(formats strfmt.Registry) error {
 			return ve.ValidateName("api_key")
 		} else if ce, ok := err.(*errors.CompositeError); ok {
 			return ce.ValidateName("api_key")
-		}
-		return err
-	}
-
-	return nil
-}
-
-func (m *VictorOpsConfig) validateAPIKeyFile(formats strfmt.Registry) error {
-	if swag.IsZero(m.APIKeyFile) { // not required
-		return nil
-	}
-
-	if err := m.APIKeyFile.Validate(formats); err != nil {
-		if ve, ok := err.(*errors.Validation); ok {
-			return ve.ValidateName("api_key_file")
-		} else if ce, ok := err.(*errors.CompositeError); ok {
-			return ce.ValidateName("api_key_file")
 		}
 		return err
 	}
@@ -158,10 +137,6 @@ func (m *VictorOpsConfig) ContextValidate(ctx context.Context, formats strfmt.Re
 		res = append(res, err)
 	}
 
-	if err := m.contextValidateAPIKeyFile(ctx, formats); err != nil {
-		res = append(res, err)
-	}
-
 	if err := m.contextValidateAPIURL(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -183,20 +158,6 @@ func (m *VictorOpsConfig) contextValidateAPIKey(ctx context.Context, formats str
 			return ve.ValidateName("api_key")
 		} else if ce, ok := err.(*errors.CompositeError); ok {
 			return ce.ValidateName("api_key")
-		}
-		return err
-	}
-
-	return nil
-}
-
-func (m *VictorOpsConfig) contextValidateAPIKeyFile(ctx context.Context, formats strfmt.Registry) error {
-
-	if err := m.APIKeyFile.ContextValidate(ctx, formats); err != nil {
-		if ve, ok := err.(*errors.Validation); ok {
-			return ve.ValidateName("api_key_file")
-		} else if ce, ok := err.(*errors.CompositeError); ok {
-			return ce.ValidateName("api_key_file")
 		}
 		return err
 	}

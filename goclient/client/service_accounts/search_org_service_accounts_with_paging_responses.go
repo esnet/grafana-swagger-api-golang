@@ -63,19 +63,19 @@ SearchOrgServiceAccountsWithPagingOK describes a response with status code 200, 
 (empty)
 */
 type SearchOrgServiceAccountsWithPagingOK struct {
-	Payload *models.SearchServiceAccountsResult
+	Payload *models.SearchOrgServiceAccountsResult
 }
 
 func (o *SearchOrgServiceAccountsWithPagingOK) Error() string {
 	return fmt.Sprintf("[GET /serviceaccounts/search][%d] searchOrgServiceAccountsWithPagingOK  %+v", 200, o.Payload)
 }
-func (o *SearchOrgServiceAccountsWithPagingOK) GetPayload() *models.SearchServiceAccountsResult {
+func (o *SearchOrgServiceAccountsWithPagingOK) GetPayload() *models.SearchOrgServiceAccountsResult {
 	return o.Payload
 }
 
 func (o *SearchOrgServiceAccountsWithPagingOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.SearchServiceAccountsResult)
+	o.Payload = new(models.SearchOrgServiceAccountsResult)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

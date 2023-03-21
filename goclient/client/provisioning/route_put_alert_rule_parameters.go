@@ -72,6 +72,9 @@ type RoutePutAlertRuleParams struct {
 	*/
 	UID string
 
+	// XDisableProvenance.
+	XDisableProvenance *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -147,6 +150,17 @@ func (o *RoutePutAlertRuleParams) SetUID(uid string) {
 	o.UID = uid
 }
 
+// WithXDisableProvenance adds the xDisableProvenance to the route put alert rule params
+func (o *RoutePutAlertRuleParams) WithXDisableProvenance(xDisableProvenance *string) *RoutePutAlertRuleParams {
+	o.SetXDisableProvenance(xDisableProvenance)
+	return o
+}
+
+// SetXDisableProvenance adds the xDisableProvenance to the route put alert rule params
+func (o *RoutePutAlertRuleParams) SetXDisableProvenance(xDisableProvenance *string) {
+	o.XDisableProvenance = xDisableProvenance
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *RoutePutAlertRuleParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -163,6 +177,14 @@ func (o *RoutePutAlertRuleParams) WriteToRequest(r runtime.ClientRequest, reg st
 	// path param UID
 	if err := r.SetPathParam("UID", o.UID); err != nil {
 		return err
+	}
+
+	if o.XDisableProvenance != nil {
+
+		// header param X-Disable-Provenance
+		if err := r.SetHeaderParam("X-Disable-Provenance", *o.XDisableProvenance); err != nil {
+			return err
+		}
 	}
 
 	if len(res) > 0 {

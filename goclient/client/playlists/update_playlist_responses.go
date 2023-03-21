@@ -69,19 +69,19 @@ UpdatePlaylistOK describes a response with status code 200, with default header 
 (empty)
 */
 type UpdatePlaylistOK struct {
-	Payload *models.Model
+	Payload *models.Playlist
 }
 
 func (o *UpdatePlaylistOK) Error() string {
 	return fmt.Sprintf("[PUT /playlists/{uid}][%d] updatePlaylistOK  %+v", 200, o.Payload)
 }
-func (o *UpdatePlaylistOK) GetPayload() *models.Model {
+func (o *UpdatePlaylistOK) GetPayload() *models.Playlist {
 	return o.Payload
 }
 
 func (o *UpdatePlaylistOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Model)
+	o.Payload = new(models.Playlist)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

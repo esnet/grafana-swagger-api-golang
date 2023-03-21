@@ -63,9 +63,6 @@ type DashboardMeta struct {
 	// has Acl
 	HasACL bool `json:"hasAcl,omitempty"`
 
-	// has public dashboard
-	HasPublicDashboard bool `json:"hasPublicDashboard,omitempty"`
-
 	// is folder
 	IsFolder bool `json:"isFolder,omitempty"`
 

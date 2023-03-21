@@ -80,6 +80,12 @@ type GetFoldersParams struct {
 	*/
 	Page *int64
 
+	/* ParentUID.
+
+	   The parent folder UID
+	*/
+	ParentUID *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -169,6 +175,17 @@ func (o *GetFoldersParams) SetPage(page *int64) {
 	o.Page = page
 }
 
+// WithParentUID adds the parentUID to the get folders params
+func (o *GetFoldersParams) WithParentUID(parentUID *string) *GetFoldersParams {
+	o.SetParentUID(parentUID)
+	return o
+}
+
+// SetParentUID adds the parentUid to the get folders params
+func (o *GetFoldersParams) SetParentUID(parentUID *string) {
+	o.ParentUID = parentUID
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *GetFoldersParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -206,6 +223,23 @@ func (o *GetFoldersParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Re
 		if qPage != "" {
 
 			if err := r.SetQueryParam("page", qPage); err != nil {
+				return err
+			}
+		}
+	}
+
+	if o.ParentUID != nil {
+
+		// query param parentUid
+		var qrParentUID string
+
+		if o.ParentUID != nil {
+			qrParentUID = *o.ParentUID
+		}
+		qParentUID := qrParentUID
+		if qParentUID != "" {
+
+			if err := r.SetQueryParam("parentUid", qParentUID); err != nil {
 				return err
 			}
 		}

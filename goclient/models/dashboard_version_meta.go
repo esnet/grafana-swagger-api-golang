@@ -14,9 +14,9 @@ import (
 	"github.com/go-openapi/validate"
 )
 
-// DashboardVersionMeta DashboardVersionMeta extends the dashboard version model with the names
+// DashboardVersionMeta DashboardVersionMeta extends the DashboardVersionDTO with the names
 // associated with the UserIds, overriding the field with the same name from
-// the DashboardVersion model.
+// the DashboardVersionDTO model.
 //
 // swagger:model DashboardVersionMeta
 type DashboardVersionMeta struct {

@@ -69,13 +69,13 @@ GetPlaylistItemsOK describes a response with status code 200, with default heade
 (empty)
 */
 type GetPlaylistItemsOK struct {
-	Payload []*models.PlaylistItem
+	Payload []*models.Item
 }
 
 func (o *GetPlaylistItemsOK) Error() string {
 	return fmt.Sprintf("[GET /playlists/{uid}/items][%d] getPlaylistItemsOK  %+v", 200, o.Payload)
 }
-func (o *GetPlaylistItemsOK) GetPayload() []*models.PlaylistItem {
+func (o *GetPlaylistItemsOK) GetPayload() []*models.Item {
 	return o.Payload
 }
 
