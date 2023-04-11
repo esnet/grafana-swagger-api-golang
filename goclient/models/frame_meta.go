@@ -54,6 +54,9 @@ type FrameMeta struct {
 
 	// type
 	Type FrameType `json:"type,omitempty"`
+
+	// type version
+	TypeVersion FrameTypeVersion `json:"typeVersion,omitempty"`
 }
 
 // Validate validates this frame meta
@@ -77,6 +80,10 @@ func (m *FrameMeta) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateType(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateTypeVersion(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -189,6 +196,23 @@ func (m *FrameMeta) validateType(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *FrameMeta) validateTypeVersion(formats strfmt.Registry) error {
+	if swag.IsZero(m.TypeVersion) { // not required
+		return nil
+	}
+
+	if err := m.TypeVersion.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("typeVersion")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("typeVersion")
+		}
+		return err
+	}
+
+	return nil
+}
+
 // ContextValidate validate this frame meta based on the context it is used
 func (m *FrameMeta) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
@@ -210,6 +234,10 @@ func (m *FrameMeta) ContextValidate(ctx context.Context, formats strfmt.Registry
 	}
 
 	if err := m.contextValidateType(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateTypeVersion(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -294,6 +322,20 @@ func (m *FrameMeta) contextValidateType(ctx context.Context, formats strfmt.Regi
 			return ve.ValidateName("type")
 		} else if ce, ok := err.(*errors.CompositeError); ok {
 			return ce.ValidateName("type")
+		}
+		return err
+	}
+
+	return nil
+}
+
+func (m *FrameMeta) contextValidateTypeVersion(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.TypeVersion.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("typeVersion")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("typeVersion")
 		}
 		return err
 	}

@@ -40,6 +40,9 @@ type AlertRuleExport struct {
 	// for
 	For Duration `json:"for,omitempty"`
 
+	// is paused
+	IsPaused bool `json:"isPaused,omitempty"`
+
 	// labels
 	Labels map[string]string `json:"labels,omitempty"`
 

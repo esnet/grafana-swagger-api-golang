@@ -75,6 +75,9 @@ type QueryStat struct {
 	// thresholds
 	Thresholds *ThresholdsConfig `json:"thresholds,omitempty"`
 
+	// type
+	Type *FieldTypeConfig `json:"type,omitempty"`
+
 	// Numeric Options
 	Unit string `json:"unit,omitempty"`
 
@@ -106,6 +109,10 @@ func (m *QueryStat) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateThresholds(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateType(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -211,6 +218,25 @@ func (m *QueryStat) validateThresholds(formats strfmt.Registry) error {
 	return nil
 }
 
+func (m *QueryStat) validateType(formats strfmt.Registry) error {
+	if swag.IsZero(m.Type) { // not required
+		return nil
+	}
+
+	if m.Type != nil {
+		if err := m.Type.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("type")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("type")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
 // ContextValidate validate this query stat based on the context it is used
 func (m *QueryStat) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
@@ -232,6 +258,10 @@ func (m *QueryStat) ContextValidate(ctx context.Context, formats strfmt.Registry
 	}
 
 	if err := m.contextValidateThresholds(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.contextValidateType(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -311,6 +341,22 @@ func (m *QueryStat) contextValidateThresholds(ctx context.Context, formats strfm
 				return ve.ValidateName("thresholds")
 			} else if ce, ok := err.(*errors.CompositeError); ok {
 				return ce.ValidateName("thresholds")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (m *QueryStat) contextValidateType(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.Type != nil {
+		if err := m.Type.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("type")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("type")
 			}
 			return err
 		}

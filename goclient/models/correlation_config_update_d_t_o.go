@@ -7,6 +7,7 @@ package models
 
 import (
 	"context"
+	"strconv"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
@@ -26,6 +27,10 @@ type CorrelationConfigUpdateDTO struct {
 	// Example: {"expr":"job=app"}
 	Target interface{} `json:"target,omitempty"`
 
+	// Source data transformations
+	// Example: [{"type":"logfmt"},{"expression":"(Superman|Batman)","type":"regex","variable":"name"}]
+	Transformations []*Transformation `json:"transformations"`
+
 	// type
 	Type CorrelationConfigType `json:"type,omitempty"`
 }
@@ -34,6 +39,10 @@ type CorrelationConfigUpdateDTO struct {
 func (m *CorrelationConfigUpdateDTO) Validate(formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.validateTransformations(formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.validateType(formats); err != nil {
 		res = append(res, err)
 	}
@@ -41,6 +50,32 @@ func (m *CorrelationConfigUpdateDTO) Validate(formats strfmt.Registry) error {
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *CorrelationConfigUpdateDTO) validateTransformations(formats strfmt.Registry) error {
+	if swag.IsZero(m.Transformations) { // not required
+		return nil
+	}
+
+	for i := 0; i < len(m.Transformations); i++ {
+		if swag.IsZero(m.Transformations[i]) { // not required
+			continue
+		}
+
+		if m.Transformations[i] != nil {
+			if err := m.Transformations[i].Validate(formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("transformations" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("transformations" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
 	return nil
 }
 
@@ -65,6 +100,10 @@ func (m *CorrelationConfigUpdateDTO) validateType(formats strfmt.Registry) error
 func (m *CorrelationConfigUpdateDTO) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateTransformations(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateType(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -72,6 +111,26 @@ func (m *CorrelationConfigUpdateDTO) ContextValidate(ctx context.Context, format
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *CorrelationConfigUpdateDTO) contextValidateTransformations(ctx context.Context, formats strfmt.Registry) error {
+
+	for i := 0; i < len(m.Transformations); i++ {
+
+		if m.Transformations[i] != nil {
+			if err := m.Transformations[i].ContextValidate(ctx, formats); err != nil {
+				if ve, ok := err.(*errors.Validation); ok {
+					return ve.ValidateName("transformations" + "." + strconv.Itoa(i))
+				} else if ce, ok := err.(*errors.CompositeError); ok {
+					return ce.ValidateName("transformations" + "." + strconv.Itoa(i))
+				}
+				return err
+			}
+		}
+
+	}
+
 	return nil
 }
 

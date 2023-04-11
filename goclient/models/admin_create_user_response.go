@@ -12,10 +12,10 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// UserIDDTO user Id d t o
+// AdminCreateUserResponse admin create user response
 //
-// swagger:model UserIdDTO
-type UserIDDTO struct {
+// swagger:model AdminCreateUserResponse
+type AdminCreateUserResponse struct {
 
 	// id
 	ID int64 `json:"id,omitempty"`
@@ -24,18 +24,18 @@ type UserIDDTO struct {
 	Message string `json:"message,omitempty"`
 }
 
-// Validate validates this user Id d t o
-func (m *UserIDDTO) Validate(formats strfmt.Registry) error {
+// Validate validates this admin create user response
+func (m *AdminCreateUserResponse) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validates this user Id d t o based on context it is used
-func (m *UserIDDTO) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validates this admin create user response based on context it is used
+func (m *AdminCreateUserResponse) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	return nil
 }
 
 // MarshalBinary interface implementation
-func (m *UserIDDTO) MarshalBinary() ([]byte, error) {
+func (m *AdminCreateUserResponse) MarshalBinary() ([]byte, error) {
 	if m == nil {
 		return nil, nil
 	}
@@ -43,8 +43,8 @@ func (m *UserIDDTO) MarshalBinary() ([]byte, error) {
 }
 
 // UnmarshalBinary interface implementation
-func (m *UserIDDTO) UnmarshalBinary(b []byte) error {
-	var res UserIDDTO
+func (m *AdminCreateUserResponse) UnmarshalBinary(b []byte) error {
+	var res AdminCreateUserResponse
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

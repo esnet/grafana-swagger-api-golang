@@ -25,6 +25,7 @@ import (
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/datasource_permissions"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/datasources"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/ds"
+	"github.com/esnet/grafana-swagger-api-golang/goclient/client/enterprise"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/folder_permissions"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/folders"
 	"github.com/esnet/grafana-swagger-api-golang/goclient/client/get_current_org"
@@ -110,6 +111,7 @@ func New(transport runtime.ClientTransport, formats strfmt.Registry) *GrafanaHTT
 	cli.DatasourcePermissions = datasource_permissions.New(transport, formats)
 	cli.Datasources = datasources.New(transport, formats)
 	cli.Ds = ds.New(transport, formats)
+	cli.Enterprise = enterprise.New(transport, formats)
 	cli.FolderPermissions = folder_permissions.New(transport, formats)
 	cli.Folders = folders.New(transport, formats)
 	cli.GetCurrentOrg = get_current_org.New(transport, formats)
@@ -210,6 +212,8 @@ type GrafanaHTTPAPI struct {
 
 	Ds ds.ClientService
 
+	Enterprise enterprise.ClientService
+
 	FolderPermissions folder_permissions.ClientService
 
 	Folders folders.ClientService
@@ -283,6 +287,7 @@ func (c *GrafanaHTTPAPI) SetTransport(transport runtime.ClientTransport) {
 	c.DatasourcePermissions.SetTransport(transport)
 	c.Datasources.SetTransport(transport)
 	c.Ds.SetTransport(transport)
+	c.Enterprise.SetTransport(transport)
 	c.FolderPermissions.SetTransport(transport)
 	c.Folders.SetTransport(transport)
 	c.GetCurrentOrg.SetTransport(transport)

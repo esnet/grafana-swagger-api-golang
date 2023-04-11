@@ -69,13 +69,13 @@ GetDashboardVersionsByIDOK describes a response with status code 200, with defau
 (empty)
 */
 type GetDashboardVersionsByIDOK struct {
-	Payload []*models.DashboardVersionDTO
+	Payload []*models.DashboardVersionMeta
 }
 
 func (o *GetDashboardVersionsByIDOK) Error() string {
 	return fmt.Sprintf("[GET /dashboards/id/{DashboardID}/versions][%d] getDashboardVersionsByIdOK  %+v", 200, o.Payload)
 }
-func (o *GetDashboardVersionsByIDOK) GetPayload() []*models.DashboardVersionDTO {
+func (o *GetDashboardVersionsByIDOK) GetPayload() []*models.DashboardVersionMeta {
 	return o.Payload
 }
 

@@ -14,16 +14,13 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// Frames Frames is a slice of Frame pointers.
+// Transformations transformations
 //
-// It is the main data container within a backend.DataResponse.
-// There should be no `nil` entries in the Frames slice (making them pointers was a mistake).
-//
-// swagger:model Frames
-type Frames []*Frame
+// swagger:model Transformations
+type Transformations []*Transformation
 
-// Validate validates this frames
-func (m Frames) Validate(formats strfmt.Registry) error {
+// Validate validates this transformations
+func (m Transformations) Validate(formats strfmt.Registry) error {
 	var res []error
 
 	for i := 0; i < len(m); i++ {
@@ -50,8 +47,8 @@ func (m Frames) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validate this frames based on the context it is used
-func (m Frames) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validate this transformations based on the context it is used
+func (m Transformations) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
 	for i := 0; i < len(m); i++ {

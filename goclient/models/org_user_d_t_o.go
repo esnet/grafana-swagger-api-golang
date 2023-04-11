@@ -34,6 +34,9 @@ type OrgUserDTO struct {
 	// is disabled
 	IsDisabled bool `json:"isDisabled,omitempty"`
 
+	// is externally synced
+	IsExternallySynced bool `json:"isExternallySynced,omitempty"`
+
 	// last seen at
 	// Format: date-time
 	LastSeenAt strfmt.DateTime `json:"lastSeenAt,omitempty"`

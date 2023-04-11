@@ -29,6 +29,9 @@ type CorrelationConfig struct {
 	// Required: true
 	Target interface{} `json:"target"`
 
+	// transformations
+	Transformations Transformations `json:"transformations,omitempty"`
+
 	// type
 	// Required: true
 	Type *CorrelationConfigType `json:"type"`
@@ -43,6 +46,10 @@ func (m *CorrelationConfig) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateTarget(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateTransformations(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -69,6 +76,23 @@ func (m *CorrelationConfig) validateTarget(formats strfmt.Registry) error {
 
 	if m.Target == nil {
 		return errors.Required("target", "body", nil)
+	}
+
+	return nil
+}
+
+func (m *CorrelationConfig) validateTransformations(formats strfmt.Registry) error {
+	if swag.IsZero(m.Transformations) { // not required
+		return nil
+	}
+
+	if err := m.Transformations.Validate(formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("transformations")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("transformations")
+		}
+		return err
 	}
 
 	return nil
@@ -102,6 +126,10 @@ func (m *CorrelationConfig) validateType(formats strfmt.Registry) error {
 func (m *CorrelationConfig) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
+	if err := m.contextValidateTransformations(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
 	if err := m.contextValidateType(ctx, formats); err != nil {
 		res = append(res, err)
 	}
@@ -109,6 +137,20 @@ func (m *CorrelationConfig) ContextValidate(ctx context.Context, formats strfmt.
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
+	return nil
+}
+
+func (m *CorrelationConfig) contextValidateTransformations(ctx context.Context, formats strfmt.Registry) error {
+
+	if err := m.Transformations.ContextValidate(ctx, formats); err != nil {
+		if ve, ok := err.(*errors.Validation); ok {
+			return ve.ValidateName("transformations")
+		} else if ce, ok := err.(*errors.CompositeError); ok {
+			return ce.ValidateName("transformations")
+		}
+		return err
+	}
+
 	return nil
 }
 

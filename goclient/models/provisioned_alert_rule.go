@@ -53,7 +53,7 @@ type ProvisionedAlertRule struct {
 	ID int64 `json:"id,omitempty"`
 
 	// is paused
-	// Example: true
+	// Example: false
 	IsPaused bool `json:"isPaused,omitempty"`
 
 	// labels

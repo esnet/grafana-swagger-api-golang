@@ -57,19 +57,19 @@ GetUserPreferencesOK describes a response with status code 200, with default hea
 (empty)
 */
 type GetUserPreferencesOK struct {
-	Payload *models.Prefs
+	Payload *models.Preferences
 }
 
 func (o *GetUserPreferencesOK) Error() string {
 	return fmt.Sprintf("[GET /user/preferences][%d] getUserPreferencesOK  %+v", 200, o.Payload)
 }
-func (o *GetUserPreferencesOK) GetPayload() *models.Prefs {
+func (o *GetUserPreferencesOK) GetPayload() *models.Preferences {
 	return o.Payload
 }
 
 func (o *GetUserPreferencesOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Prefs)
+	o.Payload = new(models.Preferences)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

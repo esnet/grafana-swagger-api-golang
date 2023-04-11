@@ -8,6 +8,7 @@ package models
 import (
 	"context"
 	"encoding/json"
+	"strconv"
 
 	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
@@ -20,6 +21,9 @@ import (
 // swagger:model PatchPrefsCmd
 type PatchPrefsCmd struct {
 
+	// cookies
+	Cookies []CookieType `json:"cookies"`
+
 	// The numerical :id of a favorited dashboard
 	HomeDashboardID int64 `json:"homeDashboardId,omitempty"`
 
@@ -28,9 +32,6 @@ type PatchPrefsCmd struct {
 
 	// language
 	Language string `json:"language,omitempty"`
-
-	// navbar
-	Navbar *NavbarPreference `json:"navbar,omitempty"`
 
 	// query history
 	QueryHistory *QueryHistoryPreference `json:"queryHistory,omitempty"`
@@ -51,7 +52,7 @@ type PatchPrefsCmd struct {
 func (m *PatchPrefsCmd) Validate(formats strfmt.Registry) error {
 	var res []error
 
-	if err := m.validateNavbar(formats); err != nil {
+	if err := m.validateCookies(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -73,20 +74,22 @@ func (m *PatchPrefsCmd) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-func (m *PatchPrefsCmd) validateNavbar(formats strfmt.Registry) error {
-	if swag.IsZero(m.Navbar) { // not required
+func (m *PatchPrefsCmd) validateCookies(formats strfmt.Registry) error {
+	if swag.IsZero(m.Cookies) { // not required
 		return nil
 	}
 
-	if m.Navbar != nil {
-		if err := m.Navbar.Validate(formats); err != nil {
+	for i := 0; i < len(m.Cookies); i++ {
+
+		if err := m.Cookies[i].Validate(formats); err != nil {
 			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("navbar")
+				return ve.ValidateName("cookies" + "." + strconv.Itoa(i))
 			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("navbar")
+				return ce.ValidateName("cookies" + "." + strconv.Itoa(i))
 			}
 			return err
 		}
+
 	}
 
 	return nil
@@ -199,7 +202,7 @@ func (m *PatchPrefsCmd) validateTimezone(formats strfmt.Registry) error {
 func (m *PatchPrefsCmd) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
 
-	if err := m.contextValidateNavbar(ctx, formats); err != nil {
+	if err := m.contextValidateCookies(ctx, formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -213,17 +216,19 @@ func (m *PatchPrefsCmd) ContextValidate(ctx context.Context, formats strfmt.Regi
 	return nil
 }
 
-func (m *PatchPrefsCmd) contextValidateNavbar(ctx context.Context, formats strfmt.Registry) error {
+func (m *PatchPrefsCmd) contextValidateCookies(ctx context.Context, formats strfmt.Registry) error {
 
-	if m.Navbar != nil {
-		if err := m.Navbar.ContextValidate(ctx, formats); err != nil {
+	for i := 0; i < len(m.Cookies); i++ {
+
+		if err := m.Cookies[i].ContextValidate(ctx, formats); err != nil {
 			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("navbar")
+				return ve.ValidateName("cookies" + "." + strconv.Itoa(i))
 			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("navbar")
+				return ce.ValidateName("cookies" + "." + strconv.Itoa(i))
 			}
 			return err
 		}
+
 	}
 
 	return nil

@@ -13,43 +13,34 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// Prefs prefs
+// Preferences Preferences defines model for Preferences.
 //
-// swagger:model Prefs
-type Prefs struct {
+// swagger:model Preferences
+type Preferences struct {
 
-	// home dashboard Id
-	HomeDashboardID int64 `json:"homeDashboardId,omitempty"`
-
-	// home dashboard UID
+	// UID for the home dashboard
 	HomeDashboardUID string `json:"homeDashboardUID,omitempty"`
 
-	// language
+	// Selected language (beta)
 	Language string `json:"language,omitempty"`
-
-	// navbar
-	Navbar *NavbarPreference `json:"navbar,omitempty"`
 
 	// query history
 	QueryHistory *QueryHistoryPreference `json:"queryHistory,omitempty"`
 
-	// theme
+	// Theme light, dark, empty is default
 	Theme string `json:"theme,omitempty"`
 
-	// timezone
+	// The timezone selection
+	// TODO: this should use the timezone defined in common
 	Timezone string `json:"timezone,omitempty"`
 
-	// week start
+	// WeekStart day of the week (sunday, monday, etc)
 	WeekStart string `json:"weekStart,omitempty"`
 }
 
-// Validate validates this prefs
-func (m *Prefs) Validate(formats strfmt.Registry) error {
+// Validate validates this preferences
+func (m *Preferences) Validate(formats strfmt.Registry) error {
 	var res []error
-
-	if err := m.validateNavbar(formats); err != nil {
-		res = append(res, err)
-	}
 
 	if err := m.validateQueryHistory(formats); err != nil {
 		res = append(res, err)
@@ -61,26 +52,7 @@ func (m *Prefs) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-func (m *Prefs) validateNavbar(formats strfmt.Registry) error {
-	if swag.IsZero(m.Navbar) { // not required
-		return nil
-	}
-
-	if m.Navbar != nil {
-		if err := m.Navbar.Validate(formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("navbar")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("navbar")
-			}
-			return err
-		}
-	}
-
-	return nil
-}
-
-func (m *Prefs) validateQueryHistory(formats strfmt.Registry) error {
+func (m *Preferences) validateQueryHistory(formats strfmt.Registry) error {
 	if swag.IsZero(m.QueryHistory) { // not required
 		return nil
 	}
@@ -99,13 +71,9 @@ func (m *Prefs) validateQueryHistory(formats strfmt.Registry) error {
 	return nil
 }
 
-// ContextValidate validate this prefs based on the context it is used
-func (m *Prefs) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+// ContextValidate validate this preferences based on the context it is used
+func (m *Preferences) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
 	var res []error
-
-	if err := m.contextValidateNavbar(ctx, formats); err != nil {
-		res = append(res, err)
-	}
 
 	if err := m.contextValidateQueryHistory(ctx, formats); err != nil {
 		res = append(res, err)
@@ -117,23 +85,7 @@ func (m *Prefs) ContextValidate(ctx context.Context, formats strfmt.Registry) er
 	return nil
 }
 
-func (m *Prefs) contextValidateNavbar(ctx context.Context, formats strfmt.Registry) error {
-
-	if m.Navbar != nil {
-		if err := m.Navbar.ContextValidate(ctx, formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("navbar")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("navbar")
-			}
-			return err
-		}
-	}
-
-	return nil
-}
-
-func (m *Prefs) contextValidateQueryHistory(ctx context.Context, formats strfmt.Registry) error {
+func (m *Preferences) contextValidateQueryHistory(ctx context.Context, formats strfmt.Registry) error {
 
 	if m.QueryHistory != nil {
 		if err := m.QueryHistory.ContextValidate(ctx, formats); err != nil {
@@ -150,7 +102,7 @@ func (m *Prefs) contextValidateQueryHistory(ctx context.Context, formats strfmt.
 }
 
 // MarshalBinary interface implementation
-func (m *Prefs) MarshalBinary() ([]byte, error) {
+func (m *Preferences) MarshalBinary() ([]byte, error) {
 	if m == nil {
 		return nil, nil
 	}
@@ -158,8 +110,8 @@ func (m *Prefs) MarshalBinary() ([]byte, error) {
 }
 
 // UnmarshalBinary interface implementation
-func (m *Prefs) UnmarshalBinary(b []byte) error {
-	var res Prefs
+func (m *Preferences) UnmarshalBinary(b []byte) error {
+	var res Preferences
 	if err := swag.ReadJSON(b, &res); err != nil {
 		return err
 	}

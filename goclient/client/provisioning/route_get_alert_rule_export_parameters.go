@@ -74,6 +74,14 @@ type RouteGetAlertRuleExportParams struct {
 	*/
 	Download *bool
 
+	/* Format.
+
+	   Format of the downloaded file, either yaml or json. Accept header can also be used, but the query parameter will take precedence.
+
+	   Default: "yaml"
+	*/
+	Format *string
+
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -93,10 +101,13 @@ func (o *RouteGetAlertRuleExportParams) WithDefaults() *RouteGetAlertRuleExportP
 func (o *RouteGetAlertRuleExportParams) SetDefaults() {
 	var (
 		downloadDefault = bool(false)
+
+		formatDefault = string("yaml")
 	)
 
 	val := RouteGetAlertRuleExportParams{
 		Download: &downloadDefault,
+		Format:   &formatDefault,
 	}
 
 	val.timeout = o.timeout
@@ -160,6 +171,17 @@ func (o *RouteGetAlertRuleExportParams) SetDownload(download *bool) {
 	o.Download = download
 }
 
+// WithFormat adds the format to the route get alert rule export params
+func (o *RouteGetAlertRuleExportParams) WithFormat(format *string) *RouteGetAlertRuleExportParams {
+	o.SetFormat(format)
+	return o
+}
+
+// SetFormat adds the format to the route get alert rule export params
+func (o *RouteGetAlertRuleExportParams) SetFormat(format *string) {
+	o.Format = format
+}
+
 // WriteToRequest writes these params to a swagger request
 func (o *RouteGetAlertRuleExportParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -185,6 +207,23 @@ func (o *RouteGetAlertRuleExportParams) WriteToRequest(r runtime.ClientRequest, 
 		if qDownload != "" {
 
 			if err := r.SetQueryParam("download", qDownload); err != nil {
+				return err
+			}
+		}
+	}
+
+	if o.Format != nil {
+
+		// query param format
+		var qrFormat string
+
+		if o.Format != nil {
+			qrFormat = *o.Format
+		}
+		qFormat := qrFormat
+		if qFormat != "" {
+
+			if err := r.SetQueryParam("format", qFormat); err != nil {
 				return err
 			}
 		}

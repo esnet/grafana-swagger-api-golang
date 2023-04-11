@@ -23,8 +23,8 @@ type LegacyAlert struct {
 	// Format: date-time
 	Created strfmt.DateTime `json:"Created,omitempty"`
 
-	// dashboard Id
-	DashboardID int64 `json:"DashboardId,omitempty"`
+	// dashboard ID
+	DashboardID int64 `json:"DashboardID,omitempty"`
 
 	// eval data
 	EvalData JSON `json:"EvalData,omitempty"`
@@ -41,8 +41,8 @@ type LegacyAlert struct {
 	// handler
 	Handler int64 `json:"Handler,omitempty"`
 
-	// Id
-	ID int64 `json:"Id,omitempty"`
+	// ID
+	ID int64 `json:"ID,omitempty"`
 
 	// message
 	Message string `json:"Message,omitempty"`
@@ -54,11 +54,11 @@ type LegacyAlert struct {
 	// Format: date-time
 	NewStateDate strfmt.DateTime `json:"NewStateDate,omitempty"`
 
-	// org Id
-	OrgID int64 `json:"OrgId,omitempty"`
+	// org ID
+	OrgID int64 `json:"OrgID,omitempty"`
 
-	// panel Id
-	PanelID int64 `json:"PanelId,omitempty"`
+	// panel ID
+	PanelID int64 `json:"PanelID,omitempty"`
 
 	// settings
 	Settings JSON `json:"Settings,omitempty"`

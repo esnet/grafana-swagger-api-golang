@@ -37,6 +37,9 @@ type GettableGrafanaRule struct {
 	// interval seconds
 	IntervalSeconds int64 `json:"intervalSeconds,omitempty"`
 
+	// is paused
+	IsPaused bool `json:"is_paused,omitempty"`
+
 	// namespace id
 	NamespaceID int64 `json:"namespace_id,omitempty"`
 

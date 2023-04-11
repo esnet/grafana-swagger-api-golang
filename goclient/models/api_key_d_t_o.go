@@ -30,6 +30,10 @@ type APIKeyDTO struct {
 	// id
 	ID int64 `json:"id,omitempty"`
 
+	// last used at
+	// Format: date-time
+	LastUsedAt strfmt.DateTime `json:"lastUsedAt,omitempty"`
+
 	// name
 	Name string `json:"name,omitempty"`
 
@@ -47,6 +51,10 @@ func (m *APIKeyDTO) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validateExpiration(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateLastUsedAt(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -85,6 +93,18 @@ func (m *APIKeyDTO) validateExpiration(formats strfmt.Registry) error {
 	}
 
 	if err := validate.FormatOf("expiration", "body", "date-time", m.Expiration.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *APIKeyDTO) validateLastUsedAt(formats strfmt.Registry) error {
+	if swag.IsZero(m.LastUsedAt) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("lastUsedAt", "body", "date-time", m.LastUsedAt.String(), formats); err != nil {
 		return err
 	}
 

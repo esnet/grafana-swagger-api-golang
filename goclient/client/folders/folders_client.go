@@ -40,6 +40,8 @@ type ClientService interface {
 
 	GetFolders(params *GetFoldersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFoldersOK, error)
 
+	MoveFolder(params *MoveFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveFolderOK, error)
+
 	UpdateFolder(params *UpdateFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateFolderOK, error)
 
 	SetTransport(transport runtime.ClientTransport)
@@ -254,11 +256,46 @@ func (a *Client) GetFolders(params *GetFoldersParams, authInfo runtime.ClientAut
 }
 
 /*
-	UpdateFolder updates folder
+MoveFolder moves folder
+*/
+func (a *Client) MoveFolder(params *MoveFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveFolderOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewMoveFolderParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "moveFolder",
+		Method:             "POST",
+		PathPattern:        "/folders/{folder_uid}/move",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &MoveFolderReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
 
-	If nested folders are enabled then it optionally expects a new parent folder UID that moves the folder and
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*MoveFolderOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for moveFolder: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
 
-includes it into the response.
+/*
+UpdateFolder updates folder
 */
 func (a *Client) UpdateFolder(params *UpdateFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*UpdateFolderOK, error) {
 	// TODO: Validate the params before sending

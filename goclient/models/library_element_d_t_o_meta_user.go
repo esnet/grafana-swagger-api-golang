@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/swag"
 )
 
-// LibraryElementDTOMetaUser LibraryElementDTOMetaUser is the meta information for user that creates/changes the library element.
+// LibraryElementDTOMetaUser LibraryElementDTOMetaUser defines model for LibraryElementDTOMetaUser.
 //
 // swagger:model LibraryElementDTOMetaUser
 type LibraryElementDTOMetaUser struct {

@@ -18,9 +18,6 @@ import (
 // swagger:model CreateDashboardSnapshotCommand
 type CreateDashboardSnapshotCommand struct {
 
-	// result
-	Result *DashboardSnapshot `json:"Result,omitempty"`
-
 	// dashboard
 	// Required: true
 	Dashboard JSON `json:"dashboard"`
@@ -46,10 +43,6 @@ type CreateDashboardSnapshotCommand struct {
 func (m *CreateDashboardSnapshotCommand) Validate(formats strfmt.Registry) error {
 	var res []error
 
-	if err := m.validateResult(formats); err != nil {
-		res = append(res, err)
-	}
-
 	if err := m.validateDashboard(formats); err != nil {
 		res = append(res, err)
 	}
@@ -57,25 +50,6 @@ func (m *CreateDashboardSnapshotCommand) Validate(formats strfmt.Registry) error
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)
 	}
-	return nil
-}
-
-func (m *CreateDashboardSnapshotCommand) validateResult(formats strfmt.Registry) error {
-	if swag.IsZero(m.Result) { // not required
-		return nil
-	}
-
-	if m.Result != nil {
-		if err := m.Result.Validate(formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("Result")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("Result")
-			}
-			return err
-		}
-	}
-
 	return nil
 }
 
@@ -88,33 +62,8 @@ func (m *CreateDashboardSnapshotCommand) validateDashboard(formats strfmt.Regist
 	return nil
 }
 
-// ContextValidate validate this create dashboard snapshot command based on the context it is used
+// ContextValidate validates this create dashboard snapshot command based on context it is used
 func (m *CreateDashboardSnapshotCommand) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
-	var res []error
-
-	if err := m.contextValidateResult(ctx, formats); err != nil {
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (m *CreateDashboardSnapshotCommand) contextValidateResult(ctx context.Context, formats strfmt.Registry) error {
-
-	if m.Result != nil {
-		if err := m.Result.ContextValidate(ctx, formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("Result")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("Result")
-			}
-			return err
-		}
-	}
-
 	return nil
 }
 

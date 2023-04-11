@@ -26,6 +26,7 @@ type Frame struct {
 
 	// Fields are the columns of a frame.
 	// All Fields must be of the same the length when marshalling the Frame for transmission.
+	// There should be no `nil` entries in the Fields slice (making them pointers was a mistake).
 	Fields []*Field `json:"Fields"`
 
 	// meta
