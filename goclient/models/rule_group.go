@@ -44,6 +44,9 @@ type RuleGroup struct {
 	// same array.
 	// Required: true
 	Rules []*AlertingRule `json:"rules"`
+
+	// totals
+	Totals map[string]int64 `json:"totals,omitempty"`
 }
 
 // Validate validates this rule group

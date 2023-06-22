@@ -23,6 +23,9 @@ type RuleDiscovery struct {
 	// groups
 	// Required: true
 	Groups []*RuleGroup `json:"groups"`
+
+	// totals
+	Totals map[string]int64 `json:"totals,omitempty"`
 }
 
 // Validate validates this rule discovery

@@ -37,7 +37,7 @@ type ProvisionedAlertRule struct {
 
 	// exec err state
 	// Required: true
-	// Enum: [Alerting Error OK]
+	// Enum: [OK Alerting Error]
 	ExecErrState *string `json:"execErrState"`
 
 	// folder UID
@@ -189,7 +189,7 @@ var provisionedAlertRuleTypeExecErrStatePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["Alerting","Error","OK"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["OK","Alerting","Error"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -199,14 +199,14 @@ func init() {
 
 const (
 
+	// ProvisionedAlertRuleExecErrStateOK captures enum value "OK"
+	ProvisionedAlertRuleExecErrStateOK string = "OK"
+
 	// ProvisionedAlertRuleExecErrStateAlerting captures enum value "Alerting"
 	ProvisionedAlertRuleExecErrStateAlerting string = "Alerting"
 
 	// ProvisionedAlertRuleExecErrStateError captures enum value "Error"
 	ProvisionedAlertRuleExecErrStateError string = "Error"
-
-	// ProvisionedAlertRuleExecErrStateOK captures enum value "OK"
-	ProvisionedAlertRuleExecErrStateOK string = "OK"
 )
 
 // prop value enum

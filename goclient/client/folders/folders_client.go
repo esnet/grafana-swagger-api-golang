@@ -38,6 +38,8 @@ type ClientService interface {
 
 	GetFolderByUID(params *GetFolderByUIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderByUIDOK, error)
 
+	GetFolderDescendantCounts(params *GetFolderDescendantCountsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderDescendantCountsOK, error)
+
 	GetFolders(params *GetFoldersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFoldersOK, error)
 
 	MoveFolder(params *MoveFolderParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*MoveFolderOK, error)
@@ -132,9 +134,11 @@ func (a *Client) DeleteFolder(params *DeleteFolderParams, authInfo runtime.Clien
 }
 
 /*
-GetFolderByID gets folder by id
+	GetFolderByID gets folder by id
 
-Returns the folder identified by id.
+	Returns the folder identified by id. This is deprecated.
+
+Please refer to [updated API](#/folders/getFolderByUID) instead
 */
 func (a *Client) GetFolderByID(params *GetFolderByIDParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderByIDOK, error) {
 	// TODO: Validate the params before sending
@@ -212,12 +216,53 @@ func (a *Client) GetFolderByUID(params *GetFolderByUIDParams, authInfo runtime.C
 }
 
 /*
+GetFolderDescendantCounts gets the count of each descendant of a folder by kind the folder is identified by UID
+*/
+func (a *Client) GetFolderDescendantCounts(params *GetFolderDescendantCountsParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFolderDescendantCountsOK, error) {
+	// TODO: Validate the params before sending
+	if params == nil {
+		params = NewGetFolderDescendantCountsParams()
+	}
+	op := &runtime.ClientOperation{
+		ID:                 "getFolderDescendantCounts",
+		Method:             "GET",
+		PathPattern:        "/folders/{folder_uid}/counts",
+		ProducesMediaTypes: []string{"application/json"},
+		ConsumesMediaTypes: []string{"application/json"},
+		Schemes:            []string{"http", "https"},
+		Params:             params,
+		Reader:             &GetFolderDescendantCountsReader{formats: a.formats},
+		AuthInfo:           authInfo,
+		Context:            params.Context,
+		Client:             params.HTTPClient,
+	}
+	for _, opt := range opts {
+		opt(op)
+	}
+
+	result, err := a.transport.Submit(op)
+	if err != nil {
+		return nil, err
+	}
+	success, ok := result.(*GetFolderDescendantCountsOK)
+	if ok {
+		return success, nil
+	}
+	// unexpected success response
+	// safeguard: normally, absent a default response, unknown success responses return an error above: so this is a codegen issue
+	msg := fmt.Sprintf("unexpected success response for getFolderDescendantCounts: API contract not enforced by server. Client expected to get an error, but got: %T", result)
+	panic(msg)
+}
+
+/*
 	GetFolders gets all folders
 
 	Returns all folders that the authenticated user has permission to view.
 
 If nested folders are enabled, it expects an additional query parameter with the parent folder UID
-and returns the immediate subfolders.
+and returns the immediate subfolders that the authenticated user has permission to view.
+If the parameter is not supplied then it returns immediate subfolders under the root
+that the authenticated user has permission to view.
 */
 func (a *Client) GetFolders(params *GetFoldersParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetFoldersOK, error) {
 	// TODO: Validate the params before sending

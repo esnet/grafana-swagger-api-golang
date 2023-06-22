@@ -63,19 +63,19 @@ GetOrgPreferencesOK describes a response with status code 200, with default head
 (empty)
 */
 type GetOrgPreferencesOK struct {
-	Payload *models.Preferences
+	Payload *models.Spec
 }
 
 func (o *GetOrgPreferencesOK) Error() string {
 	return fmt.Sprintf("[GET /org/preferences][%d] getOrgPreferencesOK  %+v", 200, o.Payload)
 }
-func (o *GetOrgPreferencesOK) GetPayload() *models.Preferences {
+func (o *GetOrgPreferencesOK) GetPayload() *models.Spec {
 	return o.Payload
 }
 
 func (o *GetOrgPreferencesOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Preferences)
+	o.Payload = new(models.Spec)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

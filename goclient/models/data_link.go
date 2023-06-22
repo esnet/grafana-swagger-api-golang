@@ -8,6 +8,7 @@ package models
 import (
 	"context"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
@@ -16,6 +17,9 @@ import (
 //
 // swagger:model DataLink
 type DataLink struct {
+
+	// internal
+	Internal *InternalDataLink `json:"internal,omitempty"`
 
 	// target blank
 	TargetBlank bool `json:"targetBlank,omitempty"`
@@ -29,11 +33,64 @@ type DataLink struct {
 
 // Validate validates this data link
 func (m *DataLink) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateInternal(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
 	return nil
 }
 
-// ContextValidate validates this data link based on context it is used
+func (m *DataLink) validateInternal(formats strfmt.Registry) error {
+	if swag.IsZero(m.Internal) { // not required
+		return nil
+	}
+
+	if m.Internal != nil {
+		if err := m.Internal.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("internal")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("internal")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// ContextValidate validate this data link based on the context it is used
 func (m *DataLink) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.contextValidateInternal(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *DataLink) contextValidateInternal(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.Internal != nil {
+		if err := m.Internal.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("internal")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("internal")
+			}
+			return err
+		}
+	}
+
 	return nil
 }
 

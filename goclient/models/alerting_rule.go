@@ -20,8 +20,12 @@ import (
 // swagger:model AlertingRule
 type AlertingRule struct {
 
-	// alerts
+	// active at
 	// Required: true
+	// Format: date-time
+	ActiveAt *strfmt.DateTime `json:"activeAt"`
+
+	// alerts
 	Alerts []*Alert `json:"alerts"`
 
 	// annotations
@@ -60,6 +64,12 @@ type AlertingRule struct {
 	// Required: true
 	State *string `json:"state"`
 
+	// totals
+	Totals map[string]int64 `json:"totals,omitempty"`
+
+	// totals filtered
+	TotalsFiltered map[string]int64 `json:"totalsFiltered,omitempty"`
+
 	// type
 	// Required: true
 	Type *RuleType `json:"type"`
@@ -68,6 +78,10 @@ type AlertingRule struct {
 // Validate validates this alerting rule
 func (m *AlertingRule) Validate(formats strfmt.Registry) error {
 	var res []error
+
+	if err := m.validateActiveAt(formats); err != nil {
+		res = append(res, err)
+	}
 
 	if err := m.validateAlerts(formats); err != nil {
 		res = append(res, err)
@@ -111,10 +125,22 @@ func (m *AlertingRule) Validate(formats strfmt.Registry) error {
 	return nil
 }
 
-func (m *AlertingRule) validateAlerts(formats strfmt.Registry) error {
+func (m *AlertingRule) validateActiveAt(formats strfmt.Registry) error {
 
-	if err := validate.Required("alerts", "body", m.Alerts); err != nil {
+	if err := validate.Required("activeAt", "body", m.ActiveAt); err != nil {
 		return err
+	}
+
+	if err := validate.FormatOf("activeAt", "body", "date-time", m.ActiveAt.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *AlertingRule) validateAlerts(formats strfmt.Registry) error {
+	if swag.IsZero(m.Alerts) { // not required
+		return nil
 	}
 
 	for i := 0; i < len(m.Alerts); i++ {

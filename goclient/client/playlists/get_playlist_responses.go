@@ -69,19 +69,19 @@ GetPlaylistOK describes a response with status code 200, with default header val
 (empty)
 */
 type GetPlaylistOK struct {
-	Payload *models.Playlist
+	Payload *models.Spec
 }
 
 func (o *GetPlaylistOK) Error() string {
 	return fmt.Sprintf("[GET /playlists/{uid}][%d] getPlaylistOK  %+v", 200, o.Payload)
 }
-func (o *GetPlaylistOK) GetPayload() *models.Playlist {
+func (o *GetPlaylistOK) GetPayload() *models.Spec {
 	return o.Payload
 }
 
 func (o *GetPlaylistOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Playlist)
+	o.Payload = new(models.Spec)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

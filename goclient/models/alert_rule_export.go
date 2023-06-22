@@ -34,7 +34,7 @@ type AlertRuleExport struct {
 	Data []*AlertQueryExport `json:"data"`
 
 	// exec err state
-	// Enum: [Alerting Error OK]
+	// Enum: [OK Alerting Error]
 	ExecErrState string `json:"execErrState,omitempty"`
 
 	// for
@@ -116,7 +116,7 @@ var alertRuleExportTypeExecErrStatePropEnum []interface{}
 
 func init() {
 	var res []string
-	if err := json.Unmarshal([]byte(`["Alerting","Error","OK"]`), &res); err != nil {
+	if err := json.Unmarshal([]byte(`["OK","Alerting","Error"]`), &res); err != nil {
 		panic(err)
 	}
 	for _, v := range res {
@@ -126,14 +126,14 @@ func init() {
 
 const (
 
+	// AlertRuleExportExecErrStateOK captures enum value "OK"
+	AlertRuleExportExecErrStateOK string = "OK"
+
 	// AlertRuleExportExecErrStateAlerting captures enum value "Alerting"
 	AlertRuleExportExecErrStateAlerting string = "Alerting"
 
 	// AlertRuleExportExecErrStateError captures enum value "Error"
 	AlertRuleExportExecErrStateError string = "Error"
-
-	// AlertRuleExportExecErrStateOK captures enum value "OK"
-	AlertRuleExportExecErrStateOK string = "OK"
 )
 
 // prop value enum

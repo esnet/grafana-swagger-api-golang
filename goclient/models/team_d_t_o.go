@@ -41,6 +41,9 @@ type TeamDTO struct {
 
 	// permission
 	Permission PermissionType `json:"permission,omitempty"`
+
+	// uid
+	UID string `json:"uid,omitempty"`
 }
 
 // Validate validates this team d t o

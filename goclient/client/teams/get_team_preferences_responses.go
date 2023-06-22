@@ -57,19 +57,19 @@ GetTeamPreferencesOK describes a response with status code 200, with default hea
 (empty)
 */
 type GetTeamPreferencesOK struct {
-	Payload *models.Preferences
+	Payload *models.Spec
 }
 
 func (o *GetTeamPreferencesOK) Error() string {
 	return fmt.Sprintf("[GET /teams/{team_id}/preferences][%d] getTeamPreferencesOK  %+v", 200, o.Payload)
 }
-func (o *GetTeamPreferencesOK) GetPayload() *models.Preferences {
+func (o *GetTeamPreferencesOK) GetPayload() *models.Spec {
 	return o.Payload
 }
 
 func (o *GetTeamPreferencesOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.Preferences)
+	o.Payload = new(models.Spec)
 
 	// response payload
 	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {

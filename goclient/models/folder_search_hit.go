@@ -8,7 +8,6 @@ package models
 import (
 	"context"
 
-	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
@@ -17,9 +16,6 @@ import (
 //
 // swagger:model FolderSearchHit
 type FolderSearchHit struct {
-
-	// access control
-	AccessControl Metadata `json:"accessControl,omitempty"`
 
 	// id
 	ID int64 `json:"id,omitempty"`
@@ -36,62 +32,11 @@ type FolderSearchHit struct {
 
 // Validate validates this folder search hit
 func (m *FolderSearchHit) Validate(formats strfmt.Registry) error {
-	var res []error
-
-	if err := m.validateAccessControl(formats); err != nil {
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
 	return nil
 }
 
-func (m *FolderSearchHit) validateAccessControl(formats strfmt.Registry) error {
-	if swag.IsZero(m.AccessControl) { // not required
-		return nil
-	}
-
-	if m.AccessControl != nil {
-		if err := m.AccessControl.Validate(formats); err != nil {
-			if ve, ok := err.(*errors.Validation); ok {
-				return ve.ValidateName("accessControl")
-			} else if ce, ok := err.(*errors.CompositeError); ok {
-				return ce.ValidateName("accessControl")
-			}
-			return err
-		}
-	}
-
-	return nil
-}
-
-// ContextValidate validate this folder search hit based on the context it is used
+// ContextValidate validates this folder search hit based on context it is used
 func (m *FolderSearchHit) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
-	var res []error
-
-	if err := m.contextValidateAccessControl(ctx, formats); err != nil {
-		res = append(res, err)
-	}
-
-	if len(res) > 0 {
-		return errors.CompositeValidationError(res...)
-	}
-	return nil
-}
-
-func (m *FolderSearchHit) contextValidateAccessControl(ctx context.Context, formats strfmt.Registry) error {
-
-	if err := m.AccessControl.ContextValidate(ctx, formats); err != nil {
-		if ve, ok := err.(*errors.Validation); ok {
-			return ve.ValidateName("accessControl")
-		} else if ce, ok := err.(*errors.CompositeError); ok {
-			return ce.ValidateName("accessControl")
-		}
-		return err
-	}
-
 	return nil
 }
 

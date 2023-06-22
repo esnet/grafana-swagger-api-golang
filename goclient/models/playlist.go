@@ -20,15 +20,13 @@ type Playlist struct {
 	// id
 	ID int64 `json:"id,omitempty"`
 
-	// Interval sets the time between switching views in a playlist.
-	// FIXME: Is this based on a standardized format or what options are available? Can datemath be used?
+	// interval
 	Interval string `json:"interval,omitempty"`
 
-	// Name of the playlist.
+	// name
 	Name string `json:"name,omitempty"`
 
-	// Unique playlist identifier. Generated on creation, either by the
-	// creator of the playlist of by the application.
+	// uid
 	UID string `json:"uid,omitempty"`
 }
 

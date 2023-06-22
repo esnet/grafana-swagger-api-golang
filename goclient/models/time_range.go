@@ -8,26 +8,65 @@ package models
 import (
 	"context"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
+	"github.com/go-openapi/validate"
 )
 
-// TimeRange TimeRange represents a range of minutes within a 1440 minute day, exclusive of the End minute. A day consists of 1440 minutes.
-//
-// For example, 4:00PM to End of the day would Begin at 1020 and End at 1440.
+// TimeRange Redefining this to avoid an import cycle
 //
 // swagger:model TimeRange
 type TimeRange struct {
 
-	// end minute
-	EndMinute int64 `json:"EndMinute,omitempty"`
+	// from
+	// Format: date-time
+	From strfmt.DateTime `json:"from,omitempty"`
 
-	// start minute
-	StartMinute int64 `json:"StartMinute,omitempty"`
+	// to
+	// Format: date-time
+	To strfmt.DateTime `json:"to,omitempty"`
 }
 
 // Validate validates this time range
 func (m *TimeRange) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateFrom(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateTo(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *TimeRange) validateFrom(formats strfmt.Registry) error {
+	if swag.IsZero(m.From) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("from", "body", "date-time", m.From.String(), formats); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (m *TimeRange) validateTo(formats strfmt.Registry) error {
+	if swag.IsZero(m.To) { // not required
+		return nil
+	}
+
+	if err := validate.FormatOf("to", "body", "date-time", m.To.String(), formats); err != nil {
+		return err
+	}
+
 	return nil
 }
 

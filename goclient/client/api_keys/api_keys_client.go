@@ -81,7 +81,11 @@ func (a *Client) AddAPIkey(params *AddAPIkeyParams, authInfo runtime.ClientAuthI
 }
 
 /*
-DeleteAPIkey deletes API key
+	DeleteAPIkey deletes API key
+
+	Deletes an API key.
+
+Deprecated. See: https://grafana.com/docs/grafana/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.
 */
 func (a *Client) DeleteAPIkey(params *DeleteAPIkeyParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*DeleteAPIkeyOK, error) {
 	// TODO: Validate the params before sending
@@ -120,9 +124,14 @@ func (a *Client) DeleteAPIkey(params *DeleteAPIkeyParams, authInfo runtime.Clien
 }
 
 /*
-GetAPIkeys gets auth keys
+	GetAPIkeys gets auth keys
 
-Will return auth keys.
+	Will return auth keys.
+
+Deprecated: true.
+
+Deprecated. Please use GET /api/serviceaccounts and GET /api/serviceaccounts/{id}/tokens instead
+see https://grafana.com/docs/grafana/next/administration/api-keys/#migrate-api-keys-to-grafana-service-accounts-using-the-api.
 */
 func (a *Client) GetAPIkeys(params *GetAPIkeysParams, authInfo runtime.ClientAuthInfoWriter, opts ...ClientOption) (*GetAPIkeysOK, error) {
 	// TODO: Validate the params before sending

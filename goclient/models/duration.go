@@ -11,7 +11,9 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// Duration Duration is a type used for marshalling durations.
+// Duration A Duration represents the elapsed time between two instants
+// as an int64 nanosecond count. The representation limits the
+// largest representable duration to approximately 290 years.
 //
 // swagger:model Duration
 type Duration int64
