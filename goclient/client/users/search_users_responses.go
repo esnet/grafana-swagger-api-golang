@@ -63,22 +63,20 @@ SearchUsersOK describes a response with status code 200, with default header val
 (empty)
 */
 type SearchUsersOK struct {
-	Payload *models.SearchUserQueryResult
+	Payload []*models.UserSearchHitDTO
 }
 
 func (o *SearchUsersOK) Error() string {
 	return fmt.Sprintf("[GET /users][%d] searchUsersOK  %+v", 200, o.Payload)
 }
-func (o *SearchUsersOK) GetPayload() *models.SearchUserQueryResult {
+func (o *SearchUsersOK) GetPayload() []*models.UserSearchHitDTO {
 	return o.Payload
 }
 
 func (o *SearchUsersOK) readResponse(response runtime.ClientResponse, consumer runtime.Consumer, formats strfmt.Registry) error {
 
-	o.Payload = new(models.SearchUserQueryResult)
-
 	// response payload
-	if err := consumer.Consume(response.Body(), o.Payload); err != nil && err != io.EOF {
+	if err := consumer.Consume(response.Body(), &o.Payload); err != nil && err != io.EOF {
 		return err
 	}
 

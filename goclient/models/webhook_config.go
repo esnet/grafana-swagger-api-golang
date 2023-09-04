@@ -30,7 +30,10 @@ type WebhookConfig struct {
 	SendResolved bool `json:"send_resolved,omitempty"`
 
 	// url
-	URL *URL `json:"url,omitempty"`
+	URL *SecretURL `json:"url,omitempty"`
+
+	// url file
+	URLFile string `json:"url_file,omitempty"`
 }
 
 // Validate validates this webhook config
