@@ -1,3 +1,11 @@
+## ARCHIVED
+
+This repo was an attempt at using the swagger spec prior to an official client has been released.  Please use the official client that can be found [here](https://github.com/grafana/grafana-openapi-client-go).
+
+
+
+---
+
 ![Go workflow](https://github.com/esnet/grafana-swagger-api-golang/actions/workflows/go.yml/badge.svg)
 
 
